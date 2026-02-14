@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NeoGoat Deck Builder</title>
+  <style>
+    body { margin:0; background:#0b0b0b; color:#f2f2f2; font-family:system-ui, sans-serif; }
+    header { padding:16px 18px; border-bottom:1px solid #222; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .tag { font-size:12px; opacity:.85; border:1px solid #333; padding:4px 8px; border-radius:999px; }
+    main { display:grid; grid-template-columns: 1fr 360px; gap:16px; padding:16px; }
+    input, button, select { font:inherit; }
+    input { width: min(520px, 100%); padding:10px 12px; border-radius:10px; border:1px solid #333; background:#121212; color:#f2f2f2; }
+    button { padding:8px 10px; border-radius:10px; border:1px solid #333; background:#151515; color:#f2f2f2; cursor:pointer; }
+    button:hover { background:#1a1a1a; }
+    .card { border:1px solid #222; border-radius:14px; padding:12px; background:#101010; }
+    .row { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
+    .name { font-weight:700; }
+    .meta { font-size:12px; opacity:.8; margin-top:2px; }
+    .small { font-size:12px; opacity:.8; }
+    .list { display:flex; flex-direction:column; gap:10px; }
+    .results { max-height: calc(100vh - 120px); overflow:auto; }
+    .deck { max-height: calc(100vh - 120px); overflow:auto; }
+    .err { color:#ff8080; font-size:12px; margin-top:6px; }
+    .ok { color:#8fff8f; font-size:12px; margin-top:6px; }
+    .counts { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .pill { font-size:12px; border:1px solid #333; padding:4px 8px; border-radius:999px; }
+    .muted { opacity:.7; }
+    .btns { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+    a { color:#9ad1ff; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex; flex-direction:column; gap:2px;">
+      <div style="font-weight:800; font-size:18px;">NeoGoat Deck Builder</div>
+      <div class="small muted" id="status">Cargando datos…</div>
+    </div>
+    <span class="tag" id="formatTag">Formato: —</span>
+    <div style="flex:1;"></div>
+    <input id="q" placeholder="Buscar carta (nombre)…" autocomplete="off" />
+    <div class="btns">
+      <button id="clearBtn" title="Vaciar Main Deck">Clear</button>
+      <button id="exportBtn" title="Exportar decklist">Export</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="row">
+        <div>
+          <div style="font-weight:800;">Resultados</div>
+          <div class="small muted">Solo cartas legales del formato activo.</div>
+        </div>
+        <div class="small muted" id="resultCount">0</div>
+      </div>
+      <div style="height:10px;"></div>
+      <div class="results list" id="results"></div>
+    </section>
+
+    <aside class="card deck">
+      <div class="row">
+        <div>
+          <div style="font-weight:800;">Main Deck</div>
+          <div class="small muted">Validación por límite (0–3).</div>
+        </div>
+        <div class="small" id="mainCount">0</div>
+      </div>
+
+      <div class="counts">
+        <span class="pill" id="legalPill">Legalidad: —</span>
+        <span class="pill" id="limitPill">Límites: —</span>
+      </div>
+
+      <div id="deckErrors" class="err" style="display:none;"></div>
+
+      <div style="height:12px;"></div>
+      <div class="list" id="deckList"></div>
+
+      <div style="height:12px;"></div>
+      <div class="small muted">
+        Próximo: Extra/Side + filtros + detalle de carta.
+      </div>
+    </aside>
+  </main>
+
+<script>
+(async function () {
+  const elStatus = document.getElementById('status');
+  const elFormatTag = document.getElementById('formatTag');
+  const elResults = document.getElementById('results');
+  const elDeck = document.getElementById('deckList');
+  const elQ = document.getElementById('q');
+  const elMainCount = document.getElementById('mainCount');
+  const elResultCount = document.getElementById('resultCount');
+  const elErrors = document.getElementById('deckErrors');
+  const elLegalPill = document.getElementById('legalPill');
+  const elLimitPill = document.getElementById('limitPill');
+
+  const state = {
+    formatId: null,
+    meta: null,
+    cards: null, // {id: {...}}
+    rules: null, // {id: {limit, legal, poolTag?}}
+    legalIds: [],
+    deck: new Map(), // id -> qty
+    lastQuery: ''
+  };
+
+  function fmtCardMeta(c) {
+    const parts = [];
+    if (c.type) parts.push(c.type);
+    if (c.subType) parts.push(c.subType);
+    if (c.attribute) parts.push(c.attribute);
+    if (c.monsterType) parts.push(c.monsterType);
+    if (Number.isFinite(c.level)) parts.push('LV ' + c.level);
+    if (Number.isFinite(c.atk) || Number.isFinite(c.def)) parts.push(`${c.atk ?? '?'} / ${c.def ?? '?'}`);
+    return parts.filter(Boolean).join(' • ');
+  }
+
+  function getLimit(id) {
+    const r = state.rules?.[id];
+    return r ? r.limit : null;
+  }
+
+  function isLegal(id) {
+    const r = state.rules?.[id];
+    return !!(r && r.legal === true);
+  }
+
+  function renderDeck() {
+    elDeck.innerHTML = '';
+    let total = 0;
+    const lines = [];
+
+    for (const [id, qty] of state.deck.entries()) {
+      const c = state.cards[id];
+      if (!c) continue;
+      total += qty;
+      lines.push({ id, qty, name: c.name || id });
+    }
+
+    lines.sort((a,b)=>a.name.localeCompare(b.name, 'es'));
+
+    for (const it of lines) {
+      const c = state.cards[it.id];
+      const lim = getLimit(it.id);
+      const over = (lim !== null && it.qty > lim);
+      const row = document.createElement('div');
+      row.className = 'card';
+      row.innerHTML = `
+        <div class="row">
+          <div>
+            <div class="name">${it.qty}x ${c.name ?? it.id}</div>
+            <div class="meta">${fmtCardMeta(c)}</div>
+            <div class="small muted">ID: ${it.id} • Límite: ${lim ?? '—'}</div>
+          </div>
+          <div class="btns">
+            <button data-act="add" data-id="${it.id}">+</button>
+            <button data-act="sub" data-id="${it.id}">-</button>
+            <button data-act="rm" data-id="${it.id}">x</button>
+          </div>
+        </div>
+        ${over ? `<div class="err">Excede límite (${it.qty}/${lim})</div>` : ``}
+      `;
+      elDeck.appendChild(row);
+    }
+
+    elMainCount.textContent = total;
+
+    // legality + limits summary
+    const illegalInDeck = [];
+    const limitIssues = [];
+    for (const [id, qty] of state.deck.entries()) {
+      if (!isLegal(id)) illegalInDeck.push(id);
+      const lim = getLimit(id);
+      if (lim !== null && qty > lim) limitIssues.push({id, qty, lim});
+    }
+
+    elLegalPill.textContent = illegalInDeck.length ? `Legalidad: ❌ ${illegalInDeck.length} ilegales` : 'Legalidad: ✅ OK';
+    elLimitPill.textContent = limitIssues.length ? `Límites: ❌ ${limitIssues.length} problema(s)` : 'Límites: ✅ OK';
+
+    if (illegalInDeck.length || limitIssues.length) {
+      elErrors.style.display = 'block';
+      elErrors.innerHTML = `
+        ${illegalInDeck.length ? `Cartas ilegales en el deck: ${illegalInDeck.join(', ')}` : ''}
+        ${illegalInDeck.length && limitIssues.length ? `<br/>` : ''}
+        ${limitIssues.length ? `Exceso de copias: ${limitIssues.map(x=>`${state.cards[x.id]?.name ?? x.id} (${x.qty}/${x.lim})`).join('; ')}` : ''}
+      `;
+    } else {
+      elErrors.style.display = 'none';
+      elErrors.textContent = '';
+    }
+  }
+
+  function addToDeck(id) {
+    // Only allow legal cards to be added
+    if (!isLegal(id)) return;
+    const current = state.deck.get(id) || 0;
+    state.deck.set(id, current + 1);
+    renderDeck();
+  }
+
+  function subFromDeck(id) {
+    const current = state.deck.get(id) || 0;
+    if (current <= 1) state.deck.delete(id);
+    else state.deck.set(id, current - 1);
+    renderDeck();
+  }
+
+  function rmFromDeck(id) {
+    state.deck.delete(id);
+    renderDeck();
+  }
+
+  function renderResults(query) {
+    elResults.innerHTML = '';
+    const q = (query || '').trim().toLowerCase();
+    state.lastQuery = q;
+
+    // show top 40 matches
+    const matches = [];
+    if (q.length >= 1) {
+      for (const id of state.legalIds) {
+        const c = state.cards[id];
+        if (!c?.name) continue;
+        if (c.name.toLowerCase().includes(q)) {
+          matches.push(id);
+          if (matches.length >= 40) break;
+        }
+      }
+    }
+
+    elResultCount.textContent = String(matches.length);
+
+    if (q.length === 0) {
+      elResults.innerHTML = `<div class="small muted">Escribe para buscar cartas…</div>`;
+      return;
+    }
+
+    if (matches.length === 0) {
+      elResults.innerHTML = `<div class="small muted">No hay resultados para “${query}”.</div>`;
+      return;
+    }
+
+    for (const id of matches) {
+      const c = state.cards[id];
+      const lim = getLimit(id);
+      const row = document.createElement('div');
+      row.className = 'card';
+      row.innerHTML = `
+        <div class="row">
+          <div>
+            <div class="name">${c.name}</div>
+            <div class="meta">${fmtCardMeta(c)}</div>
+            <div class="small muted">ID: ${id} • Límite: ${lim ?? '—'}</div>
+          </div>
+          <div class="btns">
+            <button data-act="add" data-id="${id}">Add</button>
+          </div>
+        </div>
+      `;
+      elResults.appendChild(row);
+    }
+  }
+
+  // Event handlers
+  elResults.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const act = btn.getAttribute('data-act');
+    const id = btn.getAttribute('data-id');
+    if (act === 'add') addToDeck(id);
+  });
+
+  elDeck.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const act = btn.getAttribute('data-act');
+    const id = btn.getAttribute('data-id');
+    if (act === 'add') addToDeck(id);
+    if (act === 'sub') subFromDeck(id);
+    if (act === 'rm') rmFromDeck(id);
+  });
+
+  document.getElementById('clearBtn').addEventListener('click', () => {
+    state.deck.clear();
+    renderDeck();
+  });
+
+  document.getElementById('exportBtn').addEventListener('click', async () => {
+    const lines = [];
+    const arr = [...state.deck.entries()].map(([id, qty]) => ({
+      id, qty, name: state.cards[id]?.name ?? id
+    })).sort((a,b)=>a.name.localeCompare(b.name,'es'));
+
+    for (const it of arr) lines.push(`${it.qty} ${it.name}`);
+    const text = lines.join('\n') || '(vacío)';
+
+    try {
+      await navigator.clipboard.writeText(text);
+      alert('Decklist copiada al portapapeles ✅');
+    } catch {
+      alert(text);
+    }
+  });
+
+  let t = null;
+  elQ.addEventListener('input', () => {
+    clearTimeout(t);
+    t = setTimeout(() => renderResults(elQ.value), 60);
+  });
+
+  // Load data
+  try {
+    elStatus.textContent = 'Cargando formato…';
+    const cfg = await (await fetch('/data/config.json')).json();
+    state.formatId = cfg.currentFormatId;
+
+    elStatus.textContent = 'Cargando cartas…';
+    state.cards = await (await fetch('/data/cards_catalog.json')).json();
+
+    elStatus.textContent = 'Cargando reglas del formato…';
+    state.meta = await (await fetch(`/data/formats/${state.formatId}/meta.json`)).json();
+    state.rules = await (await fetch(`/data/formats/${state.formatId}/rules.json`)).json();
+
+    // Build legalIds for faster search
+    state.legalIds = Object.keys(state.rules).filter(id => state.rules[id]?.legal === true);
+
+    elFormatTag.textContent = `Formato: ${state.meta?.name ?? state.formatId}`;
+    elStatus.innerHTML = `Listo ✅ <span class="muted">(${state.legalIds.length} cartas legales)</span>`;
+    renderResults('');
+    renderDeck();
+  } catch (err) {
+    console.error(err);
+    elStatus.textContent = 'Error cargando datos. Revisa que existan /data/*.json';
+    elResults.innerHTML = `<div class="err">No pude cargar los JSON. Verifica rutas en Vercel.</div>`;
+  }
+})();
+</script>
+</body>
+</html>
