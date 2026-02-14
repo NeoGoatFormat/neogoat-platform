@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NeoGoat Decko Builder</title>
+<title>NeoGoat Deck Builder</title>
 
 <style>
 body { margin:0; background:#0b0b0b; color:#f2f2f2; font-family:system-ui,sans-serif; }
@@ -44,8 +44,6 @@ main { display:grid; grid-template-columns: 1fr 420px; gap:14px; padding:14px; }
 
 <section class="card">
 <h3>Results</h3>
-<select id="filterType"><option value="">Type: All</option></select>
-<select id="filterAttr"><option value="">Attribute: All</option></select>
 <div class="list" id="results"></div>
 </section>
 
@@ -71,7 +69,6 @@ const LS_KEY = "neogoat_local_v1";
 
 let cards = {};
 let rules = {};
-let meta = {};
 let legalIds = [];
 let currentTab = "main";
 
@@ -121,20 +118,19 @@ function renderDeck(){
 }
 
 function validateDeck(){
-  let mainCount = count("main");
-  let extraCount = count("extra");
-  let sideCount = count("side");
-
   let errors=[];
+  let mainCount=count("main");
+  let extraCount=count("extra");
+  let sideCount=count("side");
 
   if(mainCount<40||mainCount>60) errors.push("Main must be 40-60");
   if(extraCount>15) errors.push("Extra max 15");
   if(sideCount>15) errors.push("Side max 15");
 
   for(let id of legalIds){
-    let limit = rules[id]?.limit;
+    let limit=rules[id]?.limit;
     if(limit!=null && totalCopies(id)>limit)
-      errors.push(`${cards[id].name} exceeds limit`);
+      errors.push(cards[id].name+" exceeds limit");
   }
 
   const val=document.getElementById("validation");
@@ -149,9 +145,9 @@ function validateDeck(){
 
 window.addCard=function(id){
   if(!rules[id]?.legal) return;
-  let limit = rules[id]?.limit;
+  let limit=rules[id]?.limit;
   if(limit!=null && totalCopies(id)>=limit) return;
-  let section = deck[currentTab];
+  let section=deck[currentTab];
   section.set(id,(section.get(id)||0)+1);
   renderDeck();
 }
@@ -178,7 +174,7 @@ function renderResults(query){
     div.innerHTML=`
       <div>
         <div class="name">${c.name}</div>
-        <div class="small">${c.type || ""} ${c.attribute || ""}</div>
+        <div class="small">${c.type||""} ${c.attribute||""}</div>
       </div>
       <button onclick="addCard('${id}')">Add</button>
     `;
@@ -237,12 +233,11 @@ document.getElementById("exportBtn").onclick=()=>{
 };
 
 try{
-  const cfg = await (await fetch('/data/config.json')).json();
-  cards = await (await fetch('/data/cards_catalog.json')).json();
-  meta = await (await fetch(`/data/formats/${cfg.currentFormatId}/meta.json`)).json();
-  rules = await (await fetch(`/data/formats/${cfg.currentFormatId}/rules.json`)).json();
+  const cfg=await (await fetch('/data/config.json')).json();
+  cards=await (await fetch('/data/cards_catalog.json')).json();
+  rules=await (await fetch(`/data/formats/${cfg.currentFormatId}/rules.json`)).json();
 
-  legalIds = Object.keys(rules).filter(id=>rules[id]?.legal===true);
+  legalIds=Object.keys(rules).filter(id=>rules[id]?.legal===true);
 
   document.getElementById("status").textContent="Ready ✔";
   renderResults("");
