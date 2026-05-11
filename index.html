@@ -167,7 +167,7 @@ padding: 7px 10px;
 </div>
 
 <script>
-// ─── Supabase config ───────────────────────────────────────────
+// --- Supabase config -------------------------------------------
 const SUPABASE_URL = "https://tpkqfvizizjbunpbutlo.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
 
@@ -199,7 +199,7 @@ async function saveDeckToSupabase(payload) {
   return await res.json();
 }
 
-// ─── App state ─────────────────────────────────────────────────
+// --- App state -------------------------------------------------
 (async function(){
   const LS_KEY = "neogoat_local_v1";
   let cards = {};
@@ -310,7 +310,7 @@ async function saveDeckToSupabase(payload) {
     }
   }
 
-  // ─── Deck serializer para Supabase ──────────────────────────
+  // --- Deck serializer para Supabase --------------------------
   function serializeDeck(section) {
     const result = [];
     for (let [id, qty] of deck[section]) {
@@ -319,7 +319,7 @@ async function saveDeckToSupabase(payload) {
     return result;
   }
 
-  // ─── Modal Share ────────────────────────────────────────────
+  // --- Modal Share --------------------------------------------
   const overlay = document.getElementById("modalOverlay");
   const msgEl   = document.getElementById("modalMsg");
 
@@ -374,9 +374,9 @@ async function saveDeckToSupabase(payload) {
 
     try {
       await saveDeckToSupabase(payload);
-      msgEl.textContent = "✅ Deck enviado. Quedara visible una vez aprobado.";
+      msgEl.textContent = " Deck enviado. Quedara visible una vez aprobado.";
       msgEl.className = "ok";
-      btn.textContent = "Enviado ✓";
+      btn.textContent = "Enviado OK";
       // Limpiar form despues de 3s y cerrar
       setTimeout(() => {
         overlay.classList.remove("open");
@@ -388,14 +388,14 @@ async function saveDeckToSupabase(payload) {
         document.getElementById("fDesc").value = "";
       }, 3000);
     } catch(e) {
-      msgEl.textContent = "❌ Error: " + e.message;
+      msgEl.textContent = "ERROR: Error: " + e.message;
       msgEl.className = "err";
       btn.disabled = false;
       btn.textContent = "Enviar Deck";
     }
   };
 
-  // ─── Controles existentes ───────────────────────────────────
+  // --- Controles existentes -----------------------------------
   document.getElementById("search").addEventListener("input",e=>{
     renderResults(e.target.value);
   });
@@ -446,14 +446,14 @@ async function saveDeckToSupabase(payload) {
     alert("Copied to clipboard");
   };
 
-  // ─── Carga inicial ──────────────────────────────────────────
+  // --- Carga inicial ------------------------------------------
   try{
     const cfg=await (await fetch('/data/config.json')).json();
     currentFormatId = cfg.currentFormatId || "april2026";
     cards=await (await fetch('/data/cards_catalog.json')).json();
     rules=await (await fetch(/data/formats/${cfg.currentFormatId}/rules.json)).json();
     legalIds=Object.keys(rules).filter(id=>rules[id]?.legal===true);
-    document.getElementById("status").textContent="Ready ✔️";
+    document.getElementById("status").textContent="Ready OK";
     renderResults("");
     renderDeck();
   }catch(e){
