@@ -187,7 +187,7 @@ async function saveDeckToSupabase(payload) {
     headers: {
       'Content-Type': 'application/json',
       'apikey': SUPABASE_ANON_KEY,
-      'Authorization': Bearer ${SUPABASE_ANON_KEY},
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
       'Prefer': 'return=representation'
     },
     body: JSON.stringify(payload)
@@ -206,7 +206,7 @@ async function saveDeckToSupabase(payload) {
   let rules = {};
   let legalIds = [];
   let currentTab = "main";
-  let currentFormatId = "april_2026";
+  let currentFormatId = "april2026";
   let deck = {
     main: new Map(),
     extra: new Map(),
