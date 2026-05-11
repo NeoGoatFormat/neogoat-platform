@@ -205,7 +205,7 @@ try {
 var cfg = await (await fetch(”/data/config.json”)).json();
 fmtId = cfg.currentFormatId || “apr_2026”;
 cards = await (await fetch(”/data/cards_catalog.json”)).json();
-rules = await (await fetch(”/data/formats/”+fmtId+”/rules.json”)).json();
+rules = await (await fetch(”/data/formats/”+fmtId+”/"+cfg.rulesFile)).json();
 legalIds = Object.keys(rules).filter(function(id){return rules[id]&&rules[id].legal===true;});
 document.getElementById(“status”).textContent = “Ready”;
 renderResults(””); renderDeck();
