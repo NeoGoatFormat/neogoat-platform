@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoGoat Deck Builder</title>
+<style>
+body { margin:0; background:#0b0b0b; color:#f2f2f2; font-family:system-ui,sans-serif; }
+header { padding:14px; border-bottom:1px solid #222; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+input, select, button { font:inherit; }
+input { padding:8px 10px; border-radius:8px; border:1px solid #333; background:#111; color:white; }
+button { padding:7px 10px; border-radius:8px; border:1px solid #333; background:#151515; color:white; cursor:pointer; }
+button:hover { background:#1a1a1a; }
+main { display:grid; grid-template-columns: 1fr 420px; gap:14px; padding:14px; }
+.card { border:1px solid #222; background:#101010; padding:12px; border-radius:12px; }
+.list { display:flex; flex-direction:column; gap:8px; max-height:70vh; overflow:auto; }
+.row { display:flex; justify-content:space-between; gap:10px; }
+.name { font-weight:700; }
+.small { font-size:12px; opacity:.8; }
+.tab { padding:5px 10px; border:1px solid #333; border-radius:999px; cursor:pointer; font-size:12px; }
+.tab.active { background:#1b1b1b; }
+.tabs { display:flex; gap:8px; margin:10px 0; }
+.err { color:#ff8080; font-size:12px; }
+.ok { color:#8fff8f; font-size:12px; }
+#shareBtn { background:#1a3a1a; border-color:#2a6a2a; color:#8fff8f; }
+#libraryLink { font-size:12px; opacity:.6; text-decoration:none; color:inherit; border:1px solid #222; border-radius:8px; padding:7px 10px; }
+#modalOverlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:100; align-items:center; justify-content:center; }
+#modalOverlay.open { display:flex; }
+#modal { background:#111; border:1px solid #333; border-radius:16px; padding:28px; width:480px; max-width:95vw; display:flex; flex-direction:column; gap:14px; }
+#modal h2 { margin:0; font-size:18px; color:#8fff8f; }
+#modal .field { display:flex; flex-direction:column; gap:5px; }
+#modal label { font-size:12px; opacity:.7; }
+#modal input, #modal textarea { width:100%; box-sizing:border-box; background:#0b0b0b; border:1px solid #333; border-radius:8px; color:white; padding:9px 11px; font:inherit; }
+#modal textarea { resize:vertical; min-height:70px; }
+#modal .actions { display:flex; gap:10px; justify-content:flex-end; }
+#submitBtn { background:#1a3a1a; border-color:#2a6a2a; color:#8fff8f; font-weight:700; padding:9px 18px; }
+#submitBtn:disabled { opacity:.5; cursor:not-allowed; }
+#modalMsg { font-size:13px; min-height:18px; }
+#modalMsg.ok { color:#8fff8f; }
+#modalMsg.err { color:#ff8080; }
+</style>
+</head>
+<body>
+<header>
+  <h2>NeoGoat Deck Builder</h2>
+  <div id="status">Loading...</div>
+  <div style="flex:1"></div>
+  <input id="search" placeholder="Search card name...">
+  <button id="saveBtn">Save</button>
+  <button id="loadBtn">Load</button>
+  <button id="clearBtn">New</button>
+  <button id="exportBtn">Export</button>
+  <button id="shareBtn">Share Deck</button>
+  <a href="/decks.html" id="libraryLink">Deck Library</a>
+</header>
+<main>
+  <section class="card">
+    <h3>Results</h3>
+    <div class="list" id="results"></div>
+  </section>
+  <aside class="card">
+    <h3>Deck</h3>
+    <div class="tabs">
+      <div class="tab active" data-tab="main">Main (<span id="mainCount">0</span>)</div>
+      <div class="tab" data-tab="extra">Extra (<span id="extraCount">0</span>)</div>
+      <div class="tab" data-tab="side">Side (<span id="sideCount">0</span>)</div>
+    </div>
+    <div class="list" id="deckList"></div>
+    <div id="validation" class="small"></div>
+  </aside>
+</main>
+<div id="modalOverlay">
+  <div id="modal">
+    <h2>Share Deck</h2>
+    <p style="margin:0;font-size:13px;opacity:.6;">Your deck will be reviewed before being published.</p>
+    <div class="field">
+      <label>Deck name *</label>
+      <input id="fTitle" placeholder="e.g. Chaos Warrior April 2026" maxlength="80">
+    </div>
+    <div class="field">
+      <label>Your name / alias *</label>
+      <input id="fAuthor" placeholder="e.g. Tona" maxlength="40">
+    </div>
+    <div class="field">
+      <label>Archetype</label>
+      <input id="fArchetype" placeholder="e.g. Chaos Warrior, Gravekeeper..." maxlength="60">
+    </div>
+    <div class="field">
+      <label>Description / strategy</label>
+      <textarea id="fDesc" placeholder="Briefly explain how the deck works..."></textarea>
+    </div>
+    <div id="modalMsg"></div>
+    <div class="actions">
+      <button id="cancelBtn">Cancel</button>
+      <button id="submitBtn">Submit Deck</button>
+    </div>
+  </div>
+</div>
+<script>
+var SURL = "https://tpkqfvizizjbunpbutlo.supabase.co";
+var SKEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
+
+function slug(t) {
+  return t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\s-]/g,"").trim().replace(/\s+/g,"-") + "-" + Date.now();
+}
+
+async function submitDeck(p) {
+  var r = await fetch(SURL + "/rest/v1/decks", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "apikey": SKEY, "Authorization": "Bearer " + SKEY, "Prefer": "return=representation" },
+    body: JSON.stringify(p)
+  });
+  if (!r.ok) { var e = await r.json(); throw new Error(e.message || "Save error"); }
+  return r.json();
+}
+
+(async function() {
+  var LS = "neogoat_local_v1";
+  var cards = {}, rules = {}, legalIds = [], tab = "main", fmtId = "apr_2026";
+  var deck = { main: new Map(), extra: new Map(), side: new Map() };
+
+  function cnt(s) { var t=0; deck[s].forEach(function(v){t+=v;}); return t; }
+  function copies(id) { return (deck.main.get(id)||0)+(deck.extra.get(id)||0)+(deck.side.get(id)||0); }
+
+  function renderDeck() {
+    var el = document.getElementById("deckList"); el.innerHTML = "";
+    deck[tab].forEach(function(qty, id) {
+      var c = cards[id], d = document.createElement("div"); d.className = "row";
+      d.innerHTML = "<div><div class='name'>"+qty+"x "+c.name+"</div><div class='small'>Limit: "+(rules[id]?rules[id].limit:"-")+"</div></div><div><button onclick=\"window.addCard('"+id+"')\">+</button><button onclick=\"window.removeCard('"+id+"')\">-</button></div>";
+      el.appendChild(d);
+    });
+    document.getElementById("mainCount").textContent = cnt("main");
+    document.getElementById("extraCount").textContent = cnt("extra");
+    document.getElementById("sideCount").textContent = cnt("side");
+    validate();
+  }
+
+  function validate() {
+    var errs = [];
+    if (cnt("main")<40||cnt("main")>60) errs.push("Main must be 40-60");
+    if (cnt("extra")>15) errs.push("Extra max 15");
+    if (cnt("side")>15) errs.push("Side max 15");
+    legalIds.forEach(function(id){ if(rules[id]&&rules[id].limit!=null&&copies(id)>rules[id].limit) errs.push(cards[id].name+" exceeds limit"); });
+    var v = document.getElementById("validation");
+    if (errs.length) { v.innerHTML=errs.join("<br>"); v.className="err"; } else { v.textContent="Deck OK"; v.className="ok"; }
+    return errs.length===0;
+  }
+
+  window.addCard = function(id) {
+    if (!rules[id]||!rules[id].legal) return;
+    if (rules[id].limit!=null&&copies(id)>=rules[id].limit) return;
+    deck[tab].set(id,(deck[tab].get(id)||0)+1); renderDeck();
+  };
+  window.removeCard = function(id) {
+    var q=deck[tab].get(id)||0;
+    if(q<=1) deck[tab].delete(id); else deck[tab].set(id,q-1); renderDeck();
+  };
+
+  function renderResults(q) {
+    var el=document.getElementById("results"); el.innerHTML=""; q=q.toLowerCase();
+    legalIds.forEach(function(id){
+      var c=cards[id]; if(!c.name.toLowerCase().includes(q)) return;
+      var d=document.createElement("div"); d.className="row";
+      d.innerHTML="<div><div class='name'>"+c.name+"</div><div class='small'>"+(c.type||"")+" "+(c.attribute||"")+"</div></div><button onclick=\"window.addCard('"+id+"')\">Add</button>";
+      el.appendChild(d);
+    });
+  }
+
+  function serialize(s) { var r=[]; deck[s].forEach(function(qty,id){r.push({name:cards[id].name,qty:qty});}); return r; }
+
+  var overlay = document.getElementById("modalOverlay");
+  var msg = document.getElementById("modalMsg");
+
+  document.getElementById("shareBtn").onclick = function() {
+    if (!validate()) { alert("Deck must be valid (40-60 Main cards)."); return; }
+    msg.textContent=""; msg.className=""; overlay.classList.add("open");
+  };
+  document.getElementById("cancelBtn").onclick = function() { overlay.classList.remove("open"); };
+  overlay.addEventListener("click", function(e) { if(e.target===overlay) overlay.classList.remove("open"); });
+
+  document.getElementById("submitBtn").onclick = async function() {
+    var title=document.getElementById("fTitle").value.trim();
+    var author=document.getElementById("fAuthor").value.trim();
+    if (!title||!author) { msg.textContent="Name and alias required."; msg.className="err"; return; }
+    var btn=document.getElementById("submitBtn"); btn.disabled=true; btn.textContent="Sending..."; msg.textContent="";
+    try {
+      await submitDeck({ slug:slug(title), title:title, author_name:author, format:fmtId, archetype:document.getElementById("fArchetype").value.trim()||null, description:document.getElementById("fDesc").value.trim()||null, main_deck:serialize("main"), side_deck:serialize("side"), extra_deck:serialize("extra"), is_public:false });
+      msg.textContent="Deck submitted! Will appear once approved."; msg.className="ok"; btn.textContent="Submitted!";
+      setTimeout(function(){ overlay.classList.remove("open"); btn.disabled=false; btn.textContent="Submit Deck"; document.getElementById("fTitle").value=""; document.getElementById("fAuthor").value=""; document.getElementById("fArchetype").value=""; document.getElementById("fDesc").value=""; }, 3000);
+    } catch(e) { msg.textContent="Error: "+e.message; msg.className="err"; btn.disabled=false; btn.textContent="Submit Deck"; }
+  };
+
+  document.getElementById("search").addEventListener("input", function(e){renderResults(e.target.value);});
+  document.querySelectorAll(".tab").forEach(function(t){ t.addEventListener("click",function(){ document.querySelectorAll(".tab").forEach(function(x){x.classList.remove("active");}); t.classList.add("active"); tab=t.dataset.tab; renderDeck(); }); });
+  document.getElementById("saveBtn").onclick = function(){ localStorage.setItem(LS,JSON.stringify({main:[...deck.main],extra:[...deck.extra],side:[...deck.side]})); alert("Saved locally"); };
+  document.getElementById("loadBtn").onclick = function(){ var r=localStorage.getItem(LS); if(!r){alert("No saved deck");return;} var o=JSON.parse(r); deck.main=new Map(o.main); deck.extra=new Map(o.extra); deck.side=new Map(o.side); renderDeck(); };
+  document.getElementById("clearBtn").onclick = function(){ deck.main.clear(); deck.extra.clear(); deck.side.clear(); renderDeck(); };
+  document.getElementById("exportBtn").onclick = function(){
+    var t="# Main\n"; deck.main.forEach(function(q,id){t+=q+" "+cards[id].name+"\n";}); t+="\n# Extra\n"; deck.extra.forEach(function(q,id){t+=q+" "+cards[id].name+"\n";}); t+="\n# Side\n"; deck.side.forEach(function(q,id){t+=q+" "+cards[id].name+"\n";});
+    navigator.clipboard.writeText(t); alert("Copied to clipboard");
+  };
+
+  try {
+    var cfg = await (await fetch("/data/config.json")).json();
+    fmtId = cfg.currentFormatId || "apr_2026";
+    cards = await (await fetch("/data/cards_catalog.json")).json();
+    // rules = await (await fetch("/data/formats/"+fmtId+"/"+cfg.rulesFile)).json();
+	var rawRules = await (await fetch("/data/formats/"+fmtId+"/"+cfg.rulesFile)).json();
+
+	rules = {};
+
+	rawRules.forEach(function(card){
+	  rules[card.id] = {
+	    legal: card.legal,
+ 	   limit: card.limit
+ 	 };
+	});
+    legalIds = Object.keys(rules).filter(function(id){return rules[id]&&rules[id].legal===true;});
+    document.getElementById("status").textContent = "Ready";
+    renderResults(""); renderDeck();
+  } catch(e) { console.error(e); document.getElementById("status").textContent = "Failed loading JSON"; }
+})();
+</script>
+</body>
+</html>
