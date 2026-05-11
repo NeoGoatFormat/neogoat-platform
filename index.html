@@ -135,7 +135,7 @@ padding: 7px 10px;
 <div id="modalOverlay">
   <div id="modal">
     <h2>⬆️ Share Deck</h2>
-    <p style="margin:0;font-size:13px;opacity:.6;">Tu deck quedará en revisión antes de publicarse en la biblioteca.</p>
+    <p style="margin:0;font-size:13px;opacity:.6;">Tu deck quedara en revision antes de publicarse en la biblioteca.</p>
 
 
 <div class="field">
@@ -151,8 +151,8 @@ padding: 7px 10px;
   <input id="fArchetype" placeholder="Ej: Chaos Warrior, Gravekeeper, OTK..." maxlength="60">
 </div>
 <div class="field">
-  <label>Descripción / estrategia</label>
-  <textarea id="fDesc" placeholder="Explica brevemente cómo funciona el deck..."></textarea>
+  <label>Descripcion / estrategia</label>
+  <textarea id="fDesc" placeholder="Explica brevemente como funciona el deck..."></textarea>
 </div>
 
 <div id="modalMsg"></div>
@@ -326,7 +326,7 @@ async function saveDeckToSupabase(payload) {
   document.getElementById("shareBtn").onclick = () => {
     const valid = validateDeck();
     if (!valid) {
-      alert("El deck debe ser válido antes de compartirlo (40-60 cartas en el Main, sin exceder límites).");
+      alert("El deck debe ser valido antes de compartirlo (40-60 cartas en el Main, sin exceder limites).");
       return;
     }
     msgEl.textContent = "";
@@ -374,10 +374,10 @@ async function saveDeckToSupabase(payload) {
 
     try {
       await saveDeckToSupabase(payload);
-      msgEl.textContent = "✅ Deck enviado. Quedará visible una vez aprobado.";
+      msgEl.textContent = "✅ Deck enviado. Quedara visible una vez aprobado.";
       msgEl.className = "ok";
       btn.textContent = "Enviado ✓";
-      // Limpiar form después de 3s y cerrar
+      // Limpiar form despues de 3s y cerrar
       setTimeout(() => {
         overlay.classList.remove("open");
         btn.disabled = false;
