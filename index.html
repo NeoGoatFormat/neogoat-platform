@@ -2313,13 +2313,49 @@ a.download = deckName + ".ydk";
       rules[c.password]={legal:bs!=="forbidden",limit:banLimit[bs]!=null?banLimit[bs]:3};
     });
 
-    setupDropZones();
-    setupRemoveOutsideDeck();
-    populateFilters();
-    sb.textContent=cardList.length+" cards loaded";
-    sb.className="";
-    renderSearch("");
-    renderDeck();
+setupDropZones();
+setupRemoveOutsideDeck();
+populateFilters();
+
+var importedDeck = localStorage.getItem("ng_import_deck");
+
+if(importedDeck){
+  try{
+    var imported = JSON.parse(importedDeck);
+
+    deck.main.clear();
+    deck.extra.clear();
+    deck.side.clear();
+
+    function importSection(list, section){
+      (list || []).forEach(function(card){
+        var id = findCardIdByName(card.name);
+        var qty = Number(card.qty) || 1;
+
+        if(!id)return;
+
+        deck[section].set(
+          id,
+          (deck[section].get(id)||0)+qty
+        );
+      });
+    }
+
+    importSection(imported.main, "main");
+    importSection(imported.extra, "extra");
+    importSection(imported.side, "side");
+
+    localStorage.removeItem("ng_import_deck");
+
+  }catch(e){
+    console.error("Open Builder import failed", e);
+  }
+}
+
+sb.textContent=cardList.length+" cards loaded";
+sb.className="";
+renderSearch("");
+renderDeck();
   }catch(e){
     console.error(e);
     sb.textContent="Failed loading cards";
