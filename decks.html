@@ -336,6 +336,9 @@ header h2{
 <div class="filters">
   <input id="fSearch" placeholder="Search by title or author..." style="width:250px">
   <input id="fArchetype" placeholder="Archetype..." style="width:180px">
+  <input id="fCard1" placeholder="Contains card..." style="width:220px">
+<input id="fCard2" placeholder="Contains card..." style="width:220px">
+<input id="fCard3" placeholder="Contains card..." style="width:220px">
   <select id="fFormat">
     <option value="">All formats</option>
   </select>
@@ -436,12 +439,34 @@ function renderGrid(decks){
   }
 }
 
+function deckContainsCard(deck,search){
+  if(!search)return true;
+
+  const q=search.toLowerCase().trim();
+
+  const allCards=[
+    ...(deck.main_deck||[]),
+    ...(deck.extra_deck||[]),
+    ...(deck.side_deck||[])
+  ];
+
+  return allCards.some(c=>
+    String(c.name||"").toLowerCase().includes(q)
+  );
+}
+
 function applyFilters(){
+
   const q=document.getElementById("fSearch").value.toLowerCase().trim();
   const a=document.getElementById("fArchetype").value.toLowerCase().trim();
   const f=document.getElementById("fFormat").value;
 
+  const c1=document.getElementById("fCard1").value.trim();
+  const c2=document.getElementById("fCard2").value.trim();
+  const c3=document.getElementById("fCard3").value.trim();
+
   const filtered=allDecks.filter(d=>{
+
     const title=String(d.title||"").toLowerCase();
     const author=String(d.author_name||"").toLowerCase();
     const archetype=String(d.archetype||"").toLowerCase();
@@ -450,14 +475,31 @@ function applyFilters(){
     const matchA=!a||archetype.includes(a);
     const matchF=!f||d.format===f;
 
-    return matchQ&&matchA&&matchF;
+    const matchC1=deckContainsCard(d,c1);
+    const matchC2=deckContainsCard(d,c2);
+    const matchC3=deckContainsCard(d,c3);
+
+    return (
+      matchQ &&
+      matchA &&
+      matchF &&
+      matchC1 &&
+      matchC2 &&
+      matchC3
+    );
   });
+
+  renderGrid(filtered);
+}
 
   renderGrid(filtered);
 }
 
 document.getElementById("fSearch").addEventListener("input",applyFilters);
 document.getElementById("fArchetype").addEventListener("input",applyFilters);
+  document.getElementById("fCard1").addEventListener("input",applyFilters);
+document.getElementById("fCard2").addEventListener("input",applyFilters);
+document.getElementById("fCard3").addEventListener("input",applyFilters);
 document.getElementById("fFormat").addEventListener("change",applyFilters);
 
 (async()=>{
