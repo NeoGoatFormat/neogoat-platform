@@ -1474,9 +1474,19 @@ function safeFileName(name){
 
     document.getElementById("testHandBtn").onclick=()=>openTestHand(deck);
 
-    document.getElementById("builderBtn").onclick=()=>{
-      location.href="/index.html";
-    };
+document.getElementById("builderBtn").onclick=()=>{
+
+  localStorage.setItem(
+    "ng_import_deck",
+    JSON.stringify({
+      main: deck.main_deck || [],
+      extra: deck.extra_deck || [],
+      side: deck.side_deck || []
+    })
+  );
+
+  location.href="/index.html";
+};
 
     document.getElementById("commentSubmit").onclick=()=>postComment(slug);
     loadComments(slug);
