@@ -1,0 +1,1249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoGoat Deck Builder</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+
+:root{
+  --bg:#100f0d;
+  --panel:#15120f;
+  --panel2:#0d0d0d;
+  --line:#2b2419;
+  --gold:#d4aa52;
+  --gold2:#f1d18a;
+  --blue:#5a78d6;
+  --trap:#9b59b6;
+  --green:#72d572;
+  --red:#ff7b7b;
+  --muted:#8d8374;
+}
+
+body{
+  color:#f5ead5;
+  font-family:system-ui,sans-serif;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 18% 12%,rgba(212,170,82,.10),transparent 28%),
+    radial-gradient(circle at 85% 28%,rgba(90,120,214,.10),transparent 30%),
+    linear-gradient(to bottom,#1b1712,#0d0d0d 45%,#090909);
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.08;
+  background-image:
+    linear-gradient(45deg,rgba(255,255,255,.08) 25%,transparent 25%),
+    linear-gradient(-45deg,rgba(255,255,255,.08) 25%,transparent 25%);
+  background-size:42px 42px;
+  mix-blend-mode:overlay;
+}
+
+button,input,textarea,select{font:inherit;}
+
+#header{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  background:linear-gradient(to bottom,#201a13,#111);
+  border-bottom:2px solid rgba(212,170,82,.75);
+  box-shadow:0 0 22px rgba(212,170,82,.18);
+  flex-shrink:0;
+  flex-wrap:wrap;
+  position:relative;
+  z-index:2;
+}
+
+#header:before{
+  content:"🐐";
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle,#3a2b14,#111);
+  border:1px solid rgba(212,170,82,.65);
+  box-shadow:0 0 12px rgba(212,170,82,.25);
+  margin-right:2px;
+}
+
+#header h1{
+  font-size:16px;
+  font-weight:900;
+  color:#fff7df;
+  text-shadow:0 0 9px rgba(212,170,82,.35);
+}
+
+#fmtLabel{
+  font-size:11px;
+  color:#b9aa8d;
+  font-weight:500;
+}
+
+#statusBadge{
+  font-size:11px;
+  padding:3px 9px;
+  border-radius:999px;
+  background:linear-gradient(to bottom,#163a16,#102410);
+  color:#8fff8f;
+  border:1px solid #3d8a3d;
+  box-shadow:0 0 10px rgba(114,213,114,.15);
+}
+
+#statusBadge.err{
+  background:#3a1a1a;
+  color:#ff8f8f;
+  border-color:#6a2a2a;
+}
+
+.hbtn{
+  padding:7px 13px;
+  border-radius:9px;
+  border:1px solid #5c4a2c;
+  background:linear-gradient(to bottom,#2a241d,#151515);
+  color:#f3d089;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:700;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.hbtn:hover{
+  background:linear-gradient(to bottom,#3a2d1d,#191919);
+  box-shadow:0 0 13px rgba(212,170,82,.24);
+}
+
+#shareBtn{
+  background:linear-gradient(to bottom,#1d4a1d,#102810);
+  border-color:#3d8a3d;
+  color:#9dff9d;
+}
+
+.spacer{flex:1;}
+
+#app{
+  display:grid;
+  grid-template-columns:290px 1fr;
+  flex:1;
+  overflow:hidden;
+  min-height:0;
+  position:relative;
+  z-index:1;
+}
+
+#searchPanel{
+  background:linear-gradient(to bottom,rgba(21,18,15,.96),rgba(10,10,10,.96));
+  border-right:1px solid rgba(212,170,82,.25);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  min-height:0;
+  box-shadow:8px 0 24px rgba(0,0,0,.28);
+}
+
+#searchTop{
+  padding:10px;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  border-bottom:1px solid rgba(212,170,82,.12);
+}
+
+#searchTop input,#searchTop select{
+  width:100%;
+  padding:8px 10px;
+  background:#0b0b0b;
+  border:1px solid #3b3020;
+  border-radius:9px;
+  color:#f4ead5;
+  font-size:13px;
+}
+
+#searchTop input:focus,#searchTop select:focus{
+  outline:none;
+  border-color:var(--gold);
+  box-shadow:0 0 10px rgba(212,170,82,.18);
+}
+
+.filterRow{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+}
+
+#resultCount{
+  font-size:10px;
+  color:#9d907d;
+  padding:0 2px;
+}
+
+#searchResults{
+  flex:1;
+  overflow-y:auto;
+  padding:6px;
+  min-height:0;
+  display:block;
+}
+
+.scard{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:5px 6px;
+  border-radius:8px;
+  cursor:grab;
+  border:1px solid transparent;
+  position:relative;
+  background:linear-gradient(to right,rgba(255,255,255,.02),transparent);
+}
+
+.scard:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  bottom:8px;
+  width:3px;
+  border-radius:3px;
+  background:rgba(212,170,82,.55);
+  opacity:.35;
+}
+
+.scard:hover{
+  background:linear-gradient(to right,rgba(212,170,82,.13),rgba(255,255,255,.02));
+  border-color:rgba(212,170,82,.28);
+  box-shadow:0 0 12px rgba(212,170,82,.10);
+}
+
+.scard img{
+  width:34px;
+  height:49px;
+  object-fit:cover;
+  border-radius:4px;
+  flex-shrink:0;
+  background:#1a1a1a;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.scard .sname{
+  font-size:11px;
+  font-weight:800;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  flex:1;
+  min-width:0;
+  color:#fff3dc;
+}
+
+.sbtns{
+  display:flex;
+  gap:3px;
+  flex-shrink:0;
+}
+
+.sadd{
+  padding:3px 6px;
+  border-radius:6px;
+  border:1px solid #51432c;
+  background:#15120f;
+  color:#f3d089;
+  cursor:pointer;
+  font-size:10px;
+  flex-shrink:0;
+}
+
+.sadd:hover{
+  background:var(--gold);
+  color:#140f08;
+  border-color:var(--gold);
+}
+
+.sadd.side:hover{
+  background:#cfcfcf;
+  border-color:#cfcfcf;
+}
+
+#deckArea{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  min-height:0;
+}
+
+#deckBar{
+  padding:7px 16px;
+  font-size:12px;
+  background:rgba(13,13,13,.82);
+  border-bottom:1px solid rgba(212,170,82,.18);
+  flex-shrink:0;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+#validation.ok{color:#8fff8f;}
+#validation.err{color:#ff8f8f;}
+
+#deckMain{
+  display:flex;
+  flex:1;
+  overflow:hidden;
+  min-height:0;
+}
+
+#deckZones{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:14px;
+  overflow-y:auto;
+  min-width:0;
+}
+
+.zone{
+  border:1px solid rgba(212,170,82,.22);
+  border-radius:14px;
+  background:
+    linear-gradient(to bottom,rgba(26,22,17,.92),rgba(12,12,12,.92));
+  padding:10px;
+  min-height:128px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 8px 18px rgba(0,0,0,.20);
+}
+
+.zone:nth-child(2){
+  border-color:rgba(90,120,214,.35);
+  background:
+    radial-gradient(circle at 12% 20%,rgba(90,120,214,.08),transparent 38%),
+    linear-gradient(to bottom,rgba(17,19,30,.92),rgba(12,12,12,.92));
+}
+
+.zone:nth-child(3){
+  border-color:rgba(180,180,180,.22);
+}
+
+.zoneTitle{
+  font-size:13px;
+  font-weight:900;
+  margin-bottom:9px;
+  color:#fff2d5;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  letter-spacing:.2px;
+  text-shadow:0 0 8px rgba(212,170,82,.16);
+}
+
+.zoneHint{
+  font-size:10px;
+  font-weight:500;
+  color:#8d8374;
+  text-shadow:none;
+}
+
+.zoneGrid{
+  min-height:96px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(68px,1fr));
+  gap:7px;
+  padding:7px;
+  border:2px dashed rgba(212,170,82,.18);
+  border-radius:10px;
+  align-content:start;
+  background:rgba(0,0,0,.18);
+  transition:.12s ease;
+}
+
+.zoneGrid.dragover{
+  border-color:var(--gold);
+  background:rgba(212,170,82,.08);
+  box-shadow:0 0 18px rgba(212,170,82,.20);
+  transform:scale(1.005);
+}
+
+#extraGrid.dragover{
+  border-color:#8ab4ff;
+  background:rgba(90,120,214,.10);
+  box-shadow:0 0 18px rgba(90,120,214,.22);
+}
+
+#sideGrid.dragover{
+  border-color:#d8d8d8;
+  background:rgba(220,220,220,.07);
+  box-shadow:0 0 18px rgba(220,220,220,.12);
+}
+
+#cardPreviewPanel{
+  width:245px;
+  flex-shrink:0;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(212,170,82,.12),transparent 35%),
+    linear-gradient(to bottom,#17120f,#080808);
+  border-left:1px solid rgba(212,170,82,.25);
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:9px;
+  overflow-y:auto;
+  box-shadow:-8px 0 24px rgba(0,0,0,.25);
+}
+
+#previewImg{
+  width:205px;
+  border-radius:7px;
+  display:none;
+  border:1px solid rgba(212,170,82,.35);
+  box-shadow:0 0 20px rgba(0,0,0,.55),0 0 16px rgba(212,170,82,.12);
+}
+
+#previewName{
+  font-size:12px;
+  font-weight:900;
+  text-align:center;
+  color:#fff1d4;
+}
+
+#previewInfo{
+  font-size:10px;
+  color:#b7aa94;
+  text-align:center;
+  line-height:1.6;
+}
+
+#previewText{
+  font-size:10px;
+  color:#c7bba8;
+  line-height:1.5;
+  text-align:left;
+  width:100%;
+  margin-top:4px;
+  border-top:1px solid rgba(212,170,82,.24);
+  padding-top:8px;
+}
+
+.emptyDeck{
+  grid-column:1/-1;
+  text-align:center;
+  padding:29px;
+  color:#3c352b;
+  font-size:13px;
+}
+
+.dcard{
+  position:relative;
+  cursor:grab;
+  border-radius:6px;
+  overflow:hidden;
+  border:2px solid transparent;
+  transition:.1s ease;
+  background:#181818;
+  box-shadow:0 5px 12px rgba(0,0,0,.28);
+}
+
+.dcard:hover{
+  border-color:rgba(212,170,82,.75);
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(0,0,0,.35),0 0 12px rgba(212,170,82,.16);
+}
+
+.dcard img{
+  width:100%;
+  display:block;
+  background:#1a1a1a;
+}
+
+.dcard .dqty{
+  position:absolute;
+  top:2px;
+  left:2px;
+  background:rgba(0,0,0,.82);
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+  padding:1px 5px;
+  border-radius:5px;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.dcard .drem{
+  position:absolute;
+  top:2px;
+  right:2px;
+  background:rgba(180,0,0,.88);
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.dcard:hover .drem{display:flex;}
+.dcard.limited{border-color:#c8a000;}
+.dcard.semi{border-color:#0080c8;}
+.dcard.forbidden{border-color:#c80000;opacity:.5;}
+
+#modalOverlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.82);
+  z-index:100;
+  align-items:center;
+  justify-content:center;
+}
+
+#modalOverlay.open{display:flex;}
+
+#modal{
+  background:linear-gradient(to bottom,#1b1712,#101010);
+  border:1px solid rgba(212,170,82,.45);
+  border-radius:16px;
+  padding:24px;
+  width:440px;
+  max-width:95vw;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  box-shadow:0 0 30px rgba(0,0,0,.5),0 0 18px rgba(212,170,82,.12);
+}
+
+#modal h2{font-size:16px;color:#f1d18a;}
+#modal p{font-size:12px;color:#9d907d;}
+
+.mfield{display:flex;flex-direction:column;gap:4px;}
+.mfield label{font-size:11px;color:#b9aa8d;}
+
+.mfield input,.mfield textarea{
+  background:#0d0d0d;
+  border:1px solid #3b3020;
+  border-radius:8px;
+  color:#f0f0f0;
+  padding:8px 10px;
+  font-size:13px;
+}
+
+.mfield textarea{resize:vertical;min-height:60px;}
+
+.mactions{
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  margin-top:4px;
+}
+
+.mactions button{
+  padding:8px 16px;
+  border-radius:8px;
+  border:1px solid #5c4a2c;
+  background:#181818;
+  color:#f3d089;
+  cursor:pointer;
+}
+
+#submitBtn{
+  background:#1a3a1a;
+  border-color:#2a6a2a;
+  color:#8fff8f;
+  font-weight:900;
+}
+
+#submitBtn:disabled{opacity:.4;cursor:not-allowed;}
+#modalMsg{font-size:12px;min-height:16px;}
+#modalMsg.ok{color:#8fff8f;}
+#modalMsg.err{color:#ff8f8f;}
+
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:#0d0d0d;}
+::-webkit-scrollbar-thumb{background:#4b3a20;border-radius:3px;}
+
+@media(max-width:900px){
+  #app{grid-template-columns:1fr;}
+  #searchPanel{height:260px;border-right:none;border-bottom:1px solid rgba(212,170,82,.25);}
+  #deckMain{min-height:0;}
+  #cardPreviewPanel{display:none;}
+}
+</style>
+</head>
+<body>
+<div id="header">
+  <h1>NeoGoat Deck Builder <span id="fmtLabel">April 2026 Format</span></h1>
+  <span id="statusBadge">Loading...</span>
+  <div class="spacer"></div>
+  <button class="hbtn" id="saveBtn">Save</button>
+  <button class="hbtn" id="loadBtn">Load</button>
+  <button class="hbtn" id="clearBtn">New</button>
+  <button class="hbtn" id="exportBtn">Export</button>
+  <button class="hbtn" id="shareBtn">Share Deck</button>
+  <button class="hbtn" onclick="location.href='/decks.html'">Deck Library</button>
+</div>
+
+<div id="app">
+  <div id="searchPanel">
+    <div id="searchTop">
+      <input id="searchInput" placeholder="Search by name, text, type, attribute..." autocomplete="off">
+      <div class="filterRow">
+        <select id="cardTypeFilter">
+          <option value="">All cards</option>
+          <option value="Monster">Monster</option>
+          <option value="Spell">Spell</option>
+          <option value="Trap">Trap</option>
+        </select>
+        <select id="subtypeFilter">
+          <option value="">All subtypes</option>
+        </select>
+      </div>
+      <div class="filterRow" id="monsterFilters">
+        <select id="attributeFilter">
+          <option value="">All attributes</option>
+        </select>
+        <select id="monsterTypeFilter">
+          <option value="">All monster types</option>
+        </select>
+      </div>
+      <div id="resultCount">Showing first 80 results</div>
+    </div>
+    <div id="searchResults"></div>
+  </div>
+
+  <div id="deckArea">
+    <div id="deckBar"><span id="validation" class="err">Main 0/40-60</span></div>
+
+    <div id="deckMain">
+      <div id="deckZones">
+        <div class="zone">
+          <div class="zoneTitle">Main Deck (<span id="cntMain">0</span>) <span class="zoneHint">Main Deck cards only</span></div>
+          <div class="zoneGrid" id="mainGrid" data-zone="main"></div>
+        </div>
+
+        <div class="zone">
+          <div class="zoneTitle">Extra Deck (<span id="cntExtra">0</span>) <span class="zoneHint">Fusion / Synchro / Xyz / Link only</span></div>
+          <div class="zoneGrid" id="extraGrid" data-zone="extra"></div>
+        </div>
+
+        <div class="zone">
+          <div class="zoneTitle">Side Deck (<span id="cntSide">0</span>) <span class="zoneHint">Any card allowed, including Fusions</span></div>
+          <div class="zoneGrid" id="sideGrid" data-zone="side"></div>
+        </div>
+      </div>
+
+      <div id="cardPreviewPanel">
+        <img id="previewImg" alt="">
+        <div id="previewName"></div>
+        <div id="previewInfo"></div>
+        <div id="previewText"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalOverlay">
+  <div id="modal">
+    <h2>Share Deck</h2>
+    <p>Your deck will be reviewed before being published.</p>
+    <div class="mfield"><label>Deck name *</label><input id="fTitle" placeholder="e.g. Chaos Warrior April 2026" maxlength="80"></div>
+    <div class="mfield"><label>Your name / alias *</label><input id="fAuthor" placeholder="e.g. Tona" maxlength="40"></div>
+    <div class="mfield"><label>Archetype</label><input id="fArchetype" placeholder="e.g. Chaos Warrior..." maxlength="60"></div>
+    <div class="mfield"><label>Description / strategy</label><textarea id="fDesc" placeholder="Briefly explain how the deck works..."></textarea></div>
+    <div id="modalMsg"></div>
+    <div class="mactions"><button id="cancelBtn">Cancel</button><button id="submitBtn">Submit Deck</button></div>
+  </div>
+</div>
+
+<script>
+var SURL="https://tpkqfvizizjbunpbutlo.supabase.co";
+var SKEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
+var IMG="https://images.ygoprodeck.com/images/cards_small/";
+
+function ci(id){return IMG+id+".jpg";}
+function slug(t){return t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\s-]/g,"").trim().replace(/\s+/g,"-")+"-"+Date.now();}
+
+async function submitDeck(p){
+  var r=await fetch(SURL+"/rest/v1/decks",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json",
+      "apikey":SKEY,
+      "Authorization":"Bearer "+SKEY,
+      "Prefer":"return=representation"
+    },
+    body:JSON.stringify(p)
+  });
+  if(!r.ok){
+    var e=await r.json();
+    throw new Error(e.message||"Save error");
+  }
+  return r.json();
+}
+
+(async function(){
+  var LS="neogoat_v4_dragdrop";
+  var cardList=[],cardMap={},rules={},fmtId="apr_2026";
+  var deck={main:new Map(),extra:new Map(),side:new Map()};
+  var banLimit={"forbidden":0,"limited":1,"semi-limited":2,"unlimited":3};
+
+  function cnt(s){
+    var t=0;
+    deck[s].forEach(function(v){t+=v;});
+    return t;
+  }
+
+  function copies(id){
+    return (deck.main.get(id)||0)+(deck.extra.get(id)||0)+(deck.side.get(id)||0);
+  }
+
+  function lim(id){
+    return rules[id]?rules[id].limit:3;
+  }
+
+  function bc(id){
+    var l=lim(id);
+    if(l===0)return "forbidden";
+    if(l===1)return "limited";
+    if(l===2)return "semi";
+    return "";
+  }
+
+  function isExtraDeck(id){
+    var c=cardMap[id];
+    if(!c)return false;
+    var st=String(c.subType||"").toLowerCase();
+    var ty=String(c.type||"").toLowerCase();
+    return st==="fusion"||st==="synchro"||st==="xyz"||st==="link"||ty.indexOf("fusion")>=0||ty.indexOf("synchro")>=0||ty.indexOf("xyz")>=0||ty.indexOf("link")>=0;
+  }
+
+  function canPlace(id,zone){
+    if(!rules[id]||!rules[id].legal)return "This card is forbidden or not legal.";
+    if(rules[id].limit===0)return "This card is forbidden.";
+    if(copies(id)>=rules[id].limit)return "Copy limit reached.";
+    if(zone==="extra"&&!isExtraDeck(id))return "Only Extra Deck monsters can be placed in Extra Deck.";
+    if(zone==="main"&&isExtraDeck(id))return "Extra Deck monsters cannot be placed in Main Deck.";
+    if(zone==="extra"&&cnt("extra")>=15)return "Extra Deck is full.";
+    if(zone==="side"&&cnt("side")>=15)return "Side Deck is full.";
+    return "";
+  }
+
+  function validate(){
+    var errs=[];
+    if(cnt("main")<40||cnt("main")>60)errs.push("Main "+cnt("main")+"/40-60");
+    if(cnt("extra")>15)errs.push("Extra max 15");
+    if(cnt("side")>15)errs.push("Side max 15");
+
+    var v=document.getElementById("validation");
+    if(errs.length){
+      v.textContent=errs.join(" | ");
+      v.className="err";
+    }else{
+      v.textContent="Deck OK";
+      v.className="ok";
+    }
+    return errs.length===0;
+  }
+
+  function renderDeck(){
+    var zones={
+      main:document.getElementById("mainGrid"),
+      extra:document.getElementById("extraGrid"),
+      side:document.getElementById("sideGrid")
+    };
+
+    Object.keys(zones).forEach(function(z){
+      zones[z].innerHTML="";
+    });
+
+    document.getElementById("cntMain").textContent=cnt("main");
+    document.getElementById("cntExtra").textContent=cnt("extra");
+    document.getElementById("cntSide").textContent=cnt("side");
+
+    validate();
+
+    ["main","extra","side"].forEach(function(section){
+      if(deck[section].size===0){
+        zones[section].innerHTML="<div class='emptyDeck'>Drop cards here</div>";
+        return;
+      }
+
+      deck[section].forEach(function(qty,id){
+        var d=document.createElement("div");
+        d.className="dcard "+bc(id);
+        d.draggable=true;
+        d.dataset.id=id;
+        d.dataset.from=section;
+
+        d.innerHTML=
+          "<img src='"+ci(id)+"' loading='lazy' alt=''>"+
+          "<div class='dqty'>"+qty+"x</div>"+
+          "<div class='drem'>-</div>";
+
+        d.querySelector("img").onclick=function(){showP(id);};
+        d.querySelector(".drem").onclick=function(e){
+          e.stopPropagation();
+          removeCard(section,id);
+        };
+
+        d.addEventListener("dragstart",function(e){
+          e.dataTransfer.setData("id",id);
+          e.dataTransfer.setData("from",section);
+        });
+
+        zones[section].appendChild(d);
+      });
+    });
+  }
+
+  function addCardTo(id,zone){
+    // Normal behavior: pressing Main on a Fusion/Extra Deck monster sends it to Extra.
+    // Side Deck still accepts Extra Deck monsters.
+    if(zone==="main"&&isExtraDeck(id)){
+      zone="extra";
+    }
+
+    var err=canPlace(id,zone);
+    if(err){
+      alert(err);
+      return;
+    }
+    deck[zone].set(id,(deck[zone].get(id)||0)+1);
+    renderDeck();
+  }
+
+  function removeCard(section,id){
+    var q=deck[section].get(id)||0;
+    if(q<=1)deck[section].delete(id);
+    else deck[section].set(id,q-1);
+    renderDeck();
+  }
+
+  function moveCard(id,from,to){
+    if(!id||!from||!to||from===to)return;
+
+    if(to==="extra"&&!isExtraDeck(id)){
+      alert("Only Extra Deck monsters can be placed in Extra Deck.");
+      return;
+    }
+
+    if(to==="main"&&isExtraDeck(id)){
+      alert("Extra Deck monsters cannot be placed in Main Deck.");
+      return;
+    }
+
+    if(to==="extra"&&cnt("extra")>=15){
+      alert("Extra Deck is full.");
+      return;
+    }
+
+    if(to==="side"&&cnt("side")>=15){
+      alert("Side Deck is full.");
+      return;
+    }
+
+    var q=deck[from].get(id)||0;
+    if(q<=0)return;
+
+    if(q<=1)deck[from].delete(id);
+    else deck[from].set(id,q-1);
+
+    deck[to].set(id,(deck[to].get(id)||0)+1);
+    renderDeck();
+  }
+
+  function setupDropZones(){
+    ["main","extra","side"].forEach(function(zone){
+      var el=document.getElementById(zone+"Grid");
+
+      el.addEventListener("dragover",function(e){
+        e.preventDefault();
+        el.classList.add("dragover");
+      });
+
+      el.addEventListener("dragleave",function(){
+        el.classList.remove("dragover");
+      });
+
+      el.addEventListener("drop",function(e){
+        e.preventDefault();
+        el.classList.remove("dragover");
+
+        var id=e.dataTransfer.getData("id");
+        var from=e.dataTransfer.getData("from");
+
+        if(from==="search"){
+          addCardTo(id,zone);
+        }else{
+          moveCard(id,from,zone);
+        }
+      });
+    });
+  }
+
+  function showP(id){
+    var c=cardMap[id];
+    if(!c)return;
+
+    var img=document.getElementById("previewImg");
+    img.src=ci(id);
+    img.style.display="block";
+
+    document.getElementById("previewName").textContent=String(c.name||"");
+
+    var lbl=["Forbidden","Limited","Semi-Limited","Unlimited"];
+    var l=lim(id);
+    var color=l===0?"#f88":l===1?"#fc0":l===2?"#8af":"#8f8";
+
+    document.getElementById("previewInfo").innerHTML=
+      (c.type||"")+
+      (c.subType?" / "+c.subType:"")+"<br>"+
+      (c.attribute?String(c.attribute).trim().toUpperCase():"")+
+      (c.monsterType?" / "+c.monsterType:"")+
+      (c.atk!=null?" | ATK:"+c.atk+" DEF:"+c.def:"")+
+      "<br><b style='color:"+color+"'>"+(lbl[l]!==undefined?lbl[l]:"Unlimited")+"</b>";
+
+    var pt=document.getElementById("previewText");
+    if(pt)pt.textContent=c.text||"";
+  }
+
+  function getCardKind(c){
+    var t=String(c.type||"").toLowerCase();
+    if(t.indexOf("spell")>=0)return "Spell";
+    if(t.indexOf("trap")>=0)return "Trap";
+    return "Monster";
+  }
+
+  function getCardSubtype(c){
+    // In this JSON, cards like Asura Priest have subType="Effect" and class="Spirit".
+    // So Monster subtype filter must check class first when it exists.
+    if(getCardKind(c)==="Monster" && c.class){
+      return String(c.class||"").trim();
+    }
+    return String(c.subType||"").trim();
+  }
+
+  function searchableText(c){
+    return [
+      c.name,c.text,c.type,c.subType,c.class,c.attribute,c.monsterType
+    ].map(function(x){return String(x||"").toLowerCase();}).join(" ");
+  }
+
+  function populateFilters(){
+    var attrSet={}, monSet={};
+
+    var monsterOrder=[
+      "Warrior","Spellcaster","Dragon","Fiend","Zombie","Machine","Beast",
+      "Beast-Warrior","Winged Beast","Aqua","Pyro","Thunder","Rock","Plant",
+      "Insect","Fairy","Reptile","Fish","Sea Serpent","Dinosaur"
+    ];
+
+    cardList.forEach(function(c){
+      if(getCardKind(c)==="Monster"){
+        if(c.attribute)attrSet[String(c.attribute).trim().toUpperCase()]=true;
+        if(c.monsterType)monSet[String(c.monsterType).trim()]=true;
+      }
+    });
+
+    var attrSel=document.getElementById("attributeFilter");
+    Object.keys(attrSet).sort().forEach(function(a){
+      var o=document.createElement("option");
+      o.value=a;o.textContent=a;
+      attrSel.appendChild(o);
+    });
+
+    var monSel=document.getElementById("monsterTypeFilter");
+    monsterOrder.concat(Object.keys(monSet).sort()).filter(function(v,i,a){
+      return monSet[v]&&a.indexOf(v)===i;
+    }).forEach(function(m){
+      var o=document.createElement("option");
+      o.value=m;o.textContent=m;
+      monSel.appendChild(o);
+    });
+
+    updateSubtypeOptions();
+  }
+
+  function updateSubtypeOptions(){
+    var kind=document.getElementById("cardTypeFilter").value;
+    var sub=document.getElementById("subtypeFilter");
+    var current=sub.value;
+
+    sub.innerHTML="<option value=''>All subtypes</option>";
+
+    var monsterSubtypes=["Normal","Effect","Ritual","Fusion","Spirit","Flip","Union","Gemini","Toon"];
+    var spellSubtypes=["Normal","Quick-Play","Equip","Ritual","Continuous","Field"];
+    var trapSubtypes=["Normal","Counter","Continuous"];
+
+    var list=[];
+    if(kind==="Monster")list=monsterSubtypes;
+    else if(kind==="Spell")list=spellSubtypes;
+    else if(kind==="Trap")list=trapSubtypes;
+
+    list.forEach(function(s){
+      var o=document.createElement("option");
+      o.value=s;o.textContent=s;
+      sub.appendChild(o);
+    });
+
+    if(list.indexOf(current)>=0)sub.value=current;
+
+    var mf=document.getElementById("monsterFilters");
+    mf.style.display=(kind===""||kind==="Monster")?"grid":"none";
+  }
+
+  function cardMatchesFilters(c,q,kind,sub,attr,monType){
+    if(q&&searchableText(c).indexOf(q)<0)return false;
+
+    var ck=getCardKind(c);
+    if(kind&&ck!==kind)return false;
+
+    if(sub){
+      var s=sub.toLowerCase();
+      var cs=getCardSubtype(c).toLowerCase();
+      var rawSub=String(c.subType||"").toLowerCase();
+      var cls=String(c.class||"").toLowerCase();
+
+      if(s==="normal"){
+        if(cs&&cs!=="normal"&&rawSub!=="normal")return false;
+      }else if(cs!==s && rawSub!==s && cls!==s){
+        return false;
+      }
+    }
+
+    if((kind===""||kind==="Monster")&&ck==="Monster"){
+      if(attr&&String(c.attribute||"").trim().toUpperCase()!==attr)return false;
+      if(monType&&String(c.monsterType||"").trim()!==monType)return false;
+    }
+
+    return true;
+  }
+
+  function renderSearch(q){
+    var el=document.getElementById("searchResults");
+    el.innerHTML="";
+    q=String(q||"").toLowerCase().trim();
+
+    var kind=document.getElementById("cardTypeFilter").value;
+    var sub=document.getElementById("subtypeFilter").value;
+    var attr=document.getElementById("attributeFilter").value;
+    var monType=document.getElementById("monsterTypeFilter").value;
+
+    var shown=0,total=0;
+
+    for(var i=0;i<cardList.length;i++){
+      var c=cardList[i];
+      if(!cardMatchesFilters(c,q,kind,sub,attr,monType))continue;
+
+      total++;
+      if(shown>=80)continue;
+      shown++;
+
+      var id=c.password;
+
+      var d=document.createElement("div");
+      d.className="scard";
+      d.draggable=true;
+      d.dataset.id=id;
+
+      d.innerHTML=
+        "<img src='"+ci(id)+"' loading='lazy' alt=''>"+
+        "<span class='sname'>"+c.name+"</span>"+
+        "<div class='sbtns'>"+
+          "<button class='sadd main'>Main</button>"+
+          "<button class='sadd side'>Side</button>"+
+        "</div>";
+
+      (function(cid,cardEl){
+        cardEl.addEventListener("dragstart",function(e){
+          e.dataTransfer.setData("id",cid);
+          e.dataTransfer.setData("from","search");
+        });
+
+        cardEl.querySelector("img").onclick=function(){showP(cid);};
+        cardEl.querySelector(".main").onclick=function(e){e.stopPropagation();addCardTo(cid,"main");};
+        cardEl.querySelector(".side").onclick=function(e){e.stopPropagation();addCardTo(cid,"side");};
+        cardEl.onmouseenter=function(){showP(cid);};
+      })(id,d);
+
+      el.appendChild(d);
+    }
+
+    document.getElementById("resultCount").textContent=
+      total+" result(s) found. Showing first "+shown+" results.";
+  }
+
+  function refreshSearch(){
+    renderSearch(document.getElementById("searchInput").value);
+  }
+
+  document.getElementById("searchInput").addEventListener("input",refreshSearch);
+  document.getElementById("cardTypeFilter").addEventListener("change",function(){
+    updateSubtypeOptions();
+    refreshSearch();
+  });
+  document.getElementById("subtypeFilter").addEventListener("change",refreshSearch);
+  document.getElementById("attributeFilter").addEventListener("change",refreshSearch);
+  document.getElementById("monsterTypeFilter").addEventListener("change",refreshSearch);
+
+  document.getElementById("saveBtn").onclick=function(){
+    localStorage.setItem(LS,JSON.stringify({main:[...deck.main],extra:[...deck.extra],side:[...deck.side]}));
+    alert("Saved locally");
+  };
+
+  document.getElementById("loadBtn").onclick=function(){
+    var r=localStorage.getItem(LS);
+    if(!r){
+      alert("No saved deck");
+      return;
+    }
+    var o=JSON.parse(r);
+    deck.main=new Map(o.main||[]);
+    deck.extra=new Map(o.extra||[]);
+    deck.side=new Map(o.side||[]);
+    renderDeck();
+  };
+
+  document.getElementById("clearBtn").onclick=function(){
+    deck.main.clear();
+    deck.extra.clear();
+    deck.side.clear();
+    renderDeck();
+  };
+
+  document.getElementById("exportBtn").onclick=function(){
+    var t="# Main\n";
+    deck.main.forEach(function(q,id){t+=q+" "+(cardMap[id]?cardMap[id].name:id)+"\n";});
+    t+="\n# Extra\n";
+    deck.extra.forEach(function(q,id){t+=q+" "+(cardMap[id]?cardMap[id].name:id)+"\n";});
+    t+="\n# Side\n";
+    deck.side.forEach(function(q,id){t+=q+" "+(cardMap[id]?cardMap[id].name:id)+"\n";});
+    navigator.clipboard.writeText(t);
+    alert("Copied to clipboard");
+  };
+
+  var overlay=document.getElementById("modalOverlay");
+  var msg=document.getElementById("modalMsg");
+
+  document.getElementById("shareBtn").onclick=function(){
+    if(!validate()){
+      alert("Deck must be valid before sharing.");
+      return;
+    }
+    msg.textContent="";
+    msg.className="";
+    overlay.classList.add("open");
+  };
+
+  document.getElementById("cancelBtn").onclick=function(){
+    overlay.classList.remove("open");
+  };
+
+  overlay.addEventListener("click",function(e){
+    if(e.target===overlay)overlay.classList.remove("open");
+  });
+
+  function serialize(s){
+    var r=[];
+    deck[s].forEach(function(qty,id){
+      r.push({name:cardMap[id]?cardMap[id].name:id,qty:qty});
+    });
+    return r;
+  }
+
+  document.getElementById("submitBtn").onclick=async function(){
+    var title=document.getElementById("fTitle").value.trim();
+    var author=document.getElementById("fAuthor").value.trim();
+
+    if(!title||!author){
+      msg.textContent="Name and alias required.";
+      msg.className="err";
+      return;
+    }
+
+    var btn=document.getElementById("submitBtn");
+    btn.disabled=true;
+    btn.textContent="Sending...";
+    msg.textContent="";
+
+    try{
+      await submitDeck({
+        slug:slug(title),
+        title:title,
+        author_name:author,
+        format:fmtId,
+        archetype:document.getElementById("fArchetype").value.trim()||null,
+        description:document.getElementById("fDesc").value.trim()||null,
+        main_deck:serialize("main"),
+        side_deck:serialize("side"),
+        extra_deck:serialize("extra"),
+        is_public:false
+      });
+
+      msg.textContent="Deck submitted! Will appear once approved.";
+      msg.className="ok";
+      btn.textContent="Submitted!";
+
+      setTimeout(function(){
+        overlay.classList.remove("open");
+        btn.disabled=false;
+        btn.textContent="Submit Deck";
+        document.getElementById("fTitle").value="";
+        document.getElementById("fAuthor").value="";
+        document.getElementById("fArchetype").value="";
+        document.getElementById("fDesc").value="";
+      },3000);
+    }catch(e){
+      msg.textContent="Error: "+e.message;
+      msg.className="err";
+      btn.disabled=false;
+      btn.textContent="Submit Deck";
+    }
+  };
+
+  var sb=document.getElementById("statusBadge");
+
+  try{
+    var cfg=await(await fetch("/data/config.json")).json();
+    fmtId=cfg.currentFormatId||"apr_2026";
+
+    var rf=cfg.rulesFile||"cards_april_2026_final.json";
+    var resp=await fetch("/data/formats/"+fmtId+"/"+rf);
+
+    if(!resp.ok)throw new Error("404: "+fmtId+"/"+rf);
+
+    cardList=await resp.json();
+
+    cardList.forEach(function(c){
+      cardMap[c.password]=c;
+      var bs=(c.ban_status||"unlimited").toLowerCase();
+      rules[c.password]={legal:bs!=="forbidden",limit:banLimit[bs]!=null?banLimit[bs]:3};
+    });
+
+    setupDropZones();
+    populateFilters();
+    sb.textContent=cardList.length+" cards loaded";
+    sb.className="";
+    renderSearch("");
+    renderDeck();
+  }catch(e){
+    console.error(e);
+    sb.textContent="Failed loading cards";
+    sb.className="err";
+  }
+})();
+</script>
+</body>
+</html>
