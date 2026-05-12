@@ -681,11 +681,15 @@ body.removing #deckZones:after{
   <h1>NeoGoat Deck Builder <span id="fmtLabel">April 2026 Format</span></h1>
   <span id="statusBadge">Loading...</span>
   <div class="spacer"></div>
-  <button class="hbtn" id="saveBtn">Save</button>
-  <button class="hbtn" id="loadBtn">Load</button>
-  <button class="hbtn" id="clearBtn">New</button>
-  <button class="hbtn" id="exportBtn">Export</button>
-  <button class="hbtn" id="shareBtn">Share Deck</button>
+<button class="hbtn" id="saveBtn">Save</button>
+<button class="hbtn" id="loadBtn">Load</button>
+<button class="hbtn" id="clearBtn">New</button>
+<button class="hbtn" id="exportBtn">Export</button>
+
+<button class="hbtn" id="importBtn">Import .ydk</button>
+<input type="file" id="ydkInput" accept=".ydk" style="display:none">
+
+<button class="hbtn" id="shareBtn">Share Deck</button>
   <button class="hbtn" onclick="location.href='/decks.html'">Deck Library</button>
 </div>
 
@@ -1426,6 +1430,72 @@ async function submitDeck(p){
   };
 
   document.getElementById("exportBtn").onclick=function(){
+    document.getElementById("importBtn").onclick=function(){
+  document.getElementById("ydkInput").click();
+};
+
+document.getElementById("ydkInput").addEventListener("change", async function(e){
+  var file=e.target.files[0];
+
+  if(!file)return;
+
+  var text=await file.text();
+
+  importYDK(text);
+
+  e.target.value="";
+});
+
+function importYDK(text){
+
+  deck.main.clear();
+  deck.extra.clear();
+  deck.side.clear();
+
+  var section=null;
+
+  text.split(/\r?\n/).forEach(function(line){
+
+    line=line.trim();
+
+    if(!line)return;
+
+    if(line==="#main"){
+      section="main";
+      return;
+    }
+
+    if(line==="#extra"){
+      section="extra";
+      return;
+    }
+
+    if(line==="!side"){
+      section="side";
+      return;
+    }
+
+    if(line.startsWith("#"))return;
+
+    if(!section)return;
+
+    var id=String(Number(line));
+
+    if(!cardMap[id]){
+      console.warn("Card not found:",id);
+      return;
+    }
+
+    deck[section].set(
+      id,
+      (deck[section].get(id)||0)+1
+    );
+  });
+
+  renderDeck();
+
+  alert("YDK imported successfully");
+}
     var t="# Main\n";
     deck.main.forEach(function(q,id){t+=q+" "+(cardMap[id]?cardMap[id].name:id)+"\n";});
     t+="\n# Extra\n";
