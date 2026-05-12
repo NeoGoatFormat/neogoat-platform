@@ -1428,9 +1428,7 @@ async function submitDeck(p){
     deck.side.clear();
     renderDeck();
   };
-
-  document.getElementById("exportBtn").onclick=function(){
-    document.getElementById("importBtn").onclick=function(){
+document.getElementById("importBtn").onclick=function(){
   document.getElementById("ydkInput").click();
 };
 
@@ -1496,6 +1494,7 @@ function importYDK(text){
 
   alert("YDK imported successfully");
 }
+  document.getElementById("exportBtn").onclick=function(){
     var t="# Main\n";
     deck.main.forEach(function(q,id){t+=q+" "+(cardMap[id]?cardMap[id].name:id)+"\n";});
     t+="\n# Extra\n";
