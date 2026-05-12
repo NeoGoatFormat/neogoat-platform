@@ -1381,6 +1381,11 @@ async function submitDeck(p){
           e.dataTransfer.setData("from",section);
         });
 
+        d.addEventListener("contextmenu",function(e){
+  e.preventDefault();
+
+  removeCard(section,id);
+});
         zones[section].appendChild(d);
       });
     });
