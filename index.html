@@ -20,9 +20,11 @@ button,input,textarea{font:inherit;}
 
 #app{display:grid;grid-template-columns:270px 1fr;flex:1;overflow:hidden;min-height:0;}
 #searchPanel{background:#111;border-right:1px solid #1e1e1e;display:flex;flex-direction:column;overflow:hidden;min-height:0;}
-#searchTop{padding:8px;flex-shrink:0;}
-#searchTop input{width:100%;padding:7px 10px;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:8px;color:#f0f0f0;font-size:13px;}
-#searchTop input:focus{outline:none;border-color:#444;}
+#searchTop{padding:8px;flex-shrink:0;display:flex;flex-direction:column;gap:6px;}
+#searchTop input,#searchTop select{width:100%;padding:7px 10px;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:8px;color:#f0f0f0;font-size:13px;}
+#searchTop input:focus,#searchTop select:focus{outline:none;border-color:#444;}
+.filterRow{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+#resultCount{font-size:10px;color:#777;padding:0 2px;}
 #searchResults{flex:1;overflow-y:auto;padding:4px;min-height:0;display:block;}
 .scard{display:flex;align-items:center;gap:7px;padding:4px 6px;border-radius:7px;cursor:grab;border:1px solid transparent;}
 .scard:hover{background:#181818;border-color:#2a2a2a;}
@@ -110,7 +112,29 @@ button,input,textarea{font:inherit;}
 
 <div id="app">
   <div id="searchPanel">
-    <div id="searchTop"><input id="searchInput" placeholder="Search cards..." autocomplete="off"></div>
+    <div id="searchTop">
+      <input id="searchInput" placeholder="Search by name, text, type, attribute..." autocomplete="off">
+      <div class="filterRow">
+        <select id="cardTypeFilter">
+          <option value="">All cards</option>
+          <option value="Monster">Monster</option>
+          <option value="Spell">Spell</option>
+          <option value="Trap">Trap</option>
+        </select>
+        <select id="subtypeFilter">
+          <option value="">All subtypes</option>
+        </select>
+      </div>
+      <div class="filterRow" id="monsterFilters">
+        <select id="attributeFilter">
+          <option value="">All attributes</option>
+        </select>
+        <select id="monsterTypeFilter">
+          <option value="">All monster types</option>
+        </select>
+      </div>
+      <div id="resultCount">Showing first 80 results</div>
+    </div>
     <div id="searchResults"></div>
   </div>
 
@@ -410,18 +434,131 @@ async function submitDeck(p){
     if(pt)pt.textContent=c.text||"";
   }
 
+  function getCardKind(c){
+    var t=String(c.type||"").toLowerCase();
+    if(t.indexOf("spell")>=0)return "Spell";
+    if(t.indexOf("trap")>=0)return "Trap";
+    return "Monster";
+  }
+
+  function getCardSubtype(c){
+    return String(c.subType||"").trim();
+  }
+
+  function searchableText(c){
+    return [
+      c.name,c.text,c.type,c.subType,c.attribute,c.monsterType
+    ].map(function(x){return String(x||"").toLowerCase();}).join(" ");
+  }
+
+  function populateFilters(){
+    var attrSet={}, monSet={};
+
+    var monsterOrder=[
+      "Warrior","Spellcaster","Dragon","Fiend","Zombie","Machine","Beast",
+      "Beast-Warrior","Winged Beast","Aqua","Pyro","Thunder","Rock","Plant",
+      "Insect","Fairy","Reptile","Fish","Sea Serpent","Dinosaur"
+    ];
+
+    cardList.forEach(function(c){
+      if(getCardKind(c)==="Monster"){
+        if(c.attribute)attrSet[String(c.attribute).trim()]=true;
+        if(c.monsterType)monSet[String(c.monsterType).trim()]=true;
+      }
+    });
+
+    var attrSel=document.getElementById("attributeFilter");
+    Object.keys(attrSet).sort().forEach(function(a){
+      var o=document.createElement("option");
+      o.value=a;o.textContent=a;
+      attrSel.appendChild(o);
+    });
+
+    var monSel=document.getElementById("monsterTypeFilter");
+    monsterOrder.concat(Object.keys(monSet).sort()).filter(function(v,i,a){
+      return monSet[v]&&a.indexOf(v)===i;
+    }).forEach(function(m){
+      var o=document.createElement("option");
+      o.value=m;o.textContent=m;
+      monSel.appendChild(o);
+    });
+
+    updateSubtypeOptions();
+  }
+
+  function updateSubtypeOptions(){
+    var kind=document.getElementById("cardTypeFilter").value;
+    var sub=document.getElementById("subtypeFilter");
+    var current=sub.value;
+
+    sub.innerHTML="<option value=''>All subtypes</option>";
+
+    var monsterSubtypes=["Normal","Effect","Ritual","Fusion","Spirit","Flip","Union","Gemini","Toon"];
+    var spellSubtypes=["Normal","Quick-Play","Equip","Ritual","Continuous","Field"];
+    var trapSubtypes=["Normal","Counter","Continuous"];
+
+    var list=[];
+    if(kind==="Monster")list=monsterSubtypes;
+    else if(kind==="Spell")list=spellSubtypes;
+    else if(kind==="Trap")list=trapSubtypes;
+
+    list.forEach(function(s){
+      var o=document.createElement("option");
+      o.value=s;o.textContent=s;
+      sub.appendChild(o);
+    });
+
+    if(list.indexOf(current)>=0)sub.value=current;
+
+    var mf=document.getElementById("monsterFilters");
+    mf.style.display=(kind===""||kind==="Monster")?"grid":"none";
+  }
+
+  function cardMatchesFilters(c,q,kind,sub,attr,monType){
+    if(q&&searchableText(c).indexOf(q)<0)return false;
+
+    var ck=getCardKind(c);
+    if(kind&&ck!==kind)return false;
+
+    if(sub){
+      var cs=getCardSubtype(c).toLowerCase();
+      var s=sub.toLowerCase();
+
+      if(s==="normal"){
+        if(cs&&cs!=="normal")return false;
+      }else if(cs!==s){
+        return false;
+      }
+    }
+
+    if((kind===""||kind==="Monster")&&ck==="Monster"){
+      if(attr&&String(c.attribute||"")!==attr)return false;
+      if(monType&&String(c.monsterType||"")!==monType)return false;
+    }
+
+    return true;
+  }
+
   function renderSearch(q){
     var el=document.getElementById("searchResults");
     el.innerHTML="";
-    q=q.toLowerCase();
+    q=String(q||"").toLowerCase().trim();
 
-    var shown=0;
-    for(var i=0;i<cardList.length&&shown<80;i++){
+    var kind=document.getElementById("cardTypeFilter").value;
+    var sub=document.getElementById("subtypeFilter").value;
+    var attr=document.getElementById("attributeFilter").value;
+    var monType=document.getElementById("monsterTypeFilter").value;
+
+    var shown=0,total=0;
+
+    for(var i=0;i<cardList.length;i++){
       var c=cardList[i];
-      var cname=String(c.name||"").toLowerCase();
-      if(q.length>0&&cname.indexOf(q)<0)continue;
+      if(!cardMatchesFilters(c,q,kind,sub,attr,monType))continue;
 
+      total++;
+      if(shown>=80)continue;
       shown++;
+
       var id=c.password;
 
       var d=document.createElement("div");
@@ -451,11 +588,23 @@ async function submitDeck(p){
 
       el.appendChild(d);
     }
+
+    document.getElementById("resultCount").textContent=
+      total+" result(s) found. Showing first "+shown+" results.";
   }
 
-  document.getElementById("searchInput").addEventListener("input",function(){
+  function refreshSearch(){
     renderSearch(document.getElementById("searchInput").value);
+  }
+
+  document.getElementById("searchInput").addEventListener("input",refreshSearch);
+  document.getElementById("cardTypeFilter").addEventListener("change",function(){
+    updateSubtypeOptions();
+    refreshSearch();
   });
+  document.getElementById("subtypeFilter").addEventListener("change",refreshSearch);
+  document.getElementById("attributeFilter").addEventListener("change",refreshSearch);
+  document.getElementById("monsterTypeFilter").addEventListener("change",refreshSearch);
 
   document.getElementById("saveBtn").onclick=function(){
     localStorage.setItem(LS,JSON.stringify({main:[...deck.main],extra:[...deck.extra],side:[...deck.side]}));
@@ -592,6 +741,7 @@ async function submitDeck(p){
     });
 
     setupDropZones();
+    populateFilters();
     sb.textContent=cardList.length+" cards loaded";
     sb.className="";
     renderSearch("");
