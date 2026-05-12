@@ -1065,8 +1065,35 @@ body.removing #deckZones:after{
     <p>Your deck will be reviewed before being published.</p>
     <div class="mfield"><label>Deck name *</label><input id="fTitle" placeholder="e.g. Chaos Warrior April 2026" maxlength="80"></div>
     <div class="mfield"><label>Your name / alias *</label><input id="fAuthor" placeholder="e.g. Tona" maxlength="40"></div>
-    <div class="mfield"><label>Archetype</label><input id="fArchetype" placeholder="e.g. Chaos Warrior..." maxlength="60"></div>
-    <div class="mfield"><label>Description / strategy</label><textarea id="fDesc" placeholder="Briefly explain how the deck works..."></textarea></div>
+<div class="mfield">
+  <label>Archetype</label>
+  <input id="fArchetype" placeholder="e.g. Chaos Warrior..." maxlength="60">
+</div>
+
+<div class="mfield">
+  <label>Thumbnail Card</label>
+  <input
+    id="fThumbCard"
+    placeholder="e.g. Toon Dark Magician Girl"
+    maxlength="80"
+  >
+</div>
+
+<div class="mfield">
+  <label>Preview Strip (comma separated)</label>
+  <input
+    id="fThumbStrip"
+    placeholder="Toon Bookmark, Toon Table of Contents, Shrink, Magical Dimension"
+  >
+</div>
+
+<div class="mfield">
+  <label>Description / strategy</label>
+  <textarea
+    id="fDesc"
+    placeholder="Briefly explain how the deck works..."
+  ></textarea>
+</div>
     <div id="modalMsg"></div>
     <div class="mactions"><button id="cancelBtn">Cancel</button><button id="submitBtn">Submit Deck</button></div>
   </div>
@@ -2272,6 +2299,14 @@ a.download = deckName + ".ydk";
         format:fmtId,
         archetype:document.getElementById("fArchetype").value.trim()||null,
         description:document.getElementById("fDesc").value.trim()||null,
+        thumbnail_card:
+  document.getElementById("fThumbCard").value.trim() || null,
+
+thumbnail_strip:
+  document.getElementById("fThumbStrip").value
+    .split(",")
+    .map(x=>x.trim())
+    .filter(Boolean),
         main_deck:serialize("main"),
         side_deck:serialize("side"),
         extra_deck:serialize("extra"),
