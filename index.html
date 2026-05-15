@@ -2401,6 +2401,7 @@ async function submitDeck(p){
         importSection(imported.main,"main");
         importSection(imported.extra,"extra");
         importSection(imported.side,"side");
+        renderDeck();
         localStorage.removeItem("ng_import_deck");
       }catch(e){console.error("Open Builder import failed",e);}
     }
