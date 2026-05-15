@@ -2375,12 +2375,27 @@ async function submitDeck(p){
         var imported=JSON.parse(importedDeck);
         deck.main.clear();deck.extra.clear();deck.side.clear();
         function importSection(list,section){
-          (list||[]).forEach(function(card){
-            var id=findCardIdByName(card.name);
-            var qty=Number(card.qty)||1;
-            if(!id)return;
-            deck[section].set(id,(deck[section].get(id)||0)+qty);
-          });
+(list||[]).forEach(function(card){
+
+  var cardName =
+    card.name ||
+    card.card_name ||
+    "";
+
+  var id=findCardIdByName(cardName);
+
+  var qty =
+    Number(card.qty) ||
+    Number(card.count) ||
+    1;
+
+  if(!id)return;
+
+  deck[section].set(
+    id,
+    (deck[section].get(id)||0)+qty
+  );
+});
         }
         importSection(imported.main,"main");
         importSection(imported.extra,"extra");
