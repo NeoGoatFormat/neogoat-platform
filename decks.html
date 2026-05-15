@@ -450,7 +450,7 @@ function normText(s){
 }
 
 function cardImgUrl(cardId){
-  return `https://images.ygoprodeck.com/images/cards/${cardId}.jpg`;
+  return `https://images.ygoprodeck.com/images/cards/${card.id || card.card_id || card.password}.jpg`;
 }
 
 function renderDeckThumbs(deck){
