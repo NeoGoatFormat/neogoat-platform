@@ -1377,9 +1377,36 @@ var SKEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6I
 var IMG="https://images.ygoprodeck.com/images/cards_small/";
 
 function ci(id){return IMG+id+".jpg";}
-function slug(t){return t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\s-]/g,"").trim().replace(/\s+/g,"-")+"-"+Date.now();}
+function slug(t){
+  return t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\s-]/g,"").trim().replace(/\s+/g,"-")+"-"+Date.now();
+}
 
+function makeDeckSignature(payload){
+
+  function cleanList(list){
+    return (list || [])
+      .map(function(c){
+        return {
+          name:String(c.name || "").trim().toLowerCase(),
+          qty:Number(c.qty) || 1
+        };
+      })
+      .sort(function(a,b){
+        return a.name.localeCompare(b.name);
+      });
+  }
+
+  return JSON.stringify({
+    format: payload.format || "apr_2026",
+    main: cleanList(payload.main_deck),
+    extra: cleanList(payload.extra_deck),
+    side: cleanList(payload.side_deck)
+  });
+}
 async function submitDeck(p){
+  p.deck_signature = makeDeckSignature(p);
+  p.is_public = true;
+
   var r=await fetch(SURL+"/rest/v1/decks",{
     method:"POST",
     headers:{
