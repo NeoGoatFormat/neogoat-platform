@@ -2374,29 +2374,30 @@ async function submitDeck(p){
       try{
         var imported=JSON.parse(importedDeck);
         deck.main.clear();deck.extra.clear();deck.side.clear();
-        function importSection(list,section){
-(list||[]).forEach(function(card){
+     function importSection(list,section){
+  (list||[]).forEach(function(card){
 
-  var cardName =
-    card.name ||
-    card.card_name ||
-    "";
+    var cardName = card.name || card.card_name || "";
+    var id = findCardIdByName(cardName);
 
-  var id=findCardIdByName(cardName);
+    if(!id && card.password){
+      id = String(card.password);
+    }
 
-  var qty =
-    Number(card.qty) ||
-    Number(card.count) ||
-    1;
+    if(!id && card.id){
+      id = String(card.id);
+    }
 
-  if(!id)return;
+    if(!id || !cardMap[id]){
+      console.warn("Import skipped card:", card);
+      return;
+    }
 
-  deck[section].set(
-    id,
-    (deck[section].get(id)||0)+qty
-  );
-});
-        }
+    var qty = Number(card.qty) || Number(card.count) || 1;
+
+    deck[section].set(id,(deck[section].get(id)||0)+qty);
+  });
+}
         importSection(imported.main,"main");
         importSection(imported.extra,"extra");
         importSection(imported.side,"side");
