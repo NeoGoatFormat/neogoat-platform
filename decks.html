@@ -273,6 +273,24 @@ header h2{
   -webkit-box-orient:vertical;
 }
 
+.thumbStrip{
+  display:flex;
+  gap:8px;
+  margin:2px 0 6px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.thumbStrip img{
+  width:54px;
+  height:78px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid rgba(0,229,255,.35);
+  box-shadow:0 0 10px rgba(0,229,255,.18);
+  background:#05070c;
+}
+
 .deck-card .counts{
   display:flex;
   gap:7px;
@@ -322,23 +340,10 @@ header h2{
 <header>
   <div class="logoMark">◇</div>
 
-  <div style="
-    display:flex;
-    flex-direction:column;
-    gap:2px;
-  ">
+  <div style="display:flex;flex-direction:column;gap:2px;">
+    <h2 style="margin:0;">NeoGoat Deck Library</h2>
 
-    <h2 style="margin:0;">
-      NeoGoat Deck Library
-    </h2>
-
-    <div style="
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-    ">
-
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <span style="
         font-size:12px;
         font-weight:900;
@@ -365,9 +370,7 @@ header h2{
       >
         Visit the NeoGoat Blog ↗
       </a>
-
     </div>
-
   </div>
 
   <div class="spacer"></div>
@@ -406,7 +409,7 @@ let allDecks=[];
 
 async function loadDecks(){
   const res=await fetch(
-    `${SUPABASE_URL}/rest/v1/decks?is_public=eq.true&order=created_at.desc&select=id,slug,title,author_name,archetype,description,main_deck,extra_deck,side_deck,format,created_at`,
+    `${SUPABASE_URL}/rest/v1/decks?is_public=eq.true&order=created_at.desc&select=id,slug,title,author_name,archetype,description,main_deck,extra_deck,side_deck,thumbnail_card,thumbnail_strip,format,created_at`,
     {
       headers:{
         "apikey":SUPABASE_ANON_KEY,
@@ -444,6 +447,35 @@ function normText(s){
     .replace(/[’']/g,"")
     .replace(/[^a-z0-9]+/g," ")
     .trim();
+}
+
+function cardImgUrl(cardId){
+  return `https://images.ygoprodeck.com/images/cards/${cardId}.jpg`;
+}
+
+function renderDeckThumbs(deck){
+  const mainThumb = deck.thumbnail_card;
+  const strip = Array.isArray(deck.thumbnail_strip)
+    ? deck.thumbnail_strip
+    : [];
+
+  const ids = mainThumb
+    ? [mainThumb, ...strip.filter(id => id !== mainThumb)]
+    : strip;
+
+  if(!ids.length) return "";
+
+  return `
+    <div class="thumbStrip">
+      ${ids.slice(0,5).map(id => `
+        <img
+          src="${cardImgUrl(id)}"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        >
+      `).join("")}
+    </div>
+  `;
 }
 
 function deckContainsCard(deck,search){
@@ -503,6 +535,7 @@ function renderGrid(decks){
     a.href=`/deck.html?slug=${encodeURIComponent(d.slug)}`;
     a.innerHTML=`
       <div class="title">${escHtml(d.title)}</div>
+      ${renderDeckThumbs(d)}
       ${d.archetype?`<div class="archetype">${escHtml(d.archetype)}</div>`:""}
       <div class="meta">By ${escHtml(d.author_name)} · ${escHtml(d.format||"")} · ${date}</div>
       ${d.description?`<div class="desc">${escHtml(d.description)}</div>`:""}
