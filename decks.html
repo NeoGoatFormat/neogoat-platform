@@ -453,23 +453,42 @@ function cardImgUrl(cardId){
   return `https://images.ygoprodeck.com/images/cards/${card.id || card.card_id || card.password}.jpg`;
 }
 
+function findCardByThumbValue(value, deck){
+  const allCards=[
+    ...(deck.main_deck||[]),
+    ...(deck.extra_deck||[]),
+    ...(deck.side_deck||[])
+  ];
+
+  return allCards.find(c =>
+    String(c.id) === String(value) ||
+    String(c.card_id) === String(value) ||
+    String(c.password) === String(value) ||
+    String(c.name) === String(value)
+  );
+}
+
 function renderDeckThumbs(deck){
-  const mainThumb = deck.thumbnail_card;
-  const strip = Array.isArray(deck.thumbnail_strip)
-    ? deck.thumbnail_strip
-    : [];
+  const rawIds = [];
 
-  const ids = mainThumb
-    ? [mainThumb, ...strip.filter(id => id !== mainThumb)]
-    : strip;
+  if(deck.thumbnail_card) rawIds.push(deck.thumbnail_card);
 
-  if(!ids.length) return "";
+  if(Array.isArray(deck.thumbnail_strip)){
+    deck.thumbnail_strip.forEach(x => rawIds.push(x));
+  }
+
+  const cards = rawIds
+    .map(x => findCardByThumbValue(x, deck))
+    .filter(Boolean);
+
+  if(!cards.length) return "";
 
   return `
     <div class="thumbStrip">
-      ${ids.slice(0,5).map(id => `
+      ${cards.slice(0,5).map(card => `
         <img
-          src="${cardImgUrl(id)}"
+          src="${cardImgUrl(card)}"
+          title="${escHtml(card.name)}"
           loading="lazy"
           onerror="this.style.display='none'"
         >
