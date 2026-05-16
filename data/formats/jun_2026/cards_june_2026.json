@@ -10,7 +10,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "When there are 3 face-up \"7\" cards on your side of the field, draw 3 cards from your Deck. Then destroy all \"\"7\" cards. When this card is sent directly from the field to your Graveyard, increase your Life Points by 700 points.\"",
+    "text": "When there are 3 face-up \"7\" cards on your side of the field, draw 3 cards from your Deck. Then destroy all \"7\" cards. When this card is sent directly from the field to your Graveyard, increase your Life Points by 700 points.\"",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -1210,7 +1210,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "When your opponent activates \"Raigeki\"", all of your opponent's monsters are destroyed in place of your own.\"",
+    "text": "When your opponent activates \"Raigeki\", all of your opponent's monsters are destroyed in place of your own.\"",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -1626,7 +1626,7 @@
     "level": 7,
     "atk": 2800,
     "def": 1000,
-    "text": "Cannot be Normal Summoned/Set. Must be Special Summoned by \"Armed Dragon LV5\"", and cannot be Special Summoned by other ways. You can send 1 monster from your hand to the Graveyard: destroy all face-up monsters your opponent controls with ATK less than or equal to the sent monster's ATK.",
+    "text": "Cannot be Normal Summoned/Set. Must be Special Summoned by \"Armed Dragon LV5\", and cannot be Special Summoned by other ways. You can send 1 monster from your hand to the Graveyard: destroy all face-up monsters your opponent controls with ATK less than or equal to the sent monster's ATK.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -1834,7 +1834,7 @@
     "level": 4,
     "atk": 1600,
     "def": 1600,
-    "text": "FLIP: Add 1 card that includes \"Guardian\" in its card name from your Deck to your hand. You cannot add \"Celtic Guardian\"", \"Winged Dragon, Guardian of the Fortress #1\"", \"Winged Dragon, Guardian of the Fortress #2\"", \"Guardian of the Labyrinth\"", or \"The Reliable Guardian\".",
+    "text": "FLIP: Add 1 card that includes \"Guardian\" in its card name from your Deck to your hand. You cannot add \"Celtic Guardian\", \"Winged Dragon, Guardian of the Fortress #1\", \"Winged Dragon, Guardian of the Fortress #2\", \"Guardian of the Labyrinth\", or \"The Reliable Guardian\".",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -3322,7 +3322,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "During your Standby Phase, roll 1 six-sided die once. Destroy any monsters whose Level is equal to the number rolled. (If the number is 6\"", destroy all face-up Level 6 or higher monsters on the field.)\"",
+    "text": "During your Standby Phase, roll 1 six-sided die once. Destroy any monsters whose Level is equal to the number rolled. (If the number is 6\", destroy all face-up Level 6 or higher monsters on the field.)\"",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -4986,7 +4986,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "When your opponent Normal or Flip Summons a monster that has a Level: Target that face-up monster; Special Summon 1 \"Clone Token\"", with the same original Type, Attribute, Level, ATK, and DEF as that target. When that target is destroyed and sent to the GY, destroy this Token.",
+    "text": "When your opponent Normal or Flip Summons a monster that has a Level: Target that face-up monster; Special Summon 1 \"Clone Token\", with the same original Type, Attribute, Level, ATK, and DEF as that target. When that target is destroyed and sent to the GY, destroy this Token.",
     "pool": "OCG Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -5242,7 +5242,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "You can only activate this card when you have Exodia the Forbidden One\"", \"Right Arm of the Forbidden One\"", \"Left Arm of the Forbidden One\"", \"Right Leg of the Forbidden One\"", and \"Left Leg of the Forbidden One\" in your Graveyard. Special Summon 1 \"Exodia Necross\" from your hand.\"",
+    "text": "You can only activate this card when you have Exodia the Forbidden One\", \"Right Arm of the Forbidden One\", \"Left Arm of the Forbidden One\", \"Right Leg of the Forbidden One\", and \"Left Leg of the Forbidden One\" in your Graveyard. Special Summon 1 \"Exodia Necross\" from your hand.\"",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -6442,7 +6442,7 @@
     "level": 7,
     "atk": 2500,
     "def": 2100,
-    "text": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 1 \"Dark Magician\"", and cannot be Special Summoned by other ways. Each time a Normal Spell Card is activated, inflict 1000 damage to your opponent immediately after it resolves.",
+    "text": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 1 \"Dark Magician\", and cannot be Special Summoned by other ways. Each time a Normal Spell Card is activated, inflict 1000 damage to your opponent immediately after it resolves.",
     "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -6698,7 +6698,7 @@
     "level": 3,
     "atk": 1000,
     "def": 1000,
-    "text": "If this card is destroyed by battle and sent to the Graveyard: Draw 1 card, but if this card was Special Summoned by the effect of \"Dark Mimic LV1\"", draw 2 cards instead.",
+    "text": "If this card is destroyed by battle and sent to the Graveyard: Draw 1 card, but if this card was Special Summoned by the effect of \"Dark Mimic LV1\", draw 2 cards instead.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -6954,7 +6954,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "You can only activate this card when there are Don Zaloog\"", \"Cliff the Trap Remover\"", \"Dark Scorpion - Chick the Yellow\"", \"Dark Scorpion - Gorg the Strong\"", and \"Dark Scorpion - Meanae the Thorn\" face-up on your side of the field. During this turn, any of these 5 cards can attack your opponent's Life Points directly. In that case, the Battle Damage inflicted to your opponent by each of those cards becomes 400 points.\"",
+    "text": "You can only activate this card when there are Don Zaloog\", \"Cliff the Trap Remover\", \"Dark Scorpion - Chick the Yellow\", \"Dark Scorpion - Gorg the Strong\", and \"Dark Scorpion - Meanae the Thorn\" face-up on your side of the field. During this turn, any of these 5 cards can attack your opponent's Life Points directly. In that case, the Battle Damage inflicted to your opponent by each of those cards becomes 400 points.\"",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -7610,7 +7610,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "At the end of each of your opponent's turns, place 1 \"Spirit Message\" card from your hand or your Deck face-up on the field. If it is from your Deck, then shuffle your Deck. When \"Spirit Message\" cards \"I\"", \"N\"", \"A\" and \"L\" are all on your side of the field in their proper order, you are declared the winner. If any of your \"Spirit Message\" cards or \"Destiny Board\" are removed from the field, all your \"Spirit Message\" cards and \"Destiny Board\" on the field are sent to the Graveyard immediately",
+    "text": "At the end of each of your opponent's turns, place 1 \"Spirit Message\" card from your hand or your Deck face-up on the field. If it is from your Deck, then shuffle your Deck. When \"Spirit Message\" cards \"I\", \"N\", \"A\" and \"L\" are all on your side of the field in their proper order, you are declared the winner. If any of your \"Spirit Message\" cards or \"Destiny Board\" are removed from the field, all your \"Spirit Message\" cards and \"Destiny Board\" on the field are sent to the Graveyard immediately",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -7866,7 +7866,7 @@
     "level": 3,
     "atk": 1000,
     "def": 600,
-    "text": "If this card is sent from the field to the GY: Add 1 monster with 1500 or less ATK from your Deck to your hand, but you cannot activate cards, or the effects of cards, with that name for the rest of this turn. You can only use this effect of "Sangan" once per turn.",
+    "text": "If this card is sent from the field to the GY: Add 1 monster with 1500 or less ATK from your Deck to your hand, but you cannot activate cards, or the effects of cards, with that name for the rest of this turn. You can only use this effect of \"Sangan\" once per turn.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "forbidden"
@@ -10122,7 +10122,7 @@
     "level": 4,
     "atk": 1800,
     "def": 0,
-    "text": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by the effect of \"Contract with Exodia\". This card is not destroyed as a result of battle or by the effects of Spell or Trap Cards, and during each of your Standby Phases, increase the ATK of this card by 500 points. This card is destroyed when any of \"Exodia the Forbidden One\"", \"Right Arm of the Forbidden One\"", \"Left Arm of the Forbidden One\"", \"Right Leg of the Forbidden One\" or \"Left Leg of the Forbidden One\" is not in your Graveyard.",
+    "text": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by the effect of \"Contract with Exodia\". This card is not destroyed as a result of battle or by the effects of Spell or Trap Cards, and during each of your Standby Phases, increase the ATK of this card by 500 points. This card is destroyed when any of \"Exodia the Forbidden One\", \"Right Arm of the Forbidden One\", \"Left Arm of the Forbidden One\", \"Right Leg of the Forbidden One\" or \"Left Leg of the Forbidden One\" is not in your Graveyard.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -10970,7 +10970,7 @@
     "level": 6,
     "atk": 2100,
     "def": 1800,
-    "text": "Known to many as the \"Burning Executioner\"", this monster is capable of burning enemies to cinders.",
+    "text": "Known to many as the \"Burning Executioner\", this monster is capable of burning enemies to cinders.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -11610,7 +11610,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "While this card is on the field: Either player can Fusion Summon a Fusion Monster without using \"Polymerization\"", but the Fusion Material Monsters are banished instead of being sent to the Graveyard.",
+    "text": "While this card is on the field: Either player can Fusion Summon a Fusion Monster without using \"Polymerization\", but the Fusion Material Monsters are banished instead of being sent to the Graveyard.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -11978,7 +11978,7 @@
     "level": 11,
     "atk": 3750,
     "def": 3400,
-    "text": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned by Tributing \"Sanga of the Thunder\"", \"Kazejin\" and \"Suijin\"",
+    "text": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned by Tributing \"Sanga of the Thunder\", \"Kazejin\" and \"Suijin\"",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -13146,7 +13146,7 @@
     "level": 4,
     "atk": 1400,
     "def": 1200,
-    "text": "You can Tribute 1 \"Gravekeeper's\" monster, except \"Gravekeeper's Cannonholder\"", to inflict 700 damage to your opponent.",
+    "text": "You can Tribute 1 \"Gravekeeper's\" monster, except \"Gravekeeper's Cannonholder\", to inflict 700 damage to your opponent.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -14282,7 +14282,7 @@
     "level": 8,
     "atk": 2800,
     "def": 2600,
-    "text": "During the End Phase, if this card was Normal or Special Summoned this turn: You can target 1 Spell in your GY; add it to your hand. You can only use this effect of "Dark Magician of Chaos" once per turn. If this card destroys an opponent's monster by battle, after damage calculation: Banish that opponent's monster. If this face-up card would leave the field, banish it instead.",
+    "text": "During the End Phase, if this card was Normal or Special Summoned this turn: You can target 1 Spell in your GY; add it to your hand. You can only use this effect of \"Dark Magician of Chaos\" once per turn. If this card destroys an opponent's monster by battle, after damage calculation: Banish that opponent's monster. If this face-up card would leave the field, banish it instead.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "limited"
@@ -15498,7 +15498,7 @@
     "level": 3,
     "atk": 1000,
     "def": 1000,
-    "text": "When you have \"Right Leg of the Forbidden One\"", \"Left Leg of the Forbidden One\"", \"Right Arm of the Forbidden One\" and \"Left Arm of the Forbidden One\" in addition to this card in your hand, you win the Duel.",
+    "text": "When you have \"Right Leg of the Forbidden One\", \"Left Leg of the Forbidden One\", \"Right Arm of the Forbidden One\" and \"Left Arm of the Forbidden One\" in addition to this card in your hand, you win the Duel.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "limited"
@@ -16346,7 +16346,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "You can only activate this card if there is at least 1 face-up \"Chu-Ske the Mouse Fighter\"", \"Monk Fighter\"", or \"Master Monk\" on your side of the field. Destroy the monster(s) that battle with these monsters on your side of the field this turn, at the end of each Damage Step.",
+    "text": "You can only activate this card if there is at least 1 face-up \"Chu-Ske the Mouse Fighter\", \"Monk Fighter\", or \"Master Monk\" on your side of the field. Destroy the monster(s) that battle with these monsters on your side of the field this turn, at the end of each Damage Step.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -17418,7 +17418,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "You can only equip this card to \"Chu-Ske the Mouse Fighter\"", \"Monk Fighter\"", or \"Master Monk\". When the equipped monster destroys your opponent's monster and sends it to the Graveyard as a result of battle, inflict damage to your opponent's Life Points equal to the DEF of the destroyed monster.",
+    "text": "You can only equip this card to \"Chu-Ske the Mouse Fighter\", \"Monk Fighter\", or \"Master Monk\". When the equipped monster destroys your opponent's monster and sends it to the Graveyard as a result of battle, inflict damage to your opponent's Life Points equal to the DEF of the destroyed monster.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -17914,7 +17914,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "You can only activate this card if there is only 1 monster on your side of the field, and it is \"Chu-Ske the Mouse Fighter\"", \"Monk Fighter\"", or \"Master Monk\". That monster is not destroyed as a result of battle, and is unaffected by any of your opponent's monster effects.",
+    "text": "You can only activate this card if there is only 1 monster on your side of the field, and it is \"Chu-Ske the Mouse Fighter\", \"Monk Fighter\", or \"Master Monk\". That monster is not destroyed as a result of battle, and is unaffected by any of your opponent's monster effects.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -18794,7 +18794,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "Target 1 \"Summoned Skull\"", or 1 Thunder monster, in your Monster Zone; destroy all monsters your opponent controls with DEF less than or equal to the ATK of that monster. You cannot conduct your Battle Phase the turn you activate this card.",
+    "text": "Target 1 \"Summoned Skull\", or 1 Thunder monster, in your Monster Zone; destroy all monsters your opponent controls with DEF less than or equal to the ATK of that monster. You cannot conduct your Battle Phase the turn you activate this card.",
     "pool": "OCG Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -19434,7 +19434,7 @@
     "level": 8,
     "atk": 2800,
     "def": 2300,
-    "text": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 1 face-up \"\"Warrior of Zera\" on your side of the field while \"Pandemonium\" is on the field. If \"Pandemonium\" is on your side of the field when you Special Summon this card, your opponent discards 3 random cards from their hand. If \"Pandemonium\" is not on your side of the field, this effect is not applied.",
+    "text": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 1 face-up \"Warrior of Zera\" on your side of the field while \"Pandemonium\" is on the field. If \"Pandemonium\" is on your side of the field when you Special Summon this card, your opponent discards 3 random cards from their hand. If \"Pandemonium\" is not on your side of the field, this effect is not applied.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -21354,7 +21354,7 @@
     "level": 6,
     "atk": 2500,
     "def": 2000,
-    "text": "If you do not control \"Temple of the Kings\"", destroy this card. Banish any monster destroyed by battle with this card. If this card destroys a monster by battle: It gains 500 ATK.",
+    "text": "If you do not control \"Temple of the Kings\", destroy this card. Banish any monster destroyed by battle with this card. If this card destroys a monster by battle: It gains 500 ATK.",
     "pool": "OCG Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -21626,7 +21626,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "All \"Gravekeeper's\" monsters gain 500 ATK and DEF. Cards in either player's Graveyard cannot be banished. Negate any card effect that would move a card in the Graveyard, other than itself, to a different place.",
+    "text": "All \"Gravekeeper's\" monsters gain 500 ATK/DEF. Cards in the GY cannot be banished. Negate any card effect that would move a card in the GY to a different place. Negate any card effect that changes Types or Attributes in the GY.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -21866,7 +21866,7 @@
     "level": 3,
     "atk": 200,
     "def": 500,
-    "text": "FLIP: Target 1 monster your opponent controls; destroy that target. If this card is sent from the hand to the GY: Target 1 Flip monster in your GY, except "Night Assailant"; add that target to your hand.",
+    "text": "FLIP: Target 1 monster your opponent controls; destroy that target. If this card is sent from the hand to the GY: Target 1 Flip monster in your GY, except \"Night Assailant\"; add that target to your hand.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -22394,7 +22394,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "You can only activate this card while \"Ojama Green\"", \"Ojama Yellow\" and \"Ojama Black\" are face-up on your side of the field. Destroy all cards on your opponent's side of the field.",
+    "text": "You can only activate this card while \"Ojama Green\", \"Ojama Yellow\" and \"Ojama Black\" are face-up on your side of the field. Destroy all cards on your opponent's side of the field.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -22618,7 +22618,7 @@
     "level": 4,
     "atk": 1800,
     "def": 1700,
-    "text": "A one-eyed giant that serves the \"Dark Ruler Ha Des\"", it skewers its enemies with its sharp horn, shattering them to pieces.",
+    "text": "A one-eyed giant that serves the \"Dark Ruler Ha Des\", it skewers its enemies with its sharp horn, shattering them to pieces.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -23674,7 +23674,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "During your opponent's turn: Target 1 face-up monster your opponent controls whose ATK is less than or equal to their LP; destroy that face-up monster, and if you do, take damage equal to its original ATK, then inflict damage to your opponent, equal to the damage you took. You can only activate 1 "Ring of Destruction" per turn.",
+    "text": "During your opponent's turn: Target 1 face-up monster your opponent controls whose ATK is less than or equal to their LP; destroy that face-up monster, and if you do, take damage equal to its original ATK, then inflict damage to your opponent, equal to the damage you took. You can only activate 1 \"Ring of Destruction\" per turn.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "limited"
@@ -24106,7 +24106,7 @@
     "level": 1,
     "atk": 300,
     "def": 250,
-    "text": "During your Standby Phase, if this card is in your GY: You can return it to your hand, also banish 1 "Sinister Serpent" from your GY during your opponent's next End Phase. You can only use this effect of "Sinister Serpent" once per turn.",
+    "text": "During your Standby Phase, if this card is in your GY: You can return it to your hand, also banish 1 \"Sinister Serpent\" from your GY during your opponent's next End Phase. You can only use this effect of \"Sinister Serpent\" once per turn.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "limited"
@@ -24746,7 +24746,7 @@
     "level": 4,
     "atk": 300,
     "def": 100,
-    "text": "You can send this card to the GY; Special Summon 2 Level 3 or lower Beast monsters from your Deck, but their effects are negated, also they are destroyed during the End Phase. You can only use this effect of "Rescue Cat" once per turn.",
+    "text": "You can send this card to the GY; Special Summon 2 Level 3 or lower Beast monsters from your Deck, but their effects are negated, also they are destroyed during the End Phase. You can only use this effect of \"Rescue Cat\" once per turn.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -28282,7 +28282,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "When \"Gaia the Fierce Knight\"", \"Swift Gaia the Fierce Knight\" or \"Gaia the Dragon Champion\" on your side of the field attacks a Defense Position monster, if the ATK of that card is higher than the DEF of the Defense Position monster, inflict the difference as Battle Damage to your opponent's Life Points. If \"Gaia the Dragon Champion\" inflicts Battle Damage with this effect, draw 2 cards from your Deck and discard 1 card from your hand.",
+    "text": "When \"Gaia the Fierce Knight\", \"Swift Gaia the Fierce Knight\" or \"Gaia the Dragon Champion\" on your side of the field attacks a Defense Position monster, if the ATK of that card is higher than the DEF of the Defense Position monster, inflict the difference as Battle Damage to your opponent's Life Points. If \"Gaia the Dragon Champion\" inflicts Battle Damage with this effect, draw 2 cards from your Deck and discard 1 card from your hand.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -28506,7 +28506,7 @@
     "level": 1,
     "atk": 100,
     "def": 100,
-    "text": "While this card is in face-up Attack Position on the field, if a player activates Pot of Greed\"", they can draw 1 more card.\"",
+    "text": "While this card is in face-up Attack Position on the field, if a player activates Pot of Greed\", they can draw 1 more card.\"",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -28954,7 +28954,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "Special Summon this card in Defense Position as an Effect Monster (Machine/EARTH/Level 4/ATK 0/DEF 2000). (This card is also still a Trap.) While you control \"Green Gadget\"", \"Red Gadget\"", and \"Yellow Gadget\"", this card gains 3000 ATK.",
+    "text": "Special Summon this card in Defense Position as an Effect Monster (Machine/EARTH/Level 4/ATK 0/DEF 2000). (This card is also still a Trap.) While you control \"Green Gadget\", \"Red Gadget\", and \"Yellow Gadget\", this card gains 3000 ATK.",
     "pool": "OCG Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -29914,7 +29914,7 @@
     "level": 6,
     "atk": 2400,
     "def": 0,
-    "text": "While your Life Points are higher than your opponent's, you can Tribute this card to inflict damage to your opponent equal to the difference. If you do not control \"The Sanctuary in the Sky\"", this effect is not applied. You cannot conduct your Battle Phase the turn you activate this effect.",
+    "text": "While your Life Points are higher than your opponent's, you can Tribute this card to inflict damage to your opponent equal to the difference. If you do not control \"The Sanctuary in the Sky\", this effect is not applied. You cannot conduct your Battle Phase the turn you activate this effect.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -30250,7 +30250,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "During each of your opponent's End Phases, place 1 card face-up on your side of the field from your hand or Deck in this order: The Second Sarcophagus\"", \"The Third Sarcophagus\". If 1 Sarcophagus card is removed from your side of the field, all of them on your side of the field are sent to the Graveyard. When you have all 3 Sarcophagus cards on your side of the field, send all Sarcophagus cards on your side of the field to the Graveyard to Special Summon 1 \"Spirit of the Pharaoh\" from your hand or Deck.\"",
+    "text": "During each of your opponent's End Phases, place 1 card face-up on your side of the field from your hand or Deck in this order: The Second Sarcophagus\", \"The Third Sarcophagus\". If 1 Sarcophagus card is removed from your side of the field, all of them on your side of the field are sent to the Graveyard. When you have all 3 Sarcophagus cards on your side of the field, send all Sarcophagus cards on your side of the field to the Graveyard to Special Summon 1 \"Spirit of the Pharaoh\" from your hand or Deck.\"",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -30538,7 +30538,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "Shuffle this card into its owner's Deck, OR if this card was put into play by the effect of \"Masked Beast Des Gardius\"", this card is treated as an Equip Card. Control of the equipped monster is switched.",
+    "text": "Shuffle this card into its owner's Deck, OR if this card was put into play by the effect of \"Masked Beast Des Gardius\", this card is treated as an Equip Card. Control of the equipped monster is switched.",
     "pool": "OCG Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -32602,7 +32602,7 @@
     "level": 3,
     "atk": 1400,
     "def": 900,
-    "text": "If this card was Special Summoned by the effect of \"Ultimate Insect LV1\"", as long as this card remains on the field, decrease the ATK of all your opponent's monsters by 300 points. During your Standby Phase, send this face-up card to the Graveyard to Special Summon 1 \"Ultimate Insect LV5\" from your hand or Deck. (You cannot activate this effect the turn this card is Normal Summoned, Special Summoned, or flipped face-up.)",
+    "text": "If this card was Special Summoned by the effect of \"Ultimate Insect LV1\", as long as this card remains on the field, decrease the ATK of all your opponent's monsters by 300 points. During your Standby Phase, send this face-up card to the Graveyard to Special Summon 1 \"Ultimate Insect LV5\" from your hand or Deck. (You cannot activate this effect the turn this card is Normal Summoned, Special Summoned, or flipped face-up.)",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -32618,7 +32618,7 @@
     "level": 5,
     "atk": 2300,
     "def": 900,
-    "text": "If this card was Special Summoned by the effect of \"Ultimate Insect LV3\"", as long as this card remains on the field, decrease the ATK of all your opponent's monsters by 500 points. During your Standby Phase, send this face-up card to the Graveyard to Special Summon 1 \"Ultimate Insect LV7\" from your hand or Deck. (You cannot activate this effect the turn this card is Normal Summoned, Special Summoned, or flipped face-up.)",
+    "text": "If this card was Special Summoned by the effect of \"Ultimate Insect LV3\", as long as this card remains on the field, decrease the ATK of all your opponent's monsters by 500 points. During your Standby Phase, send this face-up card to the Graveyard to Special Summon 1 \"Ultimate Insect LV7\" from your hand or Deck. (You cannot activate this effect the turn this card is Normal Summoned, Special Summoned, or flipped face-up.)",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -32634,7 +32634,7 @@
     "level": 7,
     "atk": 2600,
     "def": 1200,
-    "text": "If this card was Special Summoned by the effect of \"Ultimate Insect LV5\"", as long as this card remains face-up on your side of the field, decrease the ATK and DEF of all your opponent's monsters by 700 points.",
+    "text": "If this card was Special Summoned by the effect of \"Ultimate Insect LV5\", as long as this card remains face-up on your side of the field, decrease the ATK and DEF of all your opponent's monsters by 700 points.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -32922,7 +32922,7 @@
     "level": 8,
     "atk": 3500,
     "def": 3850,
-    "text": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned by Tributing \"Alpha The Magnet Warrior\"", \"Beta The Magnet Warrior\"", and \"Gamma The Magnet Warrior\" from your hand or your side of the field. You can Tribute this card to Special Summon \"Alpha The Magnet Warrior\"", \"Beta The Magnet Warrior\"", and \"Gamma The Magnet Warrior\" from your Graveyard.",
+    "text": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned by Tributing \"Alpha The Magnet Warrior\", \"Beta The Magnet Warrior\", and \"Gamma The Magnet Warrior\" from your hand or your side of the field. You can Tribute this card to Special Summon \"Alpha The Magnet Warrior\", \"Beta The Magnet Warrior\", and \"Gamma The Magnet Warrior\" from your Graveyard.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -33786,7 +33786,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "When your opponent plays \"Dark Hole\"", the monsters on your side of the field are not destroyed.",
+    "text": "When your opponent plays \"Dark Hole\", the monsters on your side of the field are not destroyed.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -35098,7 +35098,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "Add 1 \"Toon World\"", or 1 card that mentions it, from your Deck to your hand, except \"Toon Bookmark\". If a \"Toon World(s)\" you control would be destroyed by card effect, you can banish this card from your GY instead. You can only activate 1 \"Toon Bookmark\" per turn.",
+    "text": "Add 1 \"Toon World\", or 1 card that mentions it, from your Deck to your hand, except \"Toon Bookmark\". If a \"Toon World(s)\" you control would be destroyed by card effect, you can banish this card from your GY instead. You can only activate 1 \"Toon Bookmark\" per turn.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
