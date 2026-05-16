@@ -21626,7 +21626,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "All \"Gravekeeper's\" monsters gain 500 ATK and DEF. Cards in either player's Graveyard cannot be banished. Negate any card effect that would move a card in the Graveyard, other than itself, to a different place.",
+    "text": "All "Gravekeeper's" monsters on the field gain 500 ATK/DEF. Cards in the GY cannot be banished. Negate any card effect that would move a card in the GY to a different place. Negate any card effect that changes Types or Attributes in the GY.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
