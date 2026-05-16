@@ -4394,7 +4394,7 @@
     "level": 5,
     "atk": 1000,
     "def": 2000,
-    "text": "You can Tribute 1 monster; inflict damage to your opponent equal to half the Tributed monster's ATK on the field.",
+    "text": "Once per turn: You can Tribute 1 monster; inflict damage to your opponent equal to half the Tributed monster's ATK on the field.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -7866,7 +7866,7 @@
     "level": 3,
     "atk": 1000,
     "def": 600,
-    "text": "When this card is sent from the field to the Graveyard: Add 1 monster with 1500 or less ATK from your Deck to your hand.",
+    "text": "If this card is sent from the field to the GY: Add 1 monster with 1500 or less ATK from your Deck to your hand, but you cannot activate cards, or the effects of cards, with that name for the rest of this turn. You can only use this effect of "Sangan" once per turn.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "forbidden"
@@ -14282,7 +14282,7 @@
     "level": 8,
     "atk": 2800,
     "def": 2600,
-    "text": "When this card is Normal or Special Summoned: You can target 1 Spell Card in your Graveyard; add that target to your hand. Banish any monster destroyed by battle with this card. If this face-up card would leave the field, banish it instead.",
+    "text": "During the End Phase, if this card was Normal or Special Summoned this turn: You can target 1 Spell in your GY; add it to your hand. You can only use this effect of "Dark Magician of Chaos" once per turn. If this card destroys an opponent's monster by battle, after damage calculation: Banish that opponent's monster. If this face-up card would leave the field, banish it instead.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "limited"
@@ -21866,7 +21866,7 @@
     "level": 3,
     "atk": 200,
     "def": 500,
-    "text": "FLIP: Select 1 monster your opponent controls, and destroy it. When this card is sent directly from your hand to the Graveyard, select 1 Flip Effect Monster in your Graveyard, except this card, and return it to your hand.",
+    "text": "FLIP: Target 1 monster your opponent controls; destroy that target. If this card is sent from the hand to the GY: Target 1 Flip monster in your GY, except "Night Assailant"; add that target to your hand.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -23674,7 +23674,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "Target 1 face-up monster on the field; destroy that target, and if you do, inflict damage to both players equal to that target's ATK.",
+    "text": "During your opponent's turn: Target 1 face-up monster your opponent controls whose ATK is less than or equal to their LP; destroy that face-up monster, and if you do, take damage equal to its original ATK, then inflict damage to your opponent, equal to the damage you took. You can only activate 1 "Ring of Destruction" per turn.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "limited"
@@ -24106,7 +24106,7 @@
     "level": 1,
     "atk": 300,
     "def": 250,
-    "text": "During your Standby Phase, if this card is in your Graveyard: You can return it to your hand.",
+    "text": "During your Standby Phase, if this card is in your GY: You can return it to your hand, also banish 1 "Sinister Serpent" from your GY during your opponent's next End Phase. You can only use this effect of "Sinister Serpent" once per turn.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "limited"
@@ -24746,7 +24746,7 @@
     "level": 4,
     "atk": 300,
     "def": 100,
-    "text": "You can send this face-up card to the Graveyard to Special Summon 2 Level 3 or lower Beast-Type monsters from your Deck. Those monsters are destroyed during the End Phase.",
+    "text": "You can send this card to the GY; Special Summon 2 Level 3 or lower Beast monsters from your Deck, but their effects are negated, also they are destroyed during the End Phase. You can only use this effect of "Rescue Cat" once per turn.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -26890,7 +26890,7 @@
     "level": null,
     "atk": null,
     "def": null,
-    "text": "Pay 800 Life Points. Select 1 face-up monster your opponent controls. Take control of it until the End Phase.",
+    "text": "Pay 800 LP, then target 1 face-up monster your opponent controls that can be Normal Summoned/Set; take control of that target until the End Phase.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
     "ban_status": "semi"
@@ -35227,7 +35227,7 @@
     "atk": 1900,
     "def": 500,
     "text": "This normally gentle Dinosaur monster enjoys relaxing in its nest in the prairies. However, if angered, it turns terribly ferocious.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35243,7 +35243,7 @@
     "atk": 3300,
     "def": 1400,
     "text": "Once per turn: You can Tribute 1 monster; inflict 1000 damage to your opponent. This card cannot declare an attack the turn this effect is activated.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35259,7 +35259,7 @@
     "atk": 3000,
     "def": 2200,
     "text": "This card can attack all monsters your opponent controls, once each.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35275,7 +35275,7 @@
     "atk": 1800,
     "def": 800,
     "text": "If this card is destroyed by battle with a Pyro monster and sent to the GY: Each player takes 800 damage.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35291,7 +35291,7 @@
     "atk": 1600,
     "def": 1000,
     "text": "When this card destroys an opponent's monster by battle and sends it to the GY: You can Special Summon 1 \"Hydrogeddon\" from your Deck.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35307,7 +35307,7 @@
     "atk": 1200,
     "def": 2000,
     "text": "If this Attack Position card is targeted for an attack: Change this card to Defense Position.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35323,7 +35323,7 @@
     "atk": 0,
     "def": 2000,
     "text": "While face-up on the field, this card cannot be banished. Each time a Dinosaur-Type monster(s) is sent to your GY, place 2 counters on this card. You can Tribute this card; Special Summon 1 Dinosaur-Type monster from your Deck whose Level is less than or equal to the number of counters that were on this card.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35339,7 +35339,7 @@
     "atk": null,
     "def": 0,
     "text": "The original ATK of this card becomes the number of your banished Dinosaur monsters x 1000.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35355,7 +35355,7 @@
     "atk": 1000,
     "def": 500,
     "text": "If this card is sent from the field to the GY, except by being destroyed by battle: Return it to the hand.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35371,7 +35371,7 @@
     "atk": 500,
     "def": 500,
     "text": "If this card is destroyed by card effect and sent to the GY: Special Summon 1 Level 4 or lower Dinosaur monster from your Deck.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35387,7 +35387,7 @@
     "atk": null,
     "def": null,
     "text": "During your opponent's next turn, your opponent cannot change the battle positions of monsters, except with a card effect.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35403,7 +35403,7 @@
     "atk": null,
     "def": null,
     "text": "Target 1 Level 5 or higher Dinosaur monster you control; if that Dinosaur monster is still face-up on the field, choose up to 2 monsters your opponent controls that have a lower Level than it, or are face-down, and return the chosen monsters to the hand.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35419,7 +35419,7 @@
     "atk": null,
     "def": null,
     "text": "Tribute 1 Dinosaur monster; during your Main Phase this turn, you can Normal Summon/Set 1 Dinosaur monster without Tributing.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35435,7 +35435,7 @@
     "atk": null,
     "def": null,
     "text": "When a monster(s) is Special Summoned to your opponent's field (except during the Damage Step): Special Summon 1 Dinosaur monster from your hand.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35451,7 +35451,7 @@
     "atk": null,
     "def": null,
     "text": "During your End Phase, if you control \"Jurassic World\": Destroy all cards on the field.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35467,7 +35467,7 @@
     "atk": null,
     "def": null,
     "text": "Banish any number of Dinosaur monsters from your GY; gain 400 LP for each Dinosaur monster you banished to activate this card.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35483,7 +35483,7 @@
     "atk": null,
     "def": null,
     "text": "Activate this card by discarding 1 card, then target 1 Dinosaur monster in your GY; Special Summon that target. Negate its effects. When this card leaves the field, destroy that monster. When that monster is destroyed, destroy this card.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35499,7 +35499,7 @@
     "atk": null,
     "def": null,
     "text": "Activate only when a face-up Dinosaur monster you control is destroyed and sent to the GY. Choose 3 of your opponent's unused Spell & Trap Zones. Those zones cannot be used. Destroy this card during your third Standby Phase after activation.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35515,7 +35515,7 @@
     "atk": null,
     "def": null,
     "text": "Pay 500 LP; negate the activation of a Trap Card, and return it to its original position.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
@@ -35531,7 +35531,7 @@
     "atk": null,
     "def": null,
     "text": "Pay 500 LP; negate the activation of a Spell Card, and return it to the hand.",
-    "pool": "Extra Card Pool",
+    "pool": "Added Structure Decks",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
   },
