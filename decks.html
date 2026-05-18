@@ -449,8 +449,8 @@ function normText(s){
     .trim();
 }
 
-function cardImgUrl(cardId){
-  return `https://images.ygoprodeck.com/images/cards/${cardId}.jpg`;
+function cardImgUrl(cardName){
+  return `https://images.ygoprodeck.com/images/cards/${encodeURIComponent(cardName)}.jpg`;
 }
 
 function renderDeckThumbs(deck){
