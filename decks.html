@@ -405,7 +405,20 @@ header h2{
 const SUPABASE_URL = "https://tpkqfvizizjbunpbutlo.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
 
-let allDecks=[];
+/*
+  IMPORTANTE:
+  Este archivo intenta cargar varios nombres comunes de cardpool.
+  Debe existir al menos uno en la raíz del sitio.
+*/
+const CARDPOOL_FILES = [
+  "/cardpool.json",
+  "/cards.json",
+  "/NeoGoat_Full_CardPool_April_2026_filled.json",
+  "/neogoat_cardpool.json"
+];
+
+let allDecks = [];
+let cardIdByName = {};
 
 async function loadDecks(){
   const res=await fetch(
@@ -423,6 +436,61 @@ async function loadDecks(){
   }
 
   return await res.json();
+}
+
+async function loadCardpool(){
+  for(const file of CARDPOOL_FILES){
+    try{
+      const res = await fetch(file, { cache:"no-store" });
+      if(!res.ok) continue;
+
+      const data = await res.json();
+      const cards = Array.isArray(data)
+        ? data
+        : Array.isArray(data.cards)
+          ? data.cards
+          : Array.isArray(data.data)
+            ? data.data
+            : [];
+
+      if(!cards.length) continue;
+
+      buildCardIndex(cards);
+      console.log("Loaded cardpool:", file, cards.length);
+      return;
+    }catch(e){
+      console.warn("Could not load cardpool:", file, e);
+    }
+  }
+
+  console.warn("No cardpool file loaded. Thumbnails will only work if deck card objects contain ids.");
+}
+
+function buildCardIndex(cards){
+  cardIdByName = {};
+
+  cards.forEach(card=>{
+    const name =
+      card.name ||
+      card.card_name ||
+      card.Name ||
+      card.CardName ||
+      card["Card Name"];
+
+    const id =
+      card.id ||
+      card.card_id ||
+      card.password ||
+      card.passcode ||
+      card.Password ||
+      card.Passcode ||
+      card["Password"] ||
+      card["Passcode"];
+
+    if(name && id){
+      cardIdByName[normText(name)] = String(id).trim();
+    }
+  });
 }
 
 function totalCards(arr){
@@ -449,8 +517,36 @@ function normText(s){
     .trim();
 }
 
-function cardImgUrl(cardName){
-  return `https://images.ygoprodeck.com/images/cards/${encodeURIComponent(cardName)}.jpg`;
+function findCardIdByName(deck, cardName){
+  const key = normText(cardName);
+
+  if(cardIdByName[key]){
+    return cardIdByName[key];
+  }
+
+  const allCards = [
+    ...(deck.main_deck || []),
+    ...(deck.extra_deck || []),
+    ...(deck.side_deck || [])
+  ];
+
+  const found = allCards.find(c => normText(c.name) === key);
+
+  if(!found) return null;
+
+  return (
+    found.id ||
+    found.card_id ||
+    found.password ||
+    found.passcode ||
+    found.Password ||
+    found.Passcode ||
+    null
+  );
+}
+
+function cardImgUrl(cardId){
+  return `https://images.ygoprodeck.com/images/cards/${cardId}.jpg`;
 }
 
 function renderDeckThumbs(deck){
@@ -459,9 +555,13 @@ function renderDeckThumbs(deck){
     ? deck.thumbnail_strip
     : [];
 
-  const ids = mainThumb
-    ? [mainThumb, ...strip.filter(id => id !== mainThumb)]
+  const names = mainThumb
+    ? [mainThumb, ...strip.filter(name => name !== mainThumb)]
     : strip;
+
+  const ids = names
+    .map(name => findCardIdByName(deck, name))
+    .filter(Boolean);
 
   if(!ids.length) return "";
 
@@ -471,6 +571,7 @@ function renderDeckThumbs(deck){
         <img
           src="${cardImgUrl(id)}"
           loading="lazy"
+          alt=""
           onerror="this.style.display='none'"
         >
       `).join("")}
@@ -586,6 +687,7 @@ document.getElementById("fFormat").addEventListener("change",applyFilters);
 
 (async()=>{
   try{
+    await loadCardpool();
     allDecks=await loadDecks();
     populateFormatFilter(allDecks);
     document.getElementById("loading").style.display="none";
