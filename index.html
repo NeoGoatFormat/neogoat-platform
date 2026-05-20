@@ -1186,7 +1186,7 @@ body.filters-active .checkRow{
         text-shadow:0 0 12px rgba(125,211,252,.7);
         letter-spacing:.04em;
       ">
-        APRIL 2026 FORMAT
+        JUNE 2026 FORMAT
       </span>
 
 <a
@@ -1426,7 +1426,7 @@ async function submitDeck(p){
 
 (async function(){
   var LS="neogoat_v4_dragdrop";
-  var cardList=[],cardMap={},rules={},fmtId="apr_2026";
+  var cardList=[],cardMap={},rules={},fmtId="jun_2026";
   var deck={main:new Map(),extra:new Map(),side:new Map()};
   var selectedPreviewId=null;
   var thumbnailCardName="";
@@ -2356,7 +2356,7 @@ async function submitDeck(p){
   try{
     var cfg=await(await fetch("/data/config.json")).json();
     fmtId=cfg.currentFormatId||"apr_2026";
-    var rf=cfg.rulesFile||"cards_april_2026_final.json";
+    var rf=cfg.rulesFile||"cards_june_2026.json";
     var resp=await fetch("/data/formats/"+fmtId+"/"+rf);
     if(!resp.ok)throw new Error("404: "+fmtId+"/"+rf);
     cardList=await resp.json();
