@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NeoGoat Deck Builder</title>
+<link rel="icon" type="image/png" href="/neogoatbuilderlogo.png">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 
@@ -166,6 +167,61 @@ button,input,textarea,select{font:inherit;}
   overflow:hidden;
   min-height:0;
   box-shadow:8px 0 30px rgba(0,0,0,.36);
+}
+
+/* FILTER ACTIVE HIGHLIGHT */
+.filterActiveRow{
+  display:none;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+#filterActiveBadge{
+  font-size:10px;
+  font-weight:900;
+  color:#001018;
+  background:linear-gradient(90deg,#00e5ff,#73ff9b);
+  border-radius:999px;
+  padding:4px 9px;
+  width:max-content;
+  box-shadow:0 0 14px rgba(0,229,255,.28);
+}
+
+#clearFiltersBtn{
+  border:1px solid rgba(255,93,115,.48);
+  background:rgba(70,10,18,.88);
+  color:#ffd5dc;
+  border-radius:999px;
+  padding:4px 9px;
+  font-size:10px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+#clearFiltersBtn:hover{
+  border-color:rgba(255,93,115,.85);
+  color:#fff;
+  box-shadow:0 0 12px rgba(255,93,115,.25);
+}
+
+body.filters-active .filterActiveRow{display:flex;}
+
+body.filters-active #searchPanel{
+  border-right:1px solid rgba(0,229,255,.72);
+  box-shadow:8px 0 30px rgba(0,0,0,.36),0 0 22px rgba(0,229,255,.16),inset 0 0 24px rgba(0,229,255,.045);
+}
+
+body.filters-active #searchTop{
+  background:linear-gradient(180deg,rgba(0,229,255,.08),rgba(115,255,155,.025));
+}
+
+body.filters-active #searchTop input,
+body.filters-active #searchTop select,
+body.filters-active .checkRow{
+  border-color:rgba(0,229,255,.68) !important;
+  box-shadow:0 0 12px rgba(0,229,255,.18),inset 0 0 10px rgba(0,229,255,.035);
+  background:rgba(0,20,32,.95);
 }
 
 #searchTop{
@@ -340,35 +396,6 @@ button,input,textarea,select{font:inherit;}
 
 #validation.ok{color:#85ffb0;}
 #validation.err{color:#ff7f91;}
-
-#removeHint{
-  color:#7889a0;
-  font-size:11px;
-}
-
-body.removing #removeHint{
-  color:#ff7f91;
-  text-shadow:0 0 10px rgba(255,93,115,.5);
-}
-
-body.removing #deckZones:after{
-  content:"DROP OUTSIDE A DECK ZONE TO REMOVE 1 COPY";
-  position:fixed;
-  left:50%;
-  bottom:22px;
-  transform:translateX(-50%);
-  z-index:20;
-  padding:10px 16px;
-  border-radius:999px;
-  background:rgba(255,93,115,.12);
-  border:1px solid rgba(255,93,115,.48);
-  color:#ffc6cf;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.7px;
-  box-shadow:0 0 22px rgba(255,93,115,.18);
-  pointer-events:none;
-}
 
 #deckMain{
   display:flex;
@@ -561,20 +588,38 @@ body.removing #deckZones:after{
 
 .dcard .dqty{
   position:absolute;
-  bottom:4px;
-  left:4px;
-  background:rgba(0,0,0,.75);
+  top:2px;
+  left:2px;
+  background:rgba(0,0,0,.82);
   color:#fff;
-  font-size:18px;
+  font-size:10px;
   font-weight:900;
-  line-height:1;
-  padding:3px 7px;
-  border-radius:7px;
-  border:1px solid rgba(255,255,255,.25);
-  text-shadow:0 0 4px rgba(255,255,255,.7),0 0 8px rgba(255,255,255,.4);
-  box-shadow:0 0 10px rgba(0,0,0,.7),0 0 6px rgba(0,229,255,.15);
-  z-index:10;
+  padding:1px 5px;
+  border-radius:5px;
+  border:1px solid rgba(0,229,255,.18);
 }
+
+.dcard .dadd{
+  position:absolute;
+  top:2px;
+  left:22px;
+  background:rgba(70,255,120,.9);
+  color:#001b08;
+  font-size:11px;
+  font-weight:900;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 0 10px rgba(70,255,120,.22);
+}
+
+.dcard:hover .dadd{display:flex;}
+
+.dcard .dadd:hover{transform:scale(1.08);}
 
 .dcard .drem{
   position:absolute;
@@ -684,6 +729,17 @@ body.removing #deckZones:after{
 .handActions button:hover{border-color:rgba(0,229,255,.75);box-shadow:0 0 14px rgba(0,229,255,.18);}
 #drawOneBtn{background:linear-gradient(180deg,rgba(21,78,44,.95),rgba(7,27,16,.95));border-color:rgba(115,255,155,.55);color:#a5ffbd;}
 #drawOneBtn:disabled{opacity:.45;cursor:not-allowed;}
+
+/* Red close button */
+#closeHandBtn{
+  background:linear-gradient(180deg,rgba(180,20,20,.95),rgba(90,5,5,.95));
+  border-color:rgba(255,80,80,.55);
+  color:#ffd5d5;
+}
+#closeHandBtn:hover{
+  border-color:rgba(255,100,100,.85);
+  box-shadow:0 0 16px rgba(255,60,60,.3);
+}
 
 #handCards{
   display:grid;
@@ -1028,19 +1084,138 @@ body.removing #deckZones:after{
   #deckMain{min-height:0;}
   #cardPreviewPanel{display:none;}
 }
+@media(max-width:900px){
+  #app{grid-template-columns:1fr;}
+  #searchPanel{height:260px;border-right:none;border-bottom:1px solid rgba(0,229,255,.24);}
+  #deckMain{min-height:0;}
+  #cardPreviewPanel{display:none;}
+}
+
+/* MOBILE BUILDER FIX */
+@media(max-width:900px){
+  body{
+    overflow:auto;
+    height:auto;
+  }
+
+  #app{
+    display:block;
+    overflow:visible;
+  }
+
+  #searchPanel{
+    height:auto;
+    max-height:none;
+  }
+
+  #searchResults{
+    max-height:260px;
+    overflow-y:auto;
+  }
+
+  #deckArea,
+  #deckMain,
+  #deckZones{
+    overflow:visible;
+  }
+
+  #deckZones{
+    padding:10px;
+    gap:10px;
+  }
+
+  .zone{
+    min-height:110px;
+    padding:9px;
+  }
+
+  .zoneGrid{
+    grid-template-columns:repeat(auto-fill,minmax(52px,1fr));
+    gap:6px;
+    min-height:80px;
+  }
+
+  .dcard .drem{
+    display:flex;
+    width:22px;
+    height:22px;
+    font-size:14px;
+  }
+
+  .dcard{
+    cursor:pointer;
+  }
+
+
+  #deckBar{
+    position:sticky;
+    top:0;
+    z-index:5;
+    background:#05070c;
+  }
+}
+
 </style>
 </head>
 <body>
 <div id="header">
-  <h1>NeoGoat Deck Builder <span id="fmtLabel">April 2026 Format</span></h1>
-  <span id="statusBadge">Loading...</span>
+
+  <div style="display:flex;flex-direction:column;gap:2px;">
+    
+    <h1 style="
+      font-size:22px;
+      line-height:1;
+      margin:0;
+      color:#f2feff;
+      text-shadow:0 0 14px rgba(0,229,255,.35);
+    ">
+      NeoGoat Deck Builder
+    </h1>
+
+    <div style="
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    ">
+
+      <span id="fmtLabel" style="
+        font-size:16px;
+        font-weight:900;
+        color:#7dd3fc;
+        text-shadow:0 0 12px rgba(125,211,252,.7);
+        letter-spacing:.04em;
+      ">
+        JUNE 2026 FORMAT
+      </span>
+
+<a
+  href="https://neogoatformat.blogspot.com/"
+  target="_blank"
+  style="
+    font-size:11px;
+    color:#86efac;
+    text-decoration:none;
+    border:1px solid rgba(134,239,172,.4);
+    background:rgba(22,163,74,.12);
+    padding:5px 10px;
+    border-radius:999px;
+    font-weight:800;
+  "
+>
+  Visit the NeoGoat Blog ↗
+</a>
+
+    </div>
+
+  </div>
   <div class="spacer"></div>
   <button class="hbtn" id="clearBtn">New</button>
   <button class="hbtn" id="pasteBtn">Paste Decklist</button>
-  <button class="hbtn" id="importBtn">Import .ydk</button>
+  <button class="hbtn" id="importBtn">Load Deck File</button>
   <button class="hbtn" id="testHandBtn">Test Hand</button>
   <button class="hbtn" id="copyBtn">Copy Decklist</button>
-  <button class="hbtn" id="exportBtn">Export .ydk</button>
+  <button class="hbtn" id="exportBtn">Download Deck</button>
   <input type="file" id="ydkInput" accept=".ydk" style="display:none">
   <button class="hbtn" id="shareBtn">Share Deck</button>
   <button class="hbtn" onclick="location.href='/decks.html'">Deck Library</button>
@@ -1074,6 +1249,10 @@ body.removing #deckZones:after{
           <option value="">All monster types</option>
         </select>
       </div>
+      <div class="filterActiveRow">
+        <div id="filterActiveBadge">FILTERS ACTIVE</div>
+        <button id="clearFiltersBtn" type="button">Clear filters</button>
+      </div>
       <div id="resultCount">Showing first 80 results</div>
     </div>
     <div id="searchResults"></div>
@@ -1082,7 +1261,7 @@ body.removing #deckZones:after{
   <div id="deckArea">
     <div id="deckBar">
       <span id="validation" class="err">Main 0/40-60</span>
-      <span id="removeHint">Drag a deck card outside its zone to remove 1 copy</span>
+      <span id="mainBreakdown">Monsters: 0 | Spells: 0 | Traps: 0</span>
     </div>
 
     <div id="deckMain">
@@ -1198,9 +1377,36 @@ var SKEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6I
 var IMG="https://images.ygoprodeck.com/images/cards_small/";
 
 function ci(id){return IMG+id+".jpg";}
-function slug(t){return t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\s-]/g,"").trim().replace(/\s+/g,"-")+"-"+Date.now();}
+function slug(t){
+  return t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\s-]/g,"").trim().replace(/\s+/g,"-")+"-"+Date.now();
+}
 
+function makeDeckSignature(payload){
+
+  function cleanList(list){
+    return (list || [])
+      .map(function(c){
+        return {
+          name:String(c.name || "").trim().toLowerCase(),
+          qty:Number(c.qty) || 1
+        };
+      })
+      .sort(function(a,b){
+        return a.name.localeCompare(b.name);
+      });
+  }
+
+  return JSON.stringify({
+    format: payload.format || "apr_2026",
+    main: cleanList(payload.main_deck),
+    extra: cleanList(payload.extra_deck),
+    side: cleanList(payload.side_deck)
+  });
+}
 async function submitDeck(p){
+  p.deck_signature = makeDeckSignature(p);
+  p.is_public = true;
+
   var r=await fetch(SURL+"/rest/v1/decks",{
     method:"POST",
     headers:{
@@ -1220,7 +1426,7 @@ async function submitDeck(p){
 
 (async function(){
   var LS="neogoat_v4_dragdrop";
-  var cardList=[],cardMap={},rules={},fmtId="apr_2026";
+  var cardList=[],cardMap={},rules={},fmtId="jun_2026";
   var deck={main:new Map(),extra:new Map(),side:new Map()};
   var selectedPreviewId=null;
   var thumbnailCardName="";
@@ -1235,124 +1441,33 @@ async function submitDeck(p){
     "unlimited":3
   };
   var STAPLE_NAMES=[
-    // Monsters
-    "Tribe-Infecting Virus",
-    "Tribe Infecting Virus",
-    "Breaker the Magical Warrior",
-    "Tsukuyomi",
-    "Gigantes",
-    "Exiled Force",
-    "Chaos Sorcerer",
-    "Injection Fairy Lily",
-    "D.D. Assailant",
-    "D.D. Warrior",
-    "Kycoo the Ghost Destroyer",
-    "D.D. Warrior Lady",
-    "Don Zaloog",
-    "King of the Swamp",
-    "Mobius the Frost Monarch",
-    "Summoner Monk",
-    "Elemental HERO Prisma",
-    "Cipher Soldier",
-    "Sinister Serpent",
-    "Jinzo",
-    "Spirit Reaper",
-    "Marshmallon",
-    "Zombyra the Dark",
-    "Giant Rat",
-    "Mystic Swordsman LV2",
-
-    // Spells
-    "Metamorphosis",
-    "Upstart Goblin",
-    "Premature Burial",
-    "Unexpected Dai",
-    "Scapegoat",
-    "Creature Swap",
-    "Mystical Space Typhoon",
-    "Mystical Typhoon",
-    "Card Destruction",
-    "Pot of Greed",
-    "Lightning Vortex",
-    "Reinforcement of the Army",
-    "Reinforcements of the Army",
-    "Level Limit - Area B",
-    "Limit Area B",
-    "Book of Moon",
-    "Nobleman of Crossout",
-    "Polymerization",
-    "Terraforming",
-    "Heavy Storm",
-    "Magic Planter",
-    "Monster Reincarnation",
-    "E - Emergency Call",
-    "Emergency Call",
-    "Messenger of Peace",
-    "Foolish Burial",
-    "Smashing Ground",
-    "Giant Trunade",
-    "My Body as a Shield",
-    "Dimension Fusion",
-    "Shrink",
-    "Shield Crush",
-    "Soul Taker",
-    "Brain Control",
-    "Swords of Revealing Light",
-    "Enemy Controller",
-    "Mind Control",
-    "Mins Control",
-    "Foolish Return",
-    "Warrior Elimination",
-
-    // Traps
-    "Dust Tornado",
-    "Dist Tornado",
-    "Phoenix Wing Wind Blast",
-    "Royal Oppression",
-    "Legacy of Yata-Garasu",
-    "Legacy of Yata Garasu",
-    "Royal Decree",
-    "Skill Drain",
-    "Jar of Greed",
-    "Raigeki Break",
-    "Solemn Judgment",
-    "Return from the Different Dimension",
-    "Return from Different Dimension",
-    "Widespread Ruin",
-    "Sakuretsu Armor",
-    "Ceasefire",
-    "Deck Devastation Virus",
-    "Rivalry of Warlords",
-    "Seven Tools of the Bandit",
-    "Pulling the Rug",
-    "Good Goblin Housekeeping",
-    "Radiant Mirror Force",
-    "Rdiant Mirror Force",
-    "Bottomless Trap Hole",
-    "Ring of Destruction",
-    "Mirror Force",
-    "Torrential Tribute",
-    "Call of the Haunted",
-    "Needlebug Nest",
-    "Malevolent Catastrophe",
-    "Chaos Trap Hole",
-    "Solemn Scolding",
-
-    // Fusion Staples
-    "Thousand-Eyes Restrict",
-    "Dragoness the Wicked Knight",
-    "Darkfire Dragon",
-    "Dark Balter the Terrible",
-    "Reaper on the Nightmare",
-    "Ryu Senshi",
-    "Ojama King",
-    "Dark Blade the Dragon Knight",
-    "The Last Warrior from Another Planet",
-    "Twin-Headed Thunder Dragon",
-    "Dark Paladin",
-    "Gatling Dragon",
-    "Master of Oz",
-    "Blue-Eyes Ultimate Dragon"
+    "Tribe-Infecting Virus","Tribe Infecting Virus","Breaker the Magical Warrior","Tsukuyomi",
+    "Gigantes","Exiled Force","Black Luster Soldier - Envoy of the Beginning","Thunder Dragon","Injection Fairy Lily","D.D. Assailant",
+    "D.D. Warrior","Kycoo the Ghost Destroyer","D.D. Warrior Lady","Don Zaloog", "Gravekeeper's Spy",
+    "King of the Swamp","Mobius the Frost Monarch","Summoner Monk","Elemental HERO Prisma",
+    "Cipher Soldier","Sinister Serpent","Jinzo","Spirit Reaper","Marshmallon",
+    "Zombyra the Dark","Giant Rat","Mystic Swordsman LV2","Metamorphosis","Upstart Goblin",
+    "Premature Burial","Unexpected Dai","Scapegoat","Creature Swap","Mystical Space Typhoon",
+    "Mystical Typhoon","Pot of Greed","Lightning Vortex",
+    "Reinforcement of the Army","Reinforcements of the Army","Level Limit - Area B",
+    "Limit Area B","Book of Moon","Nobleman of Crossout","Polymerization","Terraforming",
+    "Heavy Storm","Magic Planter","Monster Reincarnation","E - Emergency Call","Emergency Call",
+    "Messenger of Peace","Foolish Burial","Smashing Ground","Giant Trunade",
+    "My Body as a Shield","Dimension Fusion","Shrink","Shield Crush","Soul Taker",
+    "Brain Control","Swords of Revealing Light","Enemy Controller","Mind Control",
+    "Mins Control","Foolish Return","Warrior Elimination","Dust Tornado","Dist Tornado",
+    "Phoenix Wing Wind Blast","Royal Oppression","Legacy of Yata-Garasu","Legacy of Yata Garasu",
+    "Royal Decree","Skill Drain","Jar of Greed","Raigeki Break","Solemn Judgment",
+    "Return from the Different Dimension","Return from Different Dimension","Widespread Ruin",
+    "Sakuretsu Armor","Ceasefire","Deck Devastation Virus","Rivalry of Warlords",
+    "Seven Tools of the Bandit","Pulling the Rug","Good Goblin Housekeeping", "Magic Cylinder",
+    "Radiant Mirror Force","Rdiant Mirror Force","Bottomless Trap Hole","Ring of Destruction",
+    "Mirror Force","Torrential Tribute","Call of the Haunted","Needlebug Nest",
+    "Malevolent Catastrophe","Chaos Trap Hole","Solemn Scolding","Thousand-Eyes Restrict",
+    "Dragoness the Wicked Knight","Darkfire Dragon","Dark Balter the Terrible",
+    "Reaper on the Nightmare","Ryu Senshi","Ojama King","Dark Blade the Dragon Knight",
+    "The Last Warrior from Another Planet","Twin-Headed Thunder Dragon","Dark Paladin",
+    "Gatling Dragon","Master of Oz","Blue-Eyes Ultimate Dragon"
   ];
 
   var STAPLES={};
@@ -1362,34 +1477,20 @@ async function submitDeck(p){
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g,"")
-      .replace(/[’']/g,"")
+      .replace(/['']/g,"")
       .replace(/[^a-z0-9]+/g," ")
       .trim();
   }
 
-  STAPLE_NAMES.forEach(function(n){
-    STAPLES[normName(n)]=true;
-  });
+  STAPLE_NAMES.forEach(function(n){STAPLES[normName(n)]=true;});
 
-  function isStapleCard(c){
-    return !!STAPLES[normName(c.name)];
-  }
+  function isStapleCard(c){return !!STAPLES[normName(c.name)];}
 
+  function cnt(s){var t=0;deck[s].forEach(function(v){t+=v;});return t;}
 
+  function copies(id){return (deck.main.get(id)||0)+(deck.extra.get(id)||0)+(deck.side.get(id)||0);}
 
-  function cnt(s){
-    var t=0;
-    deck[s].forEach(function(v){t+=v;});
-    return t;
-  }
-
-  function copies(id){
-    return (deck.main.get(id)||0)+(deck.extra.get(id)||0)+(deck.side.get(id)||0);
-  }
-
-  function lim(id){
-    return rules[id]?rules[id].limit:3;
-  }
+  function lim(id){return rules[id]?rules[id].limit:3;}
 
   function bc(id){
     var l=lim(id);
@@ -1421,15 +1522,9 @@ async function submitDeck(p){
     if(cnt("main")<40||cnt("main")>60)errs.push("Main "+cnt("main")+"/40-60");
     if(cnt("extra")>15)errs.push("Extra max 15");
     if(cnt("side")>15)errs.push("Side max 15");
-
     var v=document.getElementById("validation");
-    if(errs.length){
-      v.textContent=errs.join(" | ");
-      v.className="err";
-    }else{
-      v.textContent="Deck OK";
-      v.className="ok";
-    }
+    if(errs.length){v.textContent=errs.join(" | ");v.className="err";}
+    else{v.textContent="Deck OK";v.className="ok";}
     return errs.length===0;
   }
 
@@ -1440,13 +1535,27 @@ async function submitDeck(p){
       side:document.getElementById("sideGrid")
     };
 
-    Object.keys(zones).forEach(function(z){
-      zones[z].innerHTML="";
-    });
+    Object.keys(zones).forEach(function(z){zones[z].innerHTML="";});
 
     document.getElementById("cntMain").textContent=cnt("main");
     document.getElementById("cntExtra").textContent=cnt("extra");
     document.getElementById("cntSide").textContent=cnt("side");
+
+    var mainMonsters=0;
+    var mainSpells=0;
+    var mainTraps=0;
+
+    deck.main.forEach(function(qty,id){
+      var c=cardMap[id];
+      if(!c)return;
+      var kind=getCardKind(c);
+      if(kind==="Monster")mainMonsters+=qty;
+      else if(kind==="Spell")mainSpells+=qty;
+      else if(kind==="Trap")mainTraps+=qty;
+    });
+
+    document.getElementById("mainBreakdown").textContent=
+      "Monsters: "+mainMonsters+" | Spells: "+mainSpells+" | Traps: "+mainTraps;
 
     validate();
 
@@ -1464,7 +1573,6 @@ async function submitDeck(p){
           var type=String(c.type||"").toLowerCase();
           var sub=String(c.subType||"").toLowerCase();
           var cls=String(c.class||"").toLowerCase();
-
           if(type.indexOf("spell")>=0)return 3;
           if(type.indexOf("trap")>=0)return 4;
           if(sub==="fusion"||cls==="fusion"||type.indexOf("fusion")>=0)return 5;
@@ -1475,7 +1583,6 @@ async function submitDeck(p){
         var ra=cardSortRank(ca);
         var rb=cardSortRank(cb);
         if(ra!==rb)return ra-rb;
-
         return String(ca.name||a[0]).localeCompare(String(cb.name||b[0]));
       });
 
@@ -1490,13 +1597,23 @@ async function submitDeck(p){
 
         d.innerHTML=
           "<img src='"+ci(id)+"' loading='lazy' alt=''>"+
-          "<div class='dqty'>x"+qty+"</div>"+
+          "<div class='dqty'>"+qty+"x</div>"+
+          "<div class='dadd'>+</div>"+
           "<div class='drem'>-</div>";
 
         d.querySelector("img").onclick=function(){showP(id);};
         d.querySelector(".drem").onclick=function(e){
           e.stopPropagation();
           removeCard(section,id);
+        };
+
+        d.querySelector(".dadd").onclick=function(e){
+          e.stopPropagation();
+          var targetZone=section;
+          if(section==="main"&&isExtraDeck(id)){targetZone="extra";}
+          var err=canPlace(id,targetZone);
+          if(err)return;
+          addCardTo(id,targetZone);
         };
 
         d.addEventListener("dragstart",function(e){
@@ -1510,17 +1627,9 @@ async function submitDeck(p){
   }
 
   function addCardTo(id,zone){
-    // Normal behavior: pressing Main on a Fusion/Extra Deck monster sends it to Extra.
-    // Side Deck still accepts Fusion monsters.
-    if(zone==="main"&&isExtraDeck(id)){
-      zone="extra";
-    }
-
+    if(zone==="main"&&isExtraDeck(id)){zone="extra";}
     var err=canPlace(id,zone);
-    if(err){
-      return;
-    }
-
+    if(err){return;}
     deck[zone].set(id,(deck[zone].get(id)||0)+1);
     renderDeck();
   }
@@ -1534,29 +1643,14 @@ async function submitDeck(p){
 
   function moveCard(id,from,to){
     if(!id||!from||!to||from===to)return;
-
-    if(to==="extra"&&!isExtraDeck(id)){
-      return;
-    }
-
-    if(to==="main"&&isExtraDeck(id)){
-      return;
-    }
-
-    if(to==="extra"&&cnt("extra")>=15){
-      return;
-    }
-
-    if(to==="side"&&cnt("side")>=15){
-      return;
-    }
-
+    if(to==="extra"&&!isExtraDeck(id))return;
+    if(to==="main"&&isExtraDeck(id))return;
+    if(to==="extra"&&cnt("extra")>=15)return;
+    if(to==="side"&&cnt("side")>=15)return;
     var q=deck[from].get(id)||0;
     if(q<=0)return;
-
     if(q<=1)deck[from].delete(id);
     else deck[from].set(id,q-1);
-
     deck[to].set(id,(deck[to].get(id)||0)+1);
     renderDeck();
   }
@@ -1577,19 +1671,27 @@ async function submitDeck(p){
       el.addEventListener("drop",function(e){
         e.preventDefault();
         el.classList.remove("dragover");
-
         var id=e.dataTransfer.getData("id");
         var from=e.dataTransfer.getData("from");
-
-        if(from==="search"){
-          addCardTo(id,zone);
-        }else{
-          moveCard(id,from,zone);
-        }
+        if(from==="search"){addCardTo(id,zone);}
+        else{moveCard(id,from,zone);}
       });
     });
   }
 
+  // ── RIGHT-CLICK TO REMOVE 1 COPY ──────────────────────────────────────────
+  function setupRightClickRemove(){
+    ["main","extra","side"].forEach(function(zone){
+      var el=document.getElementById(zone+"Grid");
+      el.addEventListener("contextmenu",function(e){
+        e.preventDefault();
+        var card=e.target.closest ? e.target.closest(".dcard") : null;
+        if(!card)return;
+        removeCard(zone,card.dataset.id);
+      });
+    });
+  }
+  // ─────────────────────────────────────────────────────────────────────────
 
   function setupRemoveOutsideDeck(){
     document.addEventListener("dragstart",function(e){
@@ -1610,13 +1712,9 @@ async function submitDeck(p){
     document.addEventListener("drop",function(e){
       var id=e.dataTransfer ? e.dataTransfer.getData("id") : "";
       var from=e.dataTransfer ? e.dataTransfer.getData("from") : "";
-
       document.body.classList.remove("removing");
-
       if(!id || !from || from==="search")return;
-
       if(e.target.closest && e.target.closest(".zoneGrid"))return;
-
       e.preventDefault();
       removeCard(from,id);
     });
@@ -1625,27 +1723,20 @@ async function submitDeck(p){
   function showP(id){
     var c=cardMap[id];
     if(!c)return;
-
     selectedPreviewId=id;
-
     var img=document.getElementById("previewImg");
     img.src=ci(id);
     img.style.display="block";
-
     document.getElementById("previewName").textContent=String(c.name||"");
-
     var lbl=["Forbidden","Limited","Semi-Limited","Unlimited"];
     var l=lim(id);
     var color=l===0?"#f88":l===1?"#fc0":l===2?"#8af":"#8f8";
-
     document.getElementById("previewInfo").innerHTML=
-      (c.type||"")+
-      (c.subType?" / "+c.subType:"")+"<br>"+
+      (c.type||"")+(c.subType?" / "+c.subType:"")+"<br>"+
       (c.attribute?String(c.attribute).trim().toUpperCase():"")+
       (c.monsterType?" / "+c.monsterType:"")+
       (c.atk!=null?" | ATK:"+c.atk+" DEF:"+c.def:"")+
       "<br><b style='color:"+color+"'>"+(lbl[l]!==undefined?lbl[l]:"Unlimited")+"</b>";
-
     var pt=document.getElementById("previewText");
     if(pt)pt.textContent=c.text||"";
   }
@@ -1654,7 +1745,6 @@ async function submitDeck(p){
     var st=String(c.subType||"").toLowerCase();
     var ty=String(c.type||"").toLowerCase();
     var cls=String(c.class||"").toLowerCase();
-
     return st==="fusion"||cls==="fusion"||ty.indexOf("fusion")>=0;
   }
 
@@ -1668,29 +1758,18 @@ async function submitDeck(p){
 
   function getCardSubtype(c){
     var kind=getCardKind(c);
-
-    if(kind==="Extra"){
-      return "Fusion";
-    }
-
-    // In this JSON, cards like Asura Priest have subType="Effect" and class="Spirit".
-    // So Monster subtype filter must check class first when it exists.
-    if(kind==="Monster" && c.class){
-      return String(c.class||"").trim();
-    }
-
+    if(kind==="Extra")return "Fusion";
+    if(kind==="Monster" && c.class)return String(c.class||"").trim();
     return String(c.subType||"").trim();
   }
 
   function searchableText(c){
-    return [
-      c.name,c.text,c.type,c.subType,c.class,c.attribute,c.monsterType
-    ].map(function(x){return String(x||"").toLowerCase();}).join(" ");
+    return [c.name,c.text,c.type,c.subType,c.class,c.attribute,c.monsterType]
+      .map(function(x){return String(x||"").toLowerCase();}).join(" ");
   }
 
   function populateFilters(){
-    var attrSet={}, monSet={};
-
+    var attrSet={},monSet={};
     var monsterOrder=[
       "Warrior","Spellcaster","Dragon","Fiend","Zombie","Machine","Beast",
       "Beast-Warrior","Winged Beast","Aqua","Pyro","Thunder","Rock","Plant",
@@ -1727,60 +1806,45 @@ async function submitDeck(p){
     var kind=document.getElementById("cardTypeFilter").value;
     var sub=document.getElementById("subtypeFilter");
     var current=sub.value;
-
     sub.innerHTML="<option value=''>All subtypes</option>";
-
     var monsterSubtypes=["Normal","Effect","Ritual","Spirit","Flip","Union","Gemini","Toon"];
     var extraSubtypes=["Fusion"];
     var spellSubtypes=["Normal","Quick-Play","Equip","Ritual","Continuous","Field"];
     var trapSubtypes=["Normal","Counter","Continuous"];
-
     var list=[];
     if(kind==="Monster")list=monsterSubtypes;
     else if(kind==="Extra")list=extraSubtypes;
     else if(kind==="Spell")list=spellSubtypes;
     else if(kind==="Trap")list=trapSubtypes;
-
     list.forEach(function(s){
       var o=document.createElement("option");
       o.value=s;o.textContent=s;
       sub.appendChild(o);
     });
-
     if(list.indexOf(current)>=0)sub.value=current;
-
     var mf=document.getElementById("monsterFilters");
     mf.style.display=(kind===""||kind==="Monster"||kind==="Extra")?"grid":"none";
   }
 
   function cardMatchesFilters(c,q,kind,sub,attr,monType){
     var staplesOnly=document.getElementById("staplesOnly").checked;
-
     if(staplesOnly&&!isStapleCard(c))return false;
-
     if(q&&searchableText(c).indexOf(q)<0)return false;
-
     var ck=getCardKind(c);
     if(kind&&ck!==kind)return false;
-
     if(sub){
       var s=sub.toLowerCase();
       var cs=getCardSubtype(c).toLowerCase();
       var rawSub=String(c.subType||"").toLowerCase();
       var cls=String(c.class||"").toLowerCase();
-
       if(s==="normal"){
         if(cs&&cs!=="normal"&&rawSub!=="normal")return false;
-      }else if(cs!==s && rawSub!==s && cls!==s){
-        return false;
-      }
+      }else if(cs!==s && rawSub!==s && cls!==s){return false;}
     }
-
     if((kind===""||kind==="Monster"||kind==="Extra")&&(ck==="Monster"||ck==="Extra")){
       if(attr&&String(c.attribute||"").trim().toUpperCase()!==attr)return false;
       if(monType&&String(c.monsterType||"").trim()!==monType)return false;
     }
-
     return true;
   }
 
@@ -1788,29 +1852,23 @@ async function submitDeck(p){
     var el=document.getElementById("searchResults");
     el.innerHTML="";
     q=String(q||"").toLowerCase().trim();
-
     var kind=document.getElementById("cardTypeFilter").value;
     var sub=document.getElementById("subtypeFilter").value;
     var attr=document.getElementById("attributeFilter").value;
     var monType=document.getElementById("monsterTypeFilter").value;
-
     var shown=0,total=0;
 
     for(var i=0;i<cardList.length;i++){
       var c=cardList[i];
       if(!cardMatchesFilters(c,q,kind,sub,attr,monType))continue;
-
       total++;
       if(shown>=80)continue;
       shown++;
-
       var id=c.password;
-
       var d=document.createElement("div");
       d.className="scard";
       d.draggable=true;
       d.dataset.id=id;
-
       d.innerHTML=
         "<img src='"+ci(id)+"' loading='lazy' alt=''>"+
         "<span class='sname'>"+c.name+"</span>"+
@@ -1824,7 +1882,6 @@ async function submitDeck(p){
           e.dataTransfer.setData("id",cid);
           e.dataTransfer.setData("from","search");
         });
-
         cardEl.querySelector("img").onclick=function(){showP(cid);};
         cardEl.querySelector(".main").onclick=function(e){e.stopPropagation();addCardTo(cid,"main");};
         cardEl.querySelector(".side").onclick=function(e){e.stopPropagation();addCardTo(cid,"side");};
@@ -1839,27 +1896,46 @@ async function submitDeck(p){
       total+" result(s) found. Showing first "+shown+" results.";
   }
 
-  function refreshSearch(){
-    renderSearch(document.getElementById("searchInput").value);
+  function refreshSearch(){renderSearch(document.getElementById("searchInput").value);}
+
+  function updateFilterState(){
+    var active =
+      document.getElementById("searchInput").value.trim() !== "" ||
+      document.getElementById("staplesOnly").checked ||
+      document.getElementById("cardTypeFilter").value !== "" ||
+      document.getElementById("subtypeFilter").value !== "" ||
+      document.getElementById("attributeFilter").value !== "" ||
+      document.getElementById("monsterTypeFilter").value !== "";
+
+    document.body.classList.toggle("filters-active",active);
   }
 
-  document.getElementById("searchInput").addEventListener("input",refreshSearch);
-  document.getElementById("staplesOnly").addEventListener("change",refreshSearch);
-  document.getElementById("cardTypeFilter").addEventListener("change",function(){
+  function clearFilters(){
+    document.getElementById("searchInput").value="";
+    document.getElementById("staplesOnly").checked=false;
+    document.getElementById("cardTypeFilter").value="";
     updateSubtypeOptions();
+    document.getElementById("subtypeFilter").value="";
+    document.getElementById("attributeFilter").value="";
+    document.getElementById("monsterTypeFilter").value="";
     refreshSearch();
-  });
-  document.getElementById("subtypeFilter").addEventListener("change",refreshSearch);
-  document.getElementById("attributeFilter").addEventListener("change",refreshSearch);
-  document.getElementById("monsterTypeFilter").addEventListener("change",refreshSearch);
+    updateFilterState();
+  }
+
+  document.getElementById("clearFiltersBtn").addEventListener("click",clearFilters);
+
+  document.getElementById("searchInput").addEventListener("input",function(){refreshSearch();updateFilterState();});
+  document.getElementById("staplesOnly").addEventListener("change",function(){refreshSearch();updateFilterState();});
+  document.getElementById("cardTypeFilter").addEventListener("change",function(){updateSubtypeOptions();refreshSearch();updateFilterState();});
+  document.getElementById("subtypeFilter").addEventListener("change",function(){refreshSearch();updateFilterState();});
+  document.getElementById("attributeFilter").addEventListener("change",function(){refreshSearch();updateFilterState();});
+  document.getElementById("monsterTypeFilter").addEventListener("change",function(){refreshSearch();updateFilterState();});
 
   document.getElementById("clearBtn").onclick=function(){
     if(cnt("main")||cnt("extra")||cnt("side")){
       if(!confirm("Start a new empty deck?"))return;
     }
-    deck.main.clear();
-    deck.extra.clear();
-    deck.side.clear();
+    deck.main.clear();deck.extra.clear();deck.side.clear();
     renderDeck();
   };
 
@@ -1868,48 +1944,32 @@ async function submitDeck(p){
   var pasteMsg=document.getElementById("pasteMsg");
 
   document.getElementById("pasteBtn").onclick=function(){
-    pasteMsg.textContent="";
-    pasteMsg.className="";
-    pasteText.value="";
+    pasteMsg.textContent="";pasteMsg.className="";pasteText.value="";
     pasteOverlay.classList.add("open");
     setTimeout(function(){pasteText.focus();},50);
   };
 
-  document.getElementById("pasteCancelBtn").onclick=function(){
-    pasteOverlay.classList.remove("open");
-  };
-
-  pasteOverlay.addEventListener("click",function(e){
-    if(e.target===pasteOverlay)pasteOverlay.classList.remove("open");
-  });
+  document.getElementById("pasteCancelBtn").onclick=function(){pasteOverlay.classList.remove("open");};
+  pasteOverlay.addEventListener("click",function(e){if(e.target===pasteOverlay)pasteOverlay.classList.remove("open");});
 
   function findCardIdByName(name){
     var target=normName(name);
     if(!target)return null;
-
-    for(var id in cardMap){
-      if(normName(cardMap[id].name)===target)return id;
-    }
-
+    for(var id in cardMap){if(normName(cardMap[id].name)===target)return id;}
     return null;
   }
 
   function parseDecklistLine(line){
     line=String(line||"").trim();
     if(!line)return null;
-
     line=line.replace(/^[-*•]+\s*/,"");
     line=line.replace(/\s+\/\/.*$/,"");
-
-    var m=line.match(/^(\d+)\s*x?\s+(.+)$/i);
+    var m=line.match(/^(\d+)\s*x?\s*(.+)$/i);
     if(m)return {qty:parseInt(m[1],10)||1,name:m[2].trim()};
-
     m=line.match(/^(.+?)\s+x\s*(\d+)$/i);
     if(m)return {qty:parseInt(m[2],10)||1,name:m[1].trim()};
-
     m=line.match(/^(.+?)\s*\((\d+)\)$/i);
     if(m)return {qty:parseInt(m[2],10)||1,name:m[1].trim()};
-
     return {qty:1,name:line};
   }
 
@@ -1922,81 +1982,54 @@ async function submitDeck(p){
     String(text||"").split(/\r?\n/).forEach(function(raw){
       var line=String(raw||"").trim();
       if(!line)return;
-
       var lower=line.toLowerCase();
+      if(
+        lower==="#main"||lower==="# main"||lower==="# main deck"||
+        lower==="main"||lower==="main deck"||lower==="main deck:"||
+        lower==="monsters"||lower==="monster:"||
+        lower==="spell:"||lower==="spells:"||
+        lower==="trap:"||lower==="traps:"
+      ){section="main";return;}
 
-      if(lower==="#main"||lower==="# main"||lower==="# main deck"||lower==="main"||lower==="main deck"||lower==="monsters"||lower==="monster:"||lower==="spell:"||lower==="spells:"||lower==="trap:"||lower==="traps:"){
-        section="main";
-        return;
-      }
+      if(
+        lower==="#extra"||lower==="# extra"||lower==="# extra deck"||
+        lower==="extra"||lower==="extra deck"||lower==="extra deck:"||
+        lower==="fusion"||lower==="fusions:"||lower==="extra:"
+      ){section="extra";return;}
 
-      if(lower==="#extra"||lower==="# extra"||lower==="# extra deck"||lower==="extra"||lower==="extra deck"||lower==="fusion"||lower==="fusions:"||lower==="extra:"){
-        section="extra";
-        return;
-      }
+      if(
+        lower==="!side"||lower==="#side"||lower==="# side"||lower==="# side deck"||
+        lower==="side"||lower==="side deck"||lower==="side deck:"||lower==="side:"
+      ){section="side";return;}
 
-      if(lower==="!side"||lower==="#side"||lower==="# side"||lower==="# side deck"||lower==="side"||lower==="side deck"||lower==="side:"){
-        section="side";
-        return;
-      }
-
+      if(/^[-]+$/.test(lower))return;
       if(line[0]==="#")return;
-
       var parsed=parseDecklistLine(line);
       if(!parsed||!parsed.name)return;
-
       parsed.name=parsed.name.replace(/^[xX]\s*/,"").replace(/\s+$/g,"");
       var id=findCardIdByName(parsed.name);
-
-      if(!id){
-        missing.push(parsed.name);
-        return;
-      }
-
+      if(!id){missing.push(parsed.name);return;}
       var qty=Math.max(1,Math.min(3,parsed.qty||1));
       imported[section].set(id,(imported[section].get(id)||0)+qty);
       importedCount+=qty;
     });
 
-    deck.main=imported.main;
-    deck.extra=imported.extra;
-    deck.side=imported.side;
+    deck.main=imported.main;deck.extra=imported.extra;deck.side=imported.side;
     renderDeck();
-
     return {count:importedCount,missing:missing};
   }
 
   document.getElementById("pasteImportBtn").onclick=function(){
     var text=pasteText.value.trim();
-    if(!text){
-      pasteMsg.textContent="Paste a decklist first.";
-      pasteMsg.className="err";
-      return;
-    }
-
+    if(!text){pasteMsg.textContent="Paste a decklist first.";pasteMsg.className="err";return;}
     var result=importTextDecklist(text);
-
-    if(!result.count){
-      pasteMsg.textContent="No cards were imported. Check the card names.";
-      pasteMsg.className="err";
-      return;
-    }
-
+    if(!result.count){pasteMsg.textContent="No cards were imported. Check the card names.";pasteMsg.className="err";return;}
     var msg="Imported "+result.count+" cards.";
-    if(result.missing.length){
-      msg+=" Missing: "+result.missing.slice(0,8).join(", ");
-      if(result.missing.length>8)msg+="...";
-    }
-
+    if(result.missing.length){msg+=" Missing: "+result.missing.slice(0,8).join(", ");if(result.missing.length>8)msg+="...";}
     pasteMsg.textContent=msg;
     pasteMsg.className=result.missing.length?"err":"ok";
-
-    setTimeout(function(){
-      pasteOverlay.classList.remove("open");
-      if(result.missing.length)alert(msg);
-    },600);
+    setTimeout(function(){pasteOverlay.classList.remove("open");if(result.missing.length)alert(msg);},600);
   };
-
 
   var handOverlay=document.getElementById("handOverlay");
   var handDeck=[];
@@ -2007,18 +2040,14 @@ async function submitDeck(p){
 
   function buildMainDeckArray(){
     var arr=[];
-    deck.main.forEach(function(q,id){
-      for(var i=0;i<q;i++)arr.push(id);
-    });
+    deck.main.forEach(function(q,id){for(var i=0;i<q;i++)arr.push(id);});
     return arr;
   }
 
   function shuffleArray(arr){
     for(var i=arr.length-1;i>0;i--){
       var j=Math.floor(Math.random()*(i+1));
-      var tmp=arr[i];
-      arr[i]=arr[j];
-      arr[j]=tmp;
+      var tmp=arr[i];arr[i]=arr[j];arr[j]=tmp;
     }
     return arr;
   }
@@ -2026,23 +2055,17 @@ async function submitDeck(p){
   function showHandPreview(id){
     var c=cardMap[id];
     if(!c)return;
-
     document.getElementById("handPreviewImg").src=ci(id);
     document.getElementById("handPreviewName").textContent=String(c.name||"");
-
     document.getElementById("handPreviewInfo").innerHTML=
-      (c.type||"")+
-      (c.subType?" / "+c.subType:"")+"<br>"+
+      (c.type||"")+(c.subType?" / "+c.subType:"")+"<br>"+
       (c.attribute?String(c.attribute).trim().toUpperCase():"")+
       (c.monsterType?" / "+c.monsterType:"")+
       (c.atk!=null?" | ATK:"+c.atk+" DEF:"+c.def:"");
-
     document.getElementById("handPreviewText").textContent=c.text||"";
   }
 
-  function remainingDeckIds(){
-    return handDeck.slice(handNextIndex);
-  }
+  function remainingDeckIds(){return handDeck.slice(handNextIndex);}
 
   function remainingGrouped(){
     var grouped={};
@@ -2050,28 +2073,22 @@ async function submitDeck(p){
       if(!grouped[id])grouped[id]={id:id,qty:0,name:cardMap[id]?cardMap[id].name:id};
       grouped[id].qty++;
     });
-    return Object.keys(grouped).map(function(id){return grouped[id];}).sort(function(a,b){
-      return String(a.name).localeCompare(String(b.name));
-    });
+    return Object.keys(grouped).map(function(id){return grouped[id];}).sort(function(a,b){return String(a.name).localeCompare(String(b.name));});
   }
 
   function renderHandSearch(){
     var panel=document.getElementById("handSearchPanel");
     if(!panel)return;
     panel.className=handSearchOpen?"open":"";
-
     var q=String(document.getElementById("handSearchInput").value||"").toLowerCase().trim();
     var list=document.getElementById("handSearchResults");
     list.innerHTML="";
-
     var cards=remainingGrouped().filter(function(x){
       var c=cardMap[x.id];
       var hay=[x.name,c&&c.text,c&&c.type,c&&c.subType,c&&c.attribute,c&&c.monsterType].join(" ").toLowerCase();
       return !q || hay.indexOf(q)>=0;
     });
-
     document.getElementById("handSearchCount").textContent=cards.length+" card(s)";
-
     cards.slice(0,80).forEach(function(item){
       var row=document.createElement("div");
       row.className="handSearchRow";
@@ -2080,11 +2097,8 @@ async function submitDeck(p){
         "<div class='handSearchName'>"+String(item.name||item.id)+"</div>"+
         "<div class='handSearchQty'>x"+item.qty+"</div>"+
         "<button class='handSearchAdd'>Add</button>";
-
       row.addEventListener("mouseenter",function(){showHandPreview(item.id);});
-      row.querySelector(".handSearchAdd").onclick=function(){
-        searchCardToHand(item.id);
-      };
+      row.querySelector(".handSearchAdd").onclick=function(){searchCardToHand(item.id);};
       list.appendChild(row);
     });
   }
@@ -2092,10 +2106,9 @@ async function submitDeck(p){
   function renderHand(){
     var el=document.getElementById("handCards");
     el.innerHTML="";
-
     handDrawn.forEach(function(entry,idx){
       var id=entry.id;
-      var label=entry.label || (idx<6?"OPEN":"DRAW "+(idx-5));
+      var label=entry.label||(idx<6?"OPEN":"DRAW "+(idx-5));
       var badgeClass=label.indexOf("SEARCH")===0?"search":(label.indexOf("DRAW")===0?"draw":"");
       var d=document.createElement("div");
       d.className="handCard";
@@ -2104,60 +2117,39 @@ async function submitDeck(p){
         "<div class='handBadge "+badgeClass+"'>"+label+"</div>"+
         "<button class='handUseBtn' title='Remove from test hand'>×</button>"+
         "<div class='handUsedNote'>REMOVE / USED</div>";
-
       d.addEventListener("mouseenter",function(){showHandPreview(id);});
       d.addEventListener("click",function(){showHandPreview(id);});
-      d.querySelector(".handUseBtn").onclick=function(e){
-        e.stopPropagation();
-        removeFromTestHand(idx);
-      };
+      d.querySelector(".handUseBtn").onclick=function(e){e.stopPropagation();removeFromTestHand(idx);};
       el.appendChild(d);
     });
-
     var remaining=Math.max(0,handDeck.length-handNextIndex);
     document.getElementById("handStats").textContent="Deck remaining: "+remaining+" / "+handDeck.length+" | Hand: "+handDrawn.length;
     document.getElementById("drawOneBtn").disabled=remaining<=0;
     document.getElementById("handLog").textContent=handLastAction;
-
     renderHandSearch();
-
     if(handDrawn[0])showHandPreview(handDrawn[handDrawn.length-1].id || handDrawn[0].id);
   }
 
   function removeFromTestHand(idx){
     if(idx<0 || idx>=handDrawn.length)return;
-
     var removed=handDrawn.splice(idx,1)[0];
     var name=removed && cardMap[removed.id] ? cardMap[removed.id].name : (removed ? removed.id : "card");
-
     handLastAction="Removed / used "+name+" from test hand.";
     renderHand();
   }
 
   function startHandTest(){
     handDeck=shuffleArray(buildMainDeckArray());
-    handDrawn=[];
-    handNextIndex=0;
-
-    if(handDeck.length<6){
-      alert("Main Deck needs at least 6 cards to test a NeoGoat opening hand.");
-      return;
-    }
-
+    handDrawn=[];handNextIndex=0;
+    if(handDeck.length<6){alert("Main Deck needs at least 6 cards to test a NeoGoat opening hand.");return;}
     handSearchOpen=false;
     handLastAction="NeoGoat opening hand drawn: 6 cards.";
-
-    for(var i=0;i<6;i++){
-      handDrawn.push({id:handDeck[handNextIndex++],label:"OPEN"});
-    }
-
+    for(var i=0;i<6;i++){handDrawn.push({id:handDeck[handNextIndex++],label:"OPEN"});}
     handOverlay.classList.add("open");
     renderHand();
   }
 
-  document.getElementById("testHandBtn").onclick=function(){
-    startHandTest();
-  };
+  document.getElementById("testHandBtn").onclick=function(){startHandTest();};
 
   document.getElementById("drawOneBtn").onclick=function(){
     if(handNextIndex>=handDeck.length)return;
@@ -2172,12 +2164,9 @@ async function submitDeck(p){
     for(var i=handNextIndex;i<handDeck.length;i++){
       if(handDeck[i]===id){
         handDeck.splice(i,1);
-
-        // After a search effect resolves, the remaining deck is shuffled automatically.
         var top=handDeck.slice(0,handNextIndex);
         var rest=shuffleArray(handDeck.slice(handNextIndex));
         handDeck=top.concat(rest);
-
         handDrawn.push({id:id,label:"SEARCH"});
         handLastAction="Searched "+(cardMap[id]?cardMap[id].name:id)+" from remaining deck. Remaining deck shuffled.";
         document.getElementById("handSearchInput").value="";
@@ -2195,87 +2184,41 @@ async function submitDeck(p){
   };
 
   document.getElementById("handSearchInput").addEventListener("input",renderHandSearch);
+  document.getElementById("shuffleHandBtn").onclick=function(){startHandTest();};
+  document.getElementById("closeHandBtn").onclick=function(){handOverlay.classList.remove("open");};
+  handOverlay.addEventListener("click",function(e){if(e.target===handOverlay)handOverlay.classList.remove("open");});
 
-  document.getElementById("shuffleHandBtn").onclick=function(){
-    startHandTest();
-  };
-
-  document.getElementById("closeHandBtn").onclick=function(){
-    handOverlay.classList.remove("open");
-  };
-
-  handOverlay.addEventListener("click",function(e){
-    if(e.target===handOverlay)handOverlay.classList.remove("open");
-  });
-
-  document.getElementById("importBtn").onclick=function(){
-    document.getElementById("ydkInput").click();
-  };
+  document.getElementById("importBtn").onclick=function(){document.getElementById("ydkInput").click();};
 
   document.getElementById("ydkInput").addEventListener("change",async function(e){
     var file=e.target.files[0];
     if(!file)return;
-
-    try{
-      var text=await file.text();
-      importYDK(text);
-    }catch(err){
-      alert("Could not import YDK: "+err.message);
-    }
-
+    try{var text=await file.text();importYDK(text);}
+    catch(err){alert("Could not import YDK: "+err.message);}
     e.target.value="";
   });
 
   function importYDK(text){
     var imported={main:new Map(),extra:new Map(),side:new Map()};
-    var section=null;
-    var missing=[];
-
+    var section=null;var missing=[];
     text.split(/\r?\n/).forEach(function(line){
       line=String(line||"").trim();
       if(!line)return;
-
-      if(line==="#main"){
-        section="main";
-        return;
-      }
-
-      if(line==="#extra"){
-        section="extra";
-        return;
-      }
-
-      if(line==="!side"){
-        section="side";
-        return;
-      }
-
+      if(line==="#main"){section="main";return;}
+      if(line==="#extra"){section="extra";return;}
+      if(line==="!side"){section="side";return;}
       if(line.startsWith("#"))return;
       if(!section)return;
       if(!/^\d+$/.test(line))return;
-
       var id=String(Number(line));
-
-      if(!cardMap[id]){
-        missing.push(id);
-        return;
-      }
-
+      if(!cardMap[id]){missing.push(id);return;}
       imported[section].set(id,(imported[section].get(id)||0)+1);
     });
-
-    deck.main=imported.main;
-    deck.extra=imported.extra;
-    deck.side=imported.side;
-
+    deck.main=imported.main;deck.extra=imported.extra;deck.side=imported.side;
     renderDeck();
-
     var total=cnt("main")+cnt("extra")+cnt("side");
     var msg="YDK imported: "+total+" cards";
-    if(missing.length){
-      msg += "\nMissing cards: "+missing.slice(0,12).join(", ");
-      if(missing.length>12)msg += "...";
-    }
+    if(missing.length){msg+="\nMissing cards: "+missing.slice(0,12).join(", ");if(missing.length>12)msg+="...";}
     alert(msg);
   }
 
@@ -2292,51 +2235,21 @@ async function submitDeck(p){
 
   document.getElementById("exportBtn").onclick=function(){
     var ydk="#main\n";
-
-    deck.main.forEach(function(q,id){
-      for(var i=0;i<q;i++){
-        ydk+=id+"\n";
-      }
-    });
-
+    deck.main.forEach(function(q,id){for(var i=0;i<q;i++){ydk+=id+"\n";}});
     ydk+="#extra\n";
-
-    deck.extra.forEach(function(q,id){
-      for(var i=0;i<q;i++){
-        ydk+=id+"\n";
-      }
-    });
-
+    deck.extra.forEach(function(q,id){for(var i=0;i<q;i++){ydk+=id+"\n";}});
     ydk+="!side\n";
-
-    deck.side.forEach(function(q,id){
-      for(var i=0;i<q;i++){
-        ydk+=id+"\n";
-      }
-    });
-
+    deck.side.forEach(function(q,id){for(var i=0;i<q;i++){ydk+=id+"\n";}});
     var blob=new Blob([ydk],{type:"text/plain"});
     var a=document.createElement("a");
     a.href=URL.createObjectURL(blob);
-    var deckName = prompt(
-  "Export deck as:",
-  document.getElementById("fTitle")?.value?.trim() || "NeoGoat Deck"
-);
-
-if(!deckName)return;
-
-deckName = deckName
-  .replace(/[\\/:*?"<>|]/g,"")
-  .trim();
-
-if(!deckName)deckName="NeoGoat Deck";
-
-a.download = deckName + ".ydk";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    var deckName=prompt("Export deck as:",document.getElementById("fTitle")?.value?.trim()||"NeoGoat Deck");
+    if(!deckName)return;
+    deckName=deckName.replace(/[\\/:*?"<>|]/g,"").trim();
+    if(!deckName)deckName="NeoGoat Deck";
+    a.download=deckName+".ydk";
+    document.body.appendChild(a);a.click();a.remove();
     URL.revokeObjectURL(a.href);
-
     alert(".ydk exported");
   };
 
@@ -2347,16 +2260,10 @@ a.download = deckName + ".ydk";
     var main=document.getElementById("thumbSelected");
     var strip=document.getElementById("thumbStripPreview");
     if(!main||!strip)return;
-
     if(thumbnailCardName){
       var id=findCardIdByName(thumbnailCardName);
-      main.innerHTML=
-        "<img src='"+(id?ci(id):"neogoatbuilderlogo.png")+"' alt=''>"+
-        "<span>"+thumbnailCardName+"</span>";
-    }else{
-      main.textContent="No thumbnail selected.";
-    }
-
+      main.innerHTML="<img src='"+(id?ci(id):"neogoatbuilderlogo.png")+"' alt=''>  <span>"+thumbnailCardName+"</span>";
+    }else{main.textContent="No thumbnail selected.";}
     strip.innerHTML="";
     if(!thumbnailStripNames.length){
       var empty=document.createElement("div");
@@ -2365,33 +2272,25 @@ a.download = deckName + ".ydk";
       strip.appendChild(empty);
       return;
     }
-
     thumbnailStripNames.forEach(function(name,idx){
       var id=findCardIdByName(name);
       var item=document.createElement("div");
-      item.className="thumbStripItem";
-      item.title=name;
-      item.innerHTML=
-        "<img src='"+(id?ci(id):"neogoatbuilderlogo.png")+"' alt=''>"+
-        "<button class='thumbStripRemove' type='button'>×</button>";
-      item.querySelector(".thumbStripRemove").onclick=function(){
-        thumbnailStripNames.splice(idx,1);
-        renderThumbnailBuilder();
-      };
+      item.className="thumbStripItem";item.title=name;
+      item.innerHTML="<img src='"+(id?ci(id):"neogoatbuilderlogo.png")+"' alt=''>  <button class='thumbStripRemove' type='button'>×</button>";
+      item.querySelector(".thumbStripRemove").onclick=function(){thumbnailStripNames.splice(idx,1);renderThumbnailBuilder();};
       strip.appendChild(item);
     });
   }
 
   function currentPreviewName(){
     if(!selectedPreviewId||!cardMap[selectedPreviewId])return "";
-    return cardMap[selectedPreviewId].name || "";
+    return cardMap[selectedPreviewId].name||"";
   }
 
   document.getElementById("setThumbBtn").onclick=function(){
     var name=currentPreviewName();
     if(!name){alert("Click a deck card first, then set thumbnail.");return;}
-    thumbnailCardName=name;
-    renderThumbnailBuilder();
+    thumbnailCardName=name;renderThumbnailBuilder();
   };
 
   document.getElementById("addStripBtn").onclick=function(){
@@ -2399,95 +2298,56 @@ a.download = deckName + ".ydk";
     if(!name){alert("Click a deck card first, then add it to the strip.");return;}
     if(thumbnailStripNames.indexOf(name)>=0)return;
     if(thumbnailStripNames.length>=5){alert("Preview strip max is 5 cards.");return;}
-    thumbnailStripNames.push(name);
-    renderThumbnailBuilder();
+    thumbnailStripNames.push(name);renderThumbnailBuilder();
   };
 
   document.getElementById("clearThumbBtn").onclick=function(){
-    thumbnailCardName="";
-    thumbnailStripNames=[];
-    renderThumbnailBuilder();
+    thumbnailCardName="";thumbnailStripNames=[];renderThumbnailBuilder();
   };
 
   document.getElementById("shareBtn").onclick=function(){
-    if(!validate()){
-      alert("Deck must be valid before sharing.");
-      return;
-    }
-    msg.textContent="";
-    msg.className="";
+    if(!validate()){alert("Deck must be valid before sharing.");return;}
+    msg.textContent="";msg.className="";
     renderThumbnailBuilder();
     overlay.classList.add("open");
   };
 
-  document.getElementById("cancelBtn").onclick=function(){
-    overlay.classList.remove("open");
-  };
-
-  overlay.addEventListener("click",function(e){
-    if(e.target===overlay)overlay.classList.remove("open");
-  });
+  document.getElementById("cancelBtn").onclick=function(){overlay.classList.remove("open");};
+  overlay.addEventListener("click",function(e){if(e.target===overlay)overlay.classList.remove("open");});
 
   function serialize(s){
     var r=[];
-    deck[s].forEach(function(qty,id){
-      r.push({name:cardMap[id]?cardMap[id].name:id,qty:qty});
-    });
+    deck[s].forEach(function(qty,id){r.push({name:cardMap[id]?cardMap[id].name:id,qty:qty});});
     return r;
   }
 
   document.getElementById("submitBtn").onclick=async function(){
     var title=document.getElementById("fTitle").value.trim();
     var author=document.getElementById("fAuthor").value.trim();
-
-    if(!title||!author){
-      msg.textContent="Name and alias required.";
-      msg.className="err";
-      return;
-    }
-
+    if(!title||!author){msg.textContent="Name and alias required.";msg.className="err";return;}
     var btn=document.getElementById("submitBtn");
-    btn.disabled=true;
-    btn.textContent="Sending...";
-    msg.textContent="";
-
+    btn.disabled=true;btn.textContent="Sending...";msg.textContent="";
     try{
       await submitDeck({
-        slug:slug(title),
-        title:title,
-        author_name:author,
-        format:fmtId,
+        slug:slug(title),title:title,author_name:author,format:fmtId,
         archetype:document.getElementById("fArchetype").value.trim()||null,
         description:document.getElementById("fDesc").value.trim()||null,
-        thumbnail_card:thumbnailCardName || null,
+        thumbnail_card:thumbnailCardName||null,
         thumbnail_strip:thumbnailStripNames.slice(),
-        main_deck:serialize("main"),
-        side_deck:serialize("side"),
-        extra_deck:serialize("extra"),
+        main_deck:serialize("main"),side_deck:serialize("side"),extra_deck:serialize("extra"),
         is_public:false
       });
-
-      msg.textContent="Deck submitted! Will appear once approved.";
-      msg.className="ok";
+      msg.textContent="Deck submitted! Will appear once approved.";msg.className="ok";
       btn.textContent="Submitted!";
-
       setTimeout(function(){
-        overlay.classList.remove("open");
-        btn.disabled=false;
-        btn.textContent="Submit Deck";
-        document.getElementById("fTitle").value="";
-        document.getElementById("fAuthor").value="";
-        document.getElementById("fArchetype").value="";
-        document.getElementById("fDesc").value="";
-        thumbnailCardName="";
-        thumbnailStripNames=[];
-        renderThumbnailBuilder();
+        overlay.classList.remove("open");btn.disabled=false;btn.textContent="Submit Deck";
+        document.getElementById("fTitle").value="";document.getElementById("fAuthor").value="";
+        document.getElementById("fArchetype").value="";document.getElementById("fDesc").value="";
+        thumbnailCardName="";thumbnailStripNames=[];renderThumbnailBuilder();
       },3000);
     }catch(e){
-      msg.textContent="Error: "+e.message;
-      msg.className="err";
-      btn.disabled=false;
-      btn.textContent="Submit Deck";
+      msg.textContent="Error: "+e.message;msg.className="err";
+      btn.disabled=false;btn.textContent="Submit Deck";
     }
   };
 
@@ -2496,63 +2356,61 @@ a.download = deckName + ".ydk";
   try{
     var cfg=await(await fetch("/data/config.json")).json();
     fmtId=cfg.currentFormatId||"apr_2026";
-
-    var rf=cfg.rulesFile||"cards_april_2026_final.json";
+    var rf=cfg.rulesFile||"cards_june_2026.json";
     var resp=await fetch("/data/formats/"+fmtId+"/"+rf);
-
     if(!resp.ok)throw new Error("404: "+fmtId+"/"+rf);
-
     cardList=await resp.json();
-
     cardList.forEach(function(c){
       cardMap[c.password]=c;
       var bs=(c.ban_status||"unlimited").toLowerCase().trim();
       rules[c.password]={legal:bs!=="forbidden",limit:banLimit[bs]!=null?banLimit[bs]:3};
     });
 
-setupDropZones();
-setupRemoveOutsideDeck();
-populateFilters();
+    setupDropZones();
+    populateFilters();
 
-var importedDeck = localStorage.getItem("ng_import_deck");
+    var importedDeck=localStorage.getItem("ng_import_deck");
+    if(importedDeck){
+      try{
+        var imported=JSON.parse(importedDeck);
+        deck.main.clear();deck.extra.clear();deck.side.clear();
+     function importSection(list,section){
+  (list||[]).forEach(function(card){
 
-if(importedDeck){
-  try{
-    var imported = JSON.parse(importedDeck);
+    var cardName = card.name || card.card_name || "";
+    var id = findCardIdByName(cardName);
 
-    deck.main.clear();
-    deck.extra.clear();
-    deck.side.clear();
-
-    function importSection(list, section){
-      (list || []).forEach(function(card){
-        var id = findCardIdByName(card.name);
-        var qty = Number(card.qty) || 1;
-
-        if(!id)return;
-
-        deck[section].set(
-          id,
-          (deck[section].get(id)||0)+qty
-        );
-      });
+    if(!id && card.password){
+      id = String(card.password);
     }
 
-    importSection(imported.main, "main");
-    importSection(imported.extra, "extra");
-    importSection(imported.side, "side");
+    if(!id && card.id){
+      id = String(card.id);
+    }
 
-    localStorage.removeItem("ng_import_deck");
+    if(!id || !cardMap[id]){
+      console.warn("Import skipped card:", card);
+      return;
+    }
 
-  }catch(e){
-    console.error("Open Builder import failed", e);
-  }
+    var qty = Number(card.qty) || Number(card.count) || 1;
+
+    deck[section].set(id,(deck[section].get(id)||0)+qty);
+  });
 }
+        importSection(imported.main,"main");
+        importSection(imported.extra,"extra");
+        importSection(imported.side,"side");
+        renderDeck();
+        localStorage.removeItem("ng_import_deck");
+      }catch(e){console.error("Open Builder import failed",e);}
+    }
 
-sb.textContent=cardList.length+" cards loaded";
-sb.className="";
-renderSearch("");
-renderDeck();
+    sb.textContent=cardList.length+" cards loaded";
+    sb.className="";
+    renderSearch("");
+    updateFilterState();
+    renderDeck();
   }catch(e){
     console.error(e);
     sb.textContent="Failed loading cards";
@@ -2560,5 +2418,6 @@ renderDeck();
   }
 })();
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
