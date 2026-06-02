@@ -378,14 +378,17 @@ header{
   position:relative;
   z-index:1;
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(64px, 64px));
   gap:9px;
   justify-content:start;
 }
 
+.main-section .card-grid{
+  grid-template-columns:repeat(10, 64px);
+}
+
 .extra-section .card-grid,
 .side-section .card-grid{
-  grid-template-columns:repeat(auto-fill, minmax(54px, 54px));
+  grid-template-columns:repeat(5, 54px);
   gap:8px;
 }
 
@@ -593,9 +596,15 @@ pre{
   .brand{width:calc(100% - 44px);}
   .deck-header h1{font-size:25px;}
   .extra-side-row{grid-template-columns:1fr;}
-  .card-grid{grid-template-columns:repeat(auto-fill, minmax(54px, 54px));}
+
+  .main-section .card-grid{
+    grid-template-columns:repeat(5, 54px);
+  }
+
   .extra-section .card-grid,
-  .side-section .card-grid{grid-template-columns:repeat(auto-fill, minmax(54px, 54px));}
+  .side-section .card-grid{
+    grid-template-columns:repeat(5, 54px);
+  }
 }
 
 
