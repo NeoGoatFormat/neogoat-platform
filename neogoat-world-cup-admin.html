@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoGoat World Cup 2026 — Admin Registrations</title>
+<link rel="icon" type="image/png" href="/neogoatbuilderlogo.png">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--grass:#0a3d22;--grass2:#0f5d32;--gold:#ffe169;--ink:#f7fff9;--muted:#b7c9bd;--red:#ff667d;--green:#9dff93;--blue:#58d7ff}
+body{min-height:100vh;color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:repeating-linear-gradient(90deg,var(--grass) 0 120px,var(--grass2) 120px 240px)}
+body:before{content:"";position:fixed;inset:18px;border:3px solid rgba(255,255,255,.22);border-radius:28px;pointer-events:none;z-index:0}
+.page{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:18px}
+.hero,.card{border:1px solid rgba(255,255,255,.18);border-radius:22px;background:rgba(0,0,0,.52);box-shadow:0 22px 50px rgba(0,0,0,.28);overflow:hidden}
+.hero{padding:18px;margin-bottom:16px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}
+h1{font-size:clamp(28px,4vw,52px);line-height:.95;letter-spacing:-.05em;text-transform:uppercase}.subtitle{font-size:14px;color:#d6ffe0;margin-top:8px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:10px 12px;background:rgba(0,0,0,.32);color:#fff;font-weight:900;cursor:pointer}.btn.primary{background:linear-gradient(180deg,#1d6dff,#0b3d99)}.btn.good{background:linear-gradient(180deg,#178e43,#084d23)}.btn.danger{background:linear-gradient(180deg,#b9263e,#66101e)}input{border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.30);color:var(--ink);border-radius:12px;padding:10px 11px;outline:none}.login{display:grid;gap:8px}.pill{display:inline-block;border:1px solid rgba(255,255,255,.20);border-radius:999px;padding:5px 9px;font-size:12px;font-weight:900;background:rgba(0,0,0,.25)}.pill.ok{color:#b7ffbc;border-color:rgba(157,255,147,.45)}.pill.err{color:#ffd0d7;border-color:rgba(255,102,125,.45)}.grid{display:grid;gap:14px}.cardHead{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:10px;align-items:center;background:linear-gradient(90deg,rgba(255,225,105,.14),rgba(255,255,255,.04))}.cardBody{padding:14px 16px}.teamMeta{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}.players{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.playerBox{border:1px solid rgba(255,255,255,.13);border-radius:16px;background:rgba(0,0,0,.24);padding:12px;min-width:0}.playerBox h3{font-size:14px;margin-bottom:8px;color:var(--gold)}pre{white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,.36);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px;max-height:360px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;line-height:1.35}.small{font-size:12px;color:var(--muted);line-height:1.45}.empty{padding:24px;text-align:center;color:var(--muted)}#toast{position:fixed;right:18px;bottom:18px;z-index:5;max-width:420px;border:1px solid rgba(255,255,255,.20);border-radius:16px;padding:12px 14px;background:rgba(0,0,0,.78);display:none;font-size:13px}.sel{color:#ffe169}@media(max-width:900px){.hero{grid-template-columns:1fr}.players{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <section class="hero">
+    <div>
+      <h1>World Cup Admin</h1>
+      <div class="subtitle">Private team deck registrations. RLS must include your email in <code>admin_users</code> to see every team.</div>
+      <div class="teamMeta"><span class="pill" id="sessionPill">Signed out</span><span class="pill" id="countPill">0 teams</span></div>
+    </div>
+    <div class="login">
+      <div class="actions" id="loggedOutBox"><input id="loginEmail" type="email" placeholder="Admin email"><button class="btn primary" id="loginBtn">Send Magic Link</button></div>
+      <div class="actions" id="loggedInBox" style="display:none"><button class="btn good" id="refreshBtn">Refresh</button><button class="btn danger" id="logoutBtn">Sign Out</button></div>
+    </div>
+  </section>
+  <main id="list" class="grid"><div class="card"><div class="empty">Log in to load registrations.</div></div></main>
+</div>
+<div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+var SURL="https://tpkqfvizizjbunpbutlo.supabase.co";
+var SKEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJIUzI1NiIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
+// Correct legacy copy of the key if needed:
+SKEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
+var sb=window.supabase.createClient(SURL,SKEY), currentUser=null;
+function $(id){return document.getElementById(id)}
+function toast(msg,cls){var t=$("toast");t.textContent=msg;t.className=cls||"";t.style.display="block";clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(function(){t.style.display="none"},5200)}
+function esc(s){return String(s||"").replace(/[&<>"']/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch]})}
+function redirectUrl(){return location.origin+location.pathname}
+async function sendLogin(){var email=$("loginEmail").value.trim();if(!email){toast("Enter your admin email.","err");return}var r=await sb.auth.signInWithOtp({email:email,options:{emailRedirectTo:redirectUrl(),shouldCreateUser:true}});if(r.error)toast(r.error.message,"err");else toast("Magic link sent.","ok")}
+async function signOut(){await sb.auth.signOut();currentUser=null;updateUI();renderRows([])}
+function updateUI(){if(currentUser){$("loggedOutBox").style.display="none";$("loggedInBox").style.display="flex";$("sessionPill").textContent=currentUser.email;$("sessionPill").className="pill ok"}else{$("loggedOutBox").style.display="flex";$("loggedInBox").style.display="none";$("sessionPill").textContent="Signed out";$("sessionPill").className="pill"}}
+function deckText(deck){deck=deck||{};if(deck.raw)return deck.raw;function sec(title,list){list=list||[];if(!list.length)return "";return "# "+title+"\n"+list.map(function(c){return (c.qty||1)+" "+(c.name||"")}).join("\n")}return [sec("Main",deck.main),sec("Extra",deck.extra),sec("Side",deck.side)].filter(Boolean).join("\n\n")}
+function renderRows(rows){$("countPill").textContent=rows.length+" team"+(rows.length===1?"":"s");var list=$("list");list.innerHTML="";if(!rows.length){list.innerHTML='<div class="card"><div class="empty">No registrations visible for this login.</div></div>';return}rows.forEach(function(r){var valid=r.validation_report&&r.validation_report.valid;var sels=(r.selection_cards||[]).map(function(c){return c.name}).join(" / ");var div=document.createElement("article");div.className="card";div.innerHTML='<div class="cardHead"><div><strong>'+esc(r.team_name)+'</strong><div class="small">'+esc(r.country)+' • '+esc(r.captain_email||r.captain_contact||'')+'</div></div><span class="pill '+(valid?'ok':'err')+'">'+(valid?'VALID':'INVALID')+'</span></div><div class="cardBody"><div class="teamMeta"><span class="pill">'+esc(r.status||'submitted')+'</span><span class="pill">Updated '+esc(r.updated_at||r.created_at||'')+'</span><span class="pill sel">Selection: '+esc(sels||'—')+'</span></div><div class="players"><div class="playerBox"><h3>A — '+esc(r.player_a_name||'')+'</h3><pre>'+esc(deckText(r.player_a_deck))+'</pre></div><div class="playerBox"><h3>B Captain — '+esc(r.player_b_name||'')+'</h3><pre>'+esc(deckText(r.player_b_deck))+'</pre></div><div class="playerBox"><h3>C — '+esc(r.player_c_name||'')+'</h3><pre>'+esc(deckText(r.player_c_deck))+'</pre></div></div></div>';list.appendChild(div)})}
+async function loadRows(){if(!currentUser){toast("Log in first.","err");return}var res=await sb.from("team_registrations").select("*").eq("event_slug","neogoat-world-cup-2026").order("created_at",{ascending:false});if(res.error){toast("Load failed: "+res.error.message,"err");return}renderRows(res.data||[])}
+(async function(){ $("loginBtn").onclick=sendLogin;$("logoutBtn").onclick=signOut;$("refreshBtn").onclick=loadRows;var sess=await sb.auth.getSession();currentUser=sess.data.session?sess.data.session.user:null;updateUI();if(currentUser)loadRows();sb.auth.onAuthStateChange(function(e,session){currentUser=session?session.user:null;updateUI();if(currentUser)loadRows()}) })();
+</script>
+</body>
+</html>
