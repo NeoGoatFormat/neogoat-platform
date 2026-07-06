@@ -1265,6 +1265,27 @@ body.filters-active .checkRow{
         <select id="monsterTypeFilter">
           <option value="">All monster types</option>
         </select>
+        <select id="levelOp">
+          <option value="">Level / Rank</option>
+          <option value="eq">=</option>
+          <option value="lte">≤</option>
+          <option value="gte">≥</option>
+        </select>
+        <select id="levelValue">
+          <option value="">Any level</option>
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+          <option value="4">Level 4</option>
+          <option value="5">Level 5</option>
+          <option value="6">Level 6</option>
+          <option value="7">Level 7</option>
+          <option value="8">Level 8</option>
+          <option value="9">Level 9</option>
+          <option value="10">Level 10</option>
+          <option value="11">Level 11</option>
+          <option value="12">Level 12</option>
+        </select>
       </div>
       <div class="filterActiveRow">
         <div id="filterActiveBadge">FILTERS ACTIVE</div>
@@ -1781,8 +1802,30 @@ async function submitDeck(p){
   }
 
   function searchableText(c){
-    return [c.name,c.text,c.type,c.subType,c.class,c.attribute,c.monsterType]
+    return [c.name,c.text,c.type,c.subType,c.class,c.attribute,c.monsterType,c.level,c.rank]
       .map(function(x){return String(x||"").toLowerCase();}).join(" ");
+  }
+
+  function getMonsterLevel(c){
+    if(!c)return null;
+
+    var fields=[
+      c.level,
+      c.lvl,
+      c.rank,
+      c.levelRank
+    ];
+
+    for(var i=0;i<fields.length;i++){
+      var v=fields[i];
+
+      if(v!==undefined && v!==null && v!==""){
+        var n=parseInt(String(v).replace(/[^\d]/g,""),10);
+        if(!isNaN(n))return n;
+      }
+    }
+
+    return null;
   }
 
   function populateFilters(){
@@ -1839,11 +1882,20 @@ async function submitDeck(p){
       sub.appendChild(o);
     });
     if(list.indexOf(current)>=0)sub.value=current;
+
     var mf=document.getElementById("monsterFilters");
-    mf.style.display=(kind===""||kind==="Monster"||kind==="Extra")?"grid":"none";
+    var showMonsterFilters=(kind===""||kind==="Monster"||kind==="Extra");
+    mf.style.display=showMonsterFilters?"grid":"none";
+
+    if(!showMonsterFilters){
+      document.getElementById("attributeFilter").value="";
+      document.getElementById("monsterTypeFilter").value="";
+      document.getElementById("levelOp").value="";
+      document.getElementById("levelValue").value="";
+    }
   }
 
-  function cardMatchesFilters(c,q,kind,sub,attr,monType){
+  function cardMatchesFilters(c,q,kind,sub,attr,monType,levelOp,levelValue){
     var staplesOnly=document.getElementById("staplesOnly").checked;
     if(staplesOnly&&!isStapleCard(c))return false;
     if(q&&searchableText(c).indexOf(q)<0)return false;
@@ -1861,7 +1913,25 @@ async function submitDeck(p){
     if((kind===""||kind==="Monster"||kind==="Extra")&&(ck==="Monster"||ck==="Extra")){
       if(attr&&String(c.attribute||"").trim().toUpperCase()!==attr)return false;
       if(monType&&String(c.monsterType||"").trim()!==monType)return false;
+
+      if(levelValue){
+        var cardLevel=getMonsterLevel(c);
+        var wantedLevel=parseInt(levelValue,10);
+
+        if(cardLevel===null||isNaN(wantedLevel))return false;
+
+        if(levelOp==="lte"){
+          if(cardLevel>wantedLevel)return false;
+        }else if(levelOp==="gte"){
+          if(cardLevel<wantedLevel)return false;
+        }else{
+          if(cardLevel!==wantedLevel)return false;
+        }
+      }
+    }else{
+      if(levelValue)return false;
     }
+
     return true;
   }
 
@@ -1873,11 +1943,13 @@ async function submitDeck(p){
     var sub=document.getElementById("subtypeFilter").value;
     var attr=document.getElementById("attributeFilter").value;
     var monType=document.getElementById("monsterTypeFilter").value;
+    var levelOp=document.getElementById("levelOp").value;
+    var levelValue=document.getElementById("levelValue").value;
     var shown=0,total=0;
 
     for(var i=0;i<cardList.length;i++){
       var c=cardList[i];
-      if(!cardMatchesFilters(c,q,kind,sub,attr,monType))continue;
+      if(!cardMatchesFilters(c,q,kind,sub,attr,monType,levelOp,levelValue))continue;
       total++;
       if(shown>=80)continue;
       shown++;
@@ -1922,7 +1994,9 @@ async function submitDeck(p){
       document.getElementById("cardTypeFilter").value !== "" ||
       document.getElementById("subtypeFilter").value !== "" ||
       document.getElementById("attributeFilter").value !== "" ||
-      document.getElementById("monsterTypeFilter").value !== "";
+      document.getElementById("monsterTypeFilter").value !== "" ||
+      document.getElementById("levelOp").value !== "" ||
+      document.getElementById("levelValue").value !== "";
 
     document.body.classList.toggle("filters-active",active);
   }
@@ -1935,6 +2009,8 @@ async function submitDeck(p){
     document.getElementById("subtypeFilter").value="";
     document.getElementById("attributeFilter").value="";
     document.getElementById("monsterTypeFilter").value="";
+    document.getElementById("levelOp").value="";
+    document.getElementById("levelValue").value="";
     refreshSearch();
     updateFilterState();
   }
@@ -1947,6 +2023,8 @@ async function submitDeck(p){
   document.getElementById("subtypeFilter").addEventListener("change",function(){refreshSearch();updateFilterState();});
   document.getElementById("attributeFilter").addEventListener("change",function(){refreshSearch();updateFilterState();});
   document.getElementById("monsterTypeFilter").addEventListener("change",function(){refreshSearch();updateFilterState();});
+  document.getElementById("levelOp").addEventListener("change",function(){refreshSearch();updateFilterState();});
+  document.getElementById("levelValue").addEventListener("change",function(){refreshSearch();updateFilterState();});
 
   document.getElementById("clearBtn").onclick=function(){
     if(cnt("main")||cnt("extra")||cnt("side")){
