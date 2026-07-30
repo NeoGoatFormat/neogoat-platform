@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="neogoatbuilderlogo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoGoat – Deck</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#05070c;--panel:#0a0f18;--panel2:#070a10;--cyan:#00e5ff;--cyan2:#70f5ff;
+  --violet:#9b5cff;--green:#73ff9b;--red:#ff5d73;--muted:#8ea0bb;--line:rgba(0,229,255,.22)
+}
+body{
+  margin:0;color:#eafcff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh;
+  background:radial-gradient(circle at 18% 15%,rgba(0,229,255,.12),transparent 28%),radial-gradient(circle at 75% 22%,rgba(155,92,255,.15),transparent 30%),radial-gradient(circle at 45% 85%,rgba(255,61,242,.07),transparent 35%),linear-gradient(180deg,#08111f,#05070c 55%,#020306)
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background:linear-gradient(rgba(0,229,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.08) 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.15))}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(transparent 50%,rgba(0,0,0,.13) 51%);background-size:100% 4px;opacity:.22}
+button,input,textarea,select{font:inherit}button{cursor:pointer}
+header{display:flex;align-items:center;gap:10px;padding:12px 18px;background:linear-gradient(90deg,rgba(8,16,30,.98),rgba(13,10,25,.98));border-bottom:1px solid rgba(0,229,255,.45);box-shadow:0 0 28px rgba(0,229,255,.13),0 0 36px rgba(155,92,255,.09);position:sticky;top:0;z-index:10}
+.logoMark{width:31px;height:31px;border-radius:9px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(155,92,255,.18));border:1px solid rgba(0,229,255,.65);color:var(--cyan2);box-shadow:0 0 16px rgba(0,229,255,.28),inset 0 0 12px rgba(155,92,255,.16);font-weight:900}
+.brand{font-weight:900;font-size:16px;color:#f2feff;text-shadow:0 0 12px rgba(0,229,255,.38)}
+.headerBrand{display:flex;flex-direction:column;gap:2px;margin-right:auto}.headerSub{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.currentFormat{font-size:12px;font-weight:900;color:#7dd3fc;text-shadow:0 0 10px rgba(125,211,252,.6);letter-spacing:.05em}
+.blogLink{font-size:11px;color:#86efac;text-decoration:none;border:1px solid rgba(134,239,172,.4);background:rgba(22,163,74,.12);padding:4px 10px;border-radius:999px;font-weight:800}
+.navBtn{font-size:13px;color:#dffcff;text-decoration:none;border:1px solid rgba(0,229,255,.32);padding:8px 13px;border-radius:9px;background:linear-gradient(180deg,rgba(16,27,45,.95),rgba(5,8,14,.95));font-weight:800}.navBtn:hover{border-color:rgba(0,229,255,.75);box-shadow:0 0 18px rgba(0,229,255,.22),inset 0 0 14px rgba(0,229,255,.08)}
+#loading,#notfound{text-align:center;padding:90px 20px;color:#8ea0bb;position:relative;z-index:1}.page{max-width:1260px;margin:0 auto;padding:14px 18px 42px;position:relative;z-index:1}
+.hero{border:1px solid rgba(0,229,255,.26);border-radius:17px;background:radial-gradient(circle at 12% 20%,rgba(0,229,255,.10),transparent 35%),radial-gradient(circle at 85% 15%,rgba(155,92,255,.12),transparent 35%),linear-gradient(180deg,rgba(10,16,26,.88),rgba(3,5,9,.92));padding:14px 18px;box-shadow:0 10px 26px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.04);margin-bottom:12px;overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,229,255,.22),transparent 30%,transparent 70%,rgba(155,92,255,.20));opacity:.16;pointer-events:none}.heroInner{position:relative;z-index:1}.heroTop{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}.titleStack{min-width:0}
+.formatBadge{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;min-width:112px;padding:9px 13px;border-radius:14px;border:1px solid rgba(0,229,255,.55);background:linear-gradient(135deg,rgba(0,229,255,.20),rgba(155,92,255,.16));color:#eaffff;font-size:13px;font-weight:1000;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 0 18px rgba(0,229,255,.16),inset 0 0 16px rgba(155,92,255,.08);text-align:center}
+.heroFooter{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:11px;flex-wrap:wrap}.deck-header h1{margin:0 0 6px;font-size:28px;line-height:1.05;color:#f4feff;text-shadow:0 0 14px rgba(0,229,255,.28)}.meta{font-size:12px;color:#95a7c1;margin-top:5px}.archetype{display:inline-block;font-size:11px;color:#a5ffbd;background:rgba(21,78,44,.45);border:1px solid rgba(115,255,155,.42);border-radius:999px;padding:4px 10px;font-weight:900;box-shadow:0 0 12px rgba(115,255,155,.10)}
+.description{font-size:13px;color:#c2d4ea;line-height:1.45;background:rgba(0,0,0,.22);border:1px solid rgba(0,229,255,.16);border-radius:11px;padding:9px 12px;margin-top:9px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;position:relative}.description.expanded{display:block;overflow:visible;-webkit-line-clamp:unset}.readMoreBtn{margin-top:6px;background:none;border:0;color:#8effff;font-size:12px;font-weight:900;text-shadow:0 0 8px rgba(0,229,255,.35);padding:0}.readMoreBtn:hover{color:#fff}
+.counts{display:flex;flex-wrap:wrap;gap:8px}.countBadge{padding:6px 11px;border-radius:999px;font-size:12px;font-weight:900;background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.28);color:#dffcff}.countBadge.extra{background:rgba(155,92,255,.10);border-color:rgba(155,92,255,.36)}.countBadge.side{background:rgba(115,255,155,.08);border-color:rgba(115,255,155,.28)}
+.actions{display:flex;flex-wrap:wrap;gap:8px}.actionBtn,.modalBtn{display:inline-flex;align-items:center;justify-content:center;gap:7px;background:linear-gradient(180deg,rgba(16,27,45,.95),rgba(5,8,14,.95));border:1px solid rgba(0,229,255,.32);color:#dffcff;padding:7px 12px;border-radius:9px;font-size:12px;font-weight:900}.actionBtn:hover,.modalBtn:hover{border-color:rgba(0,229,255,.75);box-shadow:0 0 18px rgba(0,229,255,.18)}.actionBtn.image{border-color:rgba(115,255,155,.43);color:#caffd7;background:linear-gradient(180deg,rgba(18,66,37,.94),rgba(5,20,12,.96))}.modalBtn.primary{background:linear-gradient(180deg,#8effff,#00b8d4);color:#031116;border-color:#8effff}.modalBtn.good{background:linear-gradient(180deg,#52df7c,#137b39);color:#041309;border-color:#8bffaa}.modalBtn.danger{background:linear-gradient(180deg,#bc3950,#711526);border-color:#ff7c90}.modalBtn:disabled{opacity:.42;cursor:not-allowed;box-shadow:none}
+.mainLayout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:18px;align-items:start}.sections{display:flex;flex-direction:column;gap:16px;min-width:0}.extra-side-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.section{background:linear-gradient(135deg,rgba(0,229,255,.04),transparent 32%),linear-gradient(180deg,rgba(10,16,26,.88),rgba(3,5,9,.92));border:1px solid rgba(0,229,255,.22);border-radius:16px;padding:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 10px 22px rgba(0,0,0,.24);position:relative;overflow:hidden}.section:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,229,255,.18),transparent 30%,transparent 70%,rgba(155,92,255,.16));opacity:.12;pointer-events:none}.section.extra-section{border-color:rgba(155,92,255,.35);background:radial-gradient(circle at 12% 20%,rgba(155,92,255,.10),transparent 38%),linear-gradient(180deg,rgba(12,13,30,.90),rgba(3,5,9,.92))}.section.side-section{border-color:rgba(115,255,155,.22);background:radial-gradient(circle at 12% 20%,rgba(115,255,155,.07),transparent 38%),linear-gradient(180deg,rgba(8,19,17,.84),rgba(3,5,9,.92))}.section h3{position:relative;z-index:1;margin:0 0 12px;font-size:14px;color:#f2feff;text-transform:uppercase;letter-spacing:.08em;text-shadow:0 0 9px rgba(0,229,255,.20)}
+.card-grid{position:relative;z-index:1;display:grid;gap:9px;justify-content:start}.main-section .card-grid{grid-template-columns:repeat(10,64px)}.extra-section .card-grid,.side-section .card-grid{grid-template-columns:repeat(5,54px);gap:8px}.deck-card{position:relative;border-radius:7px;overflow:hidden;border:2px solid rgba(0,229,255,.18);background:#111827;transition:.12s ease;box-shadow:0 5px 14px rgba(0,0,0,.28)}.deck-card:hover{transform:translateY(-2px) scale(1.035);border-color:rgba(0,229,255,.78);box-shadow:0 10px 22px rgba(0,0,0,.38),0 0 18px rgba(0,229,255,.24)}.deck-card img{width:100%;display:block;aspect-ratio:421/614;object-fit:cover}.deck-qty{position:absolute;left:2px;bottom:2px;background:linear-gradient(180deg,rgba(10,14,20,.94),rgba(0,0,0,.92));color:#fff;font-size:10px;font-weight:950;line-height:1;padding:3px 6px 4px;min-width:24px;text-align:center;border-radius:6px;border:1px solid rgba(0,229,255,.30);z-index:2}
+.previewPanel{position:sticky;top:82px;background:radial-gradient(circle at 50% 0%,rgba(0,229,255,.13),transparent 35%),linear-gradient(180deg,#08111f,#030509);border:1px solid rgba(0,229,255,.24);border-radius:18px;padding:14px;min-height:430px;max-height:calc(100vh - 104px);box-shadow:0 14px 34px rgba(0,0,0,.30),0 0 20px rgba(0,229,255,.08);overflow:hidden;display:flex;flex-direction:column}#previewImg{width:100%;max-width:245px;display:block;margin:0 auto 12px;border-radius:9px;border:1px solid rgba(0,229,255,.38);box-shadow:0 0 24px rgba(0,0,0,.58),0 0 20px rgba(0,229,255,.15);flex-shrink:0}#previewName{text-align:center;font-size:14px;font-weight:950;color:#f4feff;text-shadow:0 0 8px rgba(0,229,255,.24);margin-bottom:7px}.previewMeta{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-bottom:8px}.pill{font-size:10px;color:#dffcff;background:rgba(0,229,255,.07);border:1px solid rgba(0,229,255,.22);border-radius:999px;padding:4px 8px;font-weight:800}.pill.monster{color:#ffe3a0;border-color:rgba(255,193,79,.28);background:rgba(255,193,79,.07)}.pill.spell{color:#a5ffe9;border-color:rgba(0,229,180,.28);background:rgba(0,229,180,.07)}.pill.trap{color:#ffb8ef;border-color:rgba(255,61,242,.28);background:rgba(255,61,242,.07)}#previewText{border-top:1px solid rgba(0,229,255,.18);padding-top:10px;margin-top:2px;color:#c6d8ee;font-size:12px;line-height:1.55;white-space:pre-wrap;overflow-y:auto;min-height:70px;padding-right:4px}#previewHint{text-align:center;font-size:11px;color:#8395ad;line-height:1.5;padding-top:8px;flex-shrink:0}
+.deckViewControls{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:0 0 12px;position:relative;z-index:1}.deckViewLabel{font-size:11px;color:#8ea0bb;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.deckViewBtn{border:1px solid rgba(0,229,255,.28);background:linear-gradient(180deg,rgba(16,27,45,.95),rgba(5,8,14,.95));color:#dffcff;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:950}.deckViewBtn.active{color:#05070c;background:linear-gradient(180deg,#8effff,#00e5ff);border-color:rgba(142,255,255,.95);box-shadow:0 0 18px rgba(0,229,255,.28)}
+.textDeckToggle{margin-top:16px}details{background:rgba(0,0,0,.20);border:1px solid rgba(0,229,255,.18);border-radius:14px;overflow:hidden}summary{cursor:pointer;padding:12px 14px;font-weight:900;color:#dffcff}pre{padding:0 14px 14px;color:#c2d4ea;font-size:12px;line-height:1.55;white-space:pre-wrap}
+.commentsBox{margin-top:18px;border:1px solid rgba(0,229,255,.22);border-radius:18px;background:radial-gradient(circle at 15% 10%,rgba(0,229,255,.08),transparent 32%),linear-gradient(180deg,rgba(10,16,26,.88),rgba(3,5,9,.92));padding:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 10px 22px rgba(0,0,0,.24)}.commentsHeader{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.commentsHeader h3{font-size:15px;letter-spacing:.06em;text-transform:uppercase}.commentCount{font-size:11px;color:#8effff;border:1px solid rgba(0,229,255,.28);background:rgba(0,229,255,.08);border-radius:999px;padding:4px 9px;font-weight:900}.commentForm{display:grid;grid-template-columns:180px 1fr auto;gap:8px;margin-bottom:14px}.commentForm input,.commentForm textarea{background:rgba(4,7,12,.95);border:1px solid rgba(0,229,255,.22);border-radius:10px;color:#eafcff;padding:9px 10px;font-size:13px}.commentForm textarea{min-height:40px;max-height:120px;resize:vertical}.commentList{display:flex;flex-direction:column;gap:9px}.commentItem{border:1px solid rgba(0,229,255,.13);border-radius:12px;background:rgba(0,0,0,.22);padding:10px 12px}.commentMeta{display:flex;align-items:center;gap:8px;font-size:12px;margin-bottom:5px}.commentAuthor{color:#8effff;font-weight:900}.commentDate{color:#7889a0}.commentText{color:#d7e8f7;font-size:13px;line-height:1.45;white-space:pre-wrap;word-break:break-word}.commentEmpty{color:#7889a0;font-size:13px;padding:8px 2px}.commentNote{color:#7889a0;font-size:11px;margin-top:8px}
+.testOverlay,.imageOverlay{display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.80);align-items:center;justify-content:center;padding:18px}.testOverlay.open,.imageOverlay.open{display:flex}.testModal{width:min(980px,96vw);height:min(720px,92vh);border:1px solid rgba(0,229,255,.55);border-radius:18px;background:linear-gradient(180deg,#08111f,#030509);box-shadow:0 0 34px rgba(0,0,0,.60),0 0 28px rgba(0,229,255,.15);padding:14px;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:14px;overflow:hidden}.testLeft{min-width:0;display:flex;flex-direction:column;overflow:hidden}.testTop{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.testTitle{font-size:16px;font-weight:950;color:#8effff}.testStats{font-size:12px;color:#aabbd2;font-weight:900}.testActions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.testBtn{padding:8px 13px;border-radius:9px;border:1px solid rgba(0,229,255,.35);background:linear-gradient(180deg,rgba(16,27,45,.95),rgba(5,8,14,.95));color:#dffcff;font-size:12px;font-weight:900}.testBtn.primary{background:linear-gradient(180deg,rgba(21,78,44,.95),rgba(7,27,16,.95));border-color:rgba(115,255,155,.55);color:#a5ffbd}.testMsg{font-size:12px;color:#9cb0c8;min-height:18px;margin-bottom:8px}.testHandGrid{min-height:150px;border:2px dashed rgba(0,229,255,.22);border-radius:14px;padding:10px;display:flex;align-content:flex-start;align-items:flex-start;gap:10px;flex-wrap:wrap;overflow-y:auto;background:rgba(0,0,0,.20)}.testCard{width:72px;position:relative;border-radius:8px;border:2px solid rgba(0,229,255,.28);background:#111827;overflow:hidden;box-shadow:0 5px 14px rgba(0,0,0,.30)}.testCard img{width:100%;display:block;aspect-ratio:421/614;object-fit:cover}.testTag{position:absolute;top:2px;left:2px;background:rgba(0,0,0,.88);color:#fff;font-size:9px;font-weight:950;padding:1px 4px;border-radius:5px}.testRemove{position:absolute;top:2px;right:2px;width:17px;height:17px;border-radius:50%;background:rgba(255,93,115,.92);color:white;border:0;font-size:11px;font-weight:950}.testRemoved{position:absolute;left:0;right:0;bottom:0;text-align:center;background:rgba(255,93,115,.86);font-size:8px;font-weight:950;color:#fff;padding:2px}.testSearchBox{display:none;border:1px solid rgba(255,209,92,.28);border-radius:12px;background:rgba(255,209,92,.055);padding:10px;margin-bottom:10px;overflow:hidden}.testSearchBox.open{display:block}.testSearchHead{display:flex;justify-content:space-between;gap:10px;color:#ffe39b;font-size:12px;font-weight:950;margin-bottom:8px}#testSearchInput{width:100%;background:#05070c;border:1px solid rgba(255,209,92,.28);border-radius:9px;color:#eafcff;padding:8px 10px;font-size:12px;margin-bottom:8px}.testSearchResults{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-height:190px;overflow-y:auto}.testSearchItem{display:flex;align-items:center;gap:7px;border:1px solid rgba(255,209,92,.16);border-radius:9px;background:rgba(0,0,0,.22);padding:6px;min-width:0}.testSearchItem img{width:32px;height:46px;object-fit:cover;border-radius:4px}.testSearchName{font-size:11px;font-weight:900;line-height:1.08;min-width:0;flex:1}.testSearchQty{font-size:11px;color:#ffe39b;font-weight:950}.testAddBtn{padding:5px 7px;border-radius:7px;border:1px solid rgba(255,209,92,.35);background:rgba(255,209,92,.10);color:#ffe39b;font-size:10px;font-weight:950}.testPreview{border:1px solid rgba(0,229,255,.24);border-radius:15px;background:linear-gradient(180deg,#08111f,#030509);padding:12px;display:flex;flex-direction:column;overflow:hidden}#testPreviewImg{width:100%;max-width:220px;margin:0 auto 10px;border-radius:9px}#testPreviewName{text-align:center;font-size:13px;font-weight:950;margin-bottom:6px}#testPreviewMeta{font-size:10px;color:#a7b8ce;text-align:center;margin-bottom:8px}#testPreviewText{border-top:1px solid rgba(0,229,255,.18);padding-top:9px;color:#c6d8ee;font-size:11px;line-height:1.45;overflow-y:auto}
+.imageModal{width:min(1500px,98vw);max-height:96vh;overflow:auto;border:1px solid rgba(0,229,255,.52);border-radius:20px;background:linear-gradient(180deg,#08111f,#030509);box-shadow:0 22px 70px rgba(0,0,0,.68),0 0 30px rgba(0,229,255,.14);padding:14px}.imageTop{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:12px}.imageTitle{font-size:16px;font-weight:950;color:#8effff;text-transform:uppercase;letter-spacing:.08em}.imageInfo{font-size:11px;color:#9eb2ca;line-height:1.5;margin-top:4px}.imageActions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.imagePreview{min-height:280px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,229,255,.16);border-radius:15px;background:rgba(0,0,0,.28);padding:10px;overflow:auto}.imagePreview canvas{display:block;width:100%;height:auto;max-width:100%;border-radius:11px;box-shadow:0 15px 45px rgba(0,0,0,.55);background:#05070c}.imageLoading{padding:70px 20px;text-align:center;color:#dffcff;font-weight:900}.imageFoot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;flex-wrap:wrap}.imageStatus{font-size:11px;font-weight:900;border:1px solid rgba(0,229,255,.28);background:rgba(0,229,255,.08);border-radius:999px;padding:5px 9px;color:#8effff}.imageHint{font-size:11px;color:#8ea0bb}
+#toast{position:fixed;right:18px;bottom:18px;z-index:10000;min-width:220px;max-width:360px;padding:12px 14px;border-radius:12px;background:rgba(7,20,30,.96);border:1px solid rgba(0,229,255,.45);color:#dffcff;font-size:12px;font-weight:800;box-shadow:0 0 24px rgba(0,229,255,.18);opacity:0;transform:translateY(12px);pointer-events:none;transition:.18s ease}#toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:1000px){.mainLayout{grid-template-columns:1fr}.previewPanel{display:none}}
+@media(max-width:820px){.testModal{grid-template-columns:1fr;height:92vh}.testPreview{display:none}.testSearchResults{grid-template-columns:1fr 1fr}.imageTop{flex-direction:column}.imageActions{justify-content:flex-start;width:100%}}
+@media(max-width:720px){header{flex-wrap:wrap}.headerBrand{width:calc(100% - 44px)}.navBtn{flex:1;text-align:center}.deck-header h1{font-size:25px}.extra-side-row{grid-template-columns:1fr}.main-section .card-grid,.extra-section .card-grid,.side-section .card-grid{grid-template-columns:repeat(5,54px)}.deckViewControls{justify-content:flex-start;flex-wrap:wrap}.commentForm{grid-template-columns:1fr}.imageActions .modalBtn{width:100%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logoMark">◇</div>
+  <div class="headerBrand">
+    <div class="brand">NeoGoat Deck Viewer</div>
+    <div class="headerSub">
+      <span class="currentFormat" id="currentFormatText">CURRENT FORMAT</span>
+      <a class="blogLink" href="https://neogoatformat.blogspot.com/" target="_blank" rel="noopener">Visit the NeoGoat Blog ↗</a>
+    </div>
+  </div>
+  <a class="navBtn" href="/decks.html">← Deck Library</a>
+  <a class="navBtn" href="/index.html">Deck Builder</a>
+</header>
+
+<div id="loading">Loading deck...</div>
+<div id="notfound" style="display:none">Deck not found or not yet approved.</div>
+
+<div class="page" id="page" style="display:none">
+  <div class="hero">
+    <div class="heroInner">
+      <div class="heroTop">
+        <div class="deck-header titleStack">
+          <h1 id="dTitle"></h1>
+          <div id="dArchetype" class="archetype" style="display:none"></div>
+          <div class="meta" id="dMeta"></div>
+        </div>
+        <div id="dFormatBadge" class="formatBadge">FORMAT</div>
+      </div>
+      <div id="dDesc" class="description" style="display:none"></div>
+      <button id="readMoreDescBtn" class="readMoreBtn" style="display:none">Read More</button>
+      <div class="heroFooter">
+        <div class="counts">
+          <div class="countBadge" id="mainCount">Main 0</div>
+          <div class="countBadge extra" id="extraCount">Extra 0</div>
+          <div class="countBadge side" id="sideCount">Side 0</div>
+        </div>
+        <div class="actions">
+          <button class="actionBtn" id="copyBtn">📋 Copy decklist</button>
+          <button class="actionBtn" id="exportYDKBtn">💾 Download Deck</button>
+          <button class="actionBtn image" id="exportImageBtn">🖼️ Export Image</button>
+          <button class="actionBtn" id="testHandBtn">🃏 Test Hand</button>
+          <button class="actionBtn" id="builderBtn">🛠️ Open deck in builder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mainLayout">
+    <div>
+      <div class="deckViewControls">
+        <span class="deckViewLabel">Deck View</span>
+        <button class="deckViewBtn" id="viewExpandedBtn" type="button">🃏 Full Copies</button>
+        <button class="deckViewBtn" id="viewGroupedBtn" type="button">🗂 Grouped</button>
+      </div>
+      <div class="sections" id="sections"></div>
+      <div class="textDeckToggle"><details><summary>Show text decklist</summary><pre id="textDecklist"></pre></details></div>
+    </div>
+    <aside class="previewPanel">
+      <img id="previewImg" src="neogoatbuilderlogo.png" alt="">
+      <div id="previewName">Card Preview</div>
+      <div class="previewMeta" id="previewMeta"></div>
+      <div id="previewText">Hover over a card to read its details here.</div>
+      <div id="previewHint">Hover over a card to preview image, type, stats, and effect text.</div>
+    </aside>
+  </div>
+
+  <section class="commentsBox" id="commentsBox">
+    <div class="commentsHeader"><h3>Comments</h3><span class="commentCount" id="commentCount">0 comments</span></div>
+    <div class="commentForm">
+      <input id="commentName" maxlength="40" placeholder="Name / alias">
+      <textarea id="commentText" maxlength="500" placeholder="Write a comment..."></textarea>
+      <button class="actionBtn" id="commentSubmit">Post</button>
+    </div>
+    <div class="commentList" id="commentList"><div class="commentEmpty">Loading comments...</div></div>
+    <div class="commentNote">Max 500 characters. Be funny, not nuclear.</div>
+  </section>
+</div>
+
+<div class="testOverlay" id="testOverlay">
+  <div class="testModal">
+    <div class="testLeft">
+      <div class="testTop"><div class="testTitle">Test Hand — Main Deck</div><div class="testStats" id="testStats">Deck remaining: 0 / 0 | Hand: 0</div></div>
+      <div class="testActions">
+        <button class="testBtn" id="testSearchBtn">Search Deck</button><button class="testBtn" id="testNewBtn">New Hand</button><button class="testBtn primary" id="testDrawBtn">+1 Draw</button><button class="testBtn" id="testCloseBtn">Close</button>
+      </div>
+      <div class="testMsg" id="testMsg">Opening hand drawn.</div>
+      <div class="testSearchBox" id="testSearchBox">
+        <div class="testSearchHead"><span>Search remaining deck</span><span id="testSearchCount">0 card(s)</span></div>
+        <input id="testSearchInput" placeholder="Search card in remaining deck...">
+        <div class="testSearchResults" id="testSearchResults"></div>
+      </div>
+      <div class="testHandGrid" id="testHandGrid"></div>
+    </div>
+    <aside class="testPreview">
+      <img id="testPreviewImg" src="neogoatbuilderlogo.png" alt=""><div id="testPreviewName">Card Preview</div><div id="testPreviewMeta"></div><div id="testPreviewText">Hover over a test hand card to read it here.</div>
+    </aside>
+  </div>
+</div>
+
+<div class="imageOverlay" id="imageOverlay">
+  <div class="imageModal">
+    <div class="imageTop">
+      <div><div class="imageTitle">Export Deck Image</div><div class="imageInfo">Creates a high-resolution PNG with grouped copies. Empty Extra or Side Deck sections are omitted automatically.</div></div>
+      <div class="imageActions">
+        <button class="modalBtn" id="imageRefreshBtn">Refresh Preview</button>
+        <button class="modalBtn primary" id="imageCopyBtn" disabled>Copy Image</button>
+        <button class="modalBtn good" id="imageDownloadBtn" disabled>Download PNG</button>
+        <button class="modalBtn danger" id="imageCloseBtn">Close</button>
+      </div>
+    </div>
+    <div class="imagePreview" id="imagePreview"><div class="imageLoading">Preparing image...</div></div>
+    <div class="imageFoot"><span class="imageStatus" id="imageStatus">Not generated</span><span class="imageHint">Card artwork is loaded through a canvas-safe proxy, with direct-image and text fallbacks.</span></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+<script>
+const SUPABASE_URL="https://tpkqfvizizjbunpbutlo.supabase.co";
+const SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
+const IMG="https://images.ygoprodeck.com/images/cards_small/";
+let cardList=[],cardByName={},currentDeck=null,currentFormatId="",deckViewMode=localStorage.getItem("ng_deck_view_mode")||"expanded";
+const $=id=>document.getElementById(id);
+function escHtml(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function normName(n){return String(n||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[’']/g,"").replace(/[^a-z0-9]+/g," ").trim()}
+function totalCards(arr){return Array.isArray(arr)?arr.reduce((s,c)=>s+(Number(c.qty)||1),0):0}
+function showToast(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.remove("show"),2400)}
+function normalizePool(data){if(Array.isArray(data))return data;if(data&&Array.isArray(data.cards))return data.cards;if(data&&Array.isArray(data.cardList))return data.cardList;if(data&&data.data&&Array.isArray(data.data))return data.data;return []}
+async function fetchJsonFirst(urls){let lastErr;for(const url of urls){try{const r=await fetch(url,{cache:"no-store"});if(!r.ok)throw new Error(r.status+" "+url);return await r.json()}catch(e){lastErr=e}}throw lastErr||new Error("Could not load JSON")}
+async function loadCardData(){
+  try{
+    const cfg=await fetchJsonFirst(["/data/config.json","data/config.json"]);
+    currentFormatId=cfg.currentFormatId||"aug_2026";
+    const rf=cfg.rulesFile||"cards_august_2026.json";
+    $("currentFormatText").textContent="CURRENT FORMAT: "+String(currentFormatId).replace(/_/g," ").toUpperCase();
+    const raw=await fetchJsonFirst(["/data/formats/"+currentFormatId+"/"+rf,"data/formats/"+currentFormatId+"/"+rf,"/data/"+rf,"data/"+rf]);
+    cardList=normalizePool(raw);cardByName={};cardList.forEach(c=>{if(c&&c.name)cardByName[normName(c.name)]=c});
+  }catch(e){console.warn("Could not load card data",e);$("currentFormatText").textContent="CURRENT FORMAT"}
+}
+function cardDataByName(name){return cardByName[normName(name)]||null}
+function cardPassword(name){const c=cardDataByName(name);return c&&String(c.password||c.id||c.card_id||"")}
+function cardImageByName(name){const id=cardPassword(name);return id?IMG+id+".jpg":"neogoatbuilderlogo.png"}
+function cardKind(c){const type=String(c&&c.type||"").toLowerCase();if(type.includes("spell"))return"spell";if(type.includes("trap"))return"trap";return"monster"}
+function previewCard(name){
+  const data=cardDataByName(name),img=$("previewImg"),title=$("previewName"),meta=$("previewMeta"),text=$("previewText");
+  img.src=cardImageByName(name);title.textContent=name;meta.innerHTML="";
+  if(!data){text.textContent="Card data not found in the current format file.";return}
+  const kind=cardKind(data),pills=[];
+  if(kind==="monster"){
+    let main=data.type||"Monster";if(data.subType)main+=" / "+data.subType;if(data.class&&String(data.class).toLowerCase()!==String(data.subType||"").toLowerCase())main+=" / "+data.class;
+    pills.push({text:main,cls:"monster"});if(data.attribute)pills.push({text:String(data.attribute).toUpperCase(),cls:"monster"});if(data.monsterType)pills.push({text:data.monsterType,cls:"monster"});if(data.atk!=null||data.def!=null)pills.push({text:"ATK "+(data.atk??"?")+" / DEF "+(data.def??"?"),cls:"monster"});
+  }else if(kind==="spell")pills.push({text:"Spell"+(data.subType?" / "+data.subType:""),cls:"spell"});else pills.push({text:"Trap"+(data.subType?" / "+data.subType:""),cls:"trap"});
+  meta.innerHTML=pills.map(p=>`<span class="pill ${p.cls}">${escHtml(p.text)}</span>`).join("");text.textContent=data.text||"No card text available.";
+}
+function buildSection(title,cards,typeClass){
+  if(!cards||!cards.length)return null;const div=document.createElement("div");div.className="section "+(typeClass||"");div.innerHTML=`<h3>${escHtml(title)} (${totalCards(cards)})</h3><div class="card-grid"></div>`;const grid=div.querySelector(".card-grid");
+  for(const c of cards){const qty=Number(c.qty)||1,copies=deckViewMode==="grouped"?1:qty;for(let i=0;i<copies;i++){const card=document.createElement("div");card.className="deck-card";card.title=c.name;card.innerHTML=`<img src="${cardImageByName(c.name)}" alt="${escHtml(c.name)}" loading="lazy">${deckViewMode==="grouped"&&qty>1?`<div class="deck-qty">${qty}x</div>`:""}`;card.addEventListener("mouseenter",()=>previewCard(c.name));card.addEventListener("click",()=>previewCard(c.name));grid.appendChild(card)}}return div;
+}
+function renderDeckSections(deck){const sections=$("sections");sections.innerHTML="";const main=buildSection("Main Deck",deck.main_deck,"main-section");if(main)sections.appendChild(main);const row=document.createElement("div");row.className="extra-side-row";const extra=buildSection("Extra Deck",deck.extra_deck,"extra-section");if(extra)row.appendChild(extra);const side=buildSection("Side Deck",deck.side_deck,"side-section");if(side)row.appendChild(side);if(row.children.length)sections.appendChild(row)}
+function setDeckViewMode(mode){deckViewMode=mode==="grouped"?"grouped":"expanded";localStorage.setItem("ng_deck_view_mode",deckViewMode);$("viewExpandedBtn").classList.toggle("active",deckViewMode==="expanded");$("viewGroupedBtn").classList.toggle("active",deckViewMode==="grouped");if(currentDeck)renderDeckSections(currentDeck)}
+function buildCopyText(deck){let t="# Main Deck\n";for(const c of deck.main_deck||[])t+=`${c.qty} ${c.name}\n`;if((deck.extra_deck||[]).length){t+="\n# Extra Deck\n";for(const c of deck.extra_deck)t+=`${c.qty} ${c.name}\n`}if((deck.side_deck||[]).length){t+="\n# Side Deck\n";for(const c of deck.side_deck)t+=`${c.qty} ${c.name}\n`}return t}
+function makeYDK(deck){let ydk="#main\n";for(const c of deck.main_deck||[]){const id=cardPassword(c.name);if(!id)continue;for(let i=0;i<(Number(c.qty)||1);i++)ydk+=id+"\n"}ydk+="#extra\n";for(const c of deck.extra_deck||[]){const id=cardPassword(c.name);if(!id)continue;for(let i=0;i<(Number(c.qty)||1);i++)ydk+=id+"\n"}ydk+="!side\n";for(const c of deck.side_deck||[]){const id=cardPassword(c.name);if(!id)continue;for(let i=0;i<(Number(c.qty)||1);i++)ydk+=id+"\n"}return ydk}
+function safeFileName(name){return String(name||"deck").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-zA-Z0-9 _-]/g,"").trim().replace(/\s+/g,"_")||"deck"}
+function commentDateLabel(value){try{return new Date(value).toLocaleString("es-MX",{year:"numeric",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})}catch{return""}}
+async function loadComments(slug){const list=$("commentList"),count=$("commentCount");try{const res=await fetch(`${SUPABASE_URL}/rest/v1/deck_comments?deck_slug=eq.${encodeURIComponent(slug)}&is_public=eq.true&select=author_name,comment,created_at&order=created_at.desc&limit=50`,{headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}});if(!res.ok)throw new Error("comments unavailable");const comments=await res.json();count.textContent=comments.length+" comment"+(comments.length===1?"":"s");list.innerHTML="";if(!comments.length){list.innerHTML='<div class="commentEmpty">No comments yet. Be the first!</div>';return}for(const c of comments){const item=document.createElement("div");item.className="commentItem";item.innerHTML=`<div class="commentMeta"><span class="commentAuthor">${escHtml(c.author_name)}</span><span class="commentDate">${escHtml(commentDateLabel(c.created_at))}</span></div><div class="commentText">${escHtml(c.comment)}</div>`;list.appendChild(item)}}catch(e){console.warn(e);list.innerHTML='<div class="commentEmpty">Comments are not enabled yet.</div>';count.textContent="0 comments"}}
+async function postComment(slug){const author=$("commentName").value.trim(),comment=$("commentText").value.trim(),btn=$("commentSubmit");if(!author){showToast("Name required");return}if(!comment){showToast("Comment required");return}btn.disabled=true;btn.textContent="Posting...";try{const res=await fetch(`${SUPABASE_URL}/rest/v1/deck_comments`,{method:"POST",headers:{"Content-Type":"application/json",apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`,Prefer:"return=minimal"},body:JSON.stringify({deck_slug:slug,author_name:author,comment,is_public:true})});if(!res.ok)throw new Error("Could not post comment");$("commentText").value="";showToast("Comment posted!");await loadComments(slug)}catch(e){console.error(e);showToast("Comments table/policy not ready")}finally{btn.disabled=false;btn.textContent="Post"}}
+let testSourceDeck=null,testRemaining=[],testHand=[],testSearchOpen=false,testDrawCount=0;
+function shuffleArray(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
+function expandMainDeck(deck){const out=[];for(const c of deck.main_deck||[])for(let i=0;i<(Number(c.qty)||1);i++)out.push({name:c.name,tag:"OPEN",used:false});return out}
+function previewTestCard(name){const data=cardDataByName(name);$("testPreviewImg").src=cardImageByName(name);$("testPreviewName").textContent=name;if(!data){$("testPreviewMeta").textContent="";$("testPreviewText").textContent="Card data not found.";return}const bits=[];if(data.type)bits.push(data.type);if(data.subType)bits.push(data.subType);if(data.attribute)bits.push(String(data.attribute).toUpperCase());if(data.monsterType)bits.push(data.monsterType);if(data.atk!=null||data.def!=null)bits.push("ATK "+(data.atk??"?")+" / DEF "+(data.def??"?"));$("testPreviewMeta").textContent=bits.join(" / ");$("testPreviewText").textContent=data.text||"No card text available."}
+function renderTestHand(){const total=testRemaining.length+testHand.length;$("testStats").textContent="Deck remaining: "+testRemaining.length+" / "+total+" | Hand: "+testHand.filter(c=>!c.used).length;const grid=$("testHandGrid");grid.innerHTML="";testHand.forEach(c=>{const el=document.createElement("div");el.className="testCard";el.innerHTML=`<img src="${cardImageByName(c.name)}" alt="${escHtml(c.name)}"><div class="testTag">${escHtml(c.tag||"OPEN")}</div>${c.used?'<div class="testRemoved">USED</div>':'<button class="testRemove">×</button>'}`;el.onmouseenter=()=>previewTestCard(c.name);el.onclick=()=>previewTestCard(c.name);const rm=el.querySelector(".testRemove");if(rm)rm.onclick=e=>{e.stopPropagation();c.used=true;$("testMsg").textContent="Removed / used "+c.name+" from hand.";renderTestHand()};grid.appendChild(el)});if(testSearchOpen)renderTestSearch()}
+function newTestHand(){if(!testSourceDeck)return;testRemaining=shuffleArray(expandMainDeck(testSourceDeck));testHand=[];testDrawCount=0;testSearchOpen=false;$("testSearchBox").classList.remove("open");for(let i=0;i<6&&testRemaining.length;i++)testHand.push(testRemaining.shift());$("testMsg").textContent="Opening hand drawn.";renderTestHand();if(testHand[0])previewTestCard(testHand[0].name)}
+function drawOneTest(){if(!testRemaining.length){$("testMsg").textContent="No cards left in deck.";return}testDrawCount++;const card=testRemaining.shift();card.tag="DRAW "+testDrawCount;testHand.push(card);$("testMsg").textContent="Drew "+card.name+".";renderTestHand();previewTestCard(card.name)}
+function renderTestSearch(){const q=normName($("testSearchInput").value),grouped={};for(const c of testRemaining){if(q&&!normName(c.name).includes(q))continue;grouped[c.name]=(grouped[c.name]||0)+1}const names=Object.keys(grouped).sort();$("testSearchCount").textContent=names.length+" card(s)";const box=$("testSearchResults");box.innerHTML="";if(!names.length){box.innerHTML='<div class="commentEmpty">No targets found.</div>';return}names.forEach(name=>{const item=document.createElement("div");item.className="testSearchItem";item.innerHTML=`<img src="${cardImageByName(name)}" alt="${escHtml(name)}"><div class="testSearchName">${escHtml(name)}</div><div class="testSearchQty">x${grouped[name]}</div><button class="testAddBtn">Add</button>`;item.onmouseenter=()=>previewTestCard(name);item.querySelector("button").onclick=()=>{const idx=testRemaining.findIndex(c=>c.name===name);if(idx<0)return;const card=testRemaining.splice(idx,1)[0];card.tag="SEARCH";testHand.push(card);shuffleArray(testRemaining);testSearchOpen=false;$("testSearchInput").value="";$("testSearchBox").classList.remove("open");$("testMsg").textContent="Searched "+name+". Remaining deck auto-shuffled.";renderTestHand();previewTestCard(name)};box.appendChild(item)})}
+function openTestHand(deck){testSourceDeck=deck;$("testOverlay").classList.add("open");newTestHand()}
+function setupTestHandControls(){$("testDrawBtn").onclick=drawOneTest;$("testNewBtn").onclick=newTestHand;$("testCloseBtn").onclick=()=>$("testOverlay").classList.remove("open");$("testSearchBtn").onclick=()=>{testSearchOpen=!testSearchOpen;$("testSearchBox").classList.toggle("open",testSearchOpen);if(testSearchOpen){$("testSearchInput").focus();renderTestSearch()}};$("testSearchInput").addEventListener("input",renderTestSearch);$("testOverlay").onclick=e=>{if(e.target===$("testOverlay"))$("testOverlay").classList.remove("open")}}
+
+// -------- Deck image exporter --------
+const imageState={canvas:null,blob:null,rendering:false,cache:new Map()};
+function roundRect(ctx,x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+function fillRound(ctx,x,y,w,h,r,fill,stroke,lw=1){roundRect(ctx,x,y,w,h,r);if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.lineWidth=lw;ctx.strokeStyle=stroke;ctx.stroke()}}
+function fitText(ctx,text,maxWidth){text=String(text||"");if(ctx.measureText(text).width<=maxWidth)return text;let lo=0,hi=text.length;while(lo<hi){const mid=Math.ceil((lo+hi)/2),test=text.slice(0,mid)+"…";if(ctx.measureText(test).width<=maxWidth)lo=mid;else hi=mid-1}return text.slice(0,lo)+"…"}
+function imageCandidates(name){const id=cardPassword(name);if(!id)return[];const full="https://images.ygoprodeck.com/images/cards/"+id+".jpg",small=IMG+id+".jpg";return["https://wsrv.nl/?n=-1&we&output=jpg&url="+encodeURIComponent("images.ygoprodeck.com/images/cards/"+id+".jpg"),"https://wsrv.nl/?n=-1&we&output=jpg&url="+encodeURIComponent("images.ygoprodeck.com/images/cards_small/"+id+".jpg"),full,small]}
+function loadCanvasImage(src){return new Promise(resolve=>{const img=new Image();img.crossOrigin="anonymous";img.referrerPolicy="no-referrer";img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=src})}
+async function loadExportCard(name){const key=normName(name);if(imageState.cache.has(key))return imageState.cache.get(key);const promise=(async()=>{for(const src of imageCandidates(name)){const img=await loadCanvasImage(src);if(img)return img}return null})();imageState.cache.set(key,promise);return promise}
+function canvasBlob(canvas){return new Promise((resolve,reject)=>{try{canvas.toBlob(blob=>blob?resolve(blob):reject(new Error("Could not create PNG")),"image/png",1)}catch(e){reject(e)}})}
+function sectionHeight(cards,cols,cardH,gap){if(!cards||!cards.length)return 0;return 58+Math.ceil(cards.length/cols)*cardH+Math.max(0,Math.ceil(cards.length/cols)-1)*gap+26}
+function drawFallbackCard(ctx,name,x,y,w,h){const g=ctx.createLinearGradient(x,y,x,y+h);g.addColorStop(0,"#17304a");g.addColorStop(1,"#060b13");ctx.fillStyle=g;ctx.fillRect(x,y,w,h);ctx.fillStyle="#dffcff";ctx.font="800 15px Arial";ctx.textAlign="center";ctx.textBaseline="middle";const words=String(name).split(" "),lines=[];let line="";for(const word of words){const test=line?line+" "+word:word;if(ctx.measureText(test).width>w-18&&line){lines.push(line);line=word}else line=test}if(line)lines.push(line);lines.slice(0,6).forEach((t,i)=>ctx.fillText(t,x+w/2,y+h/2+(i-(Math.min(lines.length,6)-1)/2)*18,w-12))}
+function drawExportCard(ctx,img,entry,x,y,w,h){ctx.save();ctx.shadowColor="rgba(0,0,0,.52)";ctx.shadowBlur=12;ctx.shadowOffsetY=6;fillRound(ctx,x,y,w,h,9,"#0b1018","rgba(0,229,255,.45)",2);ctx.restore();ctx.save();roundRect(ctx,x+2,y+2,w-4,h-4,7);ctx.clip();if(img)ctx.drawImage(img,x+2,y+2,w-4,h-4);else drawFallbackCard(ctx,entry.name,x+2,y+2,w-4,h-4);ctx.restore();const qty=Number(entry.qty)||1;if(qty>1){fillRound(ctx,x+6,y+h-34,47,27,8,"rgba(0,0,0,.9)","rgba(142,255,255,.75)",1);ctx.fillStyle="#fff";ctx.font="900 18px Arial";ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText("x"+qty,x+29.5,y+h-20.5)}}
+function drawExportSection(ctx,title,cards,y,images,layout,accent){if(!cards||!cards.length)return y;const x=layout.margin,w=layout.width-layout.margin*2;fillRound(ctx,x,y,w,42,10,"rgba(255,255,255,.065)",accent,1);ctx.fillStyle="#f2feff";ctx.font="900 23px Arial";ctx.textAlign="left";ctx.textBaseline="middle";ctx.fillText(title,x+16,y+21);ctx.fillStyle="#9fb2c9";ctx.font="800 17px Arial";ctx.textAlign="right";ctx.fillText(totalCards(cards)+" cards · "+cards.length+" images",x+w-16,y+21);y+=58;const gridW=layout.cols*layout.cardW+(layout.cols-1)*layout.gap;const startX=(layout.width-gridW)/2;cards.forEach((entry,i)=>{const col=i%layout.cols,row=Math.floor(i/layout.cols);drawExportCard(ctx,images[normName(entry.name)],entry,startX+col*(layout.cardW+layout.gap),y+row*(layout.cardH+layout.gap),layout.cardW,layout.cardH)});const rows=Math.ceil(cards.length/layout.cols);return y+rows*layout.cardH+Math.max(0,rows-1)*layout.gap+26}
+async function buildDeckCanvas(deck){
+  const layout={width:1600,margin:46,cols:10,cardW:132,cardH:193,gap:14,headerH:215};
+  const sections=[{title:"MAIN DECK",cards:deck.main_deck||[],accent:"rgba(0,229,255,.45)"},{title:"EXTRA DECK",cards:deck.extra_deck||[],accent:"rgba(155,92,255,.55)"},{title:"SIDE DECK",cards:deck.side_deck||[],accent:"rgba(115,255,155,.45)"}].filter(s=>s.cards.length);
+  const height=layout.headerH+sections.reduce((sum,s)=>sum+sectionHeight(s.cards,layout.cols,layout.cardH,layout.gap),0)+70;
+  const canvas=document.createElement("canvas");canvas.width=layout.width;canvas.height=Math.max(950,height);const ctx=canvas.getContext("2d");ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality="high";
+  const bg=ctx.createLinearGradient(0,0,canvas.width,canvas.height);bg.addColorStop(0,"#07182c");bg.addColorStop(.52,"#060a13");bg.addColorStop(1,"#100820");ctx.fillStyle=bg;ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.save();ctx.globalAlpha=.09;ctx.strokeStyle="#00e5ff";ctx.lineWidth=1;for(let x=0;x<canvas.width;x+=42){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,canvas.height);ctx.stroke()}for(let y=0;y<canvas.height;y+=42){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(canvas.width,y);ctx.stroke()}ctx.restore();
+  const glow=ctx.createRadialGradient(250,120,10,250,120,520);glow.addColorStop(0,"rgba(0,229,255,.18)");glow.addColorStop(1,"rgba(0,229,255,0)");ctx.fillStyle=glow;ctx.fillRect(0,0,800,500);
+  ctx.fillStyle="#70f5ff";ctx.font="900 25px Arial";ctx.textAlign="left";ctx.textBaseline="top";ctx.fillText("NEOGOAT DECK PROFILE",layout.margin,35);
+  ctx.fillStyle="#fff";ctx.font="900 61px Arial";ctx.fillText(fitText(ctx,String(deck.title||"Untitled Deck").toUpperCase(),1080),layout.margin,72);
+  const format=String(deck.format||currentFormatId||"NeoGoat").replace(/_/g," ").toUpperCase(),author=deck.author_name?"BY "+String(deck.author_name).toUpperCase():"NEOGOAT COMMUNITY DECK";
+  ctx.fillStyle="#a7bad0";ctx.font="800 21px Arial";ctx.fillText(author+" · "+format,layout.margin,148);
+  const countText="MAIN "+totalCards(deck.main_deck)+"   ·   EXTRA "+totalCards(deck.extra_deck)+"   ·   SIDE "+totalCards(deck.side_deck);ctx.textAlign="right";ctx.fillStyle="#caffd7";ctx.font="900 22px Arial";ctx.fillText(countText,canvas.width-layout.margin,148);
+  if(deck.archetype){fillRound(ctx,canvas.width-layout.margin-320,47,320,48,15,"rgba(21,78,44,.85)","rgba(115,255,155,.6)",2);ctx.fillStyle="#caffd7";ctx.font="900 20px Arial";ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(fitText(ctx,String(deck.archetype).toUpperCase(),280),canvas.width-layout.margin-160,71)}
+  const uniqueNames=[];const seen=new Set();for(const s of sections)for(const c of s.cards){const key=normName(c.name);if(!seen.has(key)){seen.add(key);uniqueNames.push(c.name)}}const loaded=await Promise.all(uniqueNames.map(loadExportCard)),images={};uniqueNames.forEach((name,i)=>images[normName(name)]=loaded[i]);
+  let y=layout.headerH;for(const s of sections)y=drawExportSection(ctx,s.title,s.cards,y,images,layout,s.accent);
+  ctx.fillStyle="rgba(255,255,255,.55)";ctx.font="700 16px Arial";ctx.textAlign="right";ctx.textBaseline="bottom";ctx.fillText("neogoat-platform.vercel.app · NeoGoat Format",canvas.width-layout.margin,canvas.height-22);return canvas;
+}
+function setImageBusy(busy,label){imageState.rendering=busy;$("imageRefreshBtn").disabled=busy;$("imageCopyBtn").disabled=busy||!imageState.canvas;$("imageDownloadBtn").disabled=busy||!imageState.canvas;if(label)$("imageStatus").textContent=label}
+async function renderImagePreview(){if(imageState.rendering||!currentDeck)return;imageState.canvas=null;imageState.blob=null;setImageBusy(true,"Generating...");$("imagePreview").innerHTML='<div class="imageLoading">Loading card artwork and building PNG...</div>';try{const canvas=await buildDeckCanvas(currentDeck);imageState.canvas=canvas;imageState.blob=await canvasBlob(canvas);$("imagePreview").innerHTML="";$("imagePreview").appendChild(canvas);setImageBusy(false,canvas.width+" × "+canvas.height+" px")}catch(e){console.error(e);$("imagePreview").innerHTML='<div class="imageLoading">Could not generate image: '+escHtml(e.message||String(e))+'</div>';setImageBusy(false,"Error");showToast("Could not generate image")}}
+function openImageExport(){if(!currentDeck)return;$("imageOverlay").classList.add("open");renderImagePreview()}
+function closeImageExport(){$("imageOverlay").classList.remove("open")}
+async function copyDeckImage(){try{if(!imageState.blob&&imageState.canvas)imageState.blob=await canvasBlob(imageState.canvas);if(!imageState.blob)throw new Error("Generate the image first");if(!navigator.clipboard||!window.ClipboardItem)throw new Error("Clipboard PNG is not supported. Use Download PNG.");await navigator.clipboard.write([new ClipboardItem({"image/png":imageState.blob})]);showToast("Deck image copied!")}catch(e){console.error(e);showToast(e.message||"Could not copy image")}}
+async function downloadDeckImage(){try{if(!imageState.blob&&imageState.canvas)imageState.blob=await canvasBlob(imageState.canvas);if(!imageState.blob)throw new Error("Generate the image first");const a=document.createElement("a");a.href=URL.createObjectURL(imageState.blob);a.download=safeFileName(currentDeck.title)+"_deck_image.png";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1200);showToast("Deck PNG downloaded!")}catch(e){console.error(e);showToast(e.message||"Could not download image")}}
+function setupImageControls(){$("imageCloseBtn").onclick=closeImageExport;$("imageRefreshBtn").onclick=renderImagePreview;$("imageCopyBtn").onclick=copyDeckImage;$("imageDownloadBtn").onclick=downloadDeckImage;$("imageOverlay").onclick=e=>{if(e.target===$("imageOverlay"))closeImageExport()}}
+
+(async()=>{
+  const slug=new URLSearchParams(location.search).get("slug");if(!slug){$("loading").style.display="none";$("notfound").style.display="block";return}
+  await loadCardData();setupTestHandControls();setupImageControls();
+  try{
+    const res=await fetch(`${SUPABASE_URL}/rest/v1/decks?slug=eq.${encodeURIComponent(slug)}&is_public=eq.true&limit=1`,{headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}});if(!res.ok)throw new Error("Deck request failed: "+res.status);const data=await res.json(),deck=data[0];$("loading").style.display="none";if(!deck){$("notfound").style.display="block";return}
+    currentDeck=deck;document.title=`${deck.title} – NeoGoat`;$("dTitle").textContent=deck.title;if(deck.archetype){$("dArchetype").textContent=deck.archetype;$("dArchetype").style.display="inline-block"}
+    const date=new Date(deck.created_at).toLocaleDateString("es-MX",{year:"numeric",month:"long",day:"numeric"}),fmtLabel=String(deck.format||currentFormatId||"NeoGoat").replace(/_/g," ").toUpperCase();$("dFormatBadge").textContent=fmtLabel;$("dMeta").textContent=`By ${deck.author_name||"Unknown"} · ${date}`;
+    if(deck.description){$("dDesc").textContent=deck.description;$("dDesc").style.display="block";requestAnimationFrame(()=>{if($("dDesc").scrollHeight>$("dDesc").clientHeight+4)$("readMoreDescBtn").style.display="inline-block"});$("readMoreDescBtn").onclick=()=>{$("dDesc").classList.toggle("expanded");$("readMoreDescBtn").textContent=$("dDesc").classList.contains("expanded")?"Show Less":"Read More"}}
+    $("mainCount").textContent=`Main ${totalCards(deck.main_deck)}`;$("extraCount").textContent=`Extra ${totalCards(deck.extra_deck)}`;$("sideCount").textContent=`Side ${totalCards(deck.side_deck)}`;setDeckViewMode(deckViewMode);$("viewExpandedBtn").onclick=()=>setDeckViewMode("expanded");$("viewGroupedBtn").onclick=()=>setDeckViewMode("grouped");$("textDecklist").textContent=buildCopyText(deck);
+    const first=(deck.main_deck&&deck.main_deck[0])||(deck.extra_deck&&deck.extra_deck[0])||(deck.side_deck&&deck.side_deck[0]);if(first)previewCard(first.name);
+    $("copyBtn").onclick=async()=>{try{await navigator.clipboard.writeText(buildCopyText(deck));showToast("Decklist copied!")}catch{showToast("Could not copy decklist")}};
+    $("exportYDKBtn").onclick=()=>{const blob=new Blob([makeYDK(deck)],{type:"text/plain"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=safeFileName(deck.title)+".ydk";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500);showToast(".ydk exported!")};
+    $("exportImageBtn").onclick=openImageExport;$("testHandBtn").onclick=()=>openTestHand(deck);$("builderBtn").onclick=()=>{localStorage.setItem("ng_import_deck",JSON.stringify({main:deck.main_deck||[],extra:deck.extra_deck||[],side:deck.side_deck||[]}));location.href="/index.html"};$("commentSubmit").onclick=()=>postComment(slug);loadComments(slug);$("page").style.display="block";
+  }catch(e){console.error(e);$("loading").textContent="Error: "+e.message}
+})();
+</script>
+</body>
+</html>
