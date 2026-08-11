@@ -1333,7 +1333,7 @@ body.filters-active .checkRow{
 <div id="pasteOverlay" class="pasteModalOverlay">
   <div id="pasteModal">
     <h2>Paste Decklist</h2>
-    <p>Paste a text decklist. Example: <b>3 Toon Gemini Elf</b>. Use <b># Main</b>, <b># Extra</b>, and <b># Side</b> sections.</p>
+    <p>Paste a text decklist or a complete <b>ydke://</b> code. Text lists can use <b># Main</b>, <b># Extra</b>, and <b># Side</b> sections.</p>
     <div class="mfield">
       <label>Decklist *</label>
       <textarea id="pasteText" placeholder="# Main
@@ -1409,6 +1409,7 @@ body.filters-active .checkRow{
   </div>
 </div>
 
+<script src="/ydke.js"></script>
 <script>
 var SURL="https://tpkqfvizizjbunpbutlo.supabase.co";
 var SKEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
@@ -2111,15 +2112,44 @@ async function submitDeck(p){
 
     deck.main=imported.main;deck.extra=imported.extra;deck.side=imported.side;
     renderDeck();
-    return {count:importedCount,missing:missing};
+    return {count:importedCount,missing:missing,format:"text"};
+  }
+
+  function importYdkeDecklist(text){
+    if(!window.NeoGoatYDKE)throw new Error("YDKE support did not load");
+    var decoded=window.NeoGoatYDKE.parse(text);
+    if(!decoded.main.length)throw new Error("The Main Deck is empty");
+    if(decoded.main.length>60||decoded.extra.length>15||decoded.side.length>15)throw new Error("The YDKE deck exceeds the allowed section sizes");
+    var imported={main:new Map(),extra:new Map(),side:new Map()};
+    var missing=[];
+    var importedCount=0;
+    ["main","extra","side"].forEach(function(section){
+      decoded[section].forEach(function(code){
+        var id=String(code);
+        if(!cardMap[id]){missing.push(id);return;}
+        imported[section].set(id,(imported[section].get(id)||0)+1);
+        importedCount++;
+      });
+    });
+    if(!importedCount)throw new Error("None of the YDKE cards exist in the active format");
+    deck.main=imported.main;deck.extra=imported.extra;deck.side=imported.side;
+    renderDeck();
+    return {count:importedCount,missing:missing,format:"YDKE"};
   }
 
   document.getElementById("pasteImportBtn").onclick=function(){
     var text=pasteText.value.trim();
     if(!text){pasteMsg.textContent="Paste a decklist first.";pasteMsg.className="err";return;}
-    var result=importTextDecklist(text);
+    var result;
+    try{
+      result=text.slice(0,7)==="ydke://"?importYdkeDecklist(text):importTextDecklist(text);
+    }catch(error){
+      pasteMsg.textContent="Could not import YDKE: "+error.message+".";
+      pasteMsg.className="err";
+      return;
+    }
     if(!result.count){pasteMsg.textContent="No cards were imported. Check the card names.";pasteMsg.className="err";return;}
-    var msg="Imported "+result.count+" cards.";
+    var msg="Imported "+result.count+" cards"+(result.format==="YDKE"?" from YDKE":"")+".";
     if(result.missing.length){msg+=" Missing: "+result.missing.slice(0,8).join(", ");if(result.missing.length>8)msg+="...";}
     pasteMsg.textContent=msg;
     pasteMsg.className=result.missing.length?"err":"ok";
