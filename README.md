@@ -21,7 +21,10 @@ It is a living sandbox format.
 
 ## Current Format
 
-**Active Format:** NeoGoat Feb 2026  
+**Active Format:** NeoGoat August 2026 (selected by `data/config.json`).
+
+**Available next format:** [NeoGoat October 2026](data/formats/oct_2026/README.md), including its source, exact changes and reproducible validation.
+
 Previous formats before February 2026 are deprecated.
 
 Every two months:
