@@ -4,13 +4,13 @@
   "native_format_hash": "8A84D6ED",
   "windows_archive": "NeoGoat-Pro-Windows-0.3.2-beta.60.zip",
   "windows_archive_sha256": "d2906d2ac46495156f765d8404d5f690b9c94bf76745c01908c51a1fdb8343df",
-  "source": "Los 20 YDK originales del paquete final de NeoGoat Pro beta.60, en el orden del selector del cliente.",
-  "side_source": "Revisión de Side Deck del 25 de septiembre de 2026, adaptada a los bytes finales de beta.60.",
+  "source": "The 20 original YDK files from the final NeoGoat Pro beta.60 package, in client selector order.",
+  "side_source": "Side Deck review dated September 25, 2026, adapted to the final beta.60 release files.",
   "guide_adaptations": [
-    "Armed Dragon: se ajusta la nota al único Level Up! y los tres Flying Kamakiri #1 del Main final.",
-    "Insect Normal: se documentan las dos Ladybug del Side; se sustituyen las salidas de Foolish Burial, ausente del Main final, y se conserva el Nobleman inicial donde corresponde.",
-    "Wall Rock: la lista final utiliza Des Lacooda en lugar de Medusa Worm; ninguno de sus cinco planes de Side necesitó cambiar entradas o salidas.",
-    "Textos revisados: Cipher Soldier tiene 1350 ATK; Kycoo bloquea el destierro rival desde los cementerios, no materiales exclusivamente del campo; Pulling the Rug niega el efecto activado tras una Invocación Normal, no la invocación."
+    "Armed Dragon: guidance matches the single Level Up! and three Flying Kamakiri #1 in the final Main Deck.",
+    "Insect Normal: documents both Ladybugs in the Side Deck; replaces side-outs of Foolish Burial, absent from the final Main Deck, and retains the original Nobleman where appropriate.",
+    "Wall Rock: the final list uses Des Lacooda instead of Medusa Worm; none of its five Side Deck plans required changes to cards sided in or out.",
+    "Reviewed text: Cipher Soldier has 1350 ATK; Kycoo prevents the opponent from banishing from either Graveyard, not using materials exclusively on the field; Pulling the Rug negates an effect activated after a Normal Summon, not the summon itself."
   ],
   "decks": [
     {

@@ -3,10 +3,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const { execFileSync } = require('node:child_process');
-const { validateSections, applySidePlan } = require('../tools/build-default-profiles.js');
+const { validateSections, applySidePlan, communityPost } = require('../tools/build-default-profiles.js');
 const root = path.resolve(__dirname, '..');
 const load = name => JSON.parse(fs.readFileSync(path.join(root, name), 'utf8'));
 const published = load('data/decks/neogoat-pro-oct-2026.json');
+const posts = load('data/decks/community-posts-oct-2026.json');
+assert.equal(posts.length, 20);
 const manifest = load('data/decks/source-manifest-oct-2026.json');
 const aliases = load('data/decks/card-aliases.json');
 const pool = load('data/formats/oct_2026/cards_oct_2026.json');
@@ -70,6 +72,20 @@ for (const [index, deck] of published.decks.entries()) {
   }
   assert(deck.archetype && deck.description.length > 40, label);
   const guide = deck.guide;
+  const post = posts[index];
+  assert.deepEqual(post, communityPost(deck), `${label}: reproducible ordinary post`);
+  assert.deepEqual(Object.keys(post).sort(), ['slug', 'title', 'author_name', 'format', 'archetype', 'thumbnail_card', 'thumbnail_strip', 'description', 'main_deck', 'extra_deck', 'side_deck', 'is_public', 'deck_signature'].sort(), `${label}: existing Share Deck schema only`);
+  assert(post.description.includes('PLAY GUIDE\n' + guide.summary));
+  assert(post.description.includes('SIDE DECK GUIDE\n' + guide.side_intro));
+  for (const field of ['game_plan', 'opening', 'key_plays', 'pitfalls']) {
+    for (const text of guide[field]) assert(post.description.includes(text), `${label}: complete ${field} in description`);
+  }
+  for (const card of guide.side_cards) assert(post.description.includes(card.reason));
+  for (const plan of guide.side_plans) {
+    assert(post.description.includes(plan.matchup) && post.description.includes(plan.note));
+    for (const cards of [plan.in, plan.out]) for (const [name, count] of Object.entries(cards)) assert(post.description.includes(count + ' x ' + name));
+  }
+  assert(!/Guía de|Cada plan parte|Se conserva|El mazo|Invocación|cementerio|contra mazos|presión|monstruos|respuestas/.test(post.description), `${label}: no previous Spanish guide text`);
   assert(guide.summary.length > 40 && guide.side_intro.length > 60, label);
   for (const field of ['game_plan', 'opening', 'key_plays', 'pitfalls']) {
     assert(Array.isArray(guide[field]) && guide[field].length >= 2 && guide[field].every(value => value.length > 20), `${label}: ${field}`);

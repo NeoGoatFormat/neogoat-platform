@@ -1,4 +1,4 @@
-// Builds the public profiles from checked-in YDKs and Spanish guide sources.
+// Builds the public profiles from checked-in YDKs and reviewed English guide sources.
 // Optional --import reads explicitly supplied, local source/evidence directories.
 // It never publishes their paths, raw reports, database, or personal decks.
 const assert = require('node:assert/strict');
@@ -124,87 +124,12 @@ function applySidePlan(sections, plan) {
 
 function importEvidence(projectRoot, evidenceDirectory) {
   const nativeCards = readJson(path.join(evidenceDirectory, 'legal-cards.json'));
-  const review = readJson(path.join(evidenceDirectory, 'review.json'));
-  const nativeByName = new Map(nativeCards.map(card => [card.name, card]));
   const aliases = Object.fromEntries(nativeCards.filter(card => card.alias > 0)
     .map(card => [card.id, card.alias]));
-  function websiteName(name) {
-    const native = nativeByName.get(name);
-    assert(native, `Unknown evidence card ${name}`);
-    const card = byId.get(native.id) || byId.get(canonical(native.id, aliases));
-    assert(card, `Card absent from October website: ${name}`);
-    return card.name;
-  }
-  // Normalize historical print names in prose as well as in machine-readable swaps.
-  const renamed = nativeCards.map(card => [card.name, byId.get(card.id)?.name])
-    .filter(([oldName, newName]) => newName && oldName !== newName);
-  function prose(text) {
-    for (const [oldName, newName] of renamed) text = text.split(oldName).join(newName);
-    return text;
-  }
-  const swap = cards => Object.fromEntries(Object.entries(cards).map(([name, count]) => [websiteName(name), count]));
-  const guides = {};
-  assert.equal(review.rows.length, 20);
-  for (const row of review.rows) {
-    guides[row.name] = {
-      side_cards: row.side.map(card => ({ name: websiteName(card.name), count: card.count, reason: prose(card.reason) })),
-      side_plans: row.plans.map(plan => ({ matchup: plan.matchup, in: swap(plan.in), out: swap(plan.out), note: prose(plan.note) }))
-    };
-  }
-  // Correct two inherited stat typos using the published card record.
-  for (const title of ['Amazoness Aggro', 'Earth Aggro']) {
-    const cipher = guides[title].side_cards.find(card => card.name === 'Cipher Soldier');
-    cipher.reason = cipher.reason.replace('EARTH/1300', 'EARTH/1350');
-  }
-  guides['Archfiend Pandemonium'].side_cards.find(card => card.name === 'Kycoo the Ghost Destroyer').reason =
-    'Presiona con 1800 ATK y, mientras permanece en campo, impide que el rival destierre cartas de los cementerios para Chaos, Miracle Fusion o Dragon\'s Mirror. Estas dos fusiones aún pueden usar materiales exclusivamente del campo.';
-  // Three released lists changed after the prior side review. Preserve every YDK;
-  // revise guidance to match the shipped lists instead of restoring older cards.
-  guides['Armed Dragon'].side_plans[0].note =
-    'Se conserva una Future Fusion, los tres Flying Kamakiri #1 y todos los LV; sale la única Level Up! de esta lista. Soul Release es preventiva; Divine Wrath contesta el efecto de Chaos, no su invocación.';
-  guides['Armed Dragon'].side_plans[1].note =
-    'Royal Command no afecta a ningún monstruo propio de este Main. Prioriza retirar Necrovalley; Stamping Destruction necesita un Dragon boca arriba, no basta con Cyberdark Keel.';
-  guides['Armed Dragon'].side_plans[3].note =
-    'Se retiran respuestas a invocación menos útiles y parte del motor demorado. Se conservan Mirror Force, Torrential Tribute, Ring of Destruction y Call of the Haunted; las herramientas añadidas protegen el desarrollo sin negar esas trampas.';
-  guides['Wall Rock'].side_plans[0].note =
-    'Guardian Sphinx sale porque Mask of Restrict impediría su Invocación por Tributo; Pulling the Rug responde a los efectos de Gadget y Monarch activados al ser Invocados de Modo Normal.';
-  guides['Spellcaster'].side_plans[0].note =
-    'Rug niega el efecto activado al ser invocado de modo normal, Mind Crush usa la carta revelada por Gadget y Wrath cubre efectos fuera de esa ventana. Se conservan los seis LIGHT de Main para sostener las dos copias de Chaos Sorcerer.';
-  const insect = guides['Insect Normal'];
-  insect.side_cards.find(card => card.name === 'Soul Release').name = '4-Starred Ladybug of Doom';
-  insect.side_cards.find(card => card.name === '4-Starred Ladybug of Doom').reason =
-    'Dos respuestas FLIP a varios monstruos de Nivel 4 boca arriba del rival, como Warriors, Amazoness o Gadgets. Howling Insect puede traerla boca arriba, pero eso no activa el FLIP: normalmente se coloca desde la mano. No sustituye al odio de cementerio ni destruye monstruos de otros niveles.';
-  insect.side_plans[0] = {
-    matchup: 'Warrior / Amazoness / presión de monstruos de Nivel 4',
-    in: { '4-Starred Ladybug of Doom': 2, 'Order to Charge': 2 },
-    out: { 'Ultimate Insect LV7': 1, 'Ultimate Insect LV5': 1, 'Ultimate Insect LV3': 1, 'Insect Imitation': 1 },
-    note: 'Conversión a respuestas inmediatas: sale la línea LV completa. Se mantienen los cinco normales, Unexpected Dai, Birthright y Pinch Hopper. Ladybug se coloca para aprovechar el FLIP; Order to Charge cambia un normal por un monstruo rival. Este plan no destierra cartas del cementerio.'
-  };
-  const replaceOut = (index, replacement) => {
-    const plan = insect.side_plans[index];
-    assert.equal(plan.out['Foolish Burial'], 1);
-    delete plan.out['Foolish Burial'];
-    plan.out[replacement] = (plan.out[replacement] || 0) + 1;
-  };
-  replaceOut(1, 'Nobleman of Crossout');
-  insect.side_plans[1].note += ' Sale el Nobleman del Main si no se observaron defensores FLIP relevantes.';
-  replaceOut(3, 'Lightning Vortex');
-  insect.side_plans[3].note += ' Se conserva el Nobleman del Main: quedan tres Crossout en total. Vortex sale por ser menos preciso contra defensas colocadas.';
-  replaceOut(4, 'Ancient Rules');
-  insect.side_plans[4].note += ' Sale Ancient Rules junto a las cuatro reanimaciones; se mantienen los tres Nobleman totales para Spy/Guard.';
-  const manifest = {
-    format: 'oct_2026', version: '0.3.2 beta.60', native_format_hash: '8A84D6ED',
-    windows_archive: release + '.zip', windows_archive_sha256: releaseHash,
-    source: 'Los 20 YDK originales del paquete final de NeoGoat Pro beta.60, en el orden del selector del cliente.',
-    side_source: 'Revisión de Side Deck del 25 de septiembre de 2026, adaptada a los bytes finales de beta.60.',
-    guide_adaptations: [
-      'Armed Dragon: se ajusta la nota al único Level Up! y los tres Flying Kamakiri #1 del Main final.',
-      'Insect Normal: se documentan las dos Ladybug del Side; se sustituyen las salidas de Foolish Burial, ausente del Main final, y se conserva el Nobleman inicial donde corresponde.',
-      'Wall Rock: la lista final utiliza Des Lacooda en lugar de Medusa Worm; ninguno de sus cinco planes de Side necesitó cambiar entradas o salidas.',
-      'Textos revisados: Cipher Soldier tiene 1350 ATK; Kycoo bloquea el destierro rival desde los cementerios, no materiales exclusivamente del campo; Pulling the Rug niega el efecto activado tras una Invocación Normal, no la invocación.'
-    ],
-    decks: pins.map(([title, sha256], index) => ({ title, default_order: index + 1, file: `oct_2026/${title}.ydk`, sha256 }))
-  };
+  // Reimport only the release bytes/aliases. Reviewed English guides remain the
+  // canonical editorial source; an old Spanish report must not overwrite them.
+  const guides = readJson(path.join(directory, 'side-guides-oct-2026.json'));
+  assert.deepEqual(Object.keys(guides).sort(), pins.map(([title]) => title).sort());
   const archive = path.join(projectRoot, 'releases', release, release + '.zip');
   assert.equal(hash(fs.readFileSync(archive)), releaseHash, 'Unexpected final Windows archive');
   const selector = fs.readFileSync(path.join(projectRoot, 'ygopro-master/gframe/neogoat_deck_selector.h'), 'utf8');
@@ -225,10 +150,38 @@ function importEvidence(projectRoot, evidenceDirectory) {
     inputs.push([filename, bytes]);
   }
   for (const [filename, bytes] of inputs) fs.writeFileSync(path.join(directory, 'oct_2026', filename), bytes);
-  writeJson(path.join(directory, 'source-manifest-oct-2026.json'), manifest);
   writeJson(path.join(directory, 'card-aliases.json'), aliases);
-  writeJson(path.join(directory, 'side-guides-oct-2026.json'), guides);
-  console.log('DEFAULT_PROFILE_IMPORT PASS: 20 exact beta.60 YDKs; sanitized side guides; no source paths exported');
+  console.log('DEFAULT_PROFILE_IMPORT PASS: 20 exact beta.60 YDKs; reviewed English guides preserved; no source paths exported');
+}
+
+function communityPost(deck) {
+  const guide = deck.guide;
+  const section = (heading, items) => heading + '\n' + items.map(text => '- ' + text).join('\n');
+  const swaps = cards => Object.entries(cards).map(([name, count]) => count + ' x ' + name).join('; ');
+  const description = [
+    deck.description,
+    'NeoGoat Pro 0.3.2 beta.60 default deck | October 2026',
+    'PLAY GUIDE\n' + guide.summary,
+    section('Game Plan', guide.game_plan),
+    section('Opening Turns', guide.opening),
+    section('Key Plays and Synergies', guide.key_plays),
+    section('Common Mistakes', guide.pitfalls),
+    'SIDE DECK GUIDE\n' + guide.side_intro,
+    section('Side Card Roles', guide.side_cards.map(card => card.count + ' x ' + card.name + ': ' + card.reason)),
+    'Matchup Side Plans\n\n' + guide.side_plans.map(plan =>
+      plan.matchup + '\nSide In: ' + swaps(plan.in) + '\nSide Out: ' + swaps(plan.out) + '\n' + plan.note
+    ).join('\n\n')
+  ].join('\n\n');
+  const post = Object.fromEntries(['slug', 'title', 'author_name', 'format', 'archetype', 'thumbnail_card', 'thumbnail_strip']
+    .map(key => [key, deck[key]]));
+  post.description = description;
+  for (const zone of ['main', 'extra', 'side']) post[zone + '_deck'] = deck[zone + '_deck'].map(({name, qty}) => ({name, qty}));
+  post.is_public = true;
+  const clean = list => list.map(card => ({name:card.name.trim().toLowerCase(),qty:card.qty}))
+    .sort((a,b) => a.name.localeCompare(b.name));
+  // Same duplicate signature as the existing Share Deck form.
+  post.deck_signature = JSON.stringify({format:post.format,main:clean(post.main_deck),extra:clean(post.extra_deck),side:clean(post.side_deck)});
+  return post;
 }
 
 function build(check = false) {
@@ -276,7 +229,7 @@ function build(check = false) {
       guide: {
         summary: play.summary, game_plan: play.game_plan, opening: play.opening,
         key_plays: play.key_plays, pitfalls: play.pitfalls,
-        side_intro: 'Cada plan parte de la lista original: entra y sale el mismo número de cartas. Elige el plan según lo visto en el primer juego; no sumes planes completos. Son orientaciones para practicar, con legalidad y cantidades comprobadas, sin resultados de Matches humanos que garanticen su rendimiento.',
+        side_intro: 'Each plan starts from the original deck list and swaps an equal number of cards in and out. Choose a plan based on what you saw in Game 1; do not combine complete plans. These are practice guidelines with verified card counts and legality, not claims of proven performance in human matches.',
         side_cards: side.side_cards, side_plans: side.side_plans
       }
     };
@@ -287,6 +240,10 @@ function build(check = false) {
   assert(!/[A-Z]:\\|C:\/Users\/|D:\/Codex\/|\/opt\/neogoat-server/i.test(output), 'Private path in public profile');
   if (check) assert.equal(fs.readFileSync(target, 'utf8').replace(/\r\n/g, '\n'), output, 'Default profiles need regeneration');
   else fs.writeFileSync(target, output);
+  const postsTarget = path.join(directory, 'community-posts-oct-2026.json');
+  const postsOutput = outputJson(decks.map(communityPost));
+  if (check) assert.equal(fs.readFileSync(postsTarget, 'utf8').replace(/\r\n/g, '\n'), postsOutput, 'Community posts need regeneration');
+  else fs.writeFileSync(postsTarget, postsOutput);
   console.log(`DEFAULT_PROFILES_${check ? 'CHECK' : 'BUILD'} PASS: ${decks.length} profiles, ${decks.reduce((total, deck) => total + deck.guide.side_plans.length, 0)} validated side plans`);
   return result;
 }
@@ -300,4 +257,4 @@ if (require.main === module) {
     build(args[0] === '--check');
   }
 }
-module.exports = { parseYdk, canonical, validateSections, applySidePlan, build };
+module.exports = { parseYdk, canonical, validateSections, applySidePlan, communityPost, build };

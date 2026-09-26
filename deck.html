@@ -45,8 +45,7 @@ header{display:flex;align-items:center;gap:10px;padding:12px 18px;background:lin
 @media(max-width:1000px){.mainLayout{grid-template-columns:1fr}.previewPanel{display:none}}
 @media(max-width:820px){.testModal{grid-template-columns:1fr;height:92vh}.testPreview{display:none}.testSearchResults{grid-template-columns:1fr 1fr}.imageTop{flex-direction:column}.imageActions{justify-content:flex-start;width:100%}}
 @media(max-width:720px){header{flex-wrap:wrap}.headerBrand{width:calc(100% - 44px)}.navBtn{flex:1;text-align:center}.deck-header h1{font-size:25px}.extra-side-row{grid-template-columns:1fr}.main-section .card-grid,.extra-section .card-grid,.side-section .card-grid{grid-template-columns:repeat(5,54px)}.deckViewControls{justify-content:flex-start;flex-wrap:wrap}.commentForm{grid-template-columns:1fr}.imageActions .modalBtn{width:100%}}
-.guideBox{margin-top:22px;border:1px solid rgba(115,255,155,.3);border-radius:16px;padding:20px;background:rgba(7,17,24,.94);line-height:1.65;scroll-margin-top:95px}.guideBox h2{font-size:22px;color:#a5ffbd;margin-bottom:8px}.guideBox h3{font-size:16px;color:#9ee9ff;margin:20px 0 8px}.guideBox p,.guideBox li{font-size:14px;color:#ccdaea}.guideBox ul,.guideBox ol{padding-left:24px;margin:8px 0}.guideBox li+li{margin-top:7px}.guideBox details{margin:10px 0}.guideBox summary{cursor:pointer;padding:14px;font-weight:800;line-height:1.4}.guideBox .planBody{padding:0 16px 16px}.sideSwap{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sideSwap h4{margin:8px 0;color:#a5ffbd}.sideSwap .out h4{color:#ffafb9}.guideIntro{margin-top:8px}.guideLinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.guideLinks a{color:#a5ffbd}.guideNotice{padding:10px 12px;margin-top:14px;border-left:3px solid #00e5ff;background:rgba(0,229,255,.05)}@media(max-width:520px){.guideBox{padding:14px}.sideSwap{grid-template-columns:1fr}.guideBox summary{padding:12px}}
-[hidden]{display:none!important}
+.description{white-space:pre-wrap;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -79,7 +78,6 @@ header{display:flex;align-items:center;gap:10px;padding:12px 18px;background:lin
       </div>
       <div id="dDesc" class="description" style="display:none"></div>
       <button id="readMoreDescBtn" class="readMoreBtn" style="display:none">Read More</button>
-      <nav id="guideLinks" class="guideLinks" aria-label="Guías del mazo" hidden><a href="#playGuide">Guía de uso</a><a href="#sideGuide">Guía de Side Deck</a></nav>
       <div class="heroFooter">
         <div class="counts">
           <div class="countBadge" id="mainCount">Main 0</div>
@@ -106,8 +104,6 @@ header{display:flex;align-items:center;gap:10px;padding:12px 18px;background:lin
       </div>
       <div class="sections" id="sections"></div>
       <div class="textDeckToggle"><details><summary>Show text decklist</summary><pre id="textDecklist"></pre></details></div>
-      <section id="playGuide" class="guideBox" lang="es" hidden></section>
-      <section id="sideGuide" class="guideBox" lang="es" hidden></section>
     </div>
     <aside class="previewPanel">
       <img id="previewImg" src="neogoatbuilderlogo.png" alt="">
@@ -175,7 +171,6 @@ header{display:flex;align-items:center;gap:10px;padding:12px 18px;background:lin
 </div>
 
 <div id="toast"></div>
-<script src="default-decks.js"></script>
 <script>
 const SUPABASE_URL="https://tpkqfvizizjbunpbutlo.supabase.co";
 const SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
@@ -195,7 +190,7 @@ async function loadCardData(deckFormat){
     const knownFormats={apr_2026:"cards_april_2026_final.json",jun_2026:"cards_june_2026.json",aug_2026:"cards_aug_2026.json",oct_2026:"cards_oct_2026.json"};
     const displayFormat=knownFormats[deckFormat]||deckFormat==="feb_2026"?deckFormat:currentFormatId;
     const rf=displayFormat===currentFormatId?(cfg.rulesFile||"cards_oct_2026.json"):knownFormats[displayFormat];
-    $("currentFormatText").textContent="CURRENT FORMAT: "+NeoGoatDefaults.formatLabel(currentFormatId);
+    $("currentFormatText").textContent="CURRENT FORMAT: "+(currentFormatId==="oct_2026"?"OCTOBER 2026":String(currentFormatId).replace(/_/g," ").toUpperCase());
     const raw=await fetchJsonFirst(displayFormat==="feb_2026"?["/data/cardsfeb26.json"]:["/data/formats/"+displayFormat+"/"+rf,"data/formats/"+displayFormat+"/"+rf]);
     cardList=normalizePool(raw);cardByName={};cardList.forEach(c=>{if(c&&c.name)cardByName[normName(c.name)]=c});
   }catch(e){console.warn("Could not load card data",e);$("currentFormatText").textContent="CURRENT FORMAT"}
@@ -224,20 +219,7 @@ function setDeckViewMode(mode){deckViewMode=mode==="grouped"?"grouped":"expanded
 function buildCopyText(deck){let t="# Main Deck\n";for(const c of deck.main_deck||[])t+=`${c.qty} ${c.name}\n`;if((deck.extra_deck||[]).length){t+="\n# Extra Deck\n";for(const c of deck.extra_deck)t+=`${c.qty} ${c.name}\n`}if((deck.side_deck||[]).length){t+="\n# Side Deck\n";for(const c of deck.side_deck)t+=`${c.qty} ${c.name}\n`}return t}
 function makeYDK(deck){let ydk="#main\n";for(const c of deck.main_deck||[]){const id=cardPassword(c.name);if(!id)continue;for(let i=0;i<(Number(c.qty)||1);i++)ydk+=id+"\n"}ydk+="#extra\n";for(const c of deck.extra_deck||[]){const id=cardPassword(c.name);if(!id)continue;for(let i=0;i<(Number(c.qty)||1);i++)ydk+=id+"\n"}ydk+="!side\n";for(const c of deck.side_deck||[]){const id=cardPassword(c.name);if(!id)continue;for(let i=0;i<(Number(c.qty)||1);i++)ydk+=id+"\n"}return ydk}
 function safeFileName(name){return String(name||"deck").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-zA-Z0-9 _-]/g,"").trim().replace(/\s+/g,"_")||"deck"}
-function renderGuides(deck){
-  const guide=deck.guide;if(!guide)return;
-  const list=items=>"<ul>"+(items||[]).map(text=>"<li>"+escHtml(text)+"</li>").join("")+"</ul>";
-  const section=(title,items)=>items&&items.length?"<h3>"+title+"</h3>"+list(items):"";
-  $("playGuide").innerHTML="<h2>Guía de uso · "+escHtml(deck.title)+"</h2><p>"+escHtml(guide.summary)+"</p>"+
-    section("Plan de juego",guide.game_plan)+section("Primeros turnos",guide.opening)+section("Jugadas y sinergias",guide.key_plays)+section("Errores que conviene evitar",guide.pitfalls);
-  const swaps=entries=>list(Object.entries(entries||{}).map(([name,qty])=>qty+" × "+name));
-  $("sideGuide").innerHTML="<h2>Guía de Side Deck</h2><p class='guideIntro'>"+escHtml(guide.side_intro)+"</p>"+
-    "<h3>Para qué sirve cada carta</h3>"+list((guide.side_cards||[]).map(card=>card.count+" × "+card.name+": "+card.reason))+
-    "<h3>Planes de entradas y salidas</h3>"+(guide.side_plans||[]).map(plan=>"<details><summary>"+escHtml(plan.matchup)+"</summary><div class='planBody'><div class='sideSwap'><div><h4>Entran al Main</h4>"+swaps(plan.in)+"</div><div class='out'><h4>Salen al Side</h4>"+swaps(plan.out)+"</div></div><p>"+escHtml(plan.note)+"</p></div></details>").join("")+
-    "<p class='guideNotice'>Aplica cada plan por separado sobre la lista original: no sumes planes automáticamente. Son puntos de partida según lo que mostró el rival; conserva 40 cartas en Main y 15 en Side. Las guías no constituyen una clasificación competitiva.</p>";
-  $("playGuide").hidden=false;$("sideGuide").hidden=false;$("guideLinks").hidden=false;
-}
-function commentDateLabel(value){try{return new Date(value).toLocaleString("es-MX",{year:"numeric",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})}catch{return""}}
+function commentDateLabel(value){try{return new Date(value).toLocaleString("en-US",{year:"numeric",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})}catch{return""}}
 async function loadComments(slug){const list=$("commentList"),count=$("commentCount");try{const res=await fetch(`${SUPABASE_URL}/rest/v1/deck_comments?deck_slug=eq.${encodeURIComponent(slug)}&is_public=eq.true&select=author_name,comment,created_at&order=created_at.desc&limit=50`,{headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}});if(!res.ok)throw new Error("comments unavailable");const comments=await res.json();count.textContent=comments.length+" comment"+(comments.length===1?"":"s");list.innerHTML="";if(!comments.length){list.innerHTML='<div class="commentEmpty">No comments yet. Be the first!</div>';return}for(const c of comments){const item=document.createElement("div");item.className="commentItem";item.innerHTML=`<div class="commentMeta"><span class="commentAuthor">${escHtml(c.author_name)}</span><span class="commentDate">${escHtml(commentDateLabel(c.created_at))}</span></div><div class="commentText">${escHtml(c.comment)}</div>`;list.appendChild(item)}}catch(e){console.warn(e);list.innerHTML='<div class="commentEmpty">Comments are not enabled yet.</div>';count.textContent="0 comments"}}
 async function postComment(slug){const author=$("commentName").value.trim(),comment=$("commentText").value.trim(),btn=$("commentSubmit");if(!author){showToast("Name required");return}if(!comment){showToast("Comment required");return}btn.disabled=true;btn.textContent="Posting...";try{const res=await fetch(`${SUPABASE_URL}/rest/v1/deck_comments`,{method:"POST",headers:{"Content-Type":"application/json",apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`,Prefer:"return=minimal"},body:JSON.stringify({deck_slug:slug,author_name:author,comment,is_public:true})});if(!res.ok)throw new Error("Could not post comment");$("commentText").value="";showToast("Comment posted!");await loadComments(slug)}catch(e){console.error(e);showToast("Comments table/policy not ready")}finally{btn.disabled=false;btn.textContent="Post"}}
 let testSourceDeck=null,testRemaining=[],testHand=[],testSearchOpen=false,testDrawCount=0;
@@ -296,26 +278,16 @@ function setupImageControls(){setImageExportMode(imageExportMode,false);$("image
 (async()=>{
   const slug=new URLSearchParams(location.search).get("slug");if(!slug){$("loading").style.display="none";$("notfound").style.display="block";return}
   try{
-    let deck;
-    if(slug.startsWith("neogoat-pro-oct-2026-")){
-      deck=(await NeoGoatDefaults.load()).find(item=>item.slug===slug);
-    }
-    if(!deck){
-      const res=await fetch(`${SUPABASE_URL}/rest/v1/decks?slug=eq.${encodeURIComponent(slug)}&is_public=eq.true&limit=1`,{headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}});if(!res.ok)throw new Error("Deck request failed: "+res.status);const data=await res.json();deck=data[0];
-    }
-    if(!deck){$("loading").style.display="none";$("notfound").style.display="block";return}
+    const res=await fetch(`${SUPABASE_URL}/rest/v1/decks?slug=eq.${encodeURIComponent(slug)}&is_public=eq.true&limit=1`,{headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}});if(!res.ok)throw new Error("Deck request failed: "+res.status);const data=await res.json(),deck=data[0];$("loading").style.display="none";if(!deck){$("notfound").style.display="block";return}
     await loadCardData(deck.format);setupTestHandControls();setupImageControls();
     currentDeck=deck;document.title=`${deck.title} – NeoGoat`;$("dTitle").textContent=deck.title;if(deck.archetype){$("dArchetype").textContent=deck.archetype;$("dArchetype").style.display="inline-block"}
-    const date=new Date(deck.created_at).toLocaleDateString("es-MX",{year:"numeric",month:"long",day:"numeric",timeZone:deck.is_default?"UTC":undefined}),fmtLabel=NeoGoatDefaults.formatLabel(deck.format||currentFormatId);$("dFormatBadge").textContent=fmtLabel;$("dMeta").textContent=deck.is_default?`NeoGoat Pro · Predeterminado ${String(deck.default_order).padStart(2,"0")} de 20 · beta.60 · ${date}`:`By ${deck.author_name||"Unknown"} · ${date}`;
-    renderGuides(deck);
-    if(deck.description){$("dDesc").textContent=deck.description;$("dDesc").style.display="block";requestAnimationFrame(()=>{if($("dDesc").scrollHeight>$("dDesc").clientHeight+4)$("readMoreDescBtn").style.display="inline-block"});$("readMoreDescBtn").onclick=()=>{$("dDesc").classList.toggle("expanded");$("readMoreDescBtn").textContent=$("dDesc").classList.contains("expanded")?"Show Less":"Read More"}}
+    const date=new Date(deck.created_at).toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"}),fmtLabel=(deck.format||currentFormatId)==="oct_2026"?"OCTOBER 2026":String(deck.format||currentFormatId||"NeoGoat").replace(/_/g," ").toUpperCase();$("dFormatBadge").textContent=fmtLabel;$("dMeta").textContent=`By ${deck.author_name||"Unknown"} · ${date}`;
+    if(deck.description){$("dDesc").textContent=deck.description;$("dDesc").style.display="-webkit-box";requestAnimationFrame(()=>{if($("dDesc").scrollHeight>$("dDesc").clientHeight+4)$("readMoreDescBtn").style.display="inline-block"});$("readMoreDescBtn").onclick=()=>{$("dDesc").classList.toggle("expanded");$("readMoreDescBtn").textContent=$("dDesc").classList.contains("expanded")?"Show Less":"Read More"}}
     $("mainCount").textContent=`Main ${totalCards(deck.main_deck)}`;$("extraCount").textContent=`Extra ${totalCards(deck.extra_deck)}`;$("sideCount").textContent=`Side ${totalCards(deck.side_deck)}`;setDeckViewMode(deckViewMode);$("viewExpandedBtn").onclick=()=>setDeckViewMode("expanded");$("viewGroupedBtn").onclick=()=>setDeckViewMode("grouped");$("textDecklist").textContent=buildCopyText(deck);
     const first=(deck.main_deck&&deck.main_deck[0])||(deck.extra_deck&&deck.extra_deck[0])||(deck.side_deck&&deck.side_deck[0]);if(first)previewCard(first.name);
     $("copyBtn").onclick=async()=>{try{await navigator.clipboard.writeText(buildCopyText(deck));showToast("Decklist copied!")}catch{showToast("Could not copy decklist")}};
-    $("exportYDKBtn").onclick=()=>{const a=document.createElement("a");if(deck.is_default&&deck.ydk_path){a.href=deck.ydk_path;a.download=deck.title+".ydk";}else{const blob=new Blob([makeYDK(deck)],{type:"text/plain"});a.href=URL.createObjectURL(blob);a.download=safeFileName(deck.title)+".ydk";setTimeout(()=>URL.revokeObjectURL(a.href),500);}document.body.appendChild(a);a.click();a.remove();showToast(".ydk exported!")};
-    $("exportImageBtn").onclick=openImageExport;$("testHandBtn").onclick=()=>openTestHand(deck);$("builderBtn").onclick=()=>{localStorage.setItem("ng_import_deck",JSON.stringify({main:deck.main_deck||[],extra:deck.extra_deck||[],side:deck.side_deck||[]}));location.href="/index.html"};
-    if(deck.is_default){$("commentsBox").hidden=true;}else{$("commentSubmit").onclick=()=>postComment(slug);loadComments(slug);}
-    $("loading").style.display="none";$("page").style.display="block";
+    $("exportYDKBtn").onclick=()=>{const blob=new Blob([makeYDK(deck)],{type:"text/plain"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=safeFileName(deck.title)+".ydk";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500);showToast(".ydk exported!")};
+    $("exportImageBtn").onclick=openImageExport;$("testHandBtn").onclick=()=>openTestHand(deck);$("builderBtn").onclick=()=>{localStorage.setItem("ng_import_deck",JSON.stringify({main:deck.main_deck||[],extra:deck.extra_deck||[],side:deck.side_deck||[]}));location.href="/index.html"};$("commentSubmit").onclick=()=>postComment(slug);loadComments(slug);$("page").style.display="block";
   }catch(e){console.error(e);$("loading").textContent="Error: "+e.message}
 })();
 </script>

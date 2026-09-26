@@ -36,9 +36,11 @@ Every two months:
 
 ## NeoGoat Pro default profiles
 
-[Browse the 20 beta.60 default decks](https://neogoat-platform.vercel.app/decks.html?collection=defaults), each with its original YDK, a Spanish play guide, card-by-card Side Deck guidance, and concrete side-in/side-out plans for October 2026. Profiles open directly in the builder and remain available independently of the community database. Community submissions and earlier formats remain available through the library filters.
+[Browse Deck Library](https://neogoat-platform.vercel.app/decks.html) for the 20 beta.60 default decks, published as ordinary deck posts alongside existing community submissions. Each post includes its English play guide and Side Deck guide in the existing description field. There is no separate collection selector or special guide interface. The usual Read More, comments, downloads and Open in Builder actions apply.
 
 The [profile sources and validation instructions](data/decks/README.md) document the exact release, hashes, and adaptations to the final lists. These profiles describe the shipped decks; they are not a competitive tier list.
+
+Public website UI and official deck descriptions are written in English for an international audience. Preserve the existing page design unless a redesign is explicitly requested. Community-authored content keeps its original language.
 
 ## Platform Architecture
 

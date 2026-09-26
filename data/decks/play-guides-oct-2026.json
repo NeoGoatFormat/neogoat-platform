@@ -1,8 +1,8 @@
 {
   "Amazoness Aggro": {
-    "archetype": "Amazoness · presión y reclutamiento",
-    "description": "Once Amazoness y tres Amazoness Village sostienen una ofensiva que repone monstruos después de su destrucción. Amazoness Swords Woman convierte los combates desfavorables en daño rival; Amazoness Paladin y Amazoness Tiger aprovechan una mesa acompañada.",
-    "summary": "Establece Village, intercambia cuerpos sin perder presencia y reserva el removal para las amenazas que impiden combatir.",
+    "archetype": "Amazoness",
+    "description": "Eleven Amazoness monsters and three Amazoness Village support an offense that replaces destroyed monsters. Amazoness Swords Woman turns unfavorable battles into damage to the opponent, while Amazoness Paladin and Amazoness Tiger benefit from having allies on the field.",
+    "summary": "Establish Village, trade monsters without losing field presence, and save removal for threats that prevent you from battling.",
     "thumbnail_card": "Amazoness Swords Woman",
     "thumbnail_strip": [
       "Amazoness Paladin",
@@ -10,31 +10,31 @@
       "Amazoness Swords Woman"
     ],
     "game_plan": [
-      "Busca Amazoness Village con Terraforming y conserva una segunda copia como reposición; el campo activo importa más que acumular todas las Amazoness en mesa.",
-      "Alterna las tres Amazoness Paladin para presión y las tres Amazoness Swords Woman para castigar monstruos grandes. Village repone sólo una vez por turno.",
-      "Usa Book of Moon y el removal para abrir combates concretos. Mantén recursos en mano frente a Torrential Tribute o Mirror Force."
+      "Search for Amazoness Village with Terraforming and keep a second copy as a replacement; keeping the Field Spell active matters more than putting every Amazoness on the field.",
+      "Use the three Amazoness Paladin to apply pressure and the three Amazoness Swords Woman to punish large monsters. Village only replaces a monster once per turn.",
+      "Use Book of Moon and removal to open up specific battles. Keep resources in hand against Torrential Tribute or Mirror Force."
     ],
     "opening": [
-      "Con Village y una Amazoness, activa el campo antes de comprometer el monstruo y guarda interacción para que el rival no retire ambos con facilidad.",
-      "Sin Village, Giant Rat o Warrior Lady of the Wasteland preparan el siguiente cuerpo. Reinforcement of the Army puede buscar Swords Woman o Exiled Force según la mesa."
+      "With Village and an Amazoness, activate the Field Spell before committing the monster, and hold interaction so the opponent cannot easily remove both.",
+      "Without Village, Giant Rat or Warrior Lady of the Wasteland can set up your next monster. Reinforcement of the Army can find Swords Woman or Exiled Force depending on the field."
     ],
     "key_plays": [
-      "Warrior Lady of the Wasteland recluta EARTH Warrior con 1500 ATK o menos: Swords Woman y Exiled Force son opciones; Giant Rat también puede acceder a Amazoness Tiger.",
-      "Después de que una Amazoness sea destruida y llegue al cementerio, Village trae otra de nivel igual o menor. Una Swords Woman destruida puede dejar preparada la siguiente.",
-      "Amazoness Spellcaster intercambia ATK original para superar un jefe. Amazoness Archers reduce 500 ATK y obliga a los monstruos afectados a atacar si pueden.",
-      "Amazoness Archer puede tributar dos monstruos para causar 1200 de daño: calcula esa salida cuando el rival ya esté al alcance, después de aprovechar ataques útiles."
+      "Warrior Lady of the Wasteland recruits an EARTH Warrior with 1500 ATK or less: Swords Woman and Exiled Force are options. Giant Rat can also access Amazoness Tiger.",
+      "After an Amazoness is destroyed and reaches the GY, Village summons another of an equal or lower Level. A destroyed Swords Woman can leave the next one ready.",
+      "Amazoness Spellcaster swaps original ATK to overcome a boss monster. Amazoness Archers reduces ATK by 500 and forces the affected monsters to attack if able.",
+      "Amazoness Archer can Tribute two monsters to deal 1200 damage. Count that finishing option once the opponent is within range, after making any useful attacks."
     ],
     "pitfalls": [
-      "Tiger es Beast y sólo puedes controlar uno. Warrior Lady of the Wasteland y Reinforcement of the Army no lo buscan.",
-      "Village necesita destrucción y envío al cementerio; un destierro, devolución o tributo no activa esa reposición.",
-      "No declares Warrior con Tribe-Infecting Virus sin contar tus propias Amazoness. Heavy Storm también destruye Village.",
-      "Amazoness Chain Master cuesta 1500 LP tras morir en batalla; usa su efecto cuando la información y el monstruo robado compensen ese gasto."
+      "Tiger is a Beast, and you can only control one. Warrior Lady of the Wasteland and Reinforcement of the Army cannot search for it.",
+      "Village requires destruction and a trip to the GY; banishing, returning a monster, or Tributing it does not trigger the replacement.",
+      "Do not declare Warrior with Tribe-Infecting Virus without counting your own Amazoness. Heavy Storm also destroys Village.",
+      "Amazoness Chain Master costs 1500 LP after being destroyed by battle; use the effect when the information and stolen monster justify the payment."
     ]
   },
   "Archfiend Pandemonium": {
-    "archetype": "Archfiend · control de recursos",
-    "description": "Tres Archfiend General, tres Pandemonium y Terraforming dan acceso al campo que sostiene a los demonios. Archfiend Heiress y la destrucción por efectos convierten los intercambios en nuevas amenazas.",
-    "summary": "Mantén Pandemonium, presiona con demonios eficientes y transforma la destrucción de tus propios Archfiend en búsquedas.",
+    "archetype": "Archfiend",
+    "description": "Three Archfiend General, three Pandemonium, and Terraforming provide access to the Field Spell that supports your Fiends. Archfiend Heiress and destruction by effects turn trades into new threats.",
+    "summary": "Keep Pandemonium active, apply pressure with efficient Fiends, and turn the destruction of your own Archfiends into searches.",
     "thumbnail_card": "Terrorking Archfiend",
     "thumbnail_strip": [
       "Archfiend General",
@@ -42,31 +42,31 @@
       "Skull Archfiend of Lightning"
     ],
     "game_plan": [
-      "Descarta Archfiend General para encontrar Pandemonium cuando falte; con el campo establecido puedes conservar otros General como atacantes.",
-      "Abre con Archfiend Soldier o Archfiend Heiress y habilita después Terrorking Archfiend. El primer cuerpo también evita depender de una sola amenaza.",
-      "Aprovecha Pandemonium para recuperar un Archfiend de menor nivel tras destrucción por efecto; administra trampas y puntos de vida para sostener varios turnos."
+      "Discard Archfiend General to find Pandemonium when needed; once the Field Spell is established, you can keep other copies of General as attackers.",
+      "Start with Archfiend Soldier or Archfiend Heiress to enable Terrorking Archfiend later. That first monster also keeps you from relying on a single threat.",
+      "Use Pandemonium to find a lower-Level Archfiend after destruction by an effect; manage your Traps and LP to sustain this plan over several turns."
     ],
     "opening": [
-      "General más Terrorking: busca y activa Pandemonium, desarrolla primero otro Archfiend y reserva Terrorking para una invocación legal posterior.",
-      "Con Heiress y defensa, acepta un intercambio por batalla que permita buscar el Archfiend apropiado; no gastes removal sólo para conservar un cuerpo pequeño."
+      "General plus Terrorking: search for and activate Pandemonium, establish another Archfiend first, and save Terrorking for a later legal Summon.",
+      "With Heiress and protection, accept a battle trade that lets you search for the right Archfiend; do not spend removal just to preserve a small monster."
     ],
     "key_plays": [
-      "Mist Archfiend puede invocarse sin tributo, atacar y destruirse en End Phase. Con Pandemonium, esa destrucción permite buscar un Archfiend de nivel inferior.",
-      "Archfiend's Roar revive una amenaza por 500 LP y la destruye al final del turno; si Pandemonium sigue activo, esa destrucción puede alimentar otra búsqueda.",
-      "Terrorking niega los efectos de los monstruos que destruye en batalla. Úsalo para atacar motores de efectos cuando pueda ganar el combate.",
-      "Desrook Archfiend en mano puede recuperar Terrorking cuando éste sea destruido y enviado al cementerio."
+      "Mist Archfiend can be Summoned without Tributing, attack, and destroy itself in the End Phase. With Pandemonium, that destruction lets you search for a lower-Level Archfiend.",
+      "Archfiend's Roar revives a threat for 500 LP and destroys it at the end of the turn; if Pandemonium is still active, that destruction can fuel another search.",
+      "Terrorking negates the effects of monsters it destroys by battle. Use it to attack effect-based engines when it can win the battle.",
+      "Desrook Archfiend in hand can bring back Terrorking when it is destroyed and sent to the GY."
     ],
     "pitfalls": [
-      "Pandemonium evita los pagos de Standby de los Archfiend; no evita los 1000 de daño de Mist ni los 500 LP de Archfiend's Roar.",
-      "Terrorking no puede ser Normal o Flip Summoned sin otro Archfiend en tu campo; colocarla no convierte en legal un volteo posterior sin ese apoyo.",
-      "Heiress busca al llegar por efecto o por destrucción en batalla, no al descartarla como coste de Tribe-Infecting Virus.",
-      "El monstruo de Archfiend's Roar no puede ser tributado. Si desaparece Pandemonium, Archfiend General se destruye; protege el campo antes de depender de varios."
+      "Pandemonium removes the Archfiends' Standby Phase payments; it does not prevent Mist's 1000 damage or the 500 LP cost of Archfiend's Roar.",
+      "Terrorking cannot be Normal or Flip Summoned without another Archfiend on your field; Setting it does not make a later Flip Summon legal without that support.",
+      "Heiress searches when sent by an effect or destroyed by battle, not when discarded as the cost of Tribe-Infecting Virus.",
+      "The monster revived by Archfiend's Roar cannot be Tributed. If Pandemonium disappears, Archfiend General destroys itself; protect the Field Spell before relying on several copies."
     ]
   },
   "Armed Dragon": {
-    "archetype": "Armed Dragon · evolución LV",
-    "description": "Tres Flying Kamakiri #1 y tres Masked Dragon dan acceso a Armed Dragon LV3. Tres LV5, dos LV7 y una Level Up! permiten escalar, mientras Cyberdark Keel aprovecha los dragones pequeños del cementerio.",
-    "summary": "Recluta LV3, llega a LV5 con protección y decide entre evolucionar por batalla o acelerar con Level Up!.",
+    "archetype": "Armed Dragon",
+    "description": "Three Flying Kamakiri #1 and three Masked Dragon provide access to Armed Dragon LV3. Three LV5, two LV7, and one Level Up! let you climb the chain, while Cyberdark Keel uses small Dragons in the GY.",
+    "summary": "Recruit LV3, reach LV5 with protection, and choose between evolving through battle or accelerating with Level Up!",
     "thumbnail_card": "Armed Dragon LV7",
     "thumbnail_strip": [
       "Armed Dragon LV3",
@@ -74,31 +74,31 @@
       "Armed Dragon LV7"
     ],
     "game_plan": [
-      "Usa los seis reclutadores para sobrevivir y preparar LV3, idealmente durante el turno rival para evolucionar en tu siguiente Standby Phase.",
-      "Reserva monstruos con ATK suficiente para los efectos de LV5 y LV7; no descartes automáticamente la única pieza de evolución de tu mano.",
-      "Mantén la vía de combate de Cyberdark Keel mientras preparas Future Fusion y Dragon's Mirror como plan de cierre."
+      "Use the six recruiters to survive and set up LV3, ideally during the opponent's turn so it can evolve in your next Standby Phase.",
+      "Save monsters with enough ATK for the effects of LV5 and LV7; do not automatically discard the only evolution piece in your hand.",
+      "Keep Cyberdark Keel's battle plan available while preparing Future Fusion and Dragon's Mirror as finishers."
     ],
     "opening": [
-      "Coloca Masked Dragon o Flying Kamakiri #1 con una defensa. Si cae por batalla, elige LV3 cuando pueda sobrevivir hasta tu Standby.",
-      "Con LV5 y Level Up!, prepara primero un LV5 legal y limpia el backrow peligroso antes de convertirlo en LV7."
+      "Set Masked Dragon or Flying Kamakiri #1 with protection. If it falls in battle, choose LV3 when it can survive until your Standby Phase.",
+      "With LV5 and Level Up!, first establish a legal LV5 and clear dangerous backrow before turning it into LV7."
     ],
     "key_plays": [
-      "LV3 se envía al cementerio en tu Standby para traer LV5 desde mano o Deck; LV5 que destruyó un monstruo en batalla puede traer LV7 durante la End Phase.",
-      "Level Up! envía un LV boca arriba y trae el monstruo indicado ignorando sus condiciones: LV5 hacia LV7 es la conversión de mayor impacto.",
-      "Cyberdark Keel, al ser Normal Summoned, equipa un Dragon de nivel 3 o menor del cementerio, como LV3, Masked Dragon o Twin-Headed Behemoth.",
-      "Future Fusion revela Five-Headed Dragon y envía cinco Dragons en tu primera Standby posterior; Dragon's Mirror puede aprovechar después esos materiales."
+      "LV3 sends itself to the GY in your Standby Phase to summon LV5 from your hand or Deck. An LV5 that destroyed a monster by battle can summon LV7 during the End Phase.",
+      "Level Up! sends a face-up LV monster to the GY and summons the listed monster, ignoring its Summoning conditions; LV5 into LV7 is the highest-impact conversion.",
+      "When Normal Summoned, Cyberdark Keel equips a Level 3 or lower Dragon from the GY, such as LV3, Masked Dragon, or Twin-Headed Behemoth.",
+      "Future Fusion reveals Five-Headed Dragon and sends five Dragons during your first subsequent Standby Phase; Dragon's Mirror can then use those materials."
     ],
     "pitfalls": [
-      "Esta lista tiene una sola Level Up!, no dos. Conserva la vía natural de evolución y no bases cada mano en robar esa copia.",
-      "Future Fusion no carga el cementerio al activarse: necesita sobrevivir hasta tu primera Standby; la fusión llega en la segunda.",
-      "Cyberdark Keel es Machine: no sirve como material Dragon para Five-Headed Dragon ni habilita Stamping Destruction.",
-      "LV7 no se invoca simplemente con dos tributos ni con Premature Burial. Sinister Serpent sólo permite destruir con los LV objetivos de ATK acorde a su bajo valor."
+      "This list has only one Level Up!, not two. Preserve the natural evolution route and do not build every hand around drawing that copy.",
+      "Future Fusion does not load the GY on activation: it must survive until your first Standby Phase, and the Fusion arrives in the second.",
+      "Cyberdark Keel is a Machine: it is not Dragon material for Five-Headed Dragon and does not enable Stamping Destruction.",
+      "LV7 cannot simply be Summoned with two Tributes or Premature Burial. Sending Sinister Serpent for a LV effect only destroys monsters within its low ATK threshold."
     ]
   },
   "Chaos Control": {
-    "archetype": "Chaos · control y ventaja",
-    "description": "Dos Chaos Sorcerer rematan un núcleo de seis LIGHT, monstruos DARK de utilidad y defensas. Spy, Dekoichi y Tsukuyomi sostienen intercambios mientras el cementerio reúne ambos atributos.",
-    "summary": "Intercambia con paciencia, recicla efectos de volteo y reserva LIGHT/DARK para que Chaos Sorcerer llegue con una función concreta.",
+    "archetype": "Chaos",
+    "description": "Two Chaos Sorcerer finish games for a core of six LIGHT monsters, useful DARK monsters, and defensive cards. Spy, Dekoichi, and Tsukuyomi sustain trades while both Attributes build up in the GY.",
+    "summary": "Trade patiently, reuse Flip Effects, and preserve LIGHT/DARK material so Chaos Sorcerer arrives with a specific job.",
     "thumbnail_card": "Chaos Sorcerer",
     "thumbnail_strip": [
       "Chaos Sorcerer",
@@ -106,31 +106,31 @@
       "Thunder Dragon"
     ],
     "game_plan": [
-      "Construye el cementerio mediante combates y efectos útiles; no sacrifiques innecesariamente tus seis LIGHT sólo para invocar Chaos un turno antes.",
-      "Defiende Spy o Dekoichi cuando puedan darte otra carta o un segundo cuerpo, y usa Tsukuyomi para reutilizar un efecto cuando la mesa lo permita.",
-      "Invoca Chaos Sorcerer para retirar una amenaza boca arriba o cerrar por ataque; cuenta el combustible necesario para la segunda copia."
+      "Build the GY through useful battles and effects; do not needlessly sacrifice your six LIGHT monsters just to summon Chaos a turn earlier.",
+      "Protect Spy or Dekoichi when they can provide another card or a second monster, and use Tsukuyomi to reuse an effect when the field allows it.",
+      "Summon Chaos Sorcerer to remove a face-up threat or finish through attacks; count the fuel needed for the second copy."
     ],
     "opening": [
-      "Con Thunder Dragon, descarta una copia para buscar la otra si sigue en el Deck. Con sólo dos copias no es una búsqueda de dos cartas.",
-      "Spy o Dekoichi colocados y una defensa permiten empezar sin mostrar Chaos. Contra presión conocida, ROTA encuentra D.D. Warrior Lady o Exiled Force."
+      "With Thunder Dragon, discard one copy to search for the other if it is still in the Deck. With only two copies, this is not a two-card search.",
+      "A Set Spy or Dekoichi plus protection lets you open without revealing Chaos. Against a known threat, ROTA can find D.D. Warrior Lady or Exiled Force."
     ],
     "key_plays": [
-      "Book of Moon seguido de Nobleman of Crossout retira un monstruo que primero estaba boca arriba, si ambos efectos pueden resolver.",
-      "Tsukuyomi puede volver a colocar Spy o Dekoichi para reutilizarlos en un turno posterior; también transforma un jefe rival en un objetivo fácil por DEF.",
-      "Raigeki Break y Tribe-Infecting Virus convierten un descarte prescindible en interacción. Night Assailant puede recuperar otro monstruo FLIP que ya esté en el cementerio.",
-      "Kycoo the Ghost Destroyer frena el destierro rival desde los cementerios mientras está boca arriba y puede retirar materiales al causar daño."
+      "Book of Moon followed by Nobleman of Crossout removes a monster that was initially face-up, provided both effects can resolve.",
+      "Tsukuyomi can Set Spy or Dekoichi again for reuse on a later turn; it also turns an opposing boss into a target you can attack through its DEF.",
+      "Raigeki Break and Tribe-Infecting Virus turn a spare discard into interaction. Night Assailant can recover another Flip monster already in the GY.",
+      "Kycoo the Ghost Destroyer stops the opponent from banishing cards from the GYs while it is face-up, and can remove materials when it deals damage."
     ],
     "pitfalls": [
-      "Chaos Sorcerer no puede atacar el turno que activa su destierro; no sumes esos 2300 al calcular el remate.",
-      "Night Assailant no se recupera a sí mismo. Sinister Serpent tiene su efecto de destierro posterior y no garantiza descartes infinitos.",
-      "Card Destruction puede arreglar la mano rival y cargarle el cementerio; úsala por una ganancia concreta, no sólo porque está disponible.",
-      "Nobleman sobre una Spy rival puede desterrar también tus propias Spy del Deck; revisa el intercambio antes de resolverlo."
+      "Chaos Sorcerer cannot attack in the turn it activates its banishing effect; do not count those 2300 when calculating lethal damage.",
+      "Night Assailant cannot recover itself. Sinister Serpent has a later banishing effect and does not guarantee endless discards.",
+      "Card Destruction can fix the opponent's hand and load their GY; use it for a concrete benefit, not just because it is available.",
+      "Nobleman on an opposing Spy can also banish your own copies of Spy from the Deck; assess the trade before resolving it."
     ]
   },
   "Chaos Warrior": {
-    "archetype": "Warrior · presión Chaos",
-    "description": "Tres Blade Knight, dos Reflect Bounder, una D.D. Warrior Lady y Ninja Grandmaster Sasuke aportan los siete LIGHT de una base agresiva. Los Warriors y la retirada abren camino para dos Chaos Sorcerer sin depender de un motor de robo lento.",
-    "summary": "Gana los combates iniciales, fuerza respuestas y convierte los LIGHT/DARK usados en una segunda oleada de Chaos.",
+    "archetype": "Chaos Warrior",
+    "description": "Three Blade Knight, two Reflect Bounder, one D.D. Warrior Lady, and Ninja Grandmaster Sasuke supply the seven LIGHT monsters in this aggressive core. Warriors and removal clear the way for two Chaos Sorcerer without relying on a slow draw engine.",
+    "summary": "Win the early battles, force answers, and turn used LIGHT/DARK monsters into a second wave of Chaos.",
     "thumbnail_card": "Blade Knight",
     "thumbnail_strip": [
       "Blade Knight",
@@ -138,31 +138,31 @@
       "Zombyra the Dark"
     ],
     "game_plan": [
-      "Presenta un atacante con protección y conserva el siguiente en mano; Shrink y Book of Moon ayudan a ganar un combate sin ampliar demasiado la mesa.",
-      "Elige con Reinforcement of the Army la herramienta para la posición rival: Exiled Force, Mystic Swordsman LV2 o un LIGHT útil.",
-      "Usa los dos Chaos Sorcerer después de que tus Warriors hayan forzado removal y reunido los atributos, sin gastar todos los materiales a la vez."
+      "Present one protected attacker and keep the next in hand; Shrink and Book of Moon help win a battle without overextending.",
+      "Use Reinforcement of the Army to find the tool for the opposing field: Exiled Force, Mystic Swordsman LV2, or a useful LIGHT monster.",
+      "Use the two Chaos Sorcerer after your Warriors have drawn out removal and supplied both Attributes, without spending all the materials at once."
     ],
     "opening": [
-      "Blade Knight más una defensa mantiene presión desde el primer turno. No vacíes la mano sólo para activar sus condiciones.",
-      "Ante monstruos colocados, reserva Mystic Swordsman LV2 o Nobleman of Crossout; contra uno boca arriba en Defensa, Ninja Grandmaster Sasuke ofrece otra ruta."
+      "Blade Knight plus protection applies pressure from the first turn. Do not empty your hand just to meet its conditions.",
+      "Against Set monsters, hold Mystic Swordsman LV2 or Nobleman of Crossout; against a face-up Defense Position monster, Ninja Grandmaster Sasuke offers another route."
     ],
     "key_plays": [
-      "Shrink permite que Don Zaloog gane un combate y haga daño para activar su efecto de mano; también conserva a tus LIGHT para otra batalla.",
-      "Book of Moon deja a un monstruo boca abajo para Mystic Swordsman LV2 o Nobleman, con tiempos de activación distintos.",
-      "Zombyra the Dark ataca por encima de muchos monstruos iniciales; Book of Moon puede reiniciar sus pérdidas de ATK cuando volver a colocarla sea útil.",
-      "Chaos Sorcerer retira una amenaza boca arriba que el combate no resuelve, mientras otro Warrior conserva el ataque disponible."
+      "Shrink lets Don Zaloog win a battle and deal damage to activate its hand effect; it can also preserve your LIGHT monsters for another battle.",
+      "Book of Moon turns a monster face-down for Mystic Swordsman LV2 or Nobleman, each with its own activation timing.",
+      "Zombyra the Dark attacks over many early monsters; Book of Moon can reset its ATK losses when Setting it again is useful.",
+      "Chaos Sorcerer removes a face-up threat that battle cannot answer, while another Warrior remains available to attack."
     ],
     "pitfalls": [
-      "Zombyra no puede atacar directamente y pierde 200 ATK tras destruir un monstruo en batalla; calcula sus siguientes combates con el valor actual.",
-      "Blade Knight sólo gana ATK con una carta o menos en mano y sólo niega efectos de volteo bajo su condición de no controlar otros monstruos.",
-      "El Main sólo tiene un Night Assailant como monstruo FLIP; su descarte no crea por sí solo una recuperación.",
-      "No reduzcas el paquete LIGHT al hacer Side sin revisar el acceso a Chaos. Sorcerer pierde su ataque del turno si usa el destierro."
+      "Zombyra cannot attack directly and loses 200 ATK after destroying a monster by battle; calculate later battles using its current ATK.",
+      "Blade Knight only gains ATK with one card or fewer in hand, and only negates Flip Effects when its condition of controlling no other monsters is met.",
+      "The Main Deck's only Flip monster is one Night Assailant; discarding it does not produce a recovery on its own.",
+      "Do not cut the LIGHT package when siding without checking your access to Chaos. Sorcerer loses its attack for the turn if it uses its banishing effect."
     ]
   },
   "Dragon Future": {
-    "archetype": "Dragon · cementerio y fusiones",
-    "description": "Un Main de monstruos íntegramente Dragon sostiene tres Totem Dragon, dos Future Fusion y dos Dragon's Mirror. La lista puede ganar con presión normal, evolucionar Horus o cerrar con Five-Headed Dragon.",
-    "summary": "Desarrolla dragones pequeños, prepara un cementerio utilizable y elige el jefe que resuelva la mesa.",
+    "archetype": "Dragon",
+    "description": "An entirely Dragon monster lineup supports three Totem Dragon, two Future Fusion, and two Dragon's Mirror. The list can win through ordinary pressure, evolve Horus, or finish with Five-Headed Dragon.",
+    "summary": "Develop small Dragons, prepare a useful GY, and choose the boss that answers the field.",
     "thumbnail_card": "Five-Headed Dragon",
     "thumbnail_strip": [
       "Horus the Black Flame Dragon LV8",
@@ -170,31 +170,31 @@
       "Five-Headed Dragon"
     ],
     "game_plan": [
-      "Empieza con Masked Dragon, Luster Dragon o Mirage Dragon; obliga al rival a gastar respuestas mientras Future Fusion prepara la siguiente oleada.",
-      "Mantén Totem Dragon en el cementerio y el campo vacío cuando quieras revivirlo en tu Standby; puede aportar dos tributos para un Dragon.",
-      "Elige entre Horus para controlar Magias y Five-Headed Dragon para presión de ATK. Reserva Dimension Fusion para recuperar suficientes desterrados que justifiquen 2000 LP."
+      "Start with Masked Dragon, Luster Dragon, or Mirage Dragon; force the opponent to spend answers while Future Fusion prepares the next wave.",
+      "Keep Totem Dragon in the GY and your field empty when you want to revive it in your Standby Phase; it can count as two Tributes for a Dragon.",
+      "Choose Horus to control Spells or Five-Headed Dragon for ATK pressure. Save Dimension Fusion for enough banished monsters to justify 2000 LP."
     ],
     "opening": [
-      "Con Future Fusion y defensa, activa la continua pronto y protege el turno de espera; verifica que queden cinco Dragons en el Deck para su primera Standby.",
-      "Foolish Burial puede enviar Totem Dragon si tu plan es revivirlo en una Standby posterior con campo vacío, o un Dragon que necesites recuperar con otra carta."
+      "With Future Fusion and protection, activate the Continuous Spell early and protect the waiting turn; check that five Dragons remain in the Deck for its first Standby Phase.",
+      "Foolish Burial can send Totem Dragon if you plan to revive it in a later Standby Phase with an empty field, or a Dragon you need to recover with another card."
     ],
     "key_plays": [
-      "Future Fusion carga cinco Dragons al revelar Five-Headed Dragon en tu primera Standby posterior. Dragon's Mirror convierte materiales de campo o cementerio en otra fusión.",
-      "Totem Dragon puede contar como dos tributos para Tyrant Dragon; un Totem revivido por su efecto se destierra cuando abandona el campo.",
-      "Horus the Black Flame Dragon LV6 que destruyó un monstruo por batalla puede traer LV8 en End Phase; LV8 permite responder a activaciones de Magias.",
-      "Mirage Dragon impide al rival activar trampas durante la Battle Phase; úsalo para acompañar el ataque decisivo."
+      "Future Fusion loads five Dragons by revealing Five-Headed Dragon during your first subsequent Standby Phase. Dragon's Mirror turns field or GY materials into another Fusion.",
+      "Totem Dragon can count as two Tributes for Tyrant Dragon; a Totem revived by its own effect is banished when it leaves the field.",
+      "Horus the Black Flame Dragon LV6 can summon LV8 in the End Phase after destroying a monster by battle; LV8 lets you respond to Spell activations.",
+      "Mirage Dragon prevents the opponent from activating Traps during the Battle Phase; use it to support the decisive attack."
     ],
     "pitfalls": [
-      "Future Fusion no envía materiales al activarse y su fusión se destruye si la continua abandona el campo. Heavy Storm propia puede romper ese vínculo.",
-      "Totem necesita campo vacío y ningún monstruo que no sea Dragon en tu cementerio; revisa esa condición tras introducir monstruos del Side.",
-      "Horus LV6 es inmune a Magias, incluidas Book of Moon y otras tuyas. LV8 exige su ruta de invocación y no se recupera con revival ordinario.",
-      "Dimension Fusion también devuelve monstruos desterrados del rival. Mirage Dragon no elimina trampas continuas ya activas ni protege fuera de batalla."
+      "Future Fusion does not send materials on activation, and its Fusion is destroyed if the Continuous Spell leaves the field. Your own Heavy Storm can break that link.",
+      "Totem requires an empty field and no non-Dragon monsters in your GY; check that condition after bringing in monsters from the Side Deck.",
+      "Horus LV6 is unaffected by Spells, including your own Book of Moon and other Spells. LV8 requires its Summoning route and cannot be brought back with ordinary revival.",
+      "Dimension Fusion also returns the opponent's banished monsters. Mirage Dragon does not remove already-active Continuous Traps or protect you outside battle."
     ]
   },
   "Earth Aggro": {
-    "archetype": "EARTH · combate y reclutadores",
-    "description": "Tres Giant Rat y tres Nimble Momonga sostienen una ofensiva de Berserk Gorilla, Goblin Attack Force y monstruos EARTH especiales. Enraged Battle Ox añade daño perforante a las Bestias y Guerreros-Bestia.",
-    "summary": "Convierte reclutadores en presión, usa trucos de batalla para conservar cuerpos y administra los pagos de Lily y Baboon.",
+    "archetype": "EARTH",
+    "description": "Three Giant Rat and three Nimble Momonga support an offense of Berserk Gorilla, Goblin Attack Force, and EARTH monsters that Special Summon themselves. Enraged Battle Ox adds piercing damage for Beasts and Beast-Warriors.",
+    "summary": "Turn recruiters into pressure, use battle tricks to preserve monsters, and manage the LP payments for Lily and Baboon.",
     "thumbnail_card": "Berserk Gorilla",
     "thumbnail_strip": [
       "Berserk Gorilla",
@@ -202,31 +202,31 @@
       "Green Baboon, Defender of the Forest"
     ],
     "game_plan": [
-      "Usa Rat y Momonga para no quedarte sin mesa; la vida de Momonga ayuda a financiar Injection Fairy Lily y Green Baboon.",
-      "Presiona con un atacante grande y una defensa. Rush Recklessly o Book of Moon pueden ganar un intercambio sin gastar otro monstruo.",
-      "Destierra EARTH prescindibles para Gigantes o The Rock Spirit y crea una segunda amenaza cuando el rival ya haya usado su respuesta principal."
+      "Use Rat and Momonga to maintain field presence; Momonga's LP gain helps fund Injection Fairy Lily and Green Baboon.",
+      "Apply pressure with a large attacker and protection. Rush Recklessly or Book of Moon can win a trade without spending another monster.",
+      "Banish expendable EARTH monsters for Gigantes or The Rock Spirit, creating a second threat after the opponent has used their main answer."
     ],
     "opening": [
-      "Rat colocado permite elegir después entre más presencia, Injection Fairy Lily o Exiled Force según el combate.",
-      "Con Gorilla y protección, ataca de forma controlada; con Momonga y Creature Swap, prepara el intercambio cuando el rival sólo pueda entregar un cuerpo valioso."
+      "A Set Rat lets you choose between more field presence, Injection Fairy Lily, or Exiled Force once you know the battle situation.",
+      "With Gorilla and protection, attack carefully; with Momonga and Creature Swap, prepare the exchange when the opponent can only give you a valuable monster."
     ],
     "key_plays": [
-      "Creature Swap entrega Giant Rat o Nimble Momonga y permite atacar ese cuerpo con el monstruo recibido, aprovechando su efecto al llegar a tu cementerio.",
-      "Enraged Battle Ox concede perforación a tus Beast, Beast-Warrior y Winged Beast; combina su efecto con Gorilla para castigar defensas.",
-      "Injection Fairy Lily puede pagar 2000 LP durante el cálculo de daño para superar un jefe; cuenta también el pago de Premature Burial y el daño de Ring of Destruction.",
-      "Si una Bestia boca arriba se destruye por efecto y llega al cementerio fuera del Damage Step, Green Baboon puede aparecer desde mano o cementerio pagando 1000."
+      "Creature Swap gives away Giant Rat or Nimble Momonga and lets you attack it with the monster you receive, using its effect when it reaches your GY.",
+      "Enraged Battle Ox grants piercing to your Beast, Beast-Warrior, and Winged Beast monsters; combine it with Gorilla to punish defenders.",
+      "Injection Fairy Lily can pay 2000 LP during damage calculation to overcome a boss; also account for Premature Burial's payment and Ring of Destruction's damage.",
+      "If a face-up Beast is destroyed by an effect and sent to the GY outside the Damage Step, Green Baboon can arrive from your hand or GY for 1000 LP."
     ],
     "pitfalls": [
-      "Green Baboon no se invoca por una destrucción en batalla dentro del Damage Step. No bases su entrada en perder deliberadamente a Rat o Momonga allí.",
-      "Gorilla debe atacar si puede y se destruye en Defensa boca arriba; Book de Moon sólo la deja temporalmente boca abajo.",
-      "Goblin Attack Force pasa a Defensa tras atacar y queda limitada para cambiar posición; no la dejes expuesta sin considerar el siguiente turno.",
-      "Gigantes destruido en batalla barre también tus Magias y Trampas. The Rock Spirit sólo gana sus 300 ATK durante la Battle Phase rival."
+      "Green Baboon cannot be Summoned following battle destruction within the Damage Step. Do not base its arrival on deliberately losing Rat or Momonga there.",
+      "Gorilla must attack if able and destroys itself in face-up Defense Position; Book of Moon only leaves it face-down temporarily.",
+      "Goblin Attack Force changes to Defense Position after attacking and is restricted from changing position; consider the next turn before leaving it exposed.",
+      "Gigantes destroyed by battle also wipes out your Spells and Traps. The Rock Spirit only gains its 300 ATK during the opponent's Battle Phase."
     ]
   },
   "Frost and Flame": {
-    "archetype": "WATER/FIRE · control de atributos",
-    "description": "Hydrogeddon, reclutadores WATER/FIRE y dos Lonefire Blossom preparan los materiales de Frost and Flame Dragon. Abyss Soldier ofrece devolución de cartas mientras el mazo combina presión de batalla con retirada por efectos.",
-    "summary": "Reúne dos WATER y un FIRE en el cementerio sin perder el ritmo, y convierte ese trabajo en Frost and Flame Dragon.",
+    "archetype": "WATER/FIRE",
+    "description": "Hydrogeddon, WATER/FIRE recruiters, and two Lonefire Blossom prepare the materials for Frost and Flame Dragon. Abyss Soldier returns cards to the hand while the deck combines battle pressure with effect-based removal.",
+    "summary": "Gather two WATER monsters and one FIRE monster in the GY without losing momentum, then turn that setup into Frost and Flame Dragon.",
     "thumbnail_card": "Frost and Flame Dragon",
     "thumbnail_strip": [
       "Frost and Flame Dragon",
@@ -234,31 +234,31 @@
       "Hydrogeddon"
     ],
     "game_plan": [
-      "Lleva la cuenta de WATER y FIRE reales en el cementerio. Los dos Foolish Burial deben completar el atributo que falte o habilitar una jugada concreta.",
-      "Aprovecha Hydrogeddon con Shrink, Book of Moon y removal para destruir por batalla y traer otra copia desde el Deck.",
-      "Mantén cartas descartables para Abyss Soldier y Frost and Flame Dragon; llegar al jefe sin mano para su efecto reduce el valor del desarrollo."
+      "Track the WATER and FIRE monsters actually in your GY. The two Foolish Burial should supply the missing Attribute or enable a specific play.",
+      "Use Hydrogeddon with Shrink, Book of Moon, and removal to destroy a monster by battle and summon another copy from the Deck.",
+      "Keep cards available to discard for Abyss Soldier and Frost and Flame Dragon; reaching the boss with no cards left for its effect reduces the value of the setup."
     ],
     "opening": [
-      "Crystal Seer o Mother Grizzly colocados permiten preparar WATER con defensa. UFO Turtle busca el FIRE pequeño apropiado si es destruida en batalla.",
-      "Lonefire Blossom puede tributarse y traer otra Lonefire o Sylvan Hermitree; elige entre cargar más FIRE y presentar el cuerpo grande sin gastar tributos normales."
+      "A Set Crystal Seer or Mother Grizzly helps prepare WATER while defending. UFO Turtle finds the appropriate small FIRE monster if destroyed by battle.",
+      "Lonefire Blossom can Tribute itself to summon another Lonefire or Sylvan Hermitree; choose between loading more FIRE and establishing the large monster without spending ordinary Tributes."
     ],
     "key_plays": [
-      "Mother Grizzly accede a Crystal Seer, Sinister Serpent o Yomi Ship; escoge ventaja, descarte o respuesta al atacante según la situación.",
-      "Abyss Soldier descarta un WATER y devuelve una carta a la mano, preparando a la vez parte del coste de invocación de Frost and Flame Dragon.",
-      "Frost and Flame Dragon destierra dos WATER y un FIRE desde tu cementerio para invocarse, y luego puede descartar cualquier carta para destruir un monstruo.",
-      "Sylvan Hermitree llegado por Lonefire puede atacar como amenaza grande; su excavación sólo roba si envía una Plant, por lo que no se trata como robo garantizado."
+      "Mother Grizzly can access Crystal Seer, Sinister Serpent, or Yomi Ship; choose card advantage, discard material, or an answer to the attacker as needed.",
+      "Abyss Soldier discards a WATER monster to return a card to the hand, while also preparing part of Frost and Flame Dragon's Summoning cost.",
+      "Frost and Flame Dragon banishes two WATER monsters and one FIRE monster from your GY to summon itself, then can discard any card to destroy a monster.",
+      "Sylvan Hermitree summoned by Lonefire can attack as a large threat; its excavation only draws if it sends a Plant, so do not treat it as a guaranteed draw."
     ],
     "pitfalls": [
-      "Frost and Flame Dragon no revive con Premature Burial o Call of the Haunted: exige su procedimiento desde la mano.",
-      "Abyss Soldier necesita un WATER para su coste; los FIRE sobrantes no sirven. Frost and Flame Dragon sí es WATER y puede descartarse, pero evita sacrificar tu condición de victoria sin una ganancia suficiente.",
-      "No destierres con Frost el único objetivo útil de revival sin revisar la continuación. Lonefire y Sylvan Hermitree son FIRE; Crystal Seer es WATER.",
-      "Hydrogeddon necesita destruir por batalla y enviar al cementerio; no se multiplica al destruir fichas ni mediante tu removal."
+      "Frost and Flame Dragon cannot be revived with Premature Burial or Call of the Haunted; it requires its own procedure from the hand.",
+      "Abyss Soldier needs a WATER monster for its cost; spare FIRE monsters will not work. Frost and Flame Dragon is WATER and can be discarded, but avoid sacrificing your win condition without enough benefit.",
+      "Do not banish your only useful revival target for Frost without checking the follow-up. Lonefire and Sylvan Hermitree are FIRE; Crystal Seer is WATER.",
+      "Hydrogeddon must destroy a monster by battle and send it to the GY; it does not multiply by destroying Tokens or through your removal effects."
     ]
   },
   "Gravekeeper": {
-    "archetype": "Gravekeeper · control de Necrovalley",
-    "description": "Tres Necrovalley, tres Commandant y Terraforming dan acceso al campo. Spy, Guard y Assailant sostienen la mesa mientras el bloqueo del cementerio limita las rutas de Chaos y reanimación.",
-    "summary": "Establece Necrovalley, gana presencia con Spy y convierte la diferencia de estadísticas en ataques seguros.",
+    "archetype": "Gravekeeper",
+    "description": "Three Necrovalley, three Commandant, and Terraforming provide access to the Field Spell. Spy, Guard, and Assailant maintain the field while GY restrictions limit Chaos and revival routes.",
+    "summary": "Establish Necrovalley, build field presence with Spy, and turn your stat advantage into safe attacks.",
     "thumbnail_card": "Gravekeeper's Assailant",
     "thumbnail_strip": [
       "Gravekeeper's Spy",
@@ -266,31 +266,31 @@
       "Gravekeeper's Assailant"
     ],
     "game_plan": [
-      "Busca Necrovalley cuando falte y conserva otra vía de acceso para recuperarte de removal; no gastes todos los Commandant si necesitas atacantes.",
-      "Defiende Spy para traer el Gravekeeper adecuado: otro cuerpo, Guard para un turno futuro o un atacante que aproveche el campo.",
-      "Conserva Dust Tornado y Solemn Judgment para las cartas que desarman Necrovalley o cambian la carrera, en lugar de responder a cada jugada menor."
+      "Search for Necrovalley when missing, and keep another way to find it after removal; do not spend every Commandant if you need attackers.",
+      "Protect Spy to summon the right Gravekeeper: another body, Guard for a future turn, or an attacker that benefits from the Field Spell.",
+      "Save Dust Tornado and Solemn Judgment for cards that dismantle Necrovalley or change the damage race, rather than answering every minor play."
     ],
     "opening": [
-      "Spy colocada con Necrovalley y protección genera una defensa de 2500 y amenaza un segundo cuerpo si se voltea.",
-      "Commandant puede buscar Necrovalley o ser un atacante de 2100 bajo ella; decide según si el campo ya está disponible."
+      "A Set Spy with Necrovalley and protection creates a 2500 DEF defender and threatens a second monster if flipped.",
+      "Commandant can search for Necrovalley or attack with 2100 ATK under it; decide based on whether the Field Spell is already available."
     ],
     "key_plays": [
-      "Assailant cambia la posición de un monstruo rival boca arriba al declarar ataque con Necrovalley activa; Spear Soldier añade daño perforante contra defensas.",
-      "Tsukuyomi vuelve a colocar Spy o Guard para reutilizar su efecto cuando puedan voltearse de nuevo.",
-      "Rite of Spirit revive un Gravekeeper pese a Necrovalley. Chief invocado por tributo puede recuperar otro y hace que tu cementerio no quede afectado por el campo.",
-      "Assailant, Spear Soldier, Ambusher o Chief bajo Necrovalley pueden pagar Deck Devastation Virus; confirma que el elegido siga siendo DARK y tenga al menos 2000 ATK."
+      "Assailant changes a face-up opposing monster's battle position when declaring an attack with Necrovalley active; Spear Soldier adds piercing damage against defenders.",
+      "Tsukuyomi Sets Spy or Guard again so you can reuse its effect when it can be flipped once more.",
+      "Rite of Spirit revives a Gravekeeper despite Necrovalley. A Tribute Summoned Chief can bring back another and makes your GY unaffected by the Field Spell.",
+      "Assailant, Spear Soldier, Ambusher, or Chief under Necrovalley can pay for Deck Devastation Virus; confirm the chosen monster is still DARK and has at least 2000 ATK."
     ],
     "pitfalls": [
-      "Commandant es EARTH: aunque llegue a 2100 ATK, no paga Deck Devastation Virus. Usa un DARK válido como Chief con Necrovalley.",
-      "Spy busca monstruos con 1500 ATK o menos en el Deck; Necrovalley no aumenta allí ese ATK, y Commandant de 1600 no es objetivo.",
-      "Heavy Storm destruye tu propio Necrovalley. Planifica si la limpieza permite cerrar o si antes necesitas una copia de reposición.",
-      "Nobleman of Crossout contra Spy o Guard del rival puede desterrar tus copias del Deck; Rite tampoco protege un monstruo ya desterrado."
+      "Commandant is EARTH: even at 2100 ATK, it cannot pay for Deck Devastation Virus. Use a valid DARK monster such as Chief with Necrovalley.",
+      "Spy searches for monsters with 1500 ATK or less in the Deck; Necrovalley does not increase their ATK there, and Commandant's 1600 ATK makes it ineligible.",
+      "Heavy Storm destroys your own Necrovalley. Plan whether the clear lets you finish the game or whether you need a replacement copy first.",
+      "Nobleman of Crossout on an opposing Spy or Guard can banish your copies from the Deck; Rite cannot help a monster that is already banished."
     ]
   },
   "Harpie Lady": {
-    "archetype": "Harpie · presión y limpieza de backrow",
-    "description": "Tres Harpie Lady 1, tres Harpie Queen y dos Harpie Oracle sostienen Hunting Ground y Hysteric Party. Elegant Egotist aporta extensiones, y Swallow's Nest convierte un Winged Beast de nivel 4 en la pieza adecuada.",
-    "summary": "Usa Hunting Ground para obtener valor de cada invocación y guarda Hysteric Party como segunda oleada.",
+    "archetype": "Harpie",
+    "description": "Three Harpie Lady 1, three Harpie Queen, and two Harpie Oracle support Hunting Ground and Hysteric Party. Elegant Egotist extends your plays, and Swallow's Nest turns a Level 4 Winged Beast into the right piece.",
+    "summary": "Use Hunting Ground to gain value from each Summon and save Hysteric Party as a second wave.",
     "thumbnail_card": "Harpie Lady Sisters",
     "thumbnail_strip": [
       "Harpie Queen",
@@ -298,31 +298,31 @@
       "Harpie Lady Sisters"
     ],
     "game_plan": [
-      "Busca Harpies' Hunting Ground con Queen cuando haya backrow que destruir; conserva Queen como atacante cuando el campo no aporte un objetivo útil.",
-      "Desarrolla las Harpie sin gastar toda la mano. Lady 1 mejora a los WIND y deja que los cuerpos pequeños compitan en batalla.",
-      "Prepara una Hysteric Party con varias Harpie en el cementerio y un descarte disponible para recuperar presión después de una limpieza."
+      "Search for Harpies' Hunting Ground with Queen when there is backrow to destroy; keep Queen as an attacker when the Field Spell would not have a useful target.",
+      "Develop your Harpies without spending the whole hand. Lady 1 boosts WIND monsters and helps smaller bodies compete in battle.",
+      "Prepare Hysteric Party with several Harpies in the GY and a card to discard so you can restore pressure after a board clear."
     ],
     "opening": [
-      "Queen puede buscar Hunting Ground; con otra Harpie invocable, activa el campo antes de la invocación si hay un objetivo conveniente.",
-      "Flying Kamakiri #1 puede traer Harpie Lady 1 u Oracle después de caer por batalla, conservando la Normal Summon del siguiente turno."
+      "Queen can search for Hunting Ground; with another Harpie ready to summon, activate the Field Spell first if there is a worthwhile target.",
+      "Flying Kamakiri #1 can summon Harpie Lady 1 or Oracle after falling in battle, preserving your Normal Summon for the next turn."
     ],
     "key_plays": [
-      "Una Queen u Oracle en campo se llama Harpie Lady y habilita Elegant Egotist; éste trae Lady 1 o Sisters desde mano o Deck.",
-      "Sisters permite invocar Oracle desde la mano. Oracle puede recuperar en End Phase Elegant Egotist o Hunting Ground porque mencionan Harpie Lady Sisters.",
-      "Swallow's Nest tributa un Winged Beast boca arriba y trae otro del mismo nivel; cambiar una Harpie nivel 4 por Queen u Oracle puede generar otra activación del campo.",
-      "Icarus Attack convierte un Winged Beast en destrucción de dos cartas. Hysteric Party revive también Queen y Oracle, cuyos nombres son Harpie Lady en el cementerio."
+      "Queen or Oracle on the field is named Harpie Lady and enables Elegant Egotist; Egotist summons Lady 1 or Sisters from your hand or Deck.",
+      "Sisters lets you summon Oracle from your hand. In the End Phase, Oracle can recover Elegant Egotist or Hunting Ground because they mention Harpie Lady Sisters.",
+      "Swallow's Nest Tributes a face-up Winged Beast and summons another of the same Level; replacing a Level 4 Harpie with Queen or Oracle can trigger the Field Spell again.",
+      "Icarus Attack turns a Winged Beast into the destruction of two cards. Hysteric Party also revives Queen and Oracle, whose names are Harpie Lady in the GY."
     ],
     "pitfalls": [
-      "Hunting Ground es obligatorio: si no queda backrow rival, podrías tener que destruir una carta propia, incluso el propio campo.",
-      "Queen no se llama Harpie Lady en el Deck y Elegant Egotist no la invoca desde allí. Swallow's Nest sí puede acceder a ella por tipo y nivel.",
-      "La invocación simultánea de varias Harpie con Party no equivale a una activación separada de Hunting Ground por cada monstruo.",
-      "Lady 1 mejora todos los WIND, incluidos los del rival. Icarus exige dos objetivos y Sisters debe invocarse correctamente primero con Elegant Egotist."
+      "Hunting Ground is mandatory: if no opposing backrow remains, you may have to destroy your own card, including the Field Spell itself.",
+      "Queen is not named Harpie Lady in the Deck, so Elegant Egotist cannot summon it from there. Swallow's Nest can access it through Type and Level.",
+      "Summoning several Harpies simultaneously with Party does not trigger Hunting Ground separately for each monster.",
+      "Lady 1 boosts every WIND monster, including the opponent's. Icarus requires two targets, and Sisters must first be properly Summoned with Elegant Egotist."
     ]
   },
   "HERO Fusion": {
-    "archetype": "HERO · caja de herramientas de fusión",
-    "description": "Quince fusiones distintas ofrecen respuestas a varias mesas. Tres E - Emergency Call, tres King of the Swamp y Prisma encuentran o preparan materiales para Polymerization, Miracle Fusion y las dos Future Fusion.",
-    "summary": "Escoge primero la fusión útil, reúne sus materiales exactos y reserva Miracle Fusion como segunda oleada.",
+    "archetype": "HERO",
+    "description": "Fifteen different Fusions provide answers to a range of fields. Three E - Emergency Call, three King of the Swamp, and Prisma find or prepare materials for Polymerization, Miracle Fusion, and the two Future Fusion.",
+    "summary": "Choose the useful Fusion first, gather its exact materials, and save Miracle Fusion as a second wave.",
     "thumbnail_card": "Elemental HERO Shining Flare Wingman",
     "thumbnail_strip": [
       "Elemental HERO Prisma",
@@ -330,31 +330,31 @@
       "Elemental HERO Plasma Vice"
     ],
     "game_plan": [
-      "Usa E - Emergency Call y Reinforcement of the Army para completar la jugada real de la mano: Prisma, el material que falte o un HERO que pueda combatir.",
-      "No fusiones sólo porque puedes. Gaia reduce una amenaza, Plasma Vice retira atacantes y Wildedge castiga varias criaturas; elige por la mesa.",
-      "Acumula materiales con combates, Prisma y Polymerization antes de gastar Miracle Fusion; así presentas amenazas en más de un turno."
+      "Use E - Emergency Call and Reinforcement of the Army to complete the play your hand actually supports: Prisma, a missing material, or a HERO that can battle.",
+      "Do not fuse just because you can. Gaia weakens a threat, Plasma Vice removes Attack Position monsters, and Wildedge punishes multiple monsters; choose for the field.",
+      "Build up materials through battles, Prisma, and Polymerization before spending Miracle Fusion, letting you present threats across more than one turn."
     ],
     "opening": [
-      "King of the Swamp puede buscar Polymerization; comprueba antes si lo necesitas en mano como sustituto de un material nombrado.",
-      "Future Fusion necesita sobrevivir hasta tu primera Standby para enviar materiales. Una apertura con Woodsman y defensa puede preparar Polymerization para el turno siguiente."
+      "King of the Swamp can search for Polymerization; first check whether you need to keep it in hand as a substitute for a named material.",
+      "Future Fusion must survive until your first Standby Phase to send materials. Opening with Woodsman and protection can prepare Polymerization for the following turn."
     ],
     "key_plays": [
-      "Prisma revela una fusión y envía un material cuyo nombre esté escrito expresamente en ella; adopta ese nombre hasta End Phase.",
-      "King of the Swamp sustituye un material de nombre específico. Por ejemplo, junto a Sparkman puede ocupar el lugar de Flame Wingman para Shining Flare Wingman.",
-      "Miracle Fusion destierra materiales de tu campo o cementerio; Gaia usa un HERO y un EARTH, y Nova Master un HERO y un FIRE.",
-      "Necroshade en el cementerio habilita una Normal Summon sin tributos de un HERO de nivel alto, como Bladedge, una sola vez por ese efecto."
+      "Prisma reveals a Fusion and sends a material whose name is specifically listed on it; Prisma takes that name until the End Phase.",
+      "King of the Swamp substitutes for one specifically named material. For example, alongside Sparkman it can replace Flame Wingman for Shining Flare Wingman.",
+      "Miracle Fusion banishes materials from your field or GY; Gaia uses a HERO and an EARTH monster, while Nova Master uses a HERO and a FIRE monster.",
+      "Necroshade in the GY enables a Normal Summon without Tributes for a high-Level HERO such as Bladedge, once through that effect."
     ],
     "pitfalls": [
-      "Royal Decree también niega tus Mirror Force, Torrential Tribute y Ring of Destruction; decide cuándo usar esas trampas antes de mantener Decree activo.",
-      "Prisma no envía un material genérico sólo por decir HERO, EARTH o FIRE; King of the Swamp tampoco sustituye requisitos genéricos.",
-      "Future Fusion es demorada, y las fusiones que exigen Fusion Summon no se recuperan simplemente con Premature Burial.",
-      "No gastes con Miracle todos los materiales necesarios para otra fusión. Ten presente Necrovalley o Kycoo rival antes de planear destierros del cementerio."
+      "Royal Decree also negates your Mirror Force, Torrential Tribute, and Ring of Destruction; decide when to use those Traps before keeping Decree active.",
+      "Prisma cannot send a generic material just because the requirement says HERO, EARTH, or FIRE; King of the Swamp cannot substitute for generic requirements either.",
+      "Future Fusion is delayed, and Fusions that require a Fusion Summon cannot simply be recovered with Premature Burial.",
+      "Do not use Miracle to spend every material needed for another Fusion. Check for Necrovalley or an opposing Kycoo before planning to banish from the GY."
     ]
   },
   "Insect Normal": {
-    "archetype": "Insect · normales y evolución",
-    "description": "Tres Insect Knight y dos Metal Armored Bug dan valor a Unexpected Dai, Summoner's Art, Ancient Rules y Birthright. Reclutadores y la cadena Ultimate Insect ofrecen desarrollo alternativo.",
-    "summary": "Presiona con normales, reserva los métodos de invocación de Metal Armored Bug y evoluciona Ultimate Insect cuando puedas protegerlo.",
+    "archetype": "Insect",
+    "description": "Three Insect Knight and two Metal Armored Bug give value to Unexpected Dai, Summoner's Art, Ancient Rules, and Birthright. Recruiters and the Ultimate Insect chain offer alternative development.",
+    "summary": "Apply pressure with Normal Monsters, save ways to summon Metal Armored Bug, and evolve Ultimate Insect when you can protect it.",
     "thumbnail_card": "Metal Armored Bug",
     "thumbnail_strip": [
       "Insect Knight",
@@ -362,31 +362,31 @@
       "Ultimate Insect LV7"
     ],
     "game_plan": [
-      "Usa Unexpected Dai con campo vacío para sacar Insect Knight y conserva la Normal Summon para un segundo cuerpo o una respuesta.",
-      "Busca Metal Armored Bug con Summoner's Art sólo cuando tengas Ancient Rules, Pinch Hopper o una ruta posterior de reanimación.",
-      "Lleva Ultimate Insect LV3 a LV5 y después a LV7 durante tus Standby; el plan normal sigue funcionando mientras madura esa cadena."
+      "Use Unexpected Dai on an empty field to summon Insect Knight, keeping your Normal Summon for a second monster or an answer.",
+      "Search for Metal Armored Bug with Summoner's Art only when you have Ancient Rules, Pinch Hopper, or a later revival route.",
+      "Evolve Ultimate Insect LV3 into LV5 and then LV7 during your Standby Phases; the Normal Monster plan keeps working while the chain develops."
     ],
     "opening": [
-      "Dai antes de tu Normal Summon permite empezar con Knight más un reclutador. Comprueba si ese segundo cuerpo compensa exponerte a removal masivo.",
-      "Howling Insect colocado puede buscar Pinch Hopper o Ultimate Insect LV3 después de caer en batalla; elige según tengas un insecto grande en mano o tiempo para evolucionar."
+      "Dai before your Normal Summon lets you open with Knight plus a recruiter. Check whether the second monster justifies exposing yourself to mass removal.",
+      "A Set Howling Insect can find Pinch Hopper or Ultimate Insect LV3 after falling in battle; choose based on whether you have a large Insect in hand or time to evolve."
     ],
     "key_plays": [
-      "Ancient Rules invoca Metal Armored Bug desde la mano. Birthright recupera Knight o Bug desde el cementerio y les devuelve presencia de ataque.",
-      "Insect Imitation puede tributar un monstruo de nivel 4 para traer Ultimate Insect LV5; es una ruta de cuerpo grande, distinta de su evolución natural.",
-      "Pinch Hopper enviado de tu campo al cementerio puede invocar un Insect de tu mano si se cumple su ventana, como Metal Armored Bug.",
-      "LV5 invocado por el efecto de LV3 reduce el ATK rival; LV7 invocado por LV5 reduce ATK y DEF. Protege la transición para recibir esas ventajas."
+      "Ancient Rules summons Metal Armored Bug from the hand. Birthright brings Knight or Bug back from the GY to restore your attacking presence.",
+      "Insect Imitation can Tribute a Level 4 monster to summon Ultimate Insect LV5; this produces a large monster through a different route from its natural evolution.",
+      "Pinch Hopper sent from your field to the GY can summon an Insect from your hand, such as Metal Armored Bug, if its timing window is met.",
+      "LV5 summoned by LV3's effect reduces opposing ATK; LV7 summoned by LV5 reduces ATK and DEF. Protect the transition to gain those benefits."
     ],
     "pitfalls": [
-      "La lista actual usa Nobleman of Crossout, no Foolish Burial. No presupongas un envío directo al cementerio que ya no está en el Main.",
-      "Pinch Hopper tiene un efecto opcional de 'cuando': puede perder la oportunidad si su envío no es lo último que ocurre, por ejemplo al tributarlo como coste.",
-      "LV5 traído por Insect Imitation no obtiene la reducción de ATK de haber llegado por LV3; lo mismo ocurre con LV7 si no llegó mediante LV5.",
-      "Unexpected Dai requiere campo vacío y sólo invoca un Normal de nivel 4 o menor; Summoner's Art busca normales de nivel 5 o mayor, por lo que no busca Knight."
+      "The current list uses Nobleman of Crossout, not Foolish Burial. Do not assume you have a direct GY send that is no longer in the Main Deck.",
+      "Pinch Hopper has an optional 'when' effect: it can miss timing if its trip to the GY is not the last thing to happen, such as when Tributed as a cost.",
+      "LV5 summoned by Insect Imitation does not gain the ATK reduction associated with being summoned by LV3; the same applies to LV7 if it did not arrive through LV5.",
+      "Unexpected Dai requires an empty field and only summons a Level 4 or lower Normal Monster; Summoner's Art searches for Level 5 or higher Normal Monsters, so it cannot find Knight."
     ]
   },
   "Mazera DeVille": {
-    "archetype": "Fiend · combo de descarte",
-    "description": "Tres Warrior of Zera, dos Unexpected Dai y Reinforcement of the Army preparan el tributo de Mazera. General encuentra Pandemonium y tres Dark Spirit's Mastery acceden a los dos Mazera DeVille o a Dark Necrofear.",
-    "summary": "Reúne Zera, Pandemonium y Mazera sin perder toda la mano, y usa el descarte de tres cartas cuando el rival aún tenga recursos.",
+    "archetype": "Fiend",
+    "description": "Three Warrior of Zera, two Unexpected Dai, and Reinforcement of the Army prepare Mazera's Tribute. General finds Pandemonium, while three Dark Spirit's Mastery access the two Mazera DeVille or Dark Necrofear.",
+    "summary": "Assemble Zera, Pandemonium, and Mazera without spending your entire hand, and force the three-card discard while the opponent still has resources.",
     "thumbnail_card": "Mazera DeVille",
     "thumbnail_strip": [
       "Warrior of Zera",
@@ -394,31 +394,31 @@
       "Mazera DeVille"
     ],
     "game_plan": [
-      "Identifica la pieza que falta antes de buscar: Zera, Pandemonium o Mazera. Evita gastar varios buscadores en copias de algo ya disponible.",
-      "Presiona con Archfiend Soldier, Mist Archfiend y Newdoria mientras preparas el combo; no necesitas quedarte sin mesa esperando la mano perfecta.",
-      "Con tres Fiend en el cementerio, Dark Necrofear ofrece otra amenaza. Conserva la vía de Mazera si el rival todavía tiene una mano valiosa."
+      "Identify the missing piece before searching: Zera, Pandemonium, or Mazera. Avoid spending several searchers on copies of something already available.",
+      "Apply pressure with Archfiend Soldier, Mist Archfiend, and Newdoria while preparing the combo; you do not need to leave your field empty while waiting for the perfect hand.",
+      "With three Fiends in the GY, Dark Necrofear offers another threat. Preserve the Mazera route if the opponent still has a valuable hand."
     ],
     "opening": [
-      "Con campo vacío, Unexpected Dai trae Warrior of Zera. General puede buscar Pandemonium y Dark Spirit's Mastery encuentra Mazera a cambio de un descarte.",
-      "Si faltan varias piezas, usa Newdoria o un atacante Fiend y coloca una defensa; guarda Dai para un turno en el que el campo pueda quedar vacío."
+      "On an empty field, Unexpected Dai summons Warrior of Zera. General can search for Pandemonium, and Dark Spirit's Mastery finds Mazera for a discard.",
+      "If several pieces are missing, use Newdoria or a Fiend attacker and Set protection; save Dai for a turn when your field can be empty."
     ],
     "key_plays": [
-      "Mazera se invoca desde la mano tributando a Warrior of Zera boca arriba con Pandemonium en el campo; para descartar tres cartas, Pandemonium debe estar de tu lado.",
-      "Dark Spirit's Mastery busca o recupera un Fiend de nivel 8: tanto Mazera como Dark Necrofear cumplen ese requisito.",
-      "Mist Archfiend invocado sin tributo puede atacar y destruirse en End Phase; Pandemonium convierte esa destrucción en un Archfiend de menor nivel.",
-      "Tribe-Infecting Virus y los descartes de Mastery pueden preparar Fiends para Dark Necrofear; cuenta tres objetivos utilizables antes de comprometerla."
+      "Mazera summons itself from the hand by Tributing a face-up Warrior of Zera with Pandemonium on the field; to force the three-card discard, Pandemonium must be on your side.",
+      "Dark Spirit's Mastery searches for or recovers a Level 8 Fiend: both Mazera and Dark Necrofear meet that requirement.",
+      "Mist Archfiend summoned without a Tribute can attack and destroy itself in the End Phase; Pandemonium turns that destruction into a lower-Level Archfiend.",
+      "Tribe-Infecting Virus and Mastery's discards can prepare Fiends for Dark Necrofear; count three usable monsters before committing to it."
     ],
     "pitfalls": [
-      "No hay Chaos Sorcerer en esta lista: no necesitas conservar LIGHT/DARK para un motor Chaos inexistente.",
-      "Mazera no revive con Call of the Haunted o Premature Burial ni se invoca simplemente por tributo. Requiere su propio procedimiento.",
-      "Pandemonium rival permite la condición de invocación, pero no el descarte de Mazera; perder tu campo antes de resolver también importa.",
-      "Card Destruction puede recargar una mano rival que Mazera acaba de vaciar. Mist inflige 1000 de daño aunque controles Pandemonium."
+      "There is no Chaos Sorcerer in this list: you do not need to preserve LIGHT/DARK monsters for a nonexistent Chaos engine.",
+      "Mazera cannot be revived with Call of the Haunted or Premature Burial, nor simply Tribute Summoned. It requires its own procedure.",
+      "An opposing Pandemonium satisfies the Summoning condition but not Mazera's discard effect; losing your own Field Spell before resolution also matters.",
+      "Card Destruction can refill a hand that Mazera just emptied. Mist deals 1000 damage even while you control Pandemonium."
     ]
   },
   "Monarch": {
-    "archetype": "Gadget Monarch · ventaja y tributos",
-    "description": "Nueve Gadgets encadenan búsquedas y proporcionan cuerpos para siete Monarchs. Dos Soul Exchange y Brain Control convierten monstruos rivales en tributos mientras el removal mantiene abiertos los ataques.",
-    "summary": "Mantén la cadena de Gadgets, cambia un cuerpo pequeño por un Monarch útil y conserva la iniciativa con removal eficiente.",
+    "archetype": "Gadget Monarch",
+    "description": "Nine Gadgets chain searches and provide bodies for seven Monarchs. Two Soul Exchange and Brain Control turn opposing monsters into Tributes while removal keeps attacks open.",
+    "summary": "Maintain the Gadget chain, turn a small monster into a useful Monarch, and keep the initiative with efficient removal.",
     "thumbnail_card": "Zaborg the Thunder Monarch",
     "thumbnail_strip": [
       "Green Gadget",
@@ -426,31 +426,31 @@
       "Thestalos the Firestorm Monarch"
     ],
     "game_plan": [
-      "Invoca un Gadget y busca el siguiente color que siga en el Deck; conserva esa cadena para producir cuerpos a lo largo de varios turnos.",
-      "Escoge el Monarch por su efecto: Zaborg contra monstruos, Mobius contra backrow y Thestalos contra una mano que importe reducir.",
-      "Usa Soul Exchange cuando sacrificar la Battle Phase compense retirar una amenaza y desarrollar un Monarch; Brain Control permite otro tipo de turno ofensivo."
+      "Summon a Gadget and search for the next color still in the Deck; preserve the chain to produce monsters across several turns.",
+      "Choose the Monarch for its effect: Zaborg against monsters, Mobius against backrow, and Thestalos against a hand worth reducing.",
+      "Use Soul Exchange when giving up the Battle Phase is worth removing a threat and developing a Monarch; Brain Control supports a different kind of offensive turn."
     ],
     "opening": [
-      "Gadget más Sakuretsu Armor o Shrink crea una mesa pequeña que se reemplaza en mano y puede sobrevivir para tributarla después.",
-      "Si el rival ya presenta una amenaza, Soul Exchange más un Monarch puede invertir el campo sin consumir un Gadget propio."
+      "A Gadget plus Sakuretsu Armor or Shrink creates a modest field that replaces itself in hand and can survive to become Tribute material later.",
+      "If the opponent already presents a threat, Soul Exchange plus a Monarch can turn the field around without consuming your own Gadget."
     ],
     "key_plays": [
-      "Después de que un Gadget haya buscado, tribútalo en un turno posterior para convertir su cuerpo en el efecto de un Monarch.",
-      "Gigantes y The Rock Spirit destierran un EARTH usado del cementerio para ofrecer otro atacante o tributo sin consumir la Normal Summon.",
-      "Mobius puede retirar hasta dos Magias/Trampas; elige las que dificultan el plan de ataque, considerando que las cartas colocadas pueden encadenarse.",
-      "Swords of Revealing Light compra tiempo para una mano con Monarchs; los Gadgets y removal ayudan a que esos turnos produzcan recursos."
+      "After a Gadget has searched, Tribute it on a later turn to convert its body into a Monarch effect.",
+      "Gigantes and The Rock Spirit banish a used EARTH monster from the GY to provide another attacker or Tribute without consuming your Normal Summon.",
+      "Mobius can remove up to two Spells/Traps; choose the cards that obstruct your attack plan, accounting for Set cards that can be chained.",
+      "Swords of Revealing Light buys time for a hand containing Monarchs; Gadgets and removal help turn those extra turns into resources."
     ],
     "pitfalls": [
-      "Soul Exchange impide tu Battle Phase ese turno. No calcules un remate por ataques después de activarla.",
-      "Zaborg necesita destruir un monstruo al resolver; si no hay otro objetivo válido, puede terminar destruyéndose a sí mismo.",
-      "No controles demasiados Gadgets sin necesidad frente a Torrential Tribute o Mirror Force: su ventaja está también en la próxima invocación.",
-      "Gigantes destruido por batalla barre tu propio backrow. Los siete Monarchs pueden atascar la mano si gastas todos los cuerpos sin reservar tributos."
+      "Soul Exchange prevents your Battle Phase that turn. Do not calculate a finish through attacks after activating it.",
+      "Zaborg must destroy a monster when resolving; if there is no other valid target, it can end up destroying itself.",
+      "Do not control more Gadgets than necessary against Torrential Tribute or Mirror Force; part of their advantage lies in your next Summon.",
+      "Gigantes destroyed by battle wipes out your own backrow. The seven Monarchs can clog your hand if you spend all your monsters without preserving Tribute material."
     ]
   },
   "Pyro Fire": {
-    "archetype": "FIRE · combate y daño de efecto",
-    "description": "Tres Bonfire encuentran Pyro pequeños y tres UFO Turtle sostienen el desarrollo. Solar Flare Dragon, Volcanic Slicer y el paquete Inpachi permiten combinar daño de efecto con ataques.",
-    "summary": "Busca el Pyro apropiado, alterna presión y daño directo de efectos, y conserva FIRE para Spirit of Flames y Oil.",
+    "archetype": "FIRE",
+    "description": "Three Bonfire find small Pyros, and three UFO Turtle sustain development. Solar Flare Dragon, Volcanic Slicer, and the Inpachi package combine effect damage with attacks.",
+    "summary": "Find the right Pyro, alternate pressure and effect damage, and preserve FIRE monsters for Spirit of Flames and Oil.",
     "thumbnail_card": "Solar Flare Dragon",
     "thumbnail_strip": [
       "Solar Flare Dragon",
@@ -458,31 +458,31 @@
       "Thestalos the Firestorm Monarch"
     ],
     "game_plan": [
-      "Usa Bonfire para completar la posición real: Solar Flare para daño sostenido, Slicer para un cierre o un cuerpo Pyro útil.",
-      "Sostén el campo con UFO Turtle e Inpachi antes de comprometer Thestalos. Unexpected Dai debe resolverse mientras aún no controles monstruos.",
-      "Cuenta el daño de la End Phase antes de atacar con todo: varios Solar Flare pueden cerrar sin exponer cada cuerpo a una trampa de batalla."
+      "Use Bonfire to complete the position you actually need: Solar Flare for sustained damage, Slicer for a finish, or a useful Pyro body.",
+      "Maintain the field with UFO Turtle and Inpachi before committing Thestalos. Unexpected Dai must resolve while you still control no monsters.",
+      "Count End Phase damage before attacking with everything; several Solar Flare can finish without exposing every monster to a battle Trap."
     ],
     "opening": [
-      "Dai trae Blazing Inpachi para presión o Charcoal Inpachi para defensa; después puedes usar tu Normal Summon para otro Pyro.",
-      "UFO Turtle colocada permite reclutar un FIRE de 1500 ATK o menos, como Solar Flare, cuando sea destruida en batalla."
+      "Dai summons Blazing Inpachi for pressure or Charcoal Inpachi for defense; you can then use your Normal Summon for another Pyro.",
+      "A Set UFO Turtle can recruit a FIRE monster with 1500 ATK or less, such as Solar Flare, when destroyed by battle."
     ],
     "key_plays": [
-      "Dos Solar Flare Dragon se protegen mutuamente de ataques al controlar otro Pyro; cada uno causa 500 de daño en tu End Phase si su efecto resuelve.",
-      "Volcanic Slicer puede causar 500 en lugar de atacar ese turno. Compara ese daño seguro con el combate disponible.",
-      "Spirit of Flames destierra un FIRE del cementerio para invocarse y gana 300 ATK en tu Battle Phase, ampliando la ofensiva sin consumir la Normal Summon.",
-      "Oil recupera hasta dos FIRE de nivel 4 o menor con nombres distintos; elige cuerpos útiles para el próximo turno o descartes para Raigeki Break."
+      "Two Solar Flare Dragon protect each other from attacks because each has another Pyro alongside it; each deals 500 damage in your End Phase if its effect resolves.",
+      "Volcanic Slicer can deal 500 instead of attacking that turn. Compare that guaranteed amount with the battle damage available.",
+      "Spirit of Flames banishes a FIRE monster from the GY to summon itself and gains 300 ATK in your Battle Phase, expanding your offense without using the Normal Summon.",
+      "Oil recovers up to two Level 4 or lower FIRE monsters with different names; choose useful monsters for next turn or discards for Raigeki Break."
     ],
     "pitfalls": [
-      "Bonfire busca Pyro de nivel 4 o menor, no cualquier FIRE: no encuentra UFO Turtle, Tenkabito Shien ni Thestalos.",
-      "Solar Flare Dragon es Pyro pese a su nombre. Su protección no evita efectos de destrucción, destierro o devolución.",
-      "Spirit of Flames puede consumir el objetivo que necesitabas para Oil o reanimación. Oil no recupera a Thestalos por su nivel.",
-      "Gaia Soul the Combustible Collective se destruye en End Phase; úsala para una ganancia inmediata. Molten Destruction también mejora los FIRE rivales."
+      "Bonfire searches for Level 4 or lower Pyros, not any FIRE monster: it cannot find UFO Turtle, Tenkabito Shien, or Thestalos.",
+      "Solar Flare Dragon is a Pyro despite its name. Its protection does not stop destruction, banishing, or effects that return it to the hand.",
+      "Spirit of Flames can consume the target you needed for Oil or revival. Oil cannot recover Thestalos because of its Level.",
+      "Gaia Soul the Combustible Collective destroys itself in the End Phase; use it for an immediate gain. Molten Destruction also boosts the opponent's FIRE monsters."
     ]
   },
   "Red-Eyes": {
-    "archetype": "Red-Eyes · ritual y reanimación",
-    "description": "Tres Manju y dos Paladin of Dark Dragon conectan el ritual con tres Red-Eyes B. Dragon. Future Fusion, Red-Eyes Wyvern y dos Red-Eyes Spirit aportan preparación y reanimación, con Metamorphosis como opción de Extra.",
-    "summary": "Elige entre una apertura ritual y el plan demorado de Future Fusion; conserva las condiciones de Wyvern para recuperar Red-Eyes.",
+    "archetype": "Red-Eyes",
+    "description": "Three Manju and two Paladin of Dark Dragon connect the Ritual engine to three Red-Eyes B. Dragon. Future Fusion, Red-Eyes Wyvern, and two Red-Eyes Spirit provide setup and revival, with Metamorphosis as an Extra Deck option.",
+    "summary": "Choose between a Ritual opening and Future Fusion's delayed plan; preserve Wyvern's conditions to bring back Red-Eyes.",
     "thumbnail_card": "Red-Eyes B. Dragon",
     "thumbnail_strip": [
       "Paladin of Dark Dragon",
@@ -490,31 +490,31 @@
       "Red-Eyes Darkness Dragon"
     ],
     "game_plan": [
-      "Busca con Manju la mitad ritual que falte. Ragged Records of Rites puede encontrar Paladin al revelar Dark Dragon Ritual desde mano o Deck.",
-      "Carga Red-Eyes y Wyvern cuando tengas una reanimación o puedas reservar un turno sin Normal Summon/Set; no envíes materiales sin revisar la continuación.",
-      "Usa los cuerpos grandes para forzar respuestas antes de Dragon's Mirror o Metamorphosis, escogiendo una fusión que pueda cambiar la mesa."
+      "Use Manju to find the missing Ritual half. Ragged Records of Rites can find Paladin by revealing Dark Dragon Ritual from your hand or Deck.",
+      "Load Red-Eyes and Wyvern when you have revival or can set aside a turn without a Normal Summon/Set; do not send materials without checking the follow-up.",
+      "Use large monsters to force answers before Dragon's Mirror or Metamorphosis, choosing a Fusion that can change the field."
     ],
     "opening": [
-      "Manju más una pieza ritual completa el acceso a Paladin. Advanced Ritual Art puede enviar un Luster Dragon de nivel 4 desde el Deck para ritualizarlo.",
-      "Future Fusion con protección prepara Five-Headed Dragon: en la primera Standby posterior envía cinco Dragons, incluyendo Red-Eyes o Wyvern según la mano."
+      "Manju plus one Ritual piece completes access to Paladin. Advanced Ritual Art can send a Level 4 Luster Dragon from the Deck to Ritual Summon it.",
+      "Future Fusion with protection prepares Five-Headed Dragon: in the first subsequent Standby Phase it sends five Dragons, including Red-Eyes or Wyvern depending on your hand."
     ],
     "key_plays": [
-      "Paladin destruye al inicio del Damage Step al monstruo en Defensa que ataque; después puedes tributar Paladin para traer un Red-Eyes permitido desde mano o Deck.",
-      "Dark Dragon Ritual, desde el cementerio en un turno posterior al de su envío, puede desterrarse para buscar Red-Eyes Spirit.",
-      "Red-Eyes Wyvern revive un Red-Eyes válido en tu End Phase desterrándose, siempre que no hayas hecho Normal Summon ni Set durante ese turno.",
-      "Metamorphosis convierte Red-Eyes B. Dragon de nivel 7 en una fusión nivel 7 disponible, como King Dragun; revisa las consecuencias de elegir The Last Warrior from Another Planet."
+      "At the start of the Damage Step, Paladin destroys the Defense Position monster it attacks; afterward you can Tribute Paladin to summon an eligible Red-Eyes from your hand or Deck.",
+      "On a later turn than the one it was sent to the GY, Dark Dragon Ritual can banish itself to search for Red-Eyes Spirit.",
+      "Red-Eyes Wyvern banishes itself to revive an eligible Red-Eyes in your End Phase, provided you did not Normal Summon or Set during that turn.",
+      "Metamorphosis turns Level 7 Red-Eyes B. Dragon into an available Level 7 Fusion, such as King Dragun; consider the consequences of choosing The Last Warrior from Another Planet."
     ],
     "pitfalls": [
-      "Normal Summon o Set deshabilita Wyvern ese turno, aunque después el monstruo abandone el campo.",
-      "Future Fusion no envía nada al activarse. No planifiques Red-Eyes Spirit inmediata a partir de materiales que aún siguen en el Deck.",
-      "Red-Eyes Darkness Dragon requiere tributar Red-Eyes B. Dragon y no es un objetivo de revival ordinario; Paladin tampoco ignora condiciones de invocación.",
-      "The Last Warrior from Another Planet destruye tus otros monstruos y bloquea invocaciones posteriores; no la elijas si necesitas seguir desarrollando."
+      "Normal Summoning or Setting disables Wyvern that turn, even if that monster later leaves the field.",
+      "Future Fusion sends nothing on activation. Do not plan an immediate Red-Eyes Spirit using materials that are still in the Deck.",
+      "Red-Eyes Darkness Dragon requires Tributing Red-Eyes B. Dragon and is not an ordinary revival target; Paladin does not ignore Summoning conditions either.",
+      "The Last Warrior from Another Planet destroys your other monsters and blocks further Summons; do not choose it if you need to keep developing."
     ]
   },
   "Relinquished": {
-    "archetype": "Ritual · absorción y Chaos",
-    "description": "Tres Relinquished, cinco buscadores de ritual y cuatro Magias de ritual sostienen la absorción. Dos D.D. Trainer sirven a Advanced Ritual Art, y seis LIGHT permiten una segunda ruta con Chaos Sorcerer.",
-    "summary": "Completa el ritual con el menor gasto posible, absorbe la amenaza útil y administra el equipo de Relinquished.",
+    "archetype": "Relinquished",
+    "description": "Three Relinquished, five Ritual searchers, and four Ritual Spells support the absorption plan. Two D.D. Trainer supply Advanced Ritual Art, while six LIGHT monsters enable a second route with Chaos Sorcerer.",
+    "summary": "Complete the Ritual with as few resources as possible, absorb a useful threat, and manage Relinquished's equipped monster.",
     "thumbnail_card": "Relinquished",
     "thumbnail_strip": [
       "Relinquished",
@@ -522,31 +522,31 @@
       "Chaos Sorcerer"
     ],
     "game_plan": [
-      "Elige con Manju, Senju o Sonic Bird la pieza que falte, sin buscar copias redundantes antes de comprobar los materiales.",
-      "Invoca Relinquished cuando haya una presa que valga el gasto; su retirada por equipo puede resolver monstruos que no conviene destruir.",
-      "Mantén LIGHT y DARK en el cementerio para los dos Chaos Sorcerer, pero no gastes la ruta ritual sólo por acelerar ese plan secundario."
+      "Use Manju, Senju, or Sonic Bird to find the missing piece, checking your materials before searching for redundant copies.",
+      "Summon Relinquished when there is a target worth the investment; removing a monster by equipping it can answer threats you would rather not destroy.",
+      "Keep LIGHT and DARK monsters in the GY for the two Chaos Sorcerer, but do not spend your Ritual route just to accelerate that secondary plan."
     ],
     "opening": [
-      "Advanced Ritual Art envía un D.D. Trainer de nivel 1 desde el Deck para invocar Relinquished; verifica que quede uno dentro.",
-      "Ragged Records of Rites puede revelar Black Illusion Ritual en mano o Deck para buscar Relinquished, y Manju completa después la Magia que falte."
+      "Advanced Ritual Art sends a Level 1 D.D. Trainer from the Deck to summon Relinquished; check that one remains there.",
+      "Ragged Records of Rites can reveal Black Illusion Ritual in the hand or Deck to search for Relinquished, then Manju finds the missing Spell."
     ],
     "key_plays": [
-      "Relinquished absorbe un monstruo rival como equipo y copia sus estadísticas; elige un atacante útil o una amenaza que deba retirarse.",
-      "En un turno posterior, Tsukuyomi o Book of Moon pueden colocar a Relinquished y desprender su equipo. Si puede voltearse legalmente de nuevo, abre otra absorción.",
-      "Raigeki Break puede destruir la carta equipada cuando liberar a Relinquished para absorber otra amenaza compense el descarte.",
-      "Apprentice Magician puede preparar Old Vindictive Magician; esa línea ofrece interacción mientras reúnes las piezas rituales."
+      "Relinquished absorbs an opposing monster as an Equip Card and copies its stats; choose a useful attacker or a threat that must be removed.",
+      "On a later turn, Tsukuyomi or Book of Moon can Set Relinquished and remove its equipped card. If it can legally be flipped again, another absorption becomes available.",
+      "Raigeki Break can destroy the equipped card when freeing Relinquished to absorb another threat is worth the discard.",
+      "Apprentice Magician can prepare Old Vindictive Magician; that line offers interaction while you assemble the Ritual pieces."
     ],
     "pitfalls": [
-      "Relinquished sólo admite una presa equipada por su efecto; no puedes absorber otra mientras conserva la anterior.",
-      "Absorber un monstruo colocado no te garantiza su ATK impreso como poder útil. Comprueba el resultado antes de planear el daño.",
-      "Relinquished no se vuelve inmune a efectos por tener equipo y aún recibes el daño de batalla que su texto comparte con el rival.",
-      "Advanced Ritual Art necesita niveles exactos desde el Deck: con ambos D.D. Trainer en mano o cementerio esa ruta queda sin material. Chaos tampoco ataca si usa su destierro."
+      "Relinquished can only hold one monster equipped through its effect; it cannot absorb another while keeping the previous one.",
+      "Absorbing a Set monster does not guarantee that its printed ATK will become useful attacking power. Check the result before planning damage.",
+      "An equipped card does not make Relinquished immune to effects, and you still take the battle damage that its text also inflicts on the opponent.",
+      "Advanced Ritual Art needs exact Levels from the Deck: with both D.D. Trainer in the hand or GY, that route has no material. Chaos also cannot attack if it uses its banishing effect."
     ]
   },
   "Spellcaster": {
-    "archetype": "Spellcaster · volteos y Magical Dimension",
-    "description": "Tres Apprentice Magician, Spy y varios efectos de volteo mantienen recursos para Magical Dimension. Dos Chaos Sorcerer, Chaos Command Magician y Dark Magician of Chaos dan distintas formas de convertir ese desarrollo en presión.",
-    "summary": "Gana tiempo con los Spellcaster pequeños, conserva los LIGHT y elige el momento de convertir un cuerpo en un jefe.",
+    "archetype": "Spellcaster",
+    "description": "Three Apprentice Magician, Spy, and several Flip Effects maintain resources for Magical Dimension. Two Chaos Sorcerer, Chaos Command Magician, and Dark Magician of Chaos offer different ways to turn that development into pressure.",
+    "summary": "Buy time with small Spellcasters, preserve your LIGHT monsters, and choose the moment to turn a body into a boss.",
     "thumbnail_card": "Dark Magician of Chaos",
     "thumbnail_strip": [
       "Apprentice Magician",
@@ -554,31 +554,31 @@
       "Dark Magician of Chaos"
     ],
     "game_plan": [
-      "Usa Apprentice para acceder a Crystal Seer u Old Vindictive Magician según necesites encontrar cartas o retirar un monstruo.",
-      "Mantén los seis LIGHT de la lista como recursos reales para Chaos; no confundas tipo Spellcaster con atributo DARK.",
-      "Reserva Magical Dimension para una amenaza en mano y una situación en la que tributar tu cuerpo y destruir un monstruo produzca una mejora clara."
+      "Use Apprentice to access Crystal Seer or Old Vindictive Magician depending on whether you need to find cards or remove a monster.",
+      "Keep the list's six LIGHT monsters available as resources for Chaos; do not confuse the Spellcaster Type with the DARK Attribute.",
+      "Save Magical Dimension for a threat in hand and a situation where Tributing your monster and destroying another creates a clear improvement."
     ],
     "opening": [
-      "Apprentice o Spy colocadas más una defensa permiten desarrollar sin comprometer un jefe de nivel alto.",
-      "Con un Spellcaster boca arriba, Magical Dimension y Dark Magician of Chaos en mano, prepara la sustitución cuando el rival intente retirar tu cuerpo o cuando puedas aprovechar la destrucción."
+      "A Set Apprentice or Spy plus protection lets you develop without committing a high-Level boss.",
+      "With a face-up Spellcaster, Magical Dimension, and Dark Magician of Chaos in hand, prepare the replacement when the opponent tries to remove your monster or when you can benefit from the destruction."
     ],
     "key_plays": [
-      "Magical Dimension exige controlar un Spellcaster, tributa el monstruo propio elegido e invoca un Spellcaster de la mano; después puede destruir un monstruo.",
-      "Dark Magician of Chaos recupera una Magia en la End Phase del turno en que fue invocado; protege su presencia y elige el recurso que haga útil el siguiente turno.",
-      "Tsukuyomi vuelve a colocar Spy, Guard o un FLIP de utilidad para reutilizarlo posteriormente.",
-      "Apprentice puede colocar un contador en Breaker cuando el objetivo es válido; Breaker conserva así una vía adicional para retirar backrow."
+      "Magical Dimension requires you to control a Spellcaster, Tributes your chosen monster, and summons a Spellcaster from your hand; afterward it can destroy a monster.",
+      "Dark Magician of Chaos recovers a Spell in the End Phase of the turn it was Summoned; protect its presence and choose the resource that makes your next turn useful.",
+      "Tsukuyomi Sets Spy, Guard, or a useful Flip monster again for later reuse.",
+      "Apprentice can place a counter on Breaker when it is a valid target, giving Breaker another way to remove backrow."
     ],
     "pitfalls": [
-      "Dark Magician of Chaos no recupera una Magia inmediatamente al invocarse. Si abandona el campo boca arriba, se destierra.",
-      "Magical Dimension necesita un Spellcaster para activarse y otro invocable en mano; no funciona como removal independiente en una mano vacía.",
-      "Skilled Blue Magician aporta LIGHT y defensa, pero esta lista no tiene objetivos para su efecto de invocación. Desterrarlo del cementerio para poner un contador también consume un LIGHT que Chaos podría necesitar.",
-      "Chaos Command Magician no protege a toda tu mesa: niega efectos de monstruo que hagan objetivo únicamente a él. Necrovalley y Kycoo rival pueden cortar el plan Chaos."
+      "Dark Magician of Chaos does not recover a Spell immediately on Summon. If it leaves the field face-up, it is banished.",
+      "Magical Dimension needs a Spellcaster to activate and another summonable one in hand; it is not standalone removal with an empty hand.",
+      "Skilled Blue Magician supplies LIGHT and defense, but this list has no targets for its Summoning effect. Banishing it from the GY to place a counter also consumes a LIGHT monster that Chaos may need.",
+      "Chaos Command Magician does not protect your whole field: it negates monster effects that target only itself. Necrovalley and an opposing Kycoo can stop the Chaos plan."
     ]
   },
   "Wall Rock": {
-    "archetype": "Defensa · contraataque",
-    "description": "Stone Statue of the Aztecs, Stronghold Guardian y Cross Counter castigan ataques contra alta DEF. Tres Gear Golem the Moving Fortress y dos Weapon Change ofrecen una salida ofensiva después de estabilizar.",
-    "summary": "Haz que los ataques rivales resulten costosos, protege el muro útil y prepara un remate que no dependa de que el rival siga atacando.",
+    "archetype": "Rock",
+    "description": "Stone Statue of the Aztecs, Stronghold Guardian, and Cross Counter punish attacks into high DEF. Three Gear Golem the Moving Fortress and two Weapon Change offer an offensive route after stabilizing.",
+    "summary": "Make opposing attacks costly, protect the useful wall, and prepare a finish that does not depend on the opponent continuing to attack.",
     "thumbnail_card": "Stone Statue of the Aztecs",
     "thumbnail_strip": [
       "Stone Statue of the Aztecs",
@@ -586,31 +586,31 @@
       "Guardian Sphinx"
     ],
     "game_plan": [
-      "Coloca un muro apropiado y conserva Stronghold Guardian en mano para modificar un combate; no reveles todas tus defensas sin necesidad.",
-      "Usa Golem Sentry y Guardian Sphinx para devolver amenazas en lugar de esperar indefinidamente a que ataquen tu DEF.",
-      "Activa Weapon Change con antelación y conserva Gear Golem hasta tu Standby para transformar su DEF en ATK y preparar daño directo."
+      "Set an appropriate wall and keep Stronghold Guardian in hand to change a battle; do not reveal all your defensive options unnecessarily.",
+      "Use Golem Sentry and Guardian Sphinx to return threats to the hand instead of waiting indefinitely for attacks into your DEF.",
+      "Activate Weapon Change in advance and keep Gear Golem until your Standby Phase to turn its DEF into ATK and prepare direct damage."
     ],
     "opening": [
-      "Giant Rat colocado puede acceder a Stone Statue o Gear Golem al caer en batalla; ten presente que el recluta entra en Ataque.",
-      "Un muro colocado con Stronghold Guardian en mano y una defensa permite castigar el primer ataque; Des Lacooda debe sobrevivir para producir robos por Flip Summon."
+      "A Set Giant Rat can access Stone Statue or Gear Golem when destroyed by battle; remember that the recruited monster arrives in Attack Position.",
+      "A Set wall with Stronghold Guardian in hand and protection can punish the first attack; Des Lacooda must survive to produce draws through Flip Summons."
     ],
     "key_plays": [
-      "Stronghold Guardian se envía desde la mano durante el Damage Step para dar 1500 DEF al defensor atacado; con Stone Statue aumenta el posible daño de contraataque.",
-      "Cross Counter duplica el daño de batalla cuando la DEF del defensor supera el ATK del atacante y destruye al atacante después del cálculo.",
-      "Weapon Change sólo actúa en tu Standby: paga 700 y cambia ATK/DEF de un Warrior o Machine boca arriba. Gear Golem puede pasar de 800 ATK/2200 DEF a 2200 ATK.",
-      "Gear Golem paga 800 LP en Main Phase 1 para atacar directamente. Guardian Sphinx, al ser Flip Summoned, devuelve todos los monstruos rivales a la mano."
+      "Stronghold Guardian sends itself from the hand during the Damage Step to give the attacked defender 1500 DEF; with Stone Statue, this increases potential counterattack damage.",
+      "Cross Counter doubles battle damage when the defender's DEF exceeds the attacker's ATK, then destroys the attacker after damage calculation.",
+      "Weapon Change only acts during your Standby Phase: pay 700 and swap the ATK/DEF of a face-up Warrior or Machine. Gear Golem can go from 800 ATK/2200 DEF to 2200 ATK.",
+      "Gear Golem pays 800 LP in Main Phase 1 to attack directly. When Flip Summoned, Guardian Sphinx returns every opposing monster to the hand."
     ],
     "pitfalls": [
-      "Weapon Change no afecta a Stone Statue, que es Rock, ni intercambia estadísticas inmediatamente al activar la continua en Main Phase.",
-      "Guardian Sphinx exige Flip Summon para su rebote; que un ataque la voltee boca arriba no activa ese efecto.",
-      "Staunch Defender necesita un monstruo propio boca arriba; no permite elegir un muro todavía colocado. Waboku ayuda a sobrevivir, pero no aumenta la DEF ni obliga al rival a atacar.",
-      "La defensa no cubre el daño de efectos ni el removal que evita el combate. Guarda una ruta ofensiva y no trates esta lista temática como una victoria automática por bloqueo."
+      "Weapon Change does not affect Stone Statue, which is a Rock, and does not swap stats immediately when you activate the Continuous Spell in the Main Phase.",
+      "Guardian Sphinx requires a Flip Summon for its return effect; being flipped face-up by an attack does not trigger it.",
+      "Staunch Defender needs your monster to be face-up; it cannot select a wall that is still Set. Waboku helps you survive but does not increase DEF or force the opponent to attack.",
+      "Defense does not cover effect damage or removal that avoids battle. Keep an offensive route available, and do not treat this themed list as an automatic lock-based win."
     ]
   },
   "Zombie": {
-    "archetype": "Zombie · reanimación y recursos",
-    "description": "Dos Gozuki, dos Goblin Zombie y dos Foolish Burial preparan el cementerio. Call of the Mummy pone los cuerpos grandes en juego desde la mano y Book of Life permite recuperarlos mientras retira un monstruo rival.",
-    "summary": "Prepara objetivos útiles de reanimación, usa las búsquedas de Goblin Zombie y presenta amenazas grandes en varias oleadas.",
+    "archetype": "Zombie",
+    "description": "Two Gozuki, two Goblin Zombie, and two Foolish Burial prepare the GY. Call of the Mummy puts large monsters into play from the hand, while Book of Life brings them back and removes an opposing monster.",
+    "summary": "Prepare useful revival targets, use Goblin Zombie's searches, and present large threats in successive waves.",
     "thumbnail_card": "Ryu Kokki",
     "thumbnail_strip": [
       "Gozuki",
@@ -618,25 +618,25 @@
       "Vampire Lord"
     ],
     "game_plan": [
-      "Envía con Gozuki o Foolish Burial el Zombie que puedas aprovechar pronto: un jefe para revival o Gozuki para habilitar una invocación desde la mano.",
-      "Usa Call of the Mummy antes de desarrollar otros monstruos; después tu Normal Summon puede añadir Gozuki, Goblin Zombie o un atacante.",
-      "Reserva Book of Life para recuperar un cuerpo relevante y desterrar una pieza rival; mantén siempre en mente los objetivos de ambos cementerios."
+      "Use Gozuki or Foolish Burial to send a Zombie you can use soon: a boss for revival, or Gozuki to enable a Summon from the hand.",
+      "Use Call of the Mummy before developing other monsters; your Normal Summon can then add Gozuki, Goblin Zombie, or an attacker.",
+      "Save Book of Life to recover a relevant monster and banish an opposing piece; always keep the targets in both GYs in mind."
     ],
     "opening": [
-      "Con Call of the Mummy y Ryu Kokki, Despair from the Dark o Vampire Lord, invoca primero desde la mano mientras tu campo esté vacío.",
-      "Gozuki más Book of Life puede preparar una reanimación cuando el rival ya tenga un monstruo en el cementerio; si no lo tiene, conserva Book."
+      "With Call of the Mummy and Ryu Kokki, Despair from the Dark, or Vampire Lord, summon from the hand first while your field is empty.",
+      "Gozuki plus Book of Life can set up revival when the opponent already has a monster in the GY; if they do not, hold Book."
     ],
     "key_plays": [
-      "Goblin Zombie busca un Zombie de 1200 DEF o menos cuando va del campo al cementerio; Gozuki, otro Goblin Zombie, Spirit Reaper, Des Lacooda y Master Kyonshee son las opciones de esta lista.",
-      "Gozuki enviado al cementerio puede desterrar otro Zombie distinto de Gozuki para invocar un Zombie desde la mano; guarda ese coste además de la amenaza.",
-      "Creature Swap puede entregar Goblin Zombie; si después llega del campo a tu cementerio, su búsqueda repone una pieza.",
-      "Ryu Kokki castiga a Warriors y Spellcasters tras combatir. Cuando Vampire Lord causa daño de batalla, declaras Monster, Spell o Trap y el rival envía una carta de ese tipo desde su Deck al cementerio; también puede regresar tras ser destruido por un efecto rival."
+      "Goblin Zombie searches for a Zombie with 1200 DEF or less when sent from the field to the GY; Gozuki, another Goblin Zombie, Spirit Reaper, Des Lacooda, and Master Kyonshee are this list's options.",
+      "Gozuki sent to the GY can banish another Zombie other than Gozuki to summon a Zombie from the hand; preserve that cost as well as the threat.",
+      "Creature Swap can give away Goblin Zombie; if it later goes from the field to your GY, its search replaces a piece.",
+      "Ryu Kokki punishes Warriors and Spellcasters after battling. When Vampire Lord deals battle damage, you declare Monster, Spell, or Trap and the opponent sends a card of that type from their Deck to the GY; it can also return after being destroyed by an opposing effect."
     ],
     "pitfalls": [
-      "No hay Pyramid Turtle en este Main. Goblin Zombie sí puede buscar Gozuki de 800 DEF, pero no Ryu Kokki de 2000 DEF ni Vampire Lord de 1500 DEF.",
-      "Call of the Mummy exige que sigas sin controlar monstruos al resolver su efecto; no encadenes un desarrollo propio que invalide esa condición.",
-      "Book of Life necesita un Zombie propio y un monstruo rival en los respectivos cementerios para activarse; no funciona sólo porque tú ya tengas objetivo.",
-      "Regenerating Mummy y Despair from the Dark responden al efecto rival que las envía desde la mano; tus propios descartes no producen esos beneficios."
+      "There is no Pyramid Turtle in this Main Deck. Goblin Zombie can search for Gozuki with 800 DEF, but not Ryu Kokki with 2000 DEF or Vampire Lord with 1500 DEF.",
+      "Call of the Mummy requires you to still control no monsters when its effect resolves; do not chain your own development that would invalidate this condition.",
+      "Book of Life needs your Zombie and an opposing monster in their respective GYs to activate; having only your own target is not enough.",
+      "Regenerating Mummy and Despair from the Dark respond to an opposing effect sending them from the hand; your own discards do not grant those benefits."
     ]
   }
 }
