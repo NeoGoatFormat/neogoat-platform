@@ -1203,8 +1203,9 @@ body.filters-active .checkRow{
         text-shadow:0 0 12px rgba(125,211,252,.7);
         letter-spacing:.04em;
       ">
-        AUGUST 2026 FORMAT
+        OCTOBER 2026 FORMAT
       </span>
+      <span id="statusBadge" role="status">Loading cards...</span>
 
 <a
   href="https://neogoatformat.blogspot.com/"
@@ -1236,6 +1237,7 @@ body.filters-active .checkRow{
   <input type="file" id="ydkInput" accept=".ydk" style="display:none">
   <button class="hbtn" id="shareBtn">Share Deck</button>
   <button class="hbtn" onclick="location.href='/decks.html'">Deck Library</button>
+  <a class="hbtn" href="/decks.html?collection=defaults" style="text-decoration:none">20 mazos · Guías</a>
 </div>
 
 <div id="app">
@@ -1436,7 +1438,7 @@ function makeDeckSignature(payload){
   }
 
   return JSON.stringify({
-    format: payload.format || "aug_2026",
+    format: payload.format || "oct_2026",
     main: cleanList(payload.main_deck),
     extra: cleanList(payload.extra_deck),
     side: cleanList(payload.side_deck)
@@ -1465,7 +1467,12 @@ async function submitDeck(p){
 
 (async function(){
   var LS="neogoat_v4_dragdrop";
-  var cardList=[],cardMap={},rules={},fmtId="aug_2026";
+  var cardList=[],cardMap={},rules={},fmtId="oct_2026";
+  // Canonical IDs whose historical pool entries use an alternate artwork ID.
+  // Verified against the current NeoGoat Pro cards.cdb; frozen format JSON is preserved.
+  var poolArtworkIds={"18807108":"18807109","19230407":"19230408","35686187":"35686188","39751093":"39751094","56043446":"56043447","64335804":"64335805","68540058":"68540059","73134081":"73134082","84080938":"84080939","84257639":"84257640"};
+  // These names also apply during deck construction, not only on the field.
+  var sharedCopyIds={"295517":"22702055","27927359":"76812113","54415063":"76812113","80316585":"76812113","91932350":"76812113"};
   var deck={main:new Map(),extra:new Map(),side:new Map()};
   var selectedPreviewId=null;
   var thumbnailCardName="";
@@ -1527,7 +1534,30 @@ async function submitDeck(p){
 
   function cnt(s){var t=0;deck[s].forEach(function(v){t+=v;});return t;}
 
-  function copies(id){return (deck.main.get(id)||0)+(deck.extra.get(id)||0)+(deck.side.get(id)||0);}
+  function resolveCardId(id){
+    var raw=String(id==null?"":id).trim();
+    if(!/^\d+$/.test(raw))return null;
+    var numeric=String(Number(raw));
+    if(cardMap[numeric])return numeric;
+    var padded=numeric.padStart(8,"0");
+    if(cardMap[padded])return padded;
+    var artwork=poolArtworkIds[numeric];
+    return artwork&&cardMap[artwork]?artwork:null;
+  }
+
+  function copyIdentity(id){
+    var resolved=resolveCardId(id)||String(id);
+    var numeric=String(Number(resolved));
+    return sharedCopyIds[numeric]||numeric;
+  }
+
+  function copies(id){
+    var identity=copyIdentity(id),total=0;
+    ["main","extra","side"].forEach(function(section){
+      deck[section].forEach(function(qty,cardId){if(copyIdentity(cardId)===identity)total+=qty;});
+    });
+    return total;
+  }
 
   function lim(id){return rules[id]?rules[id].limit:3;}
 
@@ -1546,11 +1576,13 @@ async function submitDeck(p){
   }
 
   function canPlace(id,zone){
+    id=resolveCardId(id);
     if(!rules[id]||!rules[id].legal)return "This card is forbidden or not legal.";
     if(rules[id].limit===0)return "This card is forbidden.";
     if(copies(id)>=rules[id].limit)return "Copy limit reached.";
     if(zone==="extra"&&!isExtraDeck(id))return "Only Fusion monsters can be placed in Extra Deck.";
     if(zone==="main"&&isExtraDeck(id))return "Fusion monsters cannot be placed in Main Deck.";
+    if(zone==="main"&&cnt("main")>=60)return "Main Deck is full.";
     if(zone==="extra"&&cnt("extra")>=15)return "Extra Deck is full.";
     if(zone==="side"&&cnt("side")>=15)return "Side Deck is full.";
     return "";
@@ -1561,6 +1593,20 @@ async function submitDeck(p){
     if(cnt("main")<40||cnt("main")>60)errs.push("Main "+cnt("main")+"/40-60");
     if(cnt("extra")>15)errs.push("Extra max 15");
     if(cnt("side")>15)errs.push("Side max 15");
+    var checkedCopies={};
+    ["main","extra","side"].forEach(function(section){
+      deck[section].forEach(function(qty,id){
+        var resolved=resolveCardId(id),card=cardMap[resolved],rule=rules[resolved];
+        var name=card?card.name:String(id);
+        if(!Number.isInteger(qty)||qty<1)errs.push(name+": invalid quantity");
+        if(!rule||!rule.legal||rule.limit===0){errs.push(name+": forbidden or outside this format");return;}
+        if(section==="main"&&isExtraDeck(resolved))errs.push(name+": Fusion in Main");
+        if(section==="extra"&&!isExtraDeck(resolved))errs.push(name+": non-Fusion in Extra");
+        var identity=copyIdentity(resolved);
+        if(!checkedCopies[identity]&&copies(resolved)>rule.limit)errs.push(name+": max "+rule.limit+" across Main, Extra and Side");
+        checkedCopies[identity]=true;
+      });
+    });
     var v=document.getElementById("validation");
     if(errs.length){v.textContent=errs.join(" | ");v.className="err";}
     else{v.textContent="Deck OK";v.className="ok";}
@@ -1666,6 +1712,7 @@ async function submitDeck(p){
   }
 
   function addCardTo(id,zone){
+    id=resolveCardId(id);
     if(zone==="main"&&isExtraDeck(id)){zone="extra";}
     var err=canPlace(id,zone);
     if(err){return;}
@@ -2105,7 +2152,7 @@ async function submitDeck(p){
       parsed.name=parsed.name.replace(/^[xX]\s*/,"").replace(/\s+$/g,"");
       var id=findCardIdByName(parsed.name);
       if(!id){missing.push(parsed.name);return;}
-      var qty=Math.max(1,Math.min(3,parsed.qty||1));
+      var qty=parsed.qty||1;
       imported[section].set(id,(imported[section].get(id)||0)+qty);
       importedCount+=qty;
     });
@@ -2125,8 +2172,8 @@ async function submitDeck(p){
     var importedCount=0;
     ["main","extra","side"].forEach(function(section){
       decoded[section].forEach(function(code){
-        var id=String(code);
-        if(!cardMap[id]){missing.push(id);return;}
+        var id=resolveCardId(code);
+        if(!id){missing.push(String(code));return;}
         imported[section].set(id,(imported[section].get(id)||0)+1);
         importedCount++;
       });
@@ -2335,8 +2382,8 @@ async function submitDeck(p){
       if(line.startsWith("#"))return;
       if(!section)return;
       if(!/^\d+$/.test(line))return;
-      var id=String(Number(line));
-      if(!cardMap[id]){missing.push(id);return;}
+      var id=resolveCardId(line);
+      if(!id){missing.push(String(Number(line)));return;}
       imported[section].set(id,(imported[section].get(id)||0)+1);
     });
     deck.main=imported.main;deck.extra=imported.extra;deck.side=imported.side;
@@ -2447,6 +2494,7 @@ async function submitDeck(p){
   }
 
   document.getElementById("submitBtn").onclick=async function(){
+    if(!validate()){msg.textContent="Deck must be valid before sharing.";msg.className="err";return;}
     var title=document.getElementById("fTitle").value.trim();
     var author=document.getElementById("fAuthor").value.trim();
     if(!title||!author){msg.textContent="Name and alias required.";msg.className="err";return;}
@@ -2479,10 +2527,10 @@ async function submitDeck(p){
   var sb=document.getElementById("statusBadge");
 
   try{
-    var cfg=await(await fetch("/data/config.json")).json();
-    fmtId=cfg.currentFormatId||"aug_2026";
-    var rf=cfg.rulesFile||"cards_aug_2026.json";
-    document.getElementById("fmtLabel").textContent=String(fmtId).replace(/_/g," ").toUpperCase()+" FORMAT";
+    var cfg=await(await fetch("/data/config.json",{cache:"no-store"})).json();
+    fmtId=cfg.currentFormatId||"oct_2026";
+    var rf=cfg.rulesFile||"cards_oct_2026.json";
+    document.getElementById("fmtLabel").textContent=(fmtId==="oct_2026"?"OCTOBER 2026":String(fmtId).replace(/_/g," ").toUpperCase())+" FORMAT";
     var resp=await fetch("/data/formats/"+fmtId+"/"+rf);
     if(!resp.ok)throw new Error("404: "+fmtId+"/"+rf);
     cardList=await resp.json();
@@ -2507,11 +2555,11 @@ async function submitDeck(p){
     var id = findCardIdByName(cardName);
 
     if(!id && card.password){
-      id = String(card.password);
+      id = resolveCardId(card.password);
     }
 
     if(!id && card.id){
-      id = String(card.id);
+      id = resolveCardId(card.id);
     }
 
     if(!id || !cardMap[id]){

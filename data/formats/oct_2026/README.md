@@ -26,4 +26,6 @@ The generator refuses a changed August source. Its SHA-256 pins the original Git
 
 ## Activation
 
-Adding the October data does not itself switch the live builder. `data/config.json` selects its active format. The October pair is `currentFormatId: "oct_2026"` and `rulesFile: "cards_oct_2026.json"`. August remains selected until October activation is requested.
+October is the active builder format, selected by `currentFormatId: "oct_2026"` and `rulesFile: "cards_oct_2026.json"` in `data/config.json`. The builder label, default deck publication metadata and fallback paths also use October. Historical format files remain unchanged.
+
+The builder validates forbidden cards, pool membership, Main/Extra placement and combined Main/Extra/Side copy limits, including imported lists. Imports keep known cards so invalid lists can be edited; invalid decks cannot be shared. Padded numeric IDs and the historical artwork IDs in this pool resolve to the same entries. Harpie Lady variants and A Legendary Ocean/Umi share their permanent-name copy limits, matching the current NeoGoat Pro card database.

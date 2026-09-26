@@ -1,0 +1,137 @@
+{
+  "format": "oct_2026",
+  "version": "0.3.2 beta.60",
+  "native_format_hash": "8A84D6ED",
+  "windows_archive": "NeoGoat-Pro-Windows-0.3.2-beta.60.zip",
+  "windows_archive_sha256": "d2906d2ac46495156f765d8404d5f690b9c94bf76745c01908c51a1fdb8343df",
+  "source": "Los 20 YDK originales del paquete final de NeoGoat Pro beta.60, en el orden del selector del cliente.",
+  "side_source": "Revisión de Side Deck del 25 de septiembre de 2026, adaptada a los bytes finales de beta.60.",
+  "guide_adaptations": [
+    "Armed Dragon: se ajusta la nota al único Level Up! y los tres Flying Kamakiri #1 del Main final.",
+    "Insect Normal: se documentan las dos Ladybug del Side; se sustituyen las salidas de Foolish Burial, ausente del Main final, y se conserva el Nobleman inicial donde corresponde.",
+    "Wall Rock: la lista final utiliza Des Lacooda en lugar de Medusa Worm; ninguno de sus cinco planes de Side necesitó cambiar entradas o salidas.",
+    "Textos revisados: Cipher Soldier tiene 1350 ATK; Kycoo bloquea el destierro rival desde los cementerios, no materiales exclusivamente del campo; Pulling the Rug niega el efecto activado tras una Invocación Normal, no la invocación."
+  ],
+  "decks": [
+    {
+      "title": "Amazoness Aggro",
+      "default_order": 1,
+      "file": "oct_2026/Amazoness Aggro.ydk",
+      "sha256": "3854418918b4109d8c99c633d14c0dc1c02efde342ce7dc294f46d595b7df83d"
+    },
+    {
+      "title": "Archfiend Pandemonium",
+      "default_order": 2,
+      "file": "oct_2026/Archfiend Pandemonium.ydk",
+      "sha256": "73ea4bb067b888711021a9942573ca1df435d0b126602873c7d6b9cf49255fc3"
+    },
+    {
+      "title": "Armed Dragon",
+      "default_order": 3,
+      "file": "oct_2026/Armed Dragon.ydk",
+      "sha256": "38440ae87ee57943e6d8eb478d120161b0de116eee2f431f979941db8bb6b934"
+    },
+    {
+      "title": "Chaos Control",
+      "default_order": 4,
+      "file": "oct_2026/Chaos Control.ydk",
+      "sha256": "674df208dc19ce37952effda4a18cf0da9df580bd57a1c8a7dd198ce08c75ec2"
+    },
+    {
+      "title": "Chaos Warrior",
+      "default_order": 5,
+      "file": "oct_2026/Chaos Warrior.ydk",
+      "sha256": "23890253e627e737015334d112f682eb22720c507eab7945d89cb7bec1087b04"
+    },
+    {
+      "title": "Dragon Future",
+      "default_order": 6,
+      "file": "oct_2026/Dragon Future.ydk",
+      "sha256": "b1ff8f4f241781668b4f00c0b9f8ba51207778b65d4d4466970143b1d15cf277"
+    },
+    {
+      "title": "Earth Aggro",
+      "default_order": 7,
+      "file": "oct_2026/Earth Aggro.ydk",
+      "sha256": "1cb6ebb93cedb132dea3f8c2dbc8e5e1f0d5102f1491f3372dfe3caea893e949"
+    },
+    {
+      "title": "Frost and Flame",
+      "default_order": 8,
+      "file": "oct_2026/Frost and Flame.ydk",
+      "sha256": "d12a071f3d1438ba4a444a8699cc61ce9296a6a1a53978cf6382a331f4603eb2"
+    },
+    {
+      "title": "Gravekeeper",
+      "default_order": 9,
+      "file": "oct_2026/Gravekeeper.ydk",
+      "sha256": "0f85aabc7a28b0048e5848718ec93a1bac1bbd5aabf91f2a433ed4374f5859d9"
+    },
+    {
+      "title": "Harpie Lady",
+      "default_order": 10,
+      "file": "oct_2026/Harpie Lady.ydk",
+      "sha256": "c244cdce01c4fe0af01088de741322b62cb3958645780a8cae008b463b9d0778"
+    },
+    {
+      "title": "HERO Fusion",
+      "default_order": 11,
+      "file": "oct_2026/HERO Fusion.ydk",
+      "sha256": "4b32d88c0837c76219ec7e8f5ad60b45355a54039c5b4ad431f3517c3e10c834"
+    },
+    {
+      "title": "Insect Normal",
+      "default_order": 12,
+      "file": "oct_2026/Insect Normal.ydk",
+      "sha256": "9800c5ab0231d9c76ac1badbfa46731d6e6fd2f91f2dbe82f4c4785822a5c9c7"
+    },
+    {
+      "title": "Mazera DeVille",
+      "default_order": 13,
+      "file": "oct_2026/Mazera DeVille.ydk",
+      "sha256": "4a5eed759ee112b6f03082ac2148aa9031e4059298c977c43a6747167272b727"
+    },
+    {
+      "title": "Monarch",
+      "default_order": 14,
+      "file": "oct_2026/Monarch.ydk",
+      "sha256": "609562bb9b75e0edd091a64d7b27eb504cac8e4805645539e39d41fba886110d"
+    },
+    {
+      "title": "Pyro Fire",
+      "default_order": 15,
+      "file": "oct_2026/Pyro Fire.ydk",
+      "sha256": "a3d1cbbd058eae9b4d02bf475a1506d2863765c06c97dabc066c65c259b60a6b"
+    },
+    {
+      "title": "Red-Eyes",
+      "default_order": 16,
+      "file": "oct_2026/Red-Eyes.ydk",
+      "sha256": "2826b0fabde8fb58ad854ed6ac3683b73f0ba18dd2d15144913e4af2db7607d6"
+    },
+    {
+      "title": "Relinquished",
+      "default_order": 17,
+      "file": "oct_2026/Relinquished.ydk",
+      "sha256": "718b82dfd96b0ba48a6f2fa21005ee2019d81730829fad03813e80aca66ee599"
+    },
+    {
+      "title": "Spellcaster",
+      "default_order": 18,
+      "file": "oct_2026/Spellcaster.ydk",
+      "sha256": "abda71b9e565b87e018eb7289039138bd4ecaf1586b77f3befa96c6fa4578f34"
+    },
+    {
+      "title": "Wall Rock",
+      "default_order": 19,
+      "file": "oct_2026/Wall Rock.ydk",
+      "sha256": "ee37c401ad84f8a00b27e447ea34884582c2e9b1f299d3a6669040220236f3a0"
+    },
+    {
+      "title": "Zombie",
+      "default_order": 20,
+      "file": "oct_2026/Zombie.ydk",
+      "sha256": "9930ef72e1bf39f5ca7b5e9e93c634672a173b1e57e74ef70b2700b30af6b189"
+    }
+  ]
+}

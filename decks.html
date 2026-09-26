@@ -344,14 +344,14 @@ header h2{
     <h2 style="margin:0;">NeoGoat Deck Library</h2>
 
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-      <span style="
+      <span id="currentFormatText" style="
         font-size:12px;
         font-weight:900;
         color:#7dd3fc;
         text-shadow:0 0 10px rgba(125,211,252,.6);
         letter-spacing:.05em;
       ">
-        CURRENT FORMAT: AUGUST 2026
+        CURRENT FORMAT: OCTOBER 2026
       </span>
 
       <a
@@ -381,11 +381,16 @@ header h2{
 <section class="hero">
   <div class="heroBox">
     <h1>Published Decks</h1>
-    <p>Browse community-submitted NeoGoat decks, archetypes, and format experiments.</p>
+    <p>Los 20 mazos predeterminados de NeoGoat Pro, con guía de juego y side deck, junto a los perfiles de la comunidad.</p>
   </div>
 </section>
 
 <div class="filters">
+  <select id="fSource" aria-label="Colección">
+    <option value="">All decks</option>
+    <option value="defaults">NeoGoat Pro · 20 predeterminados</option>
+    <option value="community">Community decks</option>
+  </select>
   <input id="fSearch" placeholder="Search by title or author..." style="width:250px">
   <input id="fArchetype" placeholder="Archetype..." style="width:180px">
   <input id="fCard1" placeholder="Contains card..." style="width:220px">
@@ -397,10 +402,12 @@ header h2{
 </div>
 
 <div id="countText"></div>
+<p id="libraryNotice" role="status" style="max-width:1200px;margin:10px auto;padding:0 18px;color:#ffd38e" hidden></p>
 <div id="loading">Loading decks...</div>
 <div id="empty" style="display:none">No decks found.</div>
 <div class="grid" id="grid" style="display:none"></div>
 
+<script src="default-decks.js"></script>
 <script>
 const SUPABASE_URL = "https://tpkqfvizizjbunpbutlo.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3Fmdml6aXpqYnVucGJ1dGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NjA0ODksImV4cCI6MjA5NDAzNjQ4OX0.Vjf2aUfYcHzAR6f3kFBoelJNpP-l0ULwdtQsetV3Eng";
@@ -412,6 +419,7 @@ async function loadDecks(){
   const res=await fetch(
     `${SUPABASE_URL}/rest/v1/decks?is_public=eq.true&order=created_at.desc&select=id,slug,title,author_name,archetype,description,main_deck,extra_deck,side_deck,thumbnail_card,thumbnail_strip,format,created_at`,
     {
+      signal: AbortSignal.timeout(15000),
       headers:{
         "apikey":SUPABASE_ANON_KEY,
         "Authorization":`Bearer ${SUPABASE_ANON_KEY}`
@@ -546,7 +554,8 @@ async function fillDeckThumbs(deck){
   const imgs = [];
 
   for(const name of names){
-    const id = await getYgoCardId(name);
+    const entry = [...(deck.main_deck||[]), ...(deck.extra_deck||[]), ...(deck.side_deck||[])].find(card=>normText(card.name)===normText(name));
+    const id = entry && entry.password ? String(Number(entry.password)) : await getYgoCardId(name);
 
     if(id){
       imgs.push(`
@@ -593,7 +602,7 @@ function populateFormatFilter(decks){
   Object.keys(seen).sort().forEach(f=>{
     const opt=document.createElement("option");
     opt.value=f;
-    opt.textContent=f;
+    opt.textContent=NeoGoatDefaults.formatLabel(f);
     sel.appendChild(opt);
   });
 }
@@ -616,7 +625,7 @@ function renderGrid(decks){
   grid.style.display="grid";
 
   for(const d of decks){
-    const date=new Date(d.created_at).toLocaleDateString("es-MX",{year:"numeric",month:"short",day:"numeric"});
+    const date=new Date(d.created_at).toLocaleDateString("es-MX",{year:"numeric",month:"short",day:"numeric",timeZone:d.is_default?"UTC":undefined});
     const mainCount=totalCards(d.main_deck);
     const extraCount=totalCards(d.extra_deck);
     const sideCount=totalCards(d.side_deck);
@@ -626,10 +635,11 @@ function renderGrid(decks){
     a.className="deck-card";
     a.href=`/deck.html?slug=${encodeURIComponent(d.slug)}`;
     a.innerHTML=`
+      ${d.is_default?`<div class="archetype">NeoGoat Pro · ${String(d.default_order).padStart(2,"0")} · Guía + Side</div>`:""}
       <div class="title">${escHtml(d.title)}</div>
       <div class="thumbStrip" id="thumbs-${safeId}"></div>
       ${d.archetype?`<div class="archetype">${escHtml(d.archetype)}</div>`:""}
-      <div class="meta">By ${escHtml(d.author_name)} · ${escHtml(d.format||"")} · ${date}</div>
+      <div class="meta">By ${escHtml(d.author_name)} · ${escHtml(NeoGoatDefaults.formatLabel(d.format))} · ${date}</div>
       ${d.description?`<div class="desc">${escHtml(d.description)}</div>`:""}
       <div class="counts">
         <span class="countBadge">Main ${mainCount}</span>
@@ -646,6 +656,7 @@ function applyFilters(){
   const q=normText(document.getElementById("fSearch").value);
   const a=normText(document.getElementById("fArchetype").value);
   const f=document.getElementById("fFormat").value;
+  const source=document.getElementById("fSource").value;
 
   const c1=document.getElementById("fCard1").value;
   const c2=document.getElementById("fCard2").value;
@@ -659,12 +670,13 @@ function applyFilters(){
     const matchQ=!q||title.includes(q)||author.includes(q);
     const matchA=!a||archetype.includes(a);
     const matchF=!f||d.format===f;
+    const matchSource=!source||(source==="defaults"?d.is_default:!d.is_default);
 
     const matchC1=deckContainsCard(d,c1);
     const matchC2=deckContainsCard(d,c2);
     const matchC3=deckContainsCard(d,c3);
 
-    return matchQ&&matchA&&matchF&&matchC1&&matchC2&&matchC3;
+    return matchQ&&matchA&&matchF&&matchSource&&matchC1&&matchC2&&matchC3;
   });
 
   renderGrid(filtered);
@@ -676,13 +688,28 @@ document.getElementById("fCard1").addEventListener("input",applyFilters);
 document.getElementById("fCard2").addEventListener("input",applyFilters);
 document.getElementById("fCard3").addEventListener("input",applyFilters);
 document.getElementById("fFormat").addEventListener("change",applyFilters);
+document.getElementById("fSource").addEventListener("change",applyFilters);
 
 (async()=>{
   try{
-    allDecks=await loadDecks();
+    const [defaults,community,config]=await Promise.allSettled([
+      NeoGoatDefaults.load(),loadDecks(),
+      fetch("/data/config.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("Format unavailable");return r.json()})
+    ]);
+    if(defaults.status==="rejected"&&community.status==="rejected")throw new Error("No se pudo cargar ninguna colección. Intenta recargar la página.");
+    allDecks=NeoGoatDefaults.merge(defaults.status==="fulfilled"?defaults.value:[],community.status==="fulfilled"?community.value:[]);
+    const notices=[];
+    if(defaults.status==="rejected")notices.push("Los perfiles de NeoGoat Pro no están disponibles temporalmente.");
+    if(community.status==="rejected")notices.push("Los perfiles de la comunidad no están disponibles temporalmente. Puedes consultar los 20 predeterminados.");
+    if(config.status==="fulfilled")document.getElementById("currentFormatText").textContent="CURRENT FORMAT: "+NeoGoatDefaults.formatLabel(config.value.currentFormatId);
+    else notices.push("No se pudo comprobar el formato activo.");
+    if(notices.length){document.getElementById("libraryNotice").textContent=notices.join(" ");document.getElementById("libraryNotice").hidden=false;}
     populateFormatFilter(allDecks);
+    const params=new URLSearchParams(location.search);
+    if(params.get("collection")==="defaults")document.getElementById("fSource").value="defaults";
+    if(config.status==="fulfilled"&&allDecks.some(d=>d.format===config.value.currentFormatId))document.getElementById("fFormat").value=config.value.currentFormatId;
     document.getElementById("loading").style.display="none";
-    renderGrid(allDecks);
+    applyFilters();
   }catch(e){
     document.getElementById("loading").textContent="Error loading decks: "+e.message;
   }

@@ -1,0 +1,2 @@
+# Downloads are the original release bytes, including original line endings.
+oct_2026/*.ydk -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
