@@ -195,6 +195,16 @@ async function loadCardData(deckFormat){
     cardList=normalizePool(raw);cardByName={};cardList.forEach(c=>{if(c&&c.name)cardByName[normName(c.name)]=c});
   }catch(e){console.warn("Could not load card data",e);$("currentFormatText").textContent="CURRENT FORMAT"}
 }
+function loadDeckCardData(deck){
+  // Pack posts may contain cards outside the selected constructed format.
+  // Use their saved metadata for this viewer only; never modify the format pool.
+  for(const c of [...(deck.main_deck||[]),...(deck.extra_deck||[]),...(deck.side_deck||[])]){
+    if(!c||!c.name||cardByName[normName(c.name)])continue;
+    const id=String(c.password||"");
+    if(!/^[1-9][0-9]{0,8}$/.test(id))continue;
+    cardByName[normName(c.name)]={...c,password:id};
+  }
+}
 function cardDataByName(name){return cardByName[normName(name)]||null}
 function cardPassword(name){const c=cardDataByName(name);return c&&String(c.password||c.id||c.card_id||"")}
 function cardImageByName(name){const id=cardPassword(name);return id?IMG+id+".jpg":"neogoatbuilderlogo.png"}
@@ -279,7 +289,7 @@ function setupImageControls(){setImageExportMode(imageExportMode,false);$("image
   const slug=new URLSearchParams(location.search).get("slug");if(!slug){$("loading").style.display="none";$("notfound").style.display="block";return}
   try{
     const res=await fetch(`${SUPABASE_URL}/rest/v1/decks?slug=eq.${encodeURIComponent(slug)}&is_public=eq.true&limit=1`,{headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}});if(!res.ok)throw new Error("Deck request failed: "+res.status);const data=await res.json(),deck=data[0];$("loading").style.display="none";if(!deck){$("notfound").style.display="block";return}
-    await loadCardData(deck.format);setupTestHandControls();setupImageControls();
+    await loadCardData(deck.format);loadDeckCardData(deck);setupTestHandControls();setupImageControls();
     currentDeck=deck;document.title=`${deck.title} – NeoGoat`;$("dTitle").textContent=deck.title;if(deck.archetype){$("dArchetype").textContent=deck.archetype;$("dArchetype").style.display="inline-block"}
     const date=new Date(deck.created_at).toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"}),fmtLabel=(deck.format||currentFormatId)==="oct_2026"?"OCTOBER 2026":String(deck.format||currentFormatId||"NeoGoat").replace(/_/g," ").toUpperCase();$("dFormatBadge").textContent=fmtLabel;$("dMeta").textContent=`By ${deck.author_name||"Unknown"} · ${date}`;
     if(deck.description){$("dDesc").textContent=deck.description;$("dDesc").style.display="-webkit-box";requestAnimationFrame(()=>{if($("dDesc").scrollHeight>$("dDesc").clientHeight+4)$("readMoreDescBtn").style.display="inline-block"});$("readMoreDescBtn").onclick=()=>{$("dDesc").classList.toggle("expanded");$("readMoreDescBtn").textContent=$("dDesc").classList.contains("expanded")?"Show Less":"Read More"}}
