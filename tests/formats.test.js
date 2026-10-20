@@ -10,6 +10,7 @@ const json = name => JSON.parse(read(name));
 const augustPath = "data/formats/aug_2026/cards_aug_2026.json";
 const august = json(augustPath);
 const october = json("data/formats/oct_2026/cards_oct_2026.json");
+const artworkAliases = json("data/decks/card-aliases.json");
 const before = new Map(august.map(card => [card.password, card]));
 const after = new Map(october.map(card => [card.password, card]));
 assert.equal(crypto.createHash("sha256").update(read(augustPath).replace(/\r\n/g, "\n")).digest("hex"),
@@ -90,7 +91,7 @@ function sourceFunction(name) {
 const deck = { main: new Map(), extra: new Map(), side: new Map() };
 const validation = {};
 const alerts = [];
-const context = vm.createContext({ cardList: october, cardMap: {}, rules: {}, deck,
+const context = vm.createContext({ cardList: october, cardMap: {}, rules: {}, artworkAliases, deck,
   document: { getElementById: () => validation },
   window: { NeoGoatYDKE: require("../ydke.js") },
   alert: message => alerts.push(message), console });
@@ -116,6 +117,35 @@ for (const card of october) {
 }
 assert.equal(context.resolveCardId("19230407"), "19230408", "Canonical Offerings ID imports into the frozen artwork entry");
 assert.equal(context.resolveCardId("88369727"), null, "Removed cards must not resolve");
+
+// Art variants resolve to their existing pool entry, while distinct cards with a
+// shared printed name retain their own identity and must exist in this format.
+const distinctSharedNames = ["295517", "27927359", "54415063", "80316585", "91932350"];
+assert.deepEqual(Object.keys(context.sharedCopyIds).sort(), [...distinctSharedNames].sort());
+const poolByNumber = new Map(october.map(card => [Number(card.password), card.password]));
+const artworkEntries = Object.entries(artworkAliases).filter(([id]) => !distinctSharedNames.includes(id));
+assert.equal(artworkEntries.length, 83);
+for (const [artwork, canonical] of artworkEntries) {
+  const expected = poolByNumber.get(Number(canonical)) || poolByNumber.get(Number(artwork));
+  assert(expected, `Artwork family ${artwork}/${canonical} has an active pool entry`);
+  for (const id of [artwork, canonical]) {
+    assert.equal(context.resolveCardId(id), expected, `Artwork family ${artwork}/${canonical}`);
+    assert.equal(context.resolveCardId(String(id).padStart(8, "0")), expected, `Padded artwork ${id}`);
+  }
+  assert.equal(context.copyIdentity(artwork), context.copyIdentity(canonical), `Shared artwork count ${artwork}`);
+}
+for (const id of distinctSharedNames) {
+  const card = context.cardMap[id];
+  assert.equal(context.resolveCardId(id), id, card.name);
+  delete context.cardMap[id];
+  assert.equal(context.resolveCardId(id), null, `${card.name} cannot substitute a different card when absent`);
+  context.cardMap[id] = card;
+}
+for (const id of ["99999999", ...removed]) assert.equal(context.resolveCardId(id), null, `Outside pool: ${id}`);
+const ring = context.cardMap["83555666"];
+delete context.cardMap["83555666"];
+assert.equal(context.resolveCardId("83555667"), null, "An artwork alias cannot add an off-format card");
+context.cardMap["83555666"] = ring;
 
 function clearDeck() {
   for (const section of ["main", "extra", "side"]) deck[section].clear();
@@ -181,6 +211,72 @@ assert.equal(deck.main.get("19230408"), 2);
 assert.equal(deck.main.get("52467217"), 3);
 assert.equal(context.validate(), false);
 
+// Reproduce a 40/0/15 deck whose final Main card uses Ring's alternate artwork.
+const ringMain = [...mainIds.slice(0, 39), 83555667];
+const ringSide = october.filter(card => card.ban_status === "unlimited" && !context.isExtraData(card))
+  .slice(40, 55).map(card => Number(card.password));
+const ringYdk = "#main\n" + ringMain.join("\n") + "\n#extra\n!side\n" + ringSide.join("\n") + "\n";
+context.importYDK(ringYdk);
+assert.equal(context.cnt("main"), 40);
+assert.equal(context.cnt("extra"), 0);
+assert.equal(context.cnt("side"), 15);
+assert.equal(deck.main.get("83555666"), 1);
+assert.equal(context.validate(), true, validation.textContent);
+assert.match(alerts.at(-1), /55 cards/);
+assert.doesNotMatch(alerts.at(-1), /Missing/);
+
+context.importYDK(ringYdk + "83555666\n");
+assert.equal(context.copies("83555667"), 2, "Original and alternate art count together across sections");
+assert.equal(context.validate(), false);
+assert.match(validation.textContent, /Ring of Destruction: max 1/);
+assert.equal(context.canPlace("83555667", "main"), "Copy limit reached.");
+
+const ringRule = context.rules["83555666"];
+context.rules["83555666"] = { legal: false, limit: 0 };
+context.importYDK(ringYdk);
+assert.equal(deck.main.get("83555666"), 1, "A known forbidden card remains visible for correction");
+assert.equal(context.validate(), false);
+assert.match(validation.textContent, /Ring of Destruction: forbidden/);
+assert.match(context.canPlace("83555667", "main"), /forbidden/);
+context.rules["83555666"] = ringRule;
+
+const ringYdke = context.importYdkeDecklist(context.window.NeoGoatYDKE.stringify({ main: ringMain, extra: [], side: ringSide }));
+assert.equal(ringYdke.count, 55);
+assert.equal(ringYdke.missing.length, 0);
+assert.equal(deck.main.get("83555666"), 1);
+assert.equal(context.validate(), true, validation.textContent);
+clearDeck();
+context.importSection([{ password: 83555667, qty: 1 }, { id: 83555666, qty: 1 }], "main");
+assert.equal(deck.main.get("83555666"), 2, "Saved deck imports aggregate both Ring art IDs");
+assert.equal(context.validate(), false);
+assert.match(validation.textContent, /Ring of Destruction: max 1/);
+
+// Optional local reproduction file; its contents are never copied into the repo.
+if (process.argv[2]) {
+  const source = fs.readFileSync(path.resolve(process.argv[2]), "utf8");
+  const expected = { main: [], extra: [], side: [] };
+  let section;
+  for (const line of source.split(/\r?\n/).map(value => value.trim())) {
+    if (["#main", "#extra", "!side"].includes(line)) section = line.slice(1);
+    else if (/^\d+$/.test(line)) {
+      assert(section, "Local YDK must identify its section");
+      const id = context.resolveCardId(line);
+      assert(id, `Unresolved local YDK card: ${line}`);
+      expected[section].push(id);
+    }
+  }
+  assert.deepEqual(Object.values(expected).map(ids => ids.length), [40, 0, 15]);
+  assert.match(source, /(?:^|\r?\n)83555667(?:\r?\n|$)/, "Local reproduction includes Ring's alternate artwork");
+  context.importYDK(source);
+  for (const zone of ["main", "extra", "side"]) {
+    const actual = [...deck[zone]].flatMap(([id, quantity]) => Array(quantity).fill(id));
+    assert.deepEqual(actual.sort(), expected[zone].sort(), `Local YDK ${zone} multiset is preserved`);
+  }
+  assert.equal(deck.main.get("83555666"), 1);
+  assert.equal(context.validate(), true, validation.textContent);
+  assert.doesNotMatch(alerts.at(-1), /Missing/);
+}
+
 const config = json("data/config.json");
 assert.deepEqual(config, {currentFormatId:"oct_2026",rulesFile:"cards_oct_2026.json"});
 assert(Array.isArray(json(`data/formats/${config.currentFormatId}/${config.rulesFile}`)), "Active format must resolve");
@@ -188,4 +284,4 @@ assert(!html.includes('"aug_2026"'), "Builder defaults and submission metadata m
 assert(html.includes("OCTOBER 2026 FORMAT"));
 assert.equal(JSON.parse(context.makeDeckSignature({})).format, "oct_2026");
 execFileSync(process.execPath, [path.join(root, "tools/build-october-2026.js"), "--check"], { stdio: "inherit" });
-console.log("FORMATS_TEST PASS: October active; 2229 cards; exact 17/6/4 delta; historical data preserved; numeric IDs, shared limits and all import paths verified");
+console.log("FORMATS_TEST PASS: October active; 2229 cards; exact 17/6/4 delta; historical data preserved; 83 artwork aliases, shared limits and all import paths verified");

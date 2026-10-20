@@ -42,6 +42,8 @@ The [profile sources and validation instructions](data/decks/README.md) document
 
 Public website UI and official deck descriptions are written in English for an international audience. Preserve the existing page design unless a redesign is explicitly requested. Community-authored content keeps its original language.
 
+YDK, YDKE and numeric deck imports resolve known alternate artwork IDs through `data/decks/card-aliases.json`, using the active format's card entry and copy limit. For example, Ring of Destruction `83555667` imports as `83555666` instead of being dropped. Distinct shared-name cards such as Harpie Lady 1 remain separate cards; their existing shared copy limits still apply. Imported quantities are preserved for validation, and exports use the resolved format ID. Historical format files are unchanged.
+
 ## Platform Architecture
 
 This platform is designed to be:
