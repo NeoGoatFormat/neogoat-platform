@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-11-04",
+  "scope": "Gallery classification only. Never changes card-pool membership, passwords, card text or NeoGoat copy limits.",
+  "source": "https://www.duelingbook.com/goat-format",
+  "sourceSection": "Cards — The following cards are legal in this format",
+  "notes": [
+    "The October JSON has explicit Normal Goat Cardpool, OCG Goat Cardpool, Added Structure Decks and Extra Card Pool values.",
+    "All non-classic October entries were compared by normalized name against the Duelingbook classic Goat list. Only the two entries below already occur in that list.",
+    "These exceptions remove classic reprints from All Added Cards and their addition category; they remain in Complete Card Pool with the original JSON pool shown in card details.",
+    "Do not use printedinTCG as the historical OCG-exclusive cutoff: many OCG-era additions have since been printed in the TCG.",
+    "The October JSON contains 103 Extra Card Pool entries (89 unlimited, 5 limited, 9 semi-limited). The gallery follows the JSON without imposing the blog description of a 90-card maximum."
+  ],
+  "classicOverrides": [
+    {
+      "password": "28649820",
+      "name": "Embodiment of Apophis",
+      "originalPool": "OCG Goat Cardpool",
+      "source": "https://www.duelingbook.com/goat-format",
+      "reason": "Listed by name in Duelingbook's classic Goat Format card pool; not a new NeoGoat addition.",
+      "corroboration": "https://www.goatformat.com/cardpool.html"
+    },
+    {
+      "password": "48642904",
+      "name": "Mesmeric Control",
+      "originalPool": "Added Structure Decks",
+      "source": "https://www.duelingbook.com/goat-format",
+      "reason": "Listed by name in Duelingbook's classic Goat Format card pool; not a new NeoGoat addition.",
+      "corroboration": "https://www.goatformat.com/cardpool.html"
+    }
+  ]
+}

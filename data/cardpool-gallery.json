@@ -1,0 +1,11 @@
+{
+  "activeFormatId": "oct_2026",
+  "classificationFile": "data/cardpool-classification.json",
+  "formats": [
+    {
+      "id": "oct_2026",
+      "label": "October 2026",
+      "cardsFile": "data/formats/oct_2026/cards_oct_2026.json"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+<!-- NeoGoat Visual Card Pool: paste after the October banlist links and
+     immediately before <h3>The Card Pool contains:</h3>, in Blogger HTML view. -->
+<section id="neogoat-visual-cardpool" aria-label="NeoGoat Visual Card Pool">
+  <style>
+    #neogoat-visual-cardpool { margin: 1.5em 0; min-width: 0; }
+    #neogoat-visual-cardpool .neogoat-gallery-link { margin: 0 0 .8em; }
+    #neogoat-visual-cardpool .neogoat-gallery-link a {
+      display: inline-block; padding: .65em .9em; border-radius: 6px;
+      background: #0a1825; color: #8ef5ff; font-weight: 700;
+      text-decoration: underline; text-underline-offset: .15em;
+    }
+    #neogoat-visual-cardpool .neogoat-gallery-link a:focus-visible {
+      outline: 3px solid #236bd7; outline-offset: 3px;
+    }
+    #neogoat-visual-cardpool iframe {
+      display: block; box-sizing: border-box; width: 100%; max-width: 100%;
+      height: 1100px; border: 0; border-radius: 10px; background: #050b12;
+    }
+  </style>
+  <p class="neogoat-gallery-link">
+    <a href="https://neogoat-platform.vercel.app/cardpool.html"
+       target="_blank" rel="noopener">Open the NeoGoat Visual Card Pool in a new tab ↗</a>
+  </p>
+  <iframe id="neogoat-cardpool-frame"
+          src="https://neogoat-platform.vercel.app/cardpool.html?embed=1"
+          title="NeoGoat Visual Card Pool — browse cards and banlist status"
+          width="100%" height="1100"
+          loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <noscript><p>Use the link above to open the interactive card gallery.</p></noscript>
+  <script>
+    (function () {
+      "use strict";
+      var frame = document.getElementById("neogoat-cardpool-frame");
+      if (!frame || frame.dataset.neogoatConnected) return;
+      frame.dataset.neogoatConnected = "true";
+      var galleryOrigin = new URL(frame.src).origin;
+      var scheduled = false;
+
+      function sendViewport() {
+        scheduled = false;
+        if (!frame.isConnected || !frame.contentWindow) return;
+        var rect = frame.getBoundingClientRect();
+        var viewportHeight = window.innerHeight;
+        var visibleHeight = Math.max(0,
+          Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0));
+        frame.contentWindow.postMessage({
+          type: "neogoat:viewport",
+          top: Math.max(0, -rect.top),
+          height: visibleHeight || viewportHeight,
+          width: window.innerWidth
+        }, galleryOrigin);
+      }
+
+      function scheduleViewport() {
+        if (scheduled) return;
+        scheduled = true;
+        window.requestAnimationFrame(sendViewport);
+      }
+
+      window.addEventListener("message", function (event) {
+        if (event.origin !== galleryOrigin || event.source !== frame.contentWindow) return;
+        var data = event.data;
+        if (!data || typeof data !== "object") return;
+        if (data.type === "neogoat:resize") {
+          if (typeof data.height !== "number" || !Number.isFinite(data.height) || data.height <= 0) return;
+          var height = Math.max(300, Math.min(30000, Math.ceil(data.height)));
+          if (frame.style.height !== height + "px") frame.style.height = height + "px";
+          scheduleViewport();
+        } else if (data.type === "neogoat:scroll-top") {
+          frame.scrollIntoView({ block: "start", behavior: "auto" });
+          scheduleViewport();
+        } else if (data.type === "neogoat:ready") {
+          scheduleViewport();
+        }
+      });
+      frame.addEventListener("load", scheduleViewport);
+      window.addEventListener("scroll", scheduleViewport, { passive: true });
+      window.addEventListener("resize", scheduleViewport);
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", scheduleViewport);
+      }
+      scheduleViewport();
+    })();
+  </script>
+</section>
+<!-- End NeoGoat Visual Card Pool -->

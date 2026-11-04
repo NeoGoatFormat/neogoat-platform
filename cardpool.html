@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the NeoGoat card pool visually. Browse OCG exclusives, Structure Deck additions, the Extra Pool and the complete format, with current copy limits.">
+  <meta name="theme-color" content="#080d16">
+  <title>NeoGoat Visual Card Pool</title>
+  <link rel="icon" type="image/png" href="/neogoatbuilderlogo.png">
+  <link rel="stylesheet" href="assets/cardpool.css">
+  <script src="assets/cardpool-core.js" defer></script>
+  <script src="assets/cardpool.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#gallery-section">Skip to cards</a>
+  <header class="site-header">
+    <a class="brand" href="/" target="_top"><img src="/neogoatbuilderlogo.png" width="42" height="42" alt=""><span>NEOGOAT<span class="brand-subtitle">FORMAT ARCHIVE</span></span></a>
+    <nav class="site-nav" aria-label="NeoGoat navigation">
+      <a href="/" target="_top">Deck Builder</a>
+      <a href="/decks.html" target="_top">Deck Library</a>
+      <a href="https://neogoatformat.blogspot.com/p/cardpool.html" target="_blank" rel="noopener">Format Guide <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <div class="masthead">
+      <div>
+        <p class="eyebrow"><span aria-hidden="true">◇</span> EXPLORE THE FORMAT</p>
+        <h1>NeoGoat <span>Visual Card Pool</span></h1>
+        <p class="intro">Discover the cards. Find your next strategy.</p>
+      </div>
+      <label class="format-field" for="format-select">Format<select id="format-select" aria-label="Format"><option value="oct_2026">October 2026</option></select></label>
+    </div>
+
+    <nav class="category-tabs" id="category-tabs" aria-label="Card pool categories">
+      <button type="button" data-category="added" aria-pressed="true"><span>All Added Cards</span><span class="category-count" data-count="added">—</span></button>
+      <button type="button" data-category="ocg" aria-pressed="false"><span>OCG Exclusives</span><span class="category-count" data-count="ocg">—</span></button>
+      <button type="button" data-category="structure" aria-pressed="false"><span>Structure Deck Additions</span><span class="category-count" data-count="structure">—</span></button>
+      <button type="button" data-category="extra" aria-pressed="false"><span>Extra Pool</span><span class="category-count" data-count="extra">—</span></button>
+      <button type="button" data-category="complete" aria-pressed="false"><span>Complete Card Pool</span><span class="category-count" data-count="complete">—</span></button>
+    </nav>
+
+    <section id="gallery-section" aria-labelledby="category-title">
+      <div class="collection-heading">
+        <h2 id="category-title" tabindex="-1">All Added Cards</h2>
+        <p id="category-description">Explore the additions beyond the classic Goat card pool.</p>
+      </div>
+      <form class="filters" role="search" onsubmit="return false">
+        <label class="search-field" for="search-input"><span>Find a card</span><span class="search-control"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="search-input" type="search" placeholder="Search name or password…" autocomplete="off" spellcheck="false"></span></label>
+        <label for="type-filter">Card type<select id="type-filter"><option value="">All types</option><option value="Monster">Monster</option><option value="Spell">Spell</option><option value="Trap">Trap</option></select></label>
+        <label for="subtype-filter">Subtype<select id="subtype-filter"><option value="">All subtypes</option></select></label>
+        <label for="status-filter">Banlist status<select id="status-filter"><option value="">All statuses</option><option value="unlimited">Unlimited · 3</option><option value="limited">Limited · 1</option><option value="semi-limited">Semi-Limited · 2</option><option value="forbidden">Forbidden · 0</option></select></label>
+        <button class="clear-button" id="clear-filters" type="button">Clear filters</button>
+      </form>
+
+      <div class="gallery-toolbar"><p id="result-summary" role="status" aria-live="polite">Loading cards…</p><p class="sort-note">Name A–Z <span aria-hidden="true">↓</span></p></div>
+      <div class="notice loading-state" id="loading-state" role="status"><span class="loading-dot" aria-hidden="true"></span> Loading the card collection…</div>
+      <div class="notice error-state" id="load-error" role="alert" hidden><p>We couldn’t load the card pool. Check your connection and try again.</p><button class="secondary-button" id="retry-load" type="button">Try again</button></div>
+      <div class="notice empty-state" id="empty-state" hidden><h3>No cards match these filters</h3><p>Try a different name or password, or clear the filters to browse this collection.</p></div>
+      <ul class="card-grid" id="gallery" aria-label="Cards"></ul>
+      <nav class="pagination" id="pagination" aria-label="Gallery pages" hidden><button class="secondary-button" id="previous-page" type="button" disabled><span aria-hidden="true">←</span> Previous</button><span id="page-label" aria-live="polite"></span><button class="secondary-button" id="next-page" type="button">Next <span aria-hidden="true">→</span></button></nav>
+      <p class="collection-note">Forbidden cards are included for reference and cannot be played. A card’s banlist status always applies.</p>
+    </section>
+
+    <footer class="page-footer"><span>NEOGOAT <span class="footer-divider">/</span> A new chapter of a classic format.</span><a href="https://neogoatformat.blogspot.com/p/current-banlist.html" target="_blank" rel="noopener">View the current banlist <span aria-hidden="true">↗</span></a></footer>
+    <noscript><p class="notice">Enable JavaScript to explore this gallery. You can also <a href="https://neogoatformat.blogspot.com/p/cardpool.html" target="_blank" rel="noopener">read the NeoGoat card pool guide</a>.</p></noscript>
+  </main>
+
+  <dialog id="card-dialog" aria-labelledby="detail-name">
+    <div class="dialog-controls"><button class="dialog-close" id="close-dialog" type="button" aria-label="Close card details">×</button></div>
+    <div class="detail-layout">
+      <div class="detail-art image-wrap"><img id="detail-image" width="421" height="614" alt=""><span class="image-fallback">Card image unavailable</span></div>
+      <div class="detail-content">
+        <p class="eyebrow">CARD DETAILS</p>
+        <h2 id="detail-name"></h2>
+        <div id="detail-status" class="detail-status"></div>
+        <dl class="detail-facts"><div><dt>Password</dt><dd id="detail-password"></dd></div><div><dt>Card type</dt><dd id="detail-type"></dd></div><div><dt>Pool origin</dt><dd id="detail-origin"></dd></div><div><dt>Maximum copies</dt><dd id="detail-limit"></dd></div></dl>
+        <p id="detail-stats" class="detail-stats"></p>
+        <h3 class="effect-title">Card text</h3>
+        <p id="detail-text" class="detail-text"></p>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
