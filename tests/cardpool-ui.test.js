@@ -53,7 +53,11 @@ function setup(options = {}) {
   const $ = id => window.document.getElementById(id);
   const select = (id, value) => { $(id).value = value; $(id).dispatchEvent(new window.Event("change")); };
   const query = value => { $("search-input").value = value; $("search-input").dispatchEvent(new window.Event("input")); };
-  const category = value => window.document.querySelector('[data-category="' + value + '"]').click();
+  const categoryInputs = () => [...window.document.querySelectorAll('#category-selection input[type="checkbox"]')];
+  const selectCategories = values => {
+    for (const input of categoryInputs()) if (input.checked !== values.includes(input.dataset.category)) input.click();
+  };
+  const category = value => selectCategories(value === "complete" ? Object.keys(core.CATEGORIES) : value === "added" ? core.DEFAULT_CATEGORIES : [value]);
   const tiles = () => [...window.document.querySelectorAll("#gallery .card-tile")];
   const ready = () => until(() => $("loading-state").hidden && $("gallery").getAttribute("aria-busy") === "false", "card data settles");
   const sendParent = (data, origin = "https://neogoatformat.blogspot.com", source = parent) => {
@@ -61,7 +65,7 @@ function setup(options = {}) {
     Object.assign(event, { data, origin, source });
     window.dispatchEvent(event);
   };
-  return { dom, window, $, select, query, category, tiles, ready, requests, messages, sendParent };
+  return { dom, window, $, select, query, category, categoryInputs, selectCategories, tiles, ready, requests, messages, sendParent };
 }
 
 async function main() {
@@ -71,11 +75,14 @@ async function main() {
     assert.equal(app.$("search-input").value, "");
     assert.equal(app.$("category-title").textContent, "All Added Cards");
     assert.equal(app.tiles().length, 36, "Initial browsing needs no query and renders one bounded page");
-    const expected = { added: "531", ocg: "390", structure: "38", extra: "103", complete: "2,229" };
+    const expected = { classic: "1,698", ocg: "390", structure: "38", extra: "103" };
     for (const [category, count] of Object.entries(expected)) {
       assert.equal(app.window.document.querySelector('[data-count="' + category + '"]').textContent, count);
     }
-    assert.match(app.$("result-summary").textContent, /531 of 531 cards/);
+    assert.match(app.$("result-summary").textContent, /531 unique cards selected.*531 match/);
+    assert.equal(app.categoryInputs().length, 4);
+    assert.deepEqual(app.categoryInputs().filter(input => input.checked).map(input => input.dataset.category), ["ocg", "structure", "extra"]);
+    assert.equal(app.window.document.querySelector("#category-tabs"), null);
     assert(app.tiles().every(tile => tile.querySelector("img").loading === "lazy"));
     assert(app.requests.every(request => request.settings.cache === "no-cache"));
     const firstPage = app.tiles().map(tile => tile.dataset.password);
@@ -85,6 +92,31 @@ async function main() {
     app.$("previous-page").click();
     assert.deepEqual(app.tiles().map(tile => tile.dataset.password), firstPage);
 
+    // Independent checkboxes immediately combine or remove categories.
+    const totals = { classic: 1698, ocg: 390, structure: 38, extra: 103 };
+    const categoryKeys = Object.keys(totals);
+    for (let mask = 0; mask < 16; mask++) {
+      const selected = categoryKeys.filter((_, index) => mask & (1 << index));
+      app.selectCategories(selected);
+      const total = selected.reduce((sum, category) => sum + totals[category], 0);
+      assert(app.$("result-summary").textContent.startsWith(total.toLocaleString("en") + " unique cards selected"));
+      assert.equal(app.tiles().length, Math.min(total, 36));
+      assert.equal(app.$("empty-state").hidden, total !== 0);
+      assert.match(app.$("page-label").textContent, /^Page 1 of /);
+    }
+    app.$("clear-categories").click();
+    assert(app.categoryInputs().every(input => !input.checked));
+    assert.equal(app.$("empty-title").textContent, "Select at least one category");
+    assert.equal(app.$("pagination").hidden, true);
+    app.$("select-all-categories").click();
+    assert(app.categoryInputs().every(input => input.checked));
+    assert.match(app.$("result-summary").textContent, /^2,229 unique cards selected/);
+    assert.equal(app.$("category-title").textContent, "Complete Card Pool");
+    app.$("next-page").click();
+    app.categoryInputs().find(input => input.dataset.category === "classic").click();
+    assert.match(app.$("page-label").textContent, /^Page 1 of /);
+    assert.match(app.$("result-summary").textContent, /^531 unique cards selected/);
+
     app.category("extra");
     app.select("type-filter", "Spell");
     app.select("subtype-filter", "Continuous");
@@ -92,6 +124,20 @@ async function main() {
     app.query("Future Fusion");
     assert.equal(app.tiles().length, 1, "Category, type, subtype, status and query combine");
     assert.equal(app.tiles()[0].dataset.password, "77565204");
+    app.$("clear-categories").click();
+    assert.equal(app.tiles().length, 0);
+    assert.equal(app.$("subtype-filter").value, "Continuous", "Clearing categories retains the subtype filter");
+    assert.equal(app.$("search-input").value, "Future Fusion");
+    assert.equal(app.$("type-filter").value, "Spell");
+    assert.equal(app.$("status-filter").value, "semi-limited");
+    app.$("select-all-categories").click();
+    assert.equal(app.$("search-input").value, "Future Fusion");
+    assert.equal(app.$("type-filter").value, "Spell");
+    assert.equal(app.$("subtype-filter").value, "Continuous");
+    assert.equal(app.$("status-filter").value, "semi-limited");
+    assert.match(app.$("result-summary").textContent, /^2,229 unique cards selected.*1 match/);
+    assert.equal(app.tiles().length, 1);
+    app.category("extra");
     app.tiles()[0].click();
     const fusion = october.find(card => card.password === "77565204");
     assert.equal(app.$("card-dialog").open, true);
@@ -151,6 +197,23 @@ async function main() {
     await app.ready();
     assert.equal(app.requests.filter(request => request.path === cardPath).length, 1, "Cached format does not refetch per filter or reselection");
   } finally { app.dom.window.close(); }
+
+  // Overlapping groups and padded IDs remain one visible card and one unique total.
+  const overlappingCard = october.find(card => card.password === "3019642");
+  const overlap = setup({ fixture: { [cardPath]: [overlappingCard, { ...overlappingCard, password: "03019642", pool: "OCG Goat Cardpool" }] } });
+  try {
+    await overlap.ready();
+    assert.equal(overlap.tiles().length, 1);
+    assert.match(overlap.$("result-summary").textContent, /^1 unique cards selected/);
+    assert.equal(overlap.window.document.querySelector('[data-count="ocg"]').textContent, "1");
+    assert.equal(overlap.window.document.querySelector('[data-count="extra"]').textContent, "1");
+    overlap.category("ocg");
+    assert.equal(overlap.tiles().length, 1);
+    overlap.category("extra");
+    assert.equal(overlap.tiles().length, 1);
+    overlap.$("select-all-categories").click();
+    assert.equal(overlap.tiles().length, 1);
+  } finally { overlap.dom.window.close(); }
 
   // Untrusted JSON remains text, both in tiles and the enlarged view.
   const injected = { ...october.find(card => card.pool === "Extra Card Pool"),
@@ -223,6 +286,6 @@ async function main() {
     embedded.$("next-page").click();
     assert(embedded.messages.some(message => message.data.type === "neogoat:scroll-top"));
   } finally { embedded.dom.window.close(); }
-  console.log("CARDPOOL_UI_TEST PASS: initial browsing, counts, combined filters, pagination, dialog, safe text, image fallback, loading/retry, cache and iframe protocol.");
+  console.log("CARDPOOL_UI_TEST PASS: 16 checkbox combinations, defaults, unique counts, overlap deduplication, Select all/Clear, preserved filters, pagination, dialog, safe text, image fallback, loading/retry, cache and iframe protocol.");
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

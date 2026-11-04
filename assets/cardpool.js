@@ -5,10 +5,12 @@
   const PAGE_SIZE = 36;
   const embedded = new URLSearchParams(location.search).get("embed") === "1";
   document.documentElement.classList.toggle("is-embedded", embedded);
-  let config, metadata, entries = [], page = 1, category = "added", loadSequence = 0, loaded = false;
+  let config, metadata, entries = [], page = 1, loadSequence = 0, loaded = false;
   let parentOrigin = null, frameViewport = null, lastHeight = 0, resizeFrame = 0;
   const dataCache = new Map(), imageCache = new Map();
-  const filters = () => ({ category, query: $("search-input").value, type: $("type-filter").value,
+  const categoryInputs = [...document.querySelectorAll("#category-selection [data-category]")];
+  const selectedCategories = () => categoryInputs.filter(input => input.checked).map(input => input.dataset.category);
+  const filters = () => ({ categories: selectedCategories(), query: $("search-input").value, type: $("type-filter").value,
     subtype: $("subtype-filter").value, status: $("status-filter").value });
 
   // An iframe may be embedded elsewhere, but only our Blogger and same-origin
@@ -64,7 +66,7 @@
   function setBusy(busy) {
     $("loading-state").hidden = !busy;
     $("gallery").setAttribute("aria-busy", String(busy));
-    for (const element of document.querySelectorAll("#category-tabs button, #search-input, #type-filter, #subtype-filter, #status-filter, #clear-filters")) element.disabled = busy || !loaded;
+    for (const element of document.querySelectorAll("#category-selection input, #category-selection button, #search-input, #type-filter, #subtype-filter, #status-filter, #clear-filters")) element.disabled = busy || !loaded;
   }
   function showError(error) {
     loaded = false;
@@ -106,10 +108,14 @@
     } catch (error) { if (sequence === loadSequence) showError(error); }
     finally { if (sequence === loadSequence) { setBusy(false); notifyHeight(); } }
   }
-  function updateSubtypes() {
+  function updateSubtypes(preserveSelection = false) {
     const type = $("type-filter").value;
     const previous = $("subtype-filter").value;
-    const values = [...new Set(entries.filter(entry => core.inCategory(entry, category) && (!type || entry.card.type === type)).flatMap(entry => core.subtypes(entry.card)))].sort();
+    const values = [...new Set(core.selectCategories(entries, selectedCategories()).filter(entry => !type || entry.card.type === type).flatMap(entry => core.subtypes(entry.card)))].sort();
+    // Category changes should not clear an active filter, even when that
+    // subtype temporarily has no cards in the selected union.
+    if (preserveSelection && previous && !values.includes(previous)) values.push(previous);
+    values.sort();
     $("subtype-filter").replaceChildren(new Option("All subtypes", ""), ...values.map(value => new Option(value, value)));
     $("subtype-filter").value = values.includes(previous) ? previous : "";
   }
@@ -174,26 +180,33 @@
     if (!loaded) return;
     const counts = core.categoryCounts(entries);
     for (const el of document.querySelectorAll("[data-count]")) el.textContent = counts[el.dataset.count].toLocaleString("en");
-    for (const button of document.querySelectorAll("#category-tabs [data-category]")) {
-      const active = button.dataset.category === category;
-      button.setAttribute("aria-pressed", String(active));
-      button.classList.toggle("active", active);
-    }
-    $("category-title").textContent = core.CATEGORIES[category].title;
-    $("category-description").textContent = core.CATEGORIES[category].description;
+    const categories = selectedCategories();
+    const selectedTotal = core.selectCategories(entries, categories).length;
+    const allSelected = categories.length === Object.keys(core.CATEGORIES).length;
+    const additionsSelected = categories.length === core.DEFAULT_CATEGORIES.length && core.DEFAULT_CATEGORIES.every(category => categories.includes(category));
+    $("category-title").textContent = allSelected ? "Complete Card Pool" : additionsSelected ? "All Added Cards" :
+      categories.length === 1 ? core.CATEGORIES[categories[0]].title : "Selected Card Pool";
+    $("category-description").textContent = categories.length === 1 ? core.CATEGORIES[categories[0]].description :
+      allSelected ? "The complete format, including classic Goat cards. Banlist status always applies." :
+      additionsSelected ? "Explore the OCG, Structure Deck and Extra Pool additions beyond classic Goat Format." :
+      "Combine categories to browse their unique cards together.";
     const matches = core.filterCards(entries, filters());
     const totalPages = Math.max(1, Math.ceil(matches.length / PAGE_SIZE));
     page = Math.min(Math.max(page, 1), totalPages);
     const offset = (page - 1) * PAGE_SIZE;
     $("gallery").replaceChildren(...matches.slice(offset, offset + PAGE_SIZE).map(tile));
     $("empty-state").hidden = matches.length !== 0;
+    $("empty-title").textContent = categories.length ? "No cards match these filters" : "Select at least one category";
+    $("empty-description").textContent = categories.length ?
+      "Try a different name or password, or clear the filters to browse this collection." :
+      "Choose one or more card pool categories above to show cards.";
     $("pagination").hidden = matches.length === 0;
     $("previous-page").disabled = page === 1;
     $("next-page").disabled = page === totalPages;
     $("page-label").textContent = "Page " + page + " of " + totalPages;
-    $("result-summary").textContent = matches.length ?
-      matches.length.toLocaleString("en") + " of " + counts[category].toLocaleString("en") + " cards · Showing " + (offset + 1) + "–" + Math.min(offset + PAGE_SIZE, matches.length) + " · A–Z" :
-      "0 of " + counts[category].toLocaleString("en") + " cards match these filters.";
+    $("result-summary").textContent = selectedTotal.toLocaleString("en") + " unique cards selected" + (matches.length ?
+      " · " + matches.length.toLocaleString("en") + " match · Showing " + (offset + 1) + "–" + Math.min(offset + PAGE_SIZE, matches.length) + " · A–Z" :
+      categories.length ? " · 0 match these filters." : " · Select at least one category.");
     notifyHeight();
   }
   function openCard(entry) {
@@ -230,11 +243,19 @@
     else $("category-title").scrollIntoView({ block: "start" });
     $("category-title").focus({ preventScroll: true });
   }
-  for (const button of document.querySelectorAll("#category-tabs [data-category]")) button.addEventListener("click", () => {
-    category = button.dataset.category;
+  function changeCategories() {
     page = 1;
-    updateSubtypes();
+    updateSubtypes(true);
     render();
+  }
+  for (const input of categoryInputs) input.addEventListener("change", changeCategories);
+  $("select-all-categories").addEventListener("click", () => {
+    for (const input of categoryInputs) input.checked = true;
+    changeCategories();
+  });
+  $("clear-categories").addEventListener("click", () => {
+    for (const input of categoryInputs) input.checked = false;
+    changeCategories();
   });
   $("type-filter").addEventListener("change", () => { page = 1; updateSubtypes(); render(); });
   for (const id of ["subtype-filter", "status-filter"]) $(id).addEventListener("change", () => { page = 1; render(); });

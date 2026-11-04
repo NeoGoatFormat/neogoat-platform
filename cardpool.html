@@ -31,13 +31,18 @@
       <label class="format-field" for="format-select">Format<select id="format-select" aria-label="Format"><option value="oct_2026">October 2026</option></select></label>
     </div>
 
-    <nav class="category-tabs" id="category-tabs" aria-label="Card pool categories">
-      <button type="button" data-category="added" aria-pressed="true"><span>All Added Cards</span><span class="category-count" data-count="added">—</span></button>
-      <button type="button" data-category="ocg" aria-pressed="false"><span>OCG Exclusives</span><span class="category-count" data-count="ocg">—</span></button>
-      <button type="button" data-category="structure" aria-pressed="false"><span>Structure Deck Additions</span><span class="category-count" data-count="structure">—</span></button>
-      <button type="button" data-category="extra" aria-pressed="false"><span>Extra Pool</span><span class="category-count" data-count="extra">—</span></button>
-      <button type="button" data-category="complete" aria-pressed="false"><span>Complete Card Pool</span><span class="category-count" data-count="complete">—</span></button>
-    </nav>
+    <fieldset class="category-selection" id="category-selection">
+      <legend>Card pool categories</legend>
+      <div class="category-controls">
+        <div class="category-options">
+          <label class="category-option"><input type="checkbox" data-category="classic"><span>Goat Pool</span><span class="category-count" data-count="classic">—</span></label>
+          <label class="category-option"><input type="checkbox" data-category="ocg" checked><span>OCG Exclusives</span><span class="category-count" data-count="ocg">—</span></label>
+          <label class="category-option"><input type="checkbox" data-category="structure" checked><span>Structure Deck Additions</span><span class="category-count" data-count="structure">—</span></label>
+          <label class="category-option"><input type="checkbox" data-category="extra" checked><span>Extra Pool</span><span class="category-count" data-count="extra">—</span></label>
+        </div>
+        <div class="category-actions"><button type="button" id="select-all-categories">Select all</button><button type="button" id="clear-categories">Clear</button></div>
+      </div>
+    </fieldset>
 
     <section id="gallery-section" aria-labelledby="category-title">
       <div class="collection-heading">
@@ -55,7 +60,7 @@
       <div class="gallery-toolbar"><p id="result-summary" role="status" aria-live="polite">Loading cards…</p><p class="sort-note">Name A–Z <span aria-hidden="true">↓</span></p></div>
       <div class="notice loading-state" id="loading-state" role="status"><span class="loading-dot" aria-hidden="true"></span> Loading the card collection…</div>
       <div class="notice error-state" id="load-error" role="alert" hidden><p>We couldn’t load the card pool. Check your connection and try again.</p><button class="secondary-button" id="retry-load" type="button">Try again</button></div>
-      <div class="notice empty-state" id="empty-state" hidden><h3>No cards match these filters</h3><p>Try a different name or password, or clear the filters to browse this collection.</p></div>
+      <div class="notice empty-state" id="empty-state" hidden><h3 id="empty-title">No cards match these filters</h3><p id="empty-description">Try a different name or password, or clear the filters to browse this collection.</p></div>
       <ul class="card-grid" id="gallery" aria-label="Cards"></ul>
       <nav class="pagination" id="pagination" aria-label="Gallery pages" hidden><button class="secondary-button" id="previous-page" type="button" disabled><span aria-hidden="true">←</span> Previous</button><span id="page-label" aria-live="polite"></span><button class="secondary-button" id="next-page" type="button">Next <span aria-hidden="true">→</span></button></nav>
       <p class="collection-note">Forbidden cards are included for reference and cannot be played. A card’s banlist status always applies.</p>

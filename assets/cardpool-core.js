@@ -17,17 +17,21 @@
     unlimited: { label: "Unlimited", limit: 3 }
   });
   const CATEGORIES = Object.freeze({
-    added: { title: "All Added Cards", description: "Explore the OCG, Structure Deck and Extra Pool additions beyond classic Goat Format." },
+    classic: { title: "Goat Pool", description: "The classic Goat card pool, including its documented reprints." },
     ocg: { title: "OCG Exclusives", description: "Historical OCG pool additions, including cards that received a later TCG printing." },
     structure: { title: "Structure Deck Additions", description: "New cards from the allowed Structure Decks. Classic Goat reprints are excluded." },
-    extra: { title: "Extra Pool", description: "The active Extra Pool, with every banlist status together in one gallery." },
-    complete: { title: "Complete Card Pool", description: "The complete format, including classic Goat cards. Forbidden cards are visible and cannot be played." }
+    extra: { title: "Extra Pool", description: "The active Extra Pool, with every banlist status together in one gallery." }
   });
+  const DEFAULT_CATEGORIES = Object.freeze(["ocg", "structure", "extra"]);
   const collator = new Intl.Collator("en", { sensitivity: "base", numeric: true });
   function identity(value) {
     const raw = String(value == null ? "" : value).trim();
     if (!/^\d{1,8}$/.test(raw) || Number(raw) === 0) throw new Error("Invalid card password in the format data.");
     return String(Number(raw));
+  }
+  function comparableCard(card, id) {
+    const normalized = { ...card, password: id, pool: null };
+    return JSON.stringify(Object.fromEntries(Object.keys(normalized).sort().map(key => [key, normalized[key]])));
   }
   function prepareCards(rows, metadata) {
     if (!Array.isArray(rows)) throw new Error("The format file must contain a card array.");
@@ -41,35 +45,50 @@
       if (!card.name || !Object.hasOwn(POOLS, card.pool) || !Object.hasOwn(STATUS, card.ban_status) || !["Monster", "Spell", "Trap"].includes(card.type)) {
         throw new Error("Unrecognized name, pool, type or banlist status. Review the format data before displaying this version.");
       }
-      if (unique.has(id)) {
-        if (JSON.stringify({ ...unique.get(id).card, password: id }) !== JSON.stringify({ ...card, password: id })) {
-          throw new Error("Conflicting duplicate password in the format data: " + id);
-        }
-        continue;
-      }
       const override = overrides.get(id);
       if (override && (override.name !== card.name || !override.source || !override.reason)) {
         throw new Error("Classification evidence does not match card " + id);
       }
-      unique.set(id, { id, card, category: override ? "classic" : POOLS[card.pool], classificationNote: override || null });
+      const category = override ? "classic" : POOLS[card.pool];
+      if (unique.has(id)) {
+        const existing = unique.get(id);
+        // One password can belong to several pools. All card details and limits
+        // must still agree; only source pool and password padding may differ.
+        if (comparableCard(existing.card, id) !== comparableCard(card, id)) {
+          throw new Error("Conflicting duplicate password in the format data: " + id);
+        }
+        if (!existing.categories.includes(category)) existing.categories.push(category);
+        continue;
+      }
+      unique.set(id, { id, card, category, categories: [category], classificationNote: override || null });
     }
     return [...unique.values()].sort((a, b) => collator.compare(a.card.name, b.card.name) || Number(a.id) - Number(b.id));
   }
   function inCategory(entry, category) {
-    return category === "complete" || (category === "added" ? entry.category !== "classic" : entry.category === category);
+    return (entry.categories || [entry.category]).includes(category);
+  }
+  function selectCategories(entries, categories = DEFAULT_CATEGORIES) {
+    const selected = [...new Set(categories)];
+    const unique = new Map();
+    for (const entry of entries) {
+      if (selected.some(category => inCategory(entry, category))) {
+        const id = identity(entry.card.password);
+        if (!unique.has(id)) unique.set(id, entry);
+      }
+    }
+    return [...unique.values()];
   }
   function categoryCounts(entries) {
-    return Object.fromEntries(Object.keys(CATEGORIES).map(category => [category, entries.filter(entry => inCategory(entry, category)).length]));
+    return Object.fromEntries(Object.keys(CATEGORIES).map(category => [category, selectCategories(entries, [category]).length]));
   }
   function subtypes(card) {
     return [...new Set([card.subType, card.type === "Monster" ? card.class : null].filter(Boolean))];
   }
   function filterCards(entries, filters = {}) {
     const query = String(filters.query || "").trim().toLocaleLowerCase("en");
-    return entries.filter(entry => {
+    return selectCategories(entries, filters.categories).filter(entry => {
       const card = entry.card;
-      return inCategory(entry, filters.category || "added") &&
-        (!filters.type || card.type === filters.type) &&
+      return (!filters.type || card.type === filters.type) &&
         (!filters.subtype || subtypes(card).includes(filters.subtype)) &&
         (!filters.status || card.ban_status === filters.status) &&
         (!query || card.name.toLocaleLowerCase("en").includes(query) || String(card.password).includes(query) || entry.id.padStart(8, "0").includes(query));
@@ -85,5 +104,5 @@
     const dimensions = large ? "&w=421&h=614" : "&w=220&h=321";
     return [...direct.map(url => "https://wsrv.nl/?url=" + encodeURIComponent(url) + dimensions + "&fit=contain&output=webp&q=88"), ...direct];
   }
-  return { POOLS, STATUS, CATEGORIES, identity, prepareCards, inCategory, categoryCounts, subtypes, filterCards, imageCandidates };
+  return { POOLS, STATUS, CATEGORIES, DEFAULT_CATEGORIES, identity, prepareCards, inCategory, selectCategories, categoryCounts, subtypes, filterCards, imageCandidates };
 });

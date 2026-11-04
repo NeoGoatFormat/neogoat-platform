@@ -11,12 +11,23 @@ const byId = new Map(entries.map(entry => [entry.id, entry]));
 const counts = core.categoryCounts(entries);
 
 // Frozen October expectations are regression fixtures, never application totals.
-assert.deepEqual(counts, { added: 531, ocg: 390, structure: 38, extra: 103, complete: 2229 });
-assert.equal(core.filterCards(entries).length, counts.added, "The empty search immediately shows All Added Cards");
+assert.deepEqual(counts, { classic: 1698, ocg: 390, structure: 38, extra: 103 });
+assert.equal(core.filterCards(entries).length, 531, "The empty search immediately shows All Added Cards");
 assert.equal(new Set(entries.map(entry => entry.id)).size, entries.length);
-assert.equal(new Set(core.filterCards(entries).map(entry => entry.id)).size, counts.added);
+assert.equal(new Set(core.filterCards(entries).map(entry => entry.id)).size, 531);
 assert.deepEqual([...new Set(raw.map(card => card.pool))].sort(), Object.keys(core.POOLS).sort());
 assert.equal(JSON.stringify(raw), original, "Preparing the gallery must not mutate the source JSON");
+// Every checkbox combination is a union, including none and the full pool.
+const categories = Object.keys(core.CATEGORIES);
+for (let mask = 0; mask < 16; mask++) {
+  const selected = categories.filter((_, index) => mask & (1 << index));
+  const actual = core.filterCards(entries, { categories: selected });
+  const expected = entries.filter(entry => selected.includes(entry.category));
+  assert.deepEqual(actual.map(entry => entry.id), expected.map(entry => entry.id));
+  assert.equal(new Set(actual.map(entry => entry.id)).size, actual.length);
+}
+assert.equal(core.filterCards(entries, { categories: [] }).length, 0);
+assert.equal(core.filterCards(entries, { categories }).length, 2229);
 for (const entry of entries) {
   assert.strictEqual(entry.card, raw.find(card => core.identity(card.password) === entry.id), "Details preserve the original source card object");
 }
@@ -32,19 +43,19 @@ for (const [id, name, pool] of [
   assert.equal(entry.card.pool, pool);
   assert.equal(entry.category, "classic");
   assert.equal(entry.classificationNote.source, "https://www.duelingbook.com/goat-format");
-  assert(!core.filterCards(entries, { category: "added" }).includes(entry));
-  assert(core.filterCards(entries, { category: "complete" }).includes(entry));
+  assert(!core.filterCards(entries, { categories: core.DEFAULT_CATEGORIES }).includes(entry));
+  assert(core.filterCards(entries, { categories: Object.keys(core.CATEGORIES) }).includes(entry));
 }
 assert.equal(entries.filter(entry => entry.category === "classic").length, 1698);
-assert.equal(core.filterCards(entries, { category: "ocg" }).filter(entry => entry.card.printedinTCG === "Yes").length, 240,
+assert.equal(core.filterCards(entries, { categories: ["ocg"] }).filter(entry => entry.card.printedinTCG === "Yes").length, 240,
   "Historical OCG additions with later TCG printings must not disappear");
-assert.equal(core.filterCards(entries, { category: "ocg" }).filter(entry => entry.card.printedinTCG === "No").length, 150);
+assert.equal(core.filterCards(entries, { categories: ["ocg"] }).filter(entry => entry.card.printedinTCG === "No").length, 150);
 
-const extra = core.filterCards(entries, { category: "extra" });
+const extra = core.filterCards(entries, { categories: ["extra"] });
 const statusCounts = list => Object.fromEntries(Object.keys(core.STATUS).map(status => [status, list.filter(entry => entry.card.ban_status === status).length]));
 assert.deepEqual(statusCounts(extra), { forbidden: 0, limited: 5, "semi-limited": 9, unlimited: 89 });
 assert.deepEqual(statusCounts(entries), { forbidden: 33, limited: 49, "semi-limited": 25, unlimited: 2122 });
-assert.equal(core.filterCards(entries, { category: "added", status: "forbidden" }).length, 1);
+assert.equal(core.filterCards(entries, { categories: core.DEFAULT_CATEGORIES, status: "forbidden" }).length, 1);
 assert.deepEqual(Object.fromEntries(Object.entries(core.STATUS).map(([status, value]) => [status, value.limit])),
   { forbidden: 0, limited: 1, "semi-limited": 2, unlimited: 3 });
 for (const [id, status] of [
@@ -56,24 +67,35 @@ for (const [id, status] of [
 }
 for (const id of ["88369727", "44887817", "3659803", "63223467"]) assert(!byId.has(id), `Removed October card ${id} must be absent`);
 for (const name of ["Foolish Return", "Miracle Fertilizer", "Overload Fusion", "Rai-Mei"]) {
-  assert.equal(core.filterCards(entries, { category: "complete", query: name }).length, 0);
+  assert.equal(core.filterCards(entries, { categories: Object.keys(core.CATEGORIES), query: name }).length, 0);
 }
 
 // All filters compose; subtype checks include Monster class (Flip, Spirit, etc.).
-const futureFusion = core.filterCards(entries, { category: "extra", query: "future", type: "Spell", subtype: "Continuous", status: "semi-limited" });
+const futureFusion = core.filterCards(entries, { categories: ["extra"], query: "future", type: "Spell", subtype: "Continuous", status: "semi-limited" });
 assert.deepEqual(futureFusion.map(entry => entry.id), ["77565204"]);
-assert.equal(core.filterCards(entries, { category: "ocg", query: "Future Fusion" }).length, 0);
-assert.deepEqual(core.filterCards(entries, { category: "extra", type: "Monster", subtype: "Flip", query: "Crystal Seer" }).map(entry => entry.id), ["82099401"]);
-assert.equal(core.filterCards(entries, { category: "extra", type: "Trap", subtype: "Flip" }).length, 0);
-assert.deepEqual(core.filterCards(entries, { category: "extra", query: " 03019642 " }).map(entry => entry.id), ["3019642"]);
-assert.deepEqual(core.filterCards(entries, { category: "extra", query: "3019642" }).map(entry => entry.id), ["3019642"]);
-assert.deepEqual(core.filterCards(entries, { category: "extra", query: "fUtUrE fUsIoN" }).map(entry => entry.id), ["77565204"]);
+assert.equal(core.filterCards(entries, { categories: ["ocg"], query: "Future Fusion" }).length, 0);
+assert.deepEqual(core.filterCards(entries, { categories: ["extra"], type: "Monster", subtype: "Flip", query: "Crystal Seer" }).map(entry => entry.id), ["82099401"]);
+assert.equal(core.filterCards(entries, { categories: ["extra"], type: "Trap", subtype: "Flip" }).length, 0);
+assert.deepEqual(core.filterCards(entries, { categories: ["extra"], query: " 03019642 " }).map(entry => entry.id), ["3019642"]);
+assert.deepEqual(core.filterCards(entries, { categories: ["extra"], query: "3019642" }).map(entry => entry.id), ["3019642"]);
+assert.deepEqual(core.filterCards(entries, { categories: ["extra"], query: "fUtUrE fUsIoN" }).map(entry => entry.id), ["77565204"]);
 
 // Duplicate imports cannot inflate counts or silently choose a conflicting limit.
 const sample = raw.find(card => card.password === "3019642");
 const duplicates = core.prepareCards([sample, { ...sample }, { ...sample, password: "03019642" }], metadata);
 assert.equal(duplicates.length, 1);
 assert.equal(duplicates[0].card.password, sample.password, "Canonical identity must not rewrite the printed source password");
+const overlapping = core.prepareCards([sample, { ...sample, password: "03019642", pool: "OCG Goat Cardpool" }], metadata);
+assert.equal(overlapping.length, 1);
+assert.deepEqual(overlapping[0].categories, ["extra", "ocg"]);
+const reorderedOverlap = Object.fromEntries(Object.entries({ ...sample, pool: "OCG Goat Cardpool", password: "03019642" }).reverse());
+assert.equal(core.prepareCards([sample, reorderedOverlap], metadata).length, 1, "JSON property order does not change a card's identity or metadata");
+assert.equal(core.filterCards(overlapping, { categories: ["ocg"] }).length, 1);
+assert.equal(core.filterCards(overlapping, { categories: ["extra"] }).length, 1);
+assert.equal(core.filterCards(overlapping, { categories: ["extra", "ocg"] }).length, 1);
+assert.deepEqual(core.categoryCounts(overlapping), { classic: 0, ocg: 1, structure: 0, extra: 1 });
+assert.equal(core.selectCategories([...overlapping, ...duplicates], ["extra", "ocg"]).length, 1);
+assert.throws(() => core.prepareCards([sample, { ...sample, pool: "OCG Goat Cardpool", ban_status: "forbidden" }], metadata), /Conflicting duplicate/);
 assert.throws(() => core.prepareCards([sample, { ...sample, ban_status: "forbidden" }], metadata), /Conflicting duplicate/);
 assert.throws(() => core.prepareCards([{ ...sample, pool: "Future unreviewed pool" }], metadata), /Unrecognized/);
 assert.throws(() => core.prepareCards([{ ...sample, pool: "toString" }], metadata), /Unrecognized/);
