@@ -1,0 +1,373 @@
+<p>NeoGoat Format uses a curated retro card pool inspired by early Yu-Gi-Oh! eras.</p>
+
+<p>
+  The format is based primarily on OCG cards released before
+  <em>Cybernetic Revolution</em> (2005), combined with modern rulings and errata.
+</p>
+
+<p>
+  The purpose of the NeoGoat card pool is to preserve the strategic depth of early
+  Yu-Gi-Oh! while expanding deck diversity through carefully selected additional cards.
+</p>
+
+<h2>Current Card Pool</h2>
+
+<h3>📊 NeoGoat Card Pool – October 2026</h3>
+
+<p>
+  The October 2026 card pool is now in effect. It combines the base card pool,
+  the allowed Structure Deck cards and the current Extra Pool listed below.
+</p>
+
+<p>
+  All cards are subject to the October 2026 NeoGoat banlist. Being part of the
+  card pool does not override a card's Forbidden, Limited or Semi-Limited status.
+</p>
+
+<ul>
+  <li>
+    <a href="https://neogoatformat.blogspot.com/p/current-banlist.html"
+       target="_blank"
+       rel="noopener">
+      View the current NeoGoat Forbidden &amp; Limited List
+    </a>
+  </li>
+  <li>
+    <a href="https://neogoatformat.blogspot.com/2026/09/neogoat-october-2026-banlist.html"
+       target="_blank"
+       rel="noopener">
+      View the October 2026 banlist and card pool update
+    </a>
+  </li>
+</ul>
+
+<!-- NeoGoat Visual Card Pool: paste after the October banlist links and
+     immediately before <h3>The Card Pool contains:</h3>, in Blogger HTML view. -->
+<section id="neogoat-visual-cardpool" aria-label="NeoGoat Visual Card Pool">
+  <style>
+    #neogoat-visual-cardpool { margin: 1.5em 0; min-width: 0; }
+    #neogoat-visual-cardpool .neogoat-gallery-link { margin: 0 0 .8em; }
+    #neogoat-visual-cardpool .neogoat-gallery-link a {
+      display: inline-block; padding: .65em .9em; border-radius: 6px;
+      background: #0a1825; color: #8ef5ff; font-weight: 700;
+      text-decoration: underline; text-underline-offset: .15em;
+    }
+    #neogoat-visual-cardpool .neogoat-gallery-link a:focus-visible {
+      outline: 3px solid #236bd7; outline-offset: 3px;
+    }
+    #neogoat-visual-cardpool iframe {
+      display: block; box-sizing: border-box; width: 100%; max-width: 100%;
+      height: 1100px; border: 0; border-radius: 10px; background: #050b12;
+    }
+  </style>
+  <p class="neogoat-gallery-link">
+    <a href="https://neogoat-platform.vercel.app/cardpool.html"
+       target="_blank" rel="noopener">Open the NeoGoat Visual Card Pool in a new tab ↗</a>
+  </p>
+  <iframe id="neogoat-cardpool-frame"
+          src="https://neogoat-platform.vercel.app/cardpool.html?embed=1"
+          title="NeoGoat Visual Card Pool — browse cards and banlist status"
+          width="100%" height="1100"
+          loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <noscript><p>Use the link above to open the interactive card gallery.</p></noscript>
+  <script>
+    (function () {
+      "use strict";
+      var frame = document.getElementById("neogoat-cardpool-frame");
+      if (!frame || frame.dataset.neogoatConnected) return;
+      frame.dataset.neogoatConnected = "true";
+      var galleryOrigin = new URL(frame.src).origin;
+      var scheduled = false;
+
+      function sendViewport() {
+        scheduled = false;
+        if (!frame.isConnected || !frame.contentWindow) return;
+        var rect = frame.getBoundingClientRect();
+        var viewportHeight = window.innerHeight;
+        var visibleHeight = Math.max(0,
+          Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0));
+        frame.contentWindow.postMessage({
+          type: "neogoat:viewport",
+          top: Math.max(0, -rect.top),
+          height: visibleHeight || viewportHeight,
+          width: window.innerWidth
+        }, galleryOrigin);
+      }
+
+      function scheduleViewport() {
+        if (scheduled) return;
+        scheduled = true;
+        window.requestAnimationFrame(sendViewport);
+      }
+
+      window.addEventListener("message", function (event) {
+        if (event.origin !== galleryOrigin || event.source !== frame.contentWindow) return;
+        var data = event.data;
+        if (!data || typeof data !== "object") return;
+        if (data.type === "neogoat:resize") {
+          if (typeof data.height !== "number" || !Number.isFinite(data.height) || data.height <= 0) return;
+          var height = Math.max(300, Math.min(30000, Math.ceil(data.height)));
+          if (frame.style.height !== height + "px") frame.style.height = height + "px";
+          scheduleViewport();
+        } else if (data.type === "neogoat:scroll-top") {
+          frame.scrollIntoView({ block: "start", behavior: "auto" });
+          scheduleViewport();
+        } else if (data.type === "neogoat:ready") {
+          scheduleViewport();
+        }
+      });
+      frame.addEventListener("load", scheduleViewport);
+      window.addEventListener("scroll", scheduleViewport, { passive: true });
+      window.addEventListener("resize", scheduleViewport);
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", scheduleViewport);
+      }
+      scheduleViewport();
+    })();
+  </script>
+</section>
+<!-- End NeoGoat Visual Card Pool -->
+
+
+<h3>The Card Pool contains:</h3>
+
+<ul>
+  <li>The regular Goat Format card pool, subject to NeoGoat's own banlist.</li>
+  <li>OCG-exclusive cards released before <em>Cybernetic Revolution</em>.</li>
+  <li>Selected Structure Deck cards.</li>
+  <li>A rotating Extra Pool of carefully selected cards.</li>
+</ul>
+
+<h4>Normal Monsters, non-effect Ritual Monsters and non-effect Fusions:</h4>
+
+<ul>
+  <li>
+    <a href="https://www.duelingbook.com/deck?id=10677015"
+       target="_blank"
+       rel="noopener">
+      A-E
+    </a>
+  </li>
+  <li>
+    <a href="https://www.duelingbook.com/deck?id=10677060"
+       target="_blank"
+       rel="noopener">
+      F-L
+    </a>
+  </li>
+  <li>
+    <a href="https://www.duelingbook.com/deck?id=10677102"
+       target="_blank"
+       rel="noopener">
+      M-S
+    </a>
+  </li>
+  <li>
+    <a href="https://www.duelingbook.com/deck?id=10677144"
+       target="_blank"
+       rel="noopener">
+      T-Z
+    </a>
+  </li>
+</ul>
+
+<h4>All other cards, including Fusions with effects:</h4>
+
+<ul>
+  <li>
+    <a href="https://www.duelingbook.com/deck?id=7692100"
+       target="_blank"
+       rel="noopener">
+      1999-2002
+    </a>
+  </li>
+  <li>
+    <a href="https://www.duelingbook.com/deck?id=17188308"
+       target="_blank"
+       rel="noopener">
+      2003-May 26th, 2005
+    </a>
+  </li>
+</ul>
+
+<h4>Structure Deck cards allowed in NeoGoat:</h4>
+
+<ul>
+  <li>Dragon’s Roar</li>
+  <li>Zombie Madness</li>
+  <li>Blaze of Destruction</li>
+  <li>Fury from the Deep</li>
+  <li>Warrior’s Triumph</li>
+  <li>Spellcaster’s Judgment</li>
+  <li>Invincible Fortress</li>
+  <li>Lord of the Storm</li>
+  <li>Dinosaur’s Rage</li>
+</ul>
+
+<p>
+  <a href="https://www.duelingbook.com/deck?id=19464611"
+     target="_blank"
+     rel="noopener">
+    View the allowed Structure Deck cards
+  </a>
+</p>
+
+<h4>Extra Pool currently active: October 2026</h4>
+
+<p>
+  <a href="https://www.duelingbook.com/deck?id=20756059"
+     target="_blank"
+     rel="noopener">
+    View the October 2026 Unlimited Extra Pool
+  </a>
+</p>
+
+<p>
+  This Duelingbook list shows the Unlimited Extra Pool cards. Extra Pool cards
+  with Limited or Semi-Limited status are listed on the current NeoGoat banlist.
+</p>
+
+<h2>Card Pool Changes – October 2026</h2>
+
+<h3>Cards added to the Extra Pool</h3>
+
+<ul>
+  <li><strong>Crystal Seer</strong> — Unlimited, up to 3 copies.</li>
+  <li><strong>Cyberdark Keel</strong> — Unlimited, up to 3 copies.</li>
+  <li><strong>Exploder Dragon</strong> — Unlimited, up to 3 copies.</li>
+  <li><strong>Mist Archfiend</strong> — Unlimited, up to 3 copies.</li>
+  <li><strong>Future Fusion</strong> — Semi-Limited, up to 2 copies.</li>
+  <li><strong>Gozuki</strong> — Semi-Limited, up to 2 copies.</li>
+</ul>
+
+<h3>Cards removed from the Extra Pool</h3>
+
+<ul>
+  <li>Foolish Return</li>
+  <li>Miracle Fertilizer</li>
+  <li>Overload Fusion</li>
+  <li>Rai-Mei</li>
+</ul>
+
+<p>These four cards are no longer legal in the October 2026 NeoGoat card pool.</p>
+
+<h2>Extra Pool Explanation</h2>
+
+<p>The NeoGoat Format uses a rotating Extra Pool.</p>
+
+<p>
+  The Extra Pool introduces selected cards from later sets to refresh the metagame
+  and encourage new strategies without significantly altering the core identity of
+  the format.
+</p>
+
+<p>
+  The Extra Pool is intentionally kept small and controlled, and never exceeds
+  90 cards.
+</p>
+
+<p>Extra Pool cards may change periodically depending on:</p>
+
+<ul>
+  <li>tournament results</li>
+  <li>deck diversity</li>
+  <li>community feedback</li>
+  <li>banlist updates</li>
+</ul>
+
+<h2>Card Pool Philosophy</h2>
+
+<p>The NeoGoat card pool is designed to:</p>
+
+<ul>
+  <li>preserve the strategic feel of early Yu-Gi-Oh!</li>
+  <li>expand the number of playable archetypes</li>
+  <li>encourage creative deckbuilding</li>
+  <li>maintain a balanced and diverse metagame</li>
+</ul>
+
+<p>Updates to the card pool usually occur alongside banlist updates.</p>
+
+<h2>Card Pool History</h2>
+
+<p>Previous versions of the NeoGoat card pool are archived here for reference.</p>
+
+<h3>📊 NeoGoat Card Pool – August 2026</h3>
+
+<p>
+  <a href="https://docs.google.com/spreadsheets/d/10UlIvfGjxWXkM5fWZfHWm-3pljXlbjgLJ6d1M646Q3Y/edit?gid=774654249#gid=774654249"
+     target="_blank"
+     rel="noopener">
+    View August 2026 Card Pool
+  </a>
+</p>
+
+<p>
+  <a href="https://www.duelingbook.com/deck?id=20137774"
+     target="_blank"
+     rel="noopener">
+    View August 2026 Extra Pool
+  </a>
+</p>
+
+<h3>📊 NeoGoat Card Pool – June 2026</h3>
+
+<p>
+  <a href="https://docs.google.com/spreadsheets/d/1kQ3Oeopenn2elEMdPdyv15LgaSjFm7zHvfthrbXhqQ8/edit?gid=988855495#gid=988855495"
+     target="_blank"
+     rel="noopener">
+    View June 2026 Card Pool
+  </a>
+</p>
+
+<h3>📊 NeoGoat Card Pool – April 2026</h3>
+
+<p>
+  <a href="https://docs.google.com/spreadsheets/d/1l3X9RMUZcpyl4DwLL15RTLPN1aWZFVT-/edit?usp=drive_link&amp;ouid=102236985133808937955&amp;rtpof=true&amp;sd=true"
+     target="_blank"
+     rel="noopener">
+    View April 2026 Card Pool
+  </a>
+</p>
+
+<h3>📊 NeoGoat Card Pool – February 2026</h3>
+
+<p>
+  <a href="https://docs.google.com/spreadsheets/d/1QYrW1gfDO1Vhe_tVZ_9bobW6SAreRQph/edit?gid=73485566#gid=73485566"
+     target="_blank"
+     rel="noopener">
+    View February 2026 Card Pool
+  </a>
+</p>
+
+<h3>📊 NeoGoat Card Pool – December 2025</h3>
+
+<h3>📊 NeoGoat Card Pool – October 2025</h3>
+
+<h3>📊 NeoGoat Card Pool – August 2025</h3>
+
+<h3>📊 NeoGoat Card Pool – July 2025</h3>
+
+<h3>📊 NeoGoat Card Pool – May 2025</h3>
+
+<h3>📊 NeoGoat Card Pool – March 2025</h3>
+
+<h3>📊 NeoGoat Card Pool – January 2025</h3>
+
+<h3>📊 NeoGoat Card Pool – November 2024</h3>
+
+<p>
+  <strong>Update:</strong> Structure Decks <em>Invincible Fortress</em> and
+  <em>Lord of the Storm</em> were added to the NeoGoat card pool.
+</p>
+
+<h3>📊 NeoGoat Card Pool – September 2024</h3>
+
+<h3>📊 NeoGoat Card Pool – July 2024</h3>
+
+<p>
+  <strong>Update:</strong> Structure Decks <em>Warrior’s Triumph</em> and
+  <em>Spellcaster’s Judgment</em> were added to the NeoGoat card pool.
+</p>
+
+<h3>📊 NeoGoat Card Pool – May 2024</h3>
