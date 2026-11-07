@@ -37,7 +37,10 @@
     { "password": "77044671", "name": "Pyramid Turtle", "from": "forbidden", "to": "limited" },
     { "password": "79571449", "name": "Graceful Charity", "from": "forbidden", "to": "limited" },
     { "password": "48686504", "name": "Lonefire Blossom", "from": "semi-limited", "to": "limited" },
-    { "password": "85602018", "name": "Last Will", "from": "forbidden", "to": "limited" }
+    { "password": "85602018", "name": "Last Will", "from": "forbidden", "to": "limited" },
+    { "password": "77565204", "name": "Future Fusion", "from": "semi-limited", "to": "unlimited" },
+    { "password": "45906428", "name": "Miracle Fusion", "from": "semi-limited", "to": "unlimited" },
+    { "password": "14386013", "name": "Dark Spirit's Mastery", "from": "unlimited", "to": "semi-limited" }
   ],
   "removals": [
     { "password": "17896384", "name": "Arcane Barrier", "from": "unlimited" },
