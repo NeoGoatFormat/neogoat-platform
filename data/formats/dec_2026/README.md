@@ -20,6 +20,8 @@ This draft inherits the complete October 2026 pool and records the maintainer's 
 | Future Fusion | Semi-limited (2) | Unlimited (3) |
 | Miracle Fusion | Semi-limited (2) | Unlimited (3) |
 | Dark Spirit's Mastery | Unlimited (3) | Semi-limited (2) |
+| Gozuki | Semi-limited (2) | Unlimited (3) |
+| Mobius the Frost Monarch | Semi-limited (2) | Limited (1) |
 
 All other retained cards keep their October copy limits. Forbidden cards remain in the data with a zero-copy limit.
 
@@ -55,7 +57,7 @@ No individual limits have been specified for these additions yet. Cyberdark Keel
 
 New-card IDs and metadata were checked against YGOPRODeck. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
 
-Current draft: **2227 entries** (33 forbidden, 50 limited, 22 semi-limited, 2122 unlimited), with ten removals, eight additions and ten changes to retained cards' copy limits.
+Current draft: **2227 entries** (33 forbidden, 51 limited, 20 semi-limited, 2123 unlimited), with ten removals, eight additions and twelve changes to retained cards' copy limits.
 
 ## Files and further edits
 
