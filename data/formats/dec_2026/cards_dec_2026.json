@@ -30000,22 +30000,6 @@
     "ban_status": "unlimited"
   },
   {
-    "password": "1784686",
-    "name": "The Eye of Timaeus",
-    "type": "Spell",
-    "subType": "Normal",
-    "attribute": null,
-    "monsterType": "Normal",
-    "class": null,
-    "level": null,
-    "atk": null,
-    "def": null,
-    "text": "(This card is also always treated as \"Legendary Dragon Timaeus\".)\nTarget 1 \"Dark Magician\" monster you control; Fusion Summon 1 Fusion Monster from your Extra Deck that lists that monster on the field as Fusion Material, using it as the Fusion Material. You can only activate 1 \"The Eye of Timaeus\" per turn.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "unlimited"
-  },
-  {
     "password": "34694160",
     "name": "The Eye of Truth",
     "type": "Trap",

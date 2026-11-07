@@ -25,7 +25,7 @@ All other retained cards keep their October copy limits. Forbidden cards remain 
 
 ### Extra Card Pool
 
-The following nine cards leave the Extra Card Pool:
+The following ten cards leave the Extra Card Pool:
 
 - Arcane Barrier
 - Chaos Trap Hole
@@ -36,8 +36,9 @@ The following nine cards leave the Extra Card Pool:
 - Magical Exemplar
 - Needlebug Nest
 - Spell Power Grasp
+- The Eye of Timaeus
 
-These cards are absent from the December file. Retained October entries preserve their metadata, with only the banlist changes above applied. The Eye of Timaeus remains in the Extra Card Pool, unlimited (three copies), as in October.
+These cards are absent from the December file. Retained October entries preserve their metadata, with only the banlist changes above applied.
 
 The following eight cards enter the Extra Card Pool, provisionally unlimited (three copies each):
 
@@ -54,7 +55,7 @@ No individual limits have been specified for these additions yet. Cyberdark Keel
 
 New-card IDs and metadata were checked against YGOPRODeck. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
 
-Current draft: **2228 entries** (33 forbidden, 50 limited, 22 semi-limited, 2123 unlimited), with nine removals, eight additions and ten changes to retained cards' copy limits.
+Current draft: **2227 entries** (33 forbidden, 50 limited, 22 semi-limited, 2122 unlimited), with ten removals, eight additions and ten changes to retained cards' copy limits.
 
 ## Files and further edits
 
