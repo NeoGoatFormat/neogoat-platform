@@ -14,7 +14,8 @@
     "25642998": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9681&ope=2&request_locale=en",
     "77625948": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6831&ope=2&request_locale=en",
     "1353770": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7573&ope=2&request_locale=en",
-    "23020408": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=14907&ope=2&request_locale=en"
+    "23020408": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=14907&ope=2&request_locale=en",
+    "93130021": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6684&ope=2&request_locale=en"
   },
   "base": {
     "file": "data/formats/oct_2026/cards_oct_2026.json",
@@ -26,7 +27,7 @@
     "Work in progress for December 2026; October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
     "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted.",
-    "The eight new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
+    "The nine new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
     "New-card IDs and metadata were checked against YGOPRODeck; English card texts follow the official TCG database linked above, including its current Surface and Cyberdark texts. These metadata do not establish NeoGoat engine rulings or an errata policy.",
     "Further changes will be added as the maintainer defines them."
   ],
@@ -181,6 +182,22 @@
       "atk": null,
       "def": null,
       "text": "Place 1 card on top of the Deck from your hand, Deck, or GY, that is \"Dark Magician\" or mentions \"Dark Magician\" or \"Dark Magician Girl\", except \"Soul Servant\". During your Main Phase: You can banish this card from your GY; draw cards equal to the number of \"Palladium\" monsters, \"Dark Magician\", and/or \"Dark Magician Girl\", with different names, on the field and in the GYs. You can only use this effect of \"Soul Servant\" once per turn.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "93130021",
+      "name": "Victory Viper XX03",
+      "type": "Monster",
+      "subType": "Effect",
+      "attribute": "Light",
+      "monsterType": "Machine",
+      "class": null,
+      "level": 4,
+      "atk": 1200,
+      "def": 1000,
+      "text": "If this card destroys an opponent's monster by battle: Activate 1 of these effects.\n● This card gains 400 ATK.\n● Target 1 face-up Spell/Trap on the field; destroy that target.\n● Special Summon 1 \"Option Token\". Its Type, Attribute, Level, and ATK/DEF are always the same as this card, but destroy it if this card is no longer face-up on the field.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"

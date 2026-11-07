@@ -42,7 +42,7 @@ The following ten cards leave the Extra Card Pool:
 
 These cards are absent from the December file. Retained October entries preserve their metadata, with only the banlist changes above applied.
 
-The following eight cards enter the Extra Card Pool, provisionally unlimited (three copies each):
+The following nine cards enter the Extra Card Pool, provisionally unlimited (three copies each):
 
 - Chaos Distill
 - Snipe Hunter
@@ -52,12 +52,13 @@ The following eight cards enter the Extra Card Pool, provisionally unlimited (th
 - Cyberdark Edge
 - Valhalla, Hall of the Fallen
 - Soul Servant
+- Victory Viper XX03
 
 No individual limits have been specified for these additions yet. Cyberdark Keel is inherited from October.
 
 New-card IDs and metadata were checked against YGOPRODeck. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
 
-Current draft: **2227 entries** (33 forbidden, 51 limited, 20 semi-limited, 2123 unlimited), with ten removals, eight additions and twelve changes to retained cards' copy limits.
+Current draft: **2228 entries** (33 forbidden, 51 limited, 20 semi-limited, 2124 unlimited), with ten removals, nine additions and twelve changes to retained cards' copy limits.
 
 ## Files and further edits
 
