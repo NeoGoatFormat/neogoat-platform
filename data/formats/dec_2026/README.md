@@ -18,9 +18,24 @@ The following nine cards leave the Extra Card Pool:
 - Needlebug Nest
 - Spell Power Grasp
 
-These cards are absent from the December file. Every other October entry, its metadata and its copy limit remain unchanged. No additions or copy-limit changes have been defined yet.
+These cards are absent from the December file. Every other October entry, its metadata and its copy limit remain unchanged.
 
-Current draft: **2220 entries** (33 forbidden, 48 limited, 25 semi-limited, 2114 unlimited).
+The following eight cards enter the Extra Card Pool, provisionally unlimited (three copies each):
+
+- Chaos Distill
+- Snipe Hunter
+- Koa'ki Meiru Gravirose
+- Surface
+- Poseidon Wave
+- Cyberdark Horn
+- Cyberdark Edge
+- Cyberdark Dragon
+
+No individual limits have been specified for these additions yet. Cyberdark Keel is inherited from October. Cyberdark Dragon is classified as a Fusion/Effect monster for Extra Deck placement.
+
+New-card IDs and metadata were checked against YGOPRODeck. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
+
+Current draft: **2228 entries** (33 forbidden, 48 limited, 25 semi-limited, 2122 unlimited), with nine removals, eight additions and no changes to retained cards' copy limits.
 
 ## Files and further edits
 
