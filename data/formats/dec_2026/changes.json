@@ -1,0 +1,33 @@
+{
+  "formatId": "dec_2026",
+  "name": "NeoGoat December 2026",
+  "status": "draft",
+  "rulesFile": "cards_dec_2026.json",
+  "source": "Maintainer's December planning decisions, November 7, 2026",
+  "updatedOn": "2026-11-07",
+  "base": {
+    "file": "data/formats/oct_2026/cards_oct_2026.json",
+    "commit": "27efe8adc200ee9edaf953898bc1c0893c010263",
+    "sha256": "f3ce59498a58675d214c94b65bbbd7f93c6f56274a90bab9aebe011454caf598",
+    "hashEncoding": "UTF-8 with LF line endings (the Git blob); normalize CRLF only when checking a Windows checkout"
+  },
+  "notes": [
+    "Work in progress for December 2026; October remains the active format.",
+    "Removed cards are absent from the December pool, not retained with forbidden status.",
+    "All remaining card metadata and copy limits are inherited unchanged from October 2026.",
+    "Further changes will be added as the maintainer defines them."
+  ],
+  "statusChanges": [],
+  "removals": [
+    { "password": "17896384", "name": "Arcane Barrier", "from": "unlimited" },
+    { "password": "11593137", "name": "Chaos Trap Hole", "from": "unlimited" },
+    { "password": "89312388", "name": "Elemental HERO Prisma", "from": "limited" },
+    { "password": "55428811", "name": "Fifth Hope", "from": "unlimited" },
+    { "password": "6614221", "name": "Fog King", "from": "unlimited" },
+    { "password": "78004197", "name": "Goldd, Wu-Lord of Dark World", "from": "unlimited" },
+    { "password": "6061630", "name": "Magical Exemplar", "from": "unlimited" },
+    { "password": "84968490", "name": "Needlebug Nest", "from": "unlimited" },
+    { "password": "75014062", "name": "Spell Power Grasp", "from": "unlimited" }
+  ],
+  "additions": []
+}
