@@ -15,7 +15,8 @@
     "41230939": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6830&ope=2&request_locale=en",
     "77625948": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6831&ope=2&request_locale=en",
     "40418351": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6833&ope=2&request_locale=en",
-    "1353770": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7573&ope=2&request_locale=en"
+    "1353770": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7573&ope=2&request_locale=en",
+    "23020408": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=14907&ope=2&request_locale=en"
   },
   "base": {
     "file": "data/formats/oct_2026/cards_oct_2026.json",
@@ -27,7 +28,7 @@
     "Work in progress for December 2026; October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
     "All retained October card metadata and copy limits are inherited unchanged.",
-    "The nine new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
+    "The ten new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
     "New-card IDs and metadata were checked against YGOPRODeck; English card texts follow the official TCG database linked above, including its current Surface and Cyberdark texts. These metadata do not establish NeoGoat engine rulings or an errata policy.",
     "Further changes will be added as the maintainer defines them."
   ],
@@ -185,6 +186,22 @@
       "atk": null,
       "def": null,
       "text": "Once per turn: You can Special Summon 1 Fairy monster from your hand. You must control no monsters to activate and to resolve this effect.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "23020408",
+      "name": "Soul Servant",
+      "type": "Spell",
+      "subType": "Quick-Play",
+      "attribute": null,
+      "monsterType": "Quick-Play",
+      "class": null,
+      "level": null,
+      "atk": null,
+      "def": null,
+      "text": "Place 1 card on top of the Deck from your hand, Deck, or GY, that is \"Dark Magician\" or mentions \"Dark Magician\" or \"Dark Magician Girl\", except \"Soul Servant\". During your Main Phase: You can banish this card from your GY; draw cards equal to the number of \"Palladium\" monsters, \"Dark Magician\", and/or \"Dark Magician Girl\", with different names, on the field and in the GYs. You can only use this effect of \"Soul Servant\" once per turn.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"
