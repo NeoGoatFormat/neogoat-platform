@@ -30000,22 +30000,6 @@
     "ban_status": "unlimited"
   },
   {
-    "password": "1784686",
-    "name": "The Eye of Timaeus",
-    "type": "Spell",
-    "subType": "Normal",
-    "attribute": null,
-    "monsterType": "Normal",
-    "class": null,
-    "level": null,
-    "atk": null,
-    "def": null,
-    "text": "(This card is also always treated as \"Legendary Dragon Timaeus\".)\nTarget 1 \"Dark Magician\" monster you control; Fusion Summon 1 Fusion Monster from your Extra Deck that lists that monster on the field as Fusion Material, using it as the Fusion Material. You can only activate 1 \"The Eye of Timaeus\" per turn.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "unlimited"
-  },
-  {
     "password": "34694160",
     "name": "The Eye of Truth",
     "type": "Trap",
@@ -35643,6 +35627,22 @@
     "atk": 1000,
     "def": 1000,
     "text": "\"Cyberdark Horn\" + \"Cyberdark Edge\" + \"Cyberdark Keel\"\nMust be Fusion Summoned. If this card is Special Summoned: Target 1 Dragon monster in your GY; equip that target to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. Gains 100 ATK for each monster in your GY. If this card would be destroyed by battle, destroy that equipped monster instead.",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "unlimited"
+  },
+  {
+    "password": "1353770",
+    "name": "Valhalla, Hall of the Fallen",
+    "type": "Spell",
+    "subType": "Continuous",
+    "attribute": null,
+    "monsterType": "Continuous",
+    "class": null,
+    "level": null,
+    "atk": null,
+    "def": null,
+    "text": "Once per turn: You can Special Summon 1 Fairy monster from your hand. You must control no monsters to activate and to resolve this effect.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"

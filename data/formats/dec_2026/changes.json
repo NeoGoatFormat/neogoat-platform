@@ -14,7 +14,8 @@
     "25642998": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9681&ope=2&request_locale=en",
     "41230939": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6830&ope=2&request_locale=en",
     "77625948": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6831&ope=2&request_locale=en",
-    "40418351": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6833&ope=2&request_locale=en"
+    "40418351": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6833&ope=2&request_locale=en",
+    "1353770": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7573&ope=2&request_locale=en"
   },
   "base": {
     "file": "data/formats/oct_2026/cards_oct_2026.json",
@@ -26,7 +27,7 @@
     "Work in progress for December 2026; October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
     "All retained October card metadata and copy limits are inherited unchanged.",
-    "The eight new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
+    "The nine new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
     "New-card IDs and metadata were checked against YGOPRODeck; English card texts follow the official TCG database linked above, including its current Surface and Cyberdark texts. These metadata do not establish NeoGoat engine rulings or an errata policy.",
     "Further changes will be added as the maintainer defines them."
   ],
@@ -40,7 +41,8 @@
     { "password": "78004197", "name": "Goldd, Wu-Lord of Dark World", "from": "unlimited" },
     { "password": "6061630", "name": "Magical Exemplar", "from": "unlimited" },
     { "password": "84968490", "name": "Needlebug Nest", "from": "unlimited" },
-    { "password": "75014062", "name": "Spell Power Grasp", "from": "unlimited" }
+    { "password": "75014062", "name": "Spell Power Grasp", "from": "unlimited" },
+    { "password": "1784686", "name": "The Eye of Timaeus", "from": "unlimited" }
   ],
   "additions": [
     {
@@ -167,6 +169,22 @@
       "atk": 1000,
       "def": 1000,
       "text": "\"Cyberdark Horn\" + \"Cyberdark Edge\" + \"Cyberdark Keel\"\nMust be Fusion Summoned. If this card is Special Summoned: Target 1 Dragon monster in your GY; equip that target to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. Gains 100 ATK for each monster in your GY. If this card would be destroyed by battle, destroy that equipped monster instead.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "1353770",
+      "name": "Valhalla, Hall of the Fallen",
+      "type": "Spell",
+      "subType": "Continuous",
+      "attribute": null,
+      "monsterType": "Continuous",
+      "class": null,
+      "level": null,
+      "atk": null,
+      "def": null,
+      "text": "Once per turn: You can Special Summon 1 Fairy monster from your hand. You must control no monsters to activate and to resolve this effect.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"
