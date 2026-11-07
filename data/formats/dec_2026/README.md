@@ -22,7 +22,7 @@ All other retained cards keep their October copy limits. Forbidden cards remain 
 
 ### Extra Card Pool
 
-The following ten cards leave the Extra Card Pool:
+The following nine cards leave the Extra Card Pool:
 
 - Arcane Barrier
 - Chaos Trap Hole
@@ -33,28 +33,25 @@ The following ten cards leave the Extra Card Pool:
 - Magical Exemplar
 - Needlebug Nest
 - Spell Power Grasp
-- The Eye of Timaeus
 
-These cards are absent from the December file. Retained October entries preserve their metadata, with only the banlist changes above applied.
+These cards are absent from the December file. Retained October entries preserve their metadata, with only the banlist changes above applied. The Eye of Timaeus remains in the Extra Card Pool, unlimited (three copies), as in October.
 
-The following ten cards enter the Extra Card Pool, provisionally unlimited (three copies each):
+The following eight cards enter the Extra Card Pool, provisionally unlimited (three copies each):
 
 - Chaos Distill
 - Snipe Hunter
 - Koa'ki Meiru Gravirose
 - Surface
 - Poseidon Wave
-- Cyberdark Horn
 - Cyberdark Edge
-- Cyberdark Dragon
 - Valhalla, Hall of the Fallen
 - Soul Servant
 
-No individual limits have been specified for these additions yet. Cyberdark Keel is inherited from October. Cyberdark Dragon is classified as a Fusion/Effect monster for Extra Deck placement.
+No individual limits have been specified for these additions yet. Cyberdark Keel is inherited from October.
 
 New-card IDs and metadata were checked against YGOPRODeck. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
 
-Current draft: **2229 entries** (33 forbidden, 50 limited, 23 semi-limited, 2123 unlimited), with ten removals, ten additions and seven changes to retained cards' copy limits.
+Current draft: **2228 entries** (33 forbidden, 50 limited, 23 semi-limited, 2122 unlimited), with nine removals, eight additions and seven changes to retained cards' copy limits.
 
 ## Files and further edits
 

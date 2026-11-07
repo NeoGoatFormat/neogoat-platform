@@ -30000,6 +30000,22 @@
     "ban_status": "unlimited"
   },
   {
+    "password": "1784686",
+    "name": "The Eye of Timaeus",
+    "type": "Spell",
+    "subType": "Normal",
+    "attribute": null,
+    "monsterType": "Normal",
+    "class": null,
+    "level": null,
+    "atk": null,
+    "def": null,
+    "text": "(This card is also always treated as \"Legendary Dragon Timaeus\".)\nTarget 1 \"Dark Magician\" monster you control; Fusion Summon 1 Fusion Monster from your Extra Deck that lists that monster on the field as Fusion Material, using it as the Fusion Material. You can only activate 1 \"The Eye of Timaeus\" per turn.",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "unlimited"
+  },
+  {
     "password": "34694160",
     "name": "The Eye of Truth",
     "type": "Trap",
@@ -35584,22 +35600,6 @@
     "ban_status": "unlimited"
   },
   {
-    "password": "41230939",
-    "name": "Cyberdark Horn",
-    "type": "Monster",
-    "subType": "Effect",
-    "attribute": "Dark",
-    "monsterType": "Machine",
-    "class": null,
-    "level": 4,
-    "atk": 800,
-    "def": 800,
-    "text": "If this card is Normal Summoned: Target 1 Level 3 or lower Dragon monster in your GY; equip that Dragon monster to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. If this card attacks a Defense Position monster, inflict piercing battle damage. If this card would be destroyed by battle, destroy that equipped monster, instead.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "unlimited"
-  },
-  {
     "password": "77625948",
     "name": "Cyberdark Edge",
     "type": "Monster",
@@ -35611,22 +35611,6 @@
     "atk": 800,
     "def": 800,
     "text": "If this card is Normal Summoned: Target 1 Level 3 or lower Dragon monster in your GY; equip that Dragon monster to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. This card can attack directly. If it does using this effect, its ATK is halved during damage calculation only. If this card would be destroyed by battle, destroy that equipped monster, instead.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "unlimited"
-  },
-  {
-    "password": "40418351",
-    "name": "Cyberdark Dragon",
-    "type": "Monster",
-    "subType": "Fusion",
-    "attribute": "Dark",
-    "monsterType": "Machine",
-    "class": "Effect",
-    "level": 8,
-    "atk": 1000,
-    "def": 1000,
-    "text": "\"Cyberdark Horn\" + \"Cyberdark Edge\" + \"Cyberdark Keel\"\nMust be Fusion Summoned. If this card is Special Summoned: Target 1 Dragon monster in your GY; equip that target to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. Gains 100 ATK for each monster in your GY. If this card would be destroyed by battle, destroy that equipped monster instead.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
