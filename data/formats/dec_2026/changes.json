@@ -27,12 +27,20 @@
   "notes": [
     "Work in progress for December 2026; October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
-    "All retained October card metadata and copy limits are inherited unchanged.",
+    "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted.",
     "The ten new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
     "New-card IDs and metadata were checked against YGOPRODeck; English card texts follow the official TCG database linked above, including its current Surface and Cyberdark texts. These metadata do not establish NeoGoat engine rulings or an errata policy.",
     "Further changes will be added as the maintainer defines them."
   ],
-  "statusChanges": [],
+  "statusChanges": [
+    { "password": "55144522", "name": "Pot of Greed", "from": "limited", "to": "forbidden" },
+    { "password": "98494543", "name": "Magical Stone Excavation", "from": "semi-limited", "to": "forbidden" },
+    { "password": "16226786", "name": "Night Assailant", "from": "limited", "to": "forbidden" },
+    { "password": "77044671", "name": "Pyramid Turtle", "from": "forbidden", "to": "limited" },
+    { "password": "79571449", "name": "Graceful Charity", "from": "forbidden", "to": "limited" },
+    { "password": "48686504", "name": "Lonefire Blossom", "from": "semi-limited", "to": "limited" },
+    { "password": "85602018", "name": "Last Will", "from": "forbidden", "to": "limited" }
+  ],
   "removals": [
     { "password": "17896384", "name": "Arcane Barrier", "from": "unlimited" },
     { "password": "11593137", "name": "Chaos Trap Hole", "from": "unlimited" },

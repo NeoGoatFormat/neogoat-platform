@@ -5197,7 +5197,7 @@
     "text": "Draw 3 cards, then discard 2 cards.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "forbidden"
+    "ban_status": "limited"
   },
   {
     "password": "68057622",
@@ -17853,7 +17853,7 @@
     "text": "Once per turn: You can Tribute 1 face-up Plant monster; Special Summon 1 Plant monster from your Deck.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
-    "ban_status": "semi-limited"
+    "ban_status": "limited"
   },
   {
     "password": "17985575",
@@ -18333,7 +18333,7 @@
     "text": "If a monster on your side of the field was sent to your Graveyard this turn, you can Special Summon 1 monster with an ATK of 1500 points or less from your Deck once during this turn. Then shuffle your Deck.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "forbidden"
+    "ban_status": "limited"
   },
   {
     "password": "46474915",
@@ -18973,7 +18973,7 @@
     "text": "Discard 2 cards, then target 1 Spell in your GY; add it to your hand.",
     "pool": "OCG Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "semi-limited"
+    "ban_status": "forbidden"
   },
   {
     "password": "66865880",
@@ -20749,7 +20749,7 @@
     "text": "Draw 2 cards.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "limited"
+    "ban_status": "forbidden"
   },
   {
     "password": "79106360",
@@ -21757,7 +21757,7 @@
     "text": "FLIP: Target 1 monster your opponent controls; destroy that target. If this card is sent from the hand to the GY: Target 1 Flip monster in your GY, except \"Night Assailant\"; add that target to your hand.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "limited"
+    "ban_status": "forbidden"
   },
   {
     "password": "78402798",
@@ -23805,7 +23805,7 @@
     "text": "When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 Zombie-Type monster with 2000 or less DEF from your Deck.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "forbidden"
+    "ban_status": "limited"
   },
   {
     "password": "1082946",
