@@ -4,7 +4,7 @@
 
 This draft inherits the complete October 2026 pool and records the maintainer's December planning decisions. It will be updated as further changes are defined. It is not the final December banlist.
 
-## Changes recorded on November 7, 2026
+## Cumulative changes through November 10, 2026
 
 ### Banlist
 
@@ -21,7 +21,6 @@ This draft inherits the complete October 2026 pool and records the maintainer's 
 | Miracle Fusion | Semi-limited (2) | Unlimited (3) |
 | Dark Spirit's Mastery | Unlimited (3) | Semi-limited (2) |
 | Gozuki | Semi-limited (2) | Unlimited (3) |
-| Mobius the Frost Monarch | Semi-limited (2) | Limited (1) |
 
 All other retained cards keep their October copy limits. Forbidden cards remain in the data with a zero-copy limit.
 
@@ -57,13 +56,17 @@ No individual limits have been specified for these additions yet. Cyberdark Keel
 
 Earlier additions were checked against YGOPRODeck. Mei-Kou identity and stats were checked against the installed card database and the official TCG database. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
 
-Current draft: **2229 entries** (33 forbidden, 51 limited, 20 semi-limited, 2125 unlimited), with nine removals, nine additions and twelve changes to retained cards' copy limits.
+Current draft: **2229 entries** (33 forbidden, 50 limited, 21 semi-limited, 2125 unlimited), with nine removals, nine additions and eleven changes to retained cards' copy limits.
 
 ## Revision recorded on November 9, 2026
 
 Snipe Hunter has been withdrawn from the December draft and replaced by Mei-Kou, Master of Barriers at three copies. Chaos Trap Hole returns to the December pool with its October unlimited status (three copies). These changes do not activate December as the current format.
 
 Mei-Kou's LIGHT Attribute, Level 4, 1700 ATK, 600 DEF and current English text were checked against the [official card database](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7116&ope=2&request_locale=en).
+
+## Revision recorded on November 10, 2026
+
+Mobius the Frost Monarch returns to **two copies (semi-limited)**, matching its October limit. Its earlier one-copy restriction has been removed from the cumulative changes. October remains the active format.
 
 ## Files and further edits
 
