@@ -55,7 +55,7 @@ The following nine cards enter the Extra Card Pool, provisionally unlimited (thr
 
 No individual limits have been specified for these additions yet. Cyberdark Keel is inherited from October.
 
-New-card IDs and metadata were checked against YGOPRODeck. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
+Earlier additions were checked against YGOPRODeck. Mei-Kou identity and stats were checked against the installed card database and the official TCG database. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
 
 Current draft: **2229 entries** (33 forbidden, 51 limited, 20 semi-limited, 2125 unlimited), with nine removals, nine additions and twelve changes to retained cards' copy limits.
 
