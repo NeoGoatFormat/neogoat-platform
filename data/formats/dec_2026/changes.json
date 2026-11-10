@@ -27,10 +27,11 @@
     "Work in progress for December 2026; October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
     "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted.",
-    "The nine new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
+    "Of the nine new cards, Soul Servant is semi-limited (two copies); the other eight are provisionally unlimited (three copies).",
     "Earlier additions were checked against YGOPRODeck; Mei-Kou identity and stats were checked against the installed card database and the official TCG database; English card texts follow the official TCG database linked above, including its current Surface and Cyberdark texts. These metadata do not establish NeoGoat engine rulings or an errata policy.",
     "November 9: Snipe Hunter leaves the December draft; Mei-Kou, Master of Barriers enters unlimited. Chaos Trap Hole is retained from October at three copies.",
     "November 10: Mobius the Frost Monarch returns to two copies, inheriting its October semi-limited status.",
+    "November 10: Soul Servant is reduced from three copies to two in the December draft.",
     "Further changes will be added as the maintainer defines them."
   ],
   "statusChanges": [
@@ -275,7 +276,7 @@
       "text": "Place 1 card on top of the Deck from your hand, Deck, or GY, that is \"Dark Magician\" or mentions \"Dark Magician\" or \"Dark Magician Girl\", except \"Soul Servant\". During your Main Phase: You can banish this card from your GY; draw cards equal to the number of \"Palladium\" monsters, \"Dark Magician\", and/or \"Dark Magician Girl\", with different names, on the field and in the GYs. You can only use this effect of \"Soul Servant\" once per turn.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
-      "ban_status": "unlimited"
+      "ban_status": "semi-limited"
     },
     {
       "password": "93130021",

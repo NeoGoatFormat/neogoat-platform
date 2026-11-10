@@ -40,7 +40,7 @@ The following nine cards leave the Extra Card Pool:
 
 These cards are absent from the December file. Retained October entries preserve their metadata, with only the banlist changes above applied.
 
-The following nine cards enter the Extra Card Pool, provisionally unlimited (three copies each):
+The following nine cards enter the Extra Card Pool. Soul Servant is semi-limited (two copies); the other eight are provisionally unlimited (three copies each):
 
 - Chaos Distill
 - Mei-Kou, Master of Barriers
@@ -52,11 +52,11 @@ The following nine cards enter the Extra Card Pool, provisionally unlimited (thr
 - Soul Servant
 - Victory Viper XX03
 
-No individual limits have been specified for these additions yet. Cyberdark Keel is inherited from October.
+Cyberdark Keel is inherited from October.
 
 Earlier additions were checked against YGOPRODeck. Mei-Kou identity and stats were checked against the installed card database and the official TCG database. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
 
-Current draft: **2229 entries** (33 forbidden, 50 limited, 21 semi-limited, 2125 unlimited), with nine removals, nine additions and eleven changes to retained cards' copy limits.
+Current draft: **2229 entries** (33 forbidden, 50 limited, 22 semi-limited, 2124 unlimited), with nine removals, nine additions and eleven changes to retained cards' copy limits.
 
 ## Revision recorded on November 9, 2026
 
@@ -67,6 +67,8 @@ Mei-Kou's LIGHT Attribute, Level 4, 1700 ATK, 600 DEF and current English text w
 ## Revision recorded on November 10, 2026
 
 Mobius the Frost Monarch returns to **two copies (semi-limited)**, matching its October limit. Its earlier one-copy restriction has been removed from the cumulative changes. October remains the active format.
+
+Soul Servant, one of the December additions, is reduced from three copies to **two copies (semi-limited)**.
 
 ## Files and further edits
 
