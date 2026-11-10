@@ -27,10 +27,9 @@ All other retained cards keep their October copy limits. Forbidden cards remain 
 
 ### Extra Card Pool
 
-The following ten cards leave the Extra Card Pool:
+The following nine cards leave the Extra Card Pool:
 
 - Arcane Barrier
-- Chaos Trap Hole
 - Elemental HERO Prisma
 - Fifth Hope
 - Fog King
@@ -45,7 +44,7 @@ These cards are absent from the December file. Retained October entries preserve
 The following nine cards enter the Extra Card Pool, provisionally unlimited (three copies each):
 
 - Chaos Distill
-- Snipe Hunter
+- Mei-Kou, Master of Barriers
 - Koa'ki Meiru Gravirose
 - Surface
 - Poseidon Wave
@@ -58,7 +57,13 @@ No individual limits have been specified for these additions yet. Cyberdark Keel
 
 New-card IDs and metadata were checked against YGOPRODeck. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
 
-Current draft: **2228 entries** (33 forbidden, 51 limited, 20 semi-limited, 2124 unlimited), with ten removals, nine additions and twelve changes to retained cards' copy limits.
+Current draft: **2229 entries** (33 forbidden, 51 limited, 20 semi-limited, 2125 unlimited), with nine removals, nine additions and twelve changes to retained cards' copy limits.
+
+## Revision recorded on November 9, 2026
+
+Snipe Hunter has been withdrawn from the December draft and replaced by Mei-Kou, Master of Barriers at three copies. Chaos Trap Hole returns to the December pool with its October unlimited status (three copies). These changes do not activate December as the current format.
+
+Mei-Kou's LIGHT Attribute, Level 4, 1700 ATK, 600 DEF and current English text were checked against the [official card database](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7116&ope=2&request_locale=en).
 
 ## Files and further edits
 

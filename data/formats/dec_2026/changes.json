@@ -3,19 +3,19 @@
   "name": "NeoGoat December 2026",
   "status": "draft",
   "rulesFile": "cards_dec_2026.json",
-  "source": "Maintainer's December planning decisions, November 7, 2026",
-  "updatedOn": "2026-11-07",
+  "source": "Maintainer's December planning decisions, November 7-9, 2026",
+  "updatedOn": "2026-11-09",
   "metadataSource": "https://db.ygoprodeck.com/api/v7/cardinfo.php",
   "cardTextSources": {
     "6500778": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=21756&ope=2&request_locale=en",
-    "84290642": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6879&ope=2&request_locale=en",
     "41201555": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=8524&ope=2&request_locale=en",
     "33057951": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9666&ope=2&request_locale=en",
     "25642998": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9681&ope=2&request_locale=en",
     "77625948": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6831&ope=2&request_locale=en",
     "1353770": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7573&ope=2&request_locale=en",
     "23020408": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=14907&ope=2&request_locale=en",
-    "93130021": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6684&ope=2&request_locale=en"
+    "93130021": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6684&ope=2&request_locale=en",
+    "47731128": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7116&ope=2&request_locale=en"
   },
   "base": {
     "file": "data/formats/oct_2026/cards_oct_2026.json",
@@ -29,33 +29,129 @@
     "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted.",
     "The nine new cards are provisionally unlimited (three copies); no individual copy limits have been specified yet.",
     "New-card IDs and metadata were checked against YGOPRODeck; English card texts follow the official TCG database linked above, including its current Surface and Cyberdark texts. These metadata do not establish NeoGoat engine rulings or an errata policy.",
+    "November 9: Snipe Hunter leaves the December draft; Mei-Kou, Master of Barriers enters unlimited. Chaos Trap Hole is retained from October at three copies.",
     "Further changes will be added as the maintainer defines them."
   ],
   "statusChanges": [
-    { "password": "55144522", "name": "Pot of Greed", "from": "limited", "to": "forbidden" },
-    { "password": "98494543", "name": "Magical Stone Excavation", "from": "semi-limited", "to": "forbidden" },
-    { "password": "16226786", "name": "Night Assailant", "from": "limited", "to": "forbidden" },
-    { "password": "77044671", "name": "Pyramid Turtle", "from": "forbidden", "to": "limited" },
-    { "password": "79571449", "name": "Graceful Charity", "from": "forbidden", "to": "limited" },
-    { "password": "48686504", "name": "Lonefire Blossom", "from": "semi-limited", "to": "limited" },
-    { "password": "85602018", "name": "Last Will", "from": "forbidden", "to": "limited" },
-    { "password": "77565204", "name": "Future Fusion", "from": "semi-limited", "to": "unlimited" },
-    { "password": "45906428", "name": "Miracle Fusion", "from": "semi-limited", "to": "unlimited" },
-    { "password": "14386013", "name": "Dark Spirit's Mastery", "from": "unlimited", "to": "semi-limited" },
-    { "password": "52467217", "name": "Gozuki", "from": "semi-limited", "to": "unlimited" },
-    { "password": "4929256", "name": "Mobius the Frost Monarch", "from": "semi-limited", "to": "limited" }
+    {
+      "password": "55144522",
+      "name": "Pot of Greed",
+      "from": "limited",
+      "to": "forbidden"
+    },
+    {
+      "password": "98494543",
+      "name": "Magical Stone Excavation",
+      "from": "semi-limited",
+      "to": "forbidden"
+    },
+    {
+      "password": "16226786",
+      "name": "Night Assailant",
+      "from": "limited",
+      "to": "forbidden"
+    },
+    {
+      "password": "77044671",
+      "name": "Pyramid Turtle",
+      "from": "forbidden",
+      "to": "limited"
+    },
+    {
+      "password": "79571449",
+      "name": "Graceful Charity",
+      "from": "forbidden",
+      "to": "limited"
+    },
+    {
+      "password": "48686504",
+      "name": "Lonefire Blossom",
+      "from": "semi-limited",
+      "to": "limited"
+    },
+    {
+      "password": "85602018",
+      "name": "Last Will",
+      "from": "forbidden",
+      "to": "limited"
+    },
+    {
+      "password": "77565204",
+      "name": "Future Fusion",
+      "from": "semi-limited",
+      "to": "unlimited"
+    },
+    {
+      "password": "45906428",
+      "name": "Miracle Fusion",
+      "from": "semi-limited",
+      "to": "unlimited"
+    },
+    {
+      "password": "14386013",
+      "name": "Dark Spirit's Mastery",
+      "from": "unlimited",
+      "to": "semi-limited"
+    },
+    {
+      "password": "52467217",
+      "name": "Gozuki",
+      "from": "semi-limited",
+      "to": "unlimited"
+    },
+    {
+      "password": "4929256",
+      "name": "Mobius the Frost Monarch",
+      "from": "semi-limited",
+      "to": "limited"
+    }
   ],
   "removals": [
-    { "password": "17896384", "name": "Arcane Barrier", "from": "unlimited" },
-    { "password": "11593137", "name": "Chaos Trap Hole", "from": "unlimited" },
-    { "password": "89312388", "name": "Elemental HERO Prisma", "from": "limited" },
-    { "password": "55428811", "name": "Fifth Hope", "from": "unlimited" },
-    { "password": "6614221", "name": "Fog King", "from": "unlimited" },
-    { "password": "78004197", "name": "Goldd, Wu-Lord of Dark World", "from": "unlimited" },
-    { "password": "6061630", "name": "Magical Exemplar", "from": "unlimited" },
-    { "password": "84968490", "name": "Needlebug Nest", "from": "unlimited" },
-    { "password": "75014062", "name": "Spell Power Grasp", "from": "unlimited" },
-    { "password": "1784686", "name": "The Eye of Timaeus", "from": "unlimited" }
+    {
+      "password": "17896384",
+      "name": "Arcane Barrier",
+      "from": "unlimited"
+    },
+    {
+      "password": "89312388",
+      "name": "Elemental HERO Prisma",
+      "from": "limited"
+    },
+    {
+      "password": "55428811",
+      "name": "Fifth Hope",
+      "from": "unlimited"
+    },
+    {
+      "password": "6614221",
+      "name": "Fog King",
+      "from": "unlimited"
+    },
+    {
+      "password": "78004197",
+      "name": "Goldd, Wu-Lord of Dark World",
+      "from": "unlimited"
+    },
+    {
+      "password": "6061630",
+      "name": "Magical Exemplar",
+      "from": "unlimited"
+    },
+    {
+      "password": "84968490",
+      "name": "Needlebug Nest",
+      "from": "unlimited"
+    },
+    {
+      "password": "75014062",
+      "name": "Spell Power Grasp",
+      "from": "unlimited"
+    },
+    {
+      "password": "1784686",
+      "name": "The Eye of Timaeus",
+      "from": "unlimited"
+    }
   ],
   "additions": [
     {
@@ -75,17 +171,17 @@
       "ban_status": "unlimited"
     },
     {
-      "password": "84290642",
-      "name": "Snipe Hunter",
+      "password": "47731128",
+      "name": "Mei-Kou, Master of Barriers",
       "type": "Monster",
       "subType": "Effect",
-      "attribute": "Dark",
-      "monsterType": "Fiend",
+      "attribute": "Light",
+      "monsterType": "Spellcaster",
       "class": null,
       "level": 4,
-      "atk": 1500,
+      "atk": 1700,
       "def": 600,
-      "text": "You can discard 1 card, then target 1 card on the field; roll a six-sided die, and destroy that target unless you roll a 1 or 6.",
+      "text": "You can Tribute this card, then target 1 face-up Continuous Spell/Trap on the field; destroy that target.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"
