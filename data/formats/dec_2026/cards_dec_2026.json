@@ -35710,5 +35710,37 @@
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
+  },
+  {
+    "password": "4754691",
+    "name": "Amphibious Bugroth MK-11",
+    "type": "Monster",
+    "subType": "Effect",
+    "attribute": "Water",
+    "monsterType": "Machine",
+    "class": null,
+    "level": 5,
+    "atk": 1850,
+    "def": 1500,
+    "text": "While \"Umi\" is not on the field, this card gains 700 ATK, also it cannot attack directly. While \"Umi\" is on the field: You can target 1 face-up non-WATER monster on the field; destroy it. You can only use this effect of \"Amphibious Bugroth MK-11\" once per turn.",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "unlimited"
+  },
+  {
+    "password": "61802346",
+    "name": "Blizzard Dragon",
+    "type": "Monster",
+    "subType": "Effect",
+    "attribute": "Water",
+    "monsterType": "Dragon",
+    "class": null,
+    "level": 4,
+    "atk": 1800,
+    "def": 1000,
+    "text": "Once per turn: You can target 1 monster your opponent controls; it cannot change its battle position or declare an attack until the end of your opponent's next turn.",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "unlimited"
   }
 ]

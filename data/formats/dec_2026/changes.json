@@ -3,7 +3,7 @@
   "name": "NeoGoat December 2026",
   "status": "final",
   "rulesFile": "cards_dec_2026.json",
-  "source": "Maintainer's final December 2026 list with November 11 additions and Elemental HERO Nova Master restored on November 12, 2026",
+  "source": "Maintainer's final December 2026 list, including subsequent additions through Amphibious Bugroth MK-11 and Blizzard Dragon on November 12, 2026",
   "updatedOn": "2026-11-12",
   "metadataSource": "https://db.ygoprodeck.com/api/v7/cardinfo.php",
   "cardTextSources": {
@@ -17,7 +17,9 @@
     "47731128": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7116&ope=2&request_locale=en",
     "58873391": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7768&ope=2&request_locale=en",
     "73778008": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9581&ope=2&request_locale=en",
-    "95027497": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9903&ope=2&request_locale=en"
+    "95027497": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9903&ope=2&request_locale=en",
+    "4754691": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=17140&ope=2&request_locale=en",
+    "61802346": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7017&ope=2&request_locale=en"
   },
   "base": {
     "file": "data/formats/oct_2026/cards_oct_2026.json",
@@ -29,11 +31,13 @@
     "Final December 2026 list supplied by the maintainer on November 11; rebuilt from the frozen October pool and superseding all earlier December drafts. October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
     "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted.",
-    "Ninja Grandmaster Hanzo and Soul Servant enter the Extra Card Pool semi-limited (two copies each); the other nine additions enter unlimited (three copies each).",
+    "Ninja Grandmaster Hanzo and Soul Servant enter the Extra Card Pool semi-limited (two copies each); the other eleven additions enter unlimited (three copies each).",
     "New card identities and stats were checked against YGOPRODeck; English texts follow the official TCG database links above. These metadata do not establish NeoGoat engine rulings or an errata policy.",
     "November 11: Chaos Distill joins the final Extra Card Pool unlimited (three copies).",
     "November 11: Koa'ki Meiru Gravirose joins the final Extra Card Pool unlimited (three copies).",
-    "November 12: Elemental HERO Nova Master is restored to the final Extra Card Pool limited (one copy), retaining its October entry unchanged."
+    "November 12: Elemental HERO Nova Master is restored to the final Extra Card Pool limited (one copy), retaining its October entry unchanged.",
+    "November 12: Amphibious Bugroth MK-11 joins the Extra Card Pool unlimited (three copies). Identity comes from the existing EDOPro card database; English text and stats were checked against the official TCG database.",
+    "November 12: Blizzard Dragon joins the Extra Card Pool unlimited (three copies). Identity and text use the existing card database, checked against the official TCG database."
   ],
   "statusChanges": [
     {
@@ -318,6 +322,38 @@
       "atk": 1900,
       "def": 1300,
       "text": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Plant-Type monster in you hand. During each of your Standby Phases, you can send 1 Level 3 or lower monster from your Deck to your Graveyard.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "4754691",
+      "name": "Amphibious Bugroth MK-11",
+      "type": "Monster",
+      "subType": "Effect",
+      "attribute": "Water",
+      "monsterType": "Machine",
+      "class": null,
+      "level": 5,
+      "atk": 1850,
+      "def": 1500,
+      "text": "While \"Umi\" is not on the field, this card gains 700 ATK, also it cannot attack directly. While \"Umi\" is on the field: You can target 1 face-up non-WATER monster on the field; destroy it. You can only use this effect of \"Amphibious Bugroth MK-11\" once per turn.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "61802346",
+      "name": "Blizzard Dragon",
+      "type": "Monster",
+      "subType": "Effect",
+      "attribute": "Water",
+      "monsterType": "Dragon",
+      "class": null,
+      "level": 4,
+      "atk": 1800,
+      "def": 1000,
+      "text": "Once per turn: You can target 1 monster your opponent controls; it cannot change its battle position or declare an attack until the end of your opponent's next turn.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"
