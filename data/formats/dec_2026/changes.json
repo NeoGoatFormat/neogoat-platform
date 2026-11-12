@@ -3,8 +3,8 @@
   "name": "NeoGoat December 2026",
   "status": "final",
   "rulesFile": "cards_dec_2026.json",
-  "source": "Maintainer's final December 2026 list with Chaos Distill and Koa'ki Meiru Gravirose additions, November 11, 2026",
-  "updatedOn": "2026-11-11",
+  "source": "Maintainer's final December 2026 list with November 11 additions and Elemental HERO Nova Master restored on November 12, 2026",
+  "updatedOn": "2026-11-12",
   "metadataSource": "https://db.ygoprodeck.com/api/v7/cardinfo.php",
   "cardTextSources": {
     "1353770": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7573&ope=2&request_locale=en",
@@ -32,7 +32,8 @@
     "Ninja Grandmaster Hanzo and Soul Servant enter the Extra Card Pool semi-limited (two copies each); the other nine additions enter unlimited (three copies each).",
     "New card identities and stats were checked against YGOPRODeck; English texts follow the official TCG database links above. These metadata do not establish NeoGoat engine rulings or an errata policy.",
     "November 11: Chaos Distill joins the final Extra Card Pool unlimited (three copies).",
-    "November 11: Koa'ki Meiru Gravirose joins the final Extra Card Pool unlimited (three copies)."
+    "November 11: Koa'ki Meiru Gravirose joins the final Extra Card Pool unlimited (three copies).",
+    "November 12: Elemental HERO Nova Master is restored to the final Extra Card Pool limited (one copy), retaining its October entry unchanged."
   ],
   "statusChanges": [
     {
@@ -106,11 +107,6 @@
     {
       "password": "89312388",
       "name": "Elemental HERO Prisma",
-      "from": "limited"
-    },
-    {
-      "password": "1945387",
-      "name": "Elemental HERO Nova Master",
       "from": "limited"
     },
     {

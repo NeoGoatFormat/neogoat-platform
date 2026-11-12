@@ -1,8 +1,8 @@
 # NeoGoat December 2026
 
-**Final list supplied on November 11, 2026. October 2026 remains the active format.**
+**Final list supplied on November 11, 2026; updated November 12. October 2026 remains the active format.**
 
-December is rebuilt from the complete, frozen October 2026 pool using only the maintainer's final list. This replaces all earlier December drafts and includes the maintainer's subsequent November 11 additions of Chaos Distill and Koa'ki Meiru Gravirose at three copies each.
+December is rebuilt from the complete, frozen October 2026 pool using only the maintainer's final list. This replaces all earlier December drafts and includes the maintainer's subsequent November 11 additions of Chaos Distill and Koa'ki Meiru Gravirose at three copies each. On November 12, Elemental HERO Nova Master was restored to the Extra Card Pool at one copy, retaining its October entry unchanged.
 
 ## Banlist changes from October
 
@@ -24,10 +24,9 @@ All other retained cards keep their October limits and metadata. In particular, 
 
 ## Extra Card Pool
 
-These nine cards leave the pool and are absent from the December file:
+These eight cards leave the pool and are absent from the December file:
 
 - Elemental HERO Prisma
-- Elemental HERO Nova Master
 - Fifth Hope
 - Arcane Barrier
 - Goldd, Wu-Lord of Dark World
@@ -56,7 +55,7 @@ Earlier proposed additions omitted from this final list are not part of December
 
 New card identities and stats were checked against YGOPRODeck. Their English texts follow the official TCG database references in `changes.json`. These are card metadata; this update does not alter NeoGoat engine scripts or rulings.
 
-December contains **2231 entries**: 34 forbidden, 49 limited, 22 semi-limited and 2126 unlimited. The Extra Card Pool contains **105 entries**. Relative to October, there are nine removals, eleven additions and eleven changes to retained cards' copy limits.
+December contains **2232 entries**: 34 forbidden, 50 limited, 22 semi-limited and 2126 unlimited. The Extra Card Pool contains **106 entries**. Relative to October, there are eight removals, eleven additions and eleven changes to retained cards' copy limits.
 
 ## Files and generation
 
