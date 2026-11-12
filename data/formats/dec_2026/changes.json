@@ -3,11 +3,12 @@
   "name": "NeoGoat December 2026",
   "status": "final",
   "rulesFile": "cards_dec_2026.json",
-  "source": "Maintainer's final December 2026 list, November 11, 2026",
+  "source": "Maintainer's final December 2026 list and Chaos Distill addition, November 11, 2026",
   "updatedOn": "2026-11-11",
   "metadataSource": "https://db.ygoprodeck.com/api/v7/cardinfo.php",
   "cardTextSources": {
     "1353770": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7573&ope=2&request_locale=en",
+    "6500778": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=21756&ope=2&request_locale=en",
     "23020408": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=14907&ope=2&request_locale=en",
     "33057951": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9666&ope=2&request_locale=en",
     "33574806": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9838&ope=2&request_locale=en",
@@ -27,8 +28,9 @@
     "Final December 2026 list supplied by the maintainer on November 11; rebuilt from the frozen October pool and superseding all earlier December drafts. October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
     "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted.",
-    "Ninja Grandmaster Hanzo and Soul Servant enter the Extra Card Pool semi-limited (two copies each); the other seven additions enter unlimited (three copies each).",
-    "New card identities and stats were checked against YGOPRODeck; English texts follow the official TCG database links above. These metadata do not establish NeoGoat engine rulings or an errata policy."
+    "Ninja Grandmaster Hanzo and Soul Servant enter the Extra Card Pool semi-limited (two copies each); the other eight additions enter unlimited (three copies each).",
+    "New card identities and stats were checked against YGOPRODeck; English texts follow the official TCG database links above. These metadata do not establish NeoGoat engine rulings or an errata policy.",
+    "November 11: Chaos Distill joins the final Extra Card Pool unlimited (three copies)."
   ],
   "statusChanges": [
     {
@@ -286,6 +288,22 @@
       "atk": null,
       "def": null,
       "text": "Tribute 1 Fish monster, then target 1 card on the field; destroy that target, and if you do, draw 1 card.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "6500778",
+      "name": "Chaos Distill",
+      "type": "Spell",
+      "subType": "Continuous",
+      "attribute": null,
+      "monsterType": "Continuous",
+      "class": null,
+      "level": null,
+      "atk": null,
+      "def": null,
+      "text": "While this card is face-up on the field, any card sent to your GY is banished instead. You can activate 1 of these effects;\n● Add 1 \"Macro Cosmos\", or 1 card that mentions it, from your Deck to your hand, except \"Chaos Distill\".\n● If \"Macro Cosmos\" is on the field: Banish this face-up card from the Spell & Trap Zone; add 1 LIGHT monster with ? ATK from your Deck to your hand.\nYou can only use this effect of \"Chaos Distill\" once per turn.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"
