@@ -17869,7 +17869,7 @@
     "text": "Once per turn: You can Tribute 1 face-up Plant monster; Special Summon 1 Plant monster from your Deck.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
-    "ban_status": "limited"
+    "ban_status": "semi-limited"
   },
   {
     "password": "17985575",
@@ -18349,7 +18349,7 @@
     "text": "If a monster on your side of the field was sent to your Graveyard this turn, you can Special Summon 1 monster with an ATK of 1500 points or less from your Deck once during this turn. Then shuffle your Deck.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "limited"
+    "ban_status": "forbidden"
   },
   {
     "password": "46474915",
@@ -18541,7 +18541,7 @@
     "text": "The equipped monster gains 500 ATK and DEF for each Spell and Trap Card you control.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "semi-limited"
+    "ban_status": "unlimited"
   },
   {
     "password": "50755",
@@ -27357,7 +27357,7 @@
     "text": "Tribute 1 DARK monster with 1000 or less ATK; your opponent takes no damage until the end of the next turn after this card resolves, also, you look at your opponent's hand and all monsters they control, and if you do, destroy the monsters among them with 1500 or more ATK, then your opponent can destroy up to 3 monsters with 1500 or more ATK in their Deck.",
     "pool": "OCG Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "semi-limited"
+    "ban_status": "limited"
   },
   {
     "password": "35346968",
@@ -32461,7 +32461,7 @@
     "text": "When this card is Tribute Summoned, you can select up to 2 Spell or Trap Cards on the field. Destroy them.",
     "pool": "Normal Goat Cardpool",
     "printedinTCG": "Yes",
-    "ban_status": "semi-limited"
+    "ban_status": "limited"
   },
   {
     "password": "22431243",
@@ -34912,22 +34912,6 @@
     "ban_status": "unlimited"
   },
   {
-    "password": "1945387",
-    "name": "Elemental HERO Nova Master",
-    "type": "Monster",
-    "subType": "Fusion",
-    "attribute": "FIRE",
-    "monsterType": "Warrior",
-    "class": null,
-    "level": 8,
-    "atk": 2600,
-    "def": 2100,
-    "text": "1 \"Elemental HERO\" monster + 1 FIRE monster\nMust be Fusion Summoned. If this card destroys an opponent's monster by battle: Draw 1 card.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "limited"
-  },
-  {
     "password": "21593977",
     "name": "Makyura the Destructor",
     "type": "Monster",
@@ -35392,6 +35376,22 @@
     "ban_status": "unlimited"
   },
   {
+    "password": "6614221",
+    "name": "Fog King",
+    "type": "Monster",
+    "subType": "Effect",
+    "attribute": "Water",
+    "monsterType": "Spellcaster",
+    "class": null,
+    "level": 7,
+    "atk": 0,
+    "def": 0,
+    "text": "You can Tribute 1 monster, or no monsters, to Normal Summon (but not Set) this card. The ATK of this card becomes the combined original ATK of the Tributed monsters. Neither player can Tribute cards.",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "unlimited"
+  },
+  {
     "password": "53094821",
     "name": "Toon Terror",
     "type": "Trap",
@@ -35437,7 +35437,7 @@
     "text": "During your Main Phase: You can send 1 Zombie monster from your Deck to the GY. If this card is sent to the GY: You can banish 1 Zombie monster from your GY, except \"Gozuki\"; Special Summon 1 Zombie monster from your hand. You can only use each effect of \"Gozuki\" once per turn.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
-    "ban_status": "unlimited"
+    "ban_status": "semi-limited"
   },
   {
     "password": "77565204",
@@ -35520,52 +35520,36 @@
     "ban_status": "unlimited"
   },
   {
-    "password": "6500778",
-    "name": "Chaos Distill",
+    "password": "95027497",
+    "name": "Ninja Grandmaster Hanzo",
+    "type": "Monster",
+    "subType": "Effect",
+    "attribute": "Dark",
+    "monsterType": "Warrior",
+    "class": null,
+    "level": 4,
+    "atk": 1800,
+    "def": 1000,
+    "text": "When this card is Normal Summoned: You can add 1 \"Ninjitsu Art\" card from your Deck to your hand. When this card is Flip or Special Summoned: You can add 1 \"Ninja\" monster from your Deck to your hand, except \"Ninja Grandmaster Hanzo\".",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "semi-limited"
+  },
+  {
+    "password": "23020408",
+    "name": "Soul Servant",
     "type": "Spell",
-    "subType": "Continuous",
+    "subType": "Quick-Play",
     "attribute": null,
-    "monsterType": "Continuous",
+    "monsterType": "Quick-Play",
     "class": null,
     "level": null,
     "atk": null,
     "def": null,
-    "text": "While this card is face-up on the field, any card sent to your GY is banished instead. You can activate 1 of these effects;\n● Add 1 \"Macro Cosmos\", or 1 card that mentions it, from your Deck to your hand, except \"Chaos Distill\".\n● If \"Macro Cosmos\" is on the field: Banish this face-up card from the Spell & Trap Zone; add 1 LIGHT monster with ? ATK from your Deck to your hand.\nYou can only use this effect of \"Chaos Distill\" once per turn.",
+    "text": "Place 1 card on top of the Deck from your hand, Deck, or GY, that is \"Dark Magician\" or mentions \"Dark Magician\" or \"Dark Magician Girl\", except \"Soul Servant\". During your Main Phase: You can banish this card from your GY; draw cards equal to the number of \"Palladium\" monsters, \"Dark Magician\", and/or \"Dark Magician Girl\", with different names, on the field and in the GYs. You can only use this effect of \"Soul Servant\" once per turn.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
-    "ban_status": "unlimited"
-  },
-  {
-    "password": "47731128",
-    "name": "Mei-Kou, Master of Barriers",
-    "type": "Monster",
-    "subType": "Effect",
-    "attribute": "Light",
-    "monsterType": "Spellcaster",
-    "class": null,
-    "level": 4,
-    "atk": 1700,
-    "def": 600,
-    "text": "You can Tribute this card, then target 1 face-up Continuous Spell/Trap on the field; destroy that target.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "unlimited"
-  },
-  {
-    "password": "41201555",
-    "name": "Koa'ki Meiru Gravirose",
-    "type": "Monster",
-    "subType": "Effect",
-    "attribute": "Fire",
-    "monsterType": "Plant",
-    "class": null,
-    "level": 4,
-    "atk": 1900,
-    "def": 1300,
-    "text": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Plant-Type monster in you hand. During each of your Standby Phases, you can send 1 Level 3 or lower monster from your Deck to your Graveyard.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "unlimited"
+    "ban_status": "semi-limited"
   },
   {
     "password": "33057951",
@@ -35584,33 +35568,17 @@
     "ban_status": "unlimited"
   },
   {
-    "password": "25642998",
-    "name": "Poseidon Wave",
-    "type": "Trap",
-    "subType": "Normal",
-    "attribute": null,
-    "monsterType": "Normal",
-    "class": null,
-    "level": null,
-    "atk": null,
-    "def": null,
-    "text": "When an opponent's monster declares an attack: Target the attacking monster; negate the attack, and if you do, inflict 800 damage to your opponent for each Fish, Sea Serpent, or Aqua-Type monster you control.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "unlimited"
-  },
-  {
-    "password": "77625948",
-    "name": "Cyberdark Edge",
+    "password": "46508640",
+    "name": "Dweller in the Depths",
     "type": "Monster",
     "subType": "Effect",
-    "attribute": "Dark",
-    "monsterType": "Machine",
+    "attribute": "Earth",
+    "monsterType": "Dragon",
     "class": null,
-    "level": 4,
-    "atk": 800,
-    "def": 800,
-    "text": "If this card is Normal Summoned: Target 1 Level 3 or lower Dragon monster in your GY; equip that Dragon monster to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. This card can attack directly. If it does using this effect, its ATK is halved during damage calculation only. If this card would be destroyed by battle, destroy that equipped monster, instead.",
+    "level": 3,
+    "atk": 1500,
+    "def": 700,
+    "text": "Gains 300 ATK for each Continuous Spell in your Spell & Trap Zone.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"
@@ -35632,33 +35600,65 @@
     "ban_status": "unlimited"
   },
   {
-    "password": "23020408",
-    "name": "Soul Servant",
-    "type": "Spell",
-    "subType": "Quick-Play",
+    "password": "47731128",
+    "name": "Mei-Kou, Master of Barriers",
+    "type": "Monster",
+    "subType": "Effect",
+    "attribute": "Light",
+    "monsterType": "Spellcaster",
+    "class": null,
+    "level": 4,
+    "atk": 1700,
+    "def": 600,
+    "text": "You can Tribute this card, then target 1 face-up Continuous Spell/Trap on the field; destroy that target.",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "unlimited"
+  },
+  {
+    "password": "33574806",
+    "name": "Elemental HERO Escuridao",
+    "type": "Monster",
+    "subType": "Fusion",
+    "attribute": "Dark",
+    "monsterType": "Warrior",
+    "class": "Effect",
+    "level": 8,
+    "atk": 2500,
+    "def": 2000,
+    "text": "1 \"Elemental HERO\" monster + 1 DARK monster\nMust be Fusion Summoned. Gains 100 ATK for each \"Elemental HERO\" monster in your GY.",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "unlimited"
+  },
+  {
+    "password": "73778008",
+    "name": "Rage of the Deep Sea",
+    "type": "Monster",
+    "subType": "Effect",
+    "attribute": "Water",
+    "monsterType": "Fish",
+    "class": null,
+    "level": 5,
+    "atk": 0,
+    "def": 0,
+    "text": "This card gains 500 ATK and DEF for each Fish, Sea Serpent, or Aqua-Type monster in your Graveyard.",
+    "pool": "Extra Card Pool",
+    "printedinTCG": "Yes",
+    "ban_status": "unlimited"
+  },
+  {
+    "password": "58873391",
+    "name": "Fish Depth Charge",
+    "type": "Trap",
+    "subType": "Normal",
     "attribute": null,
-    "monsterType": "Quick-Play",
+    "monsterType": "Normal",
     "class": null,
     "level": null,
     "atk": null,
     "def": null,
-    "text": "Place 1 card on top of the Deck from your hand, Deck, or GY, that is \"Dark Magician\" or mentions \"Dark Magician\" or \"Dark Magician Girl\", except \"Soul Servant\". During your Main Phase: You can banish this card from your GY; draw cards equal to the number of \"Palladium\" monsters, \"Dark Magician\", and/or \"Dark Magician Girl\", with different names, on the field and in the GYs. You can only use this effect of \"Soul Servant\" once per turn.",
-    "pool": "Extra Card Pool",
-    "printedinTCG": "Yes",
-    "ban_status": "semi-limited"
-  },
-  {
-    "password": "93130021",
-    "name": "Victory Viper XX03",
-    "type": "Monster",
-    "subType": "Effect",
-    "attribute": "Light",
-    "monsterType": "Machine",
-    "class": null,
-    "level": 4,
-    "atk": 1200,
-    "def": 1000,
-    "text": "If this card destroys an opponent's monster by battle: Activate 1 of these effects.\n● This card gains 400 ATK.\n● Target 1 face-up Spell/Trap on the field; destroy that target.\n● Special Summon 1 \"Option Token\". Its Type, Attribute, Level, and ATK/DEF are always the same as this card, but destroy it if this card is no longer face-up on the field.",
+    "text": "Tribute 1 Fish monster, then target 1 card on the field; destroy that target, and if you do, draw 1 card.",
     "pool": "Extra Card Pool",
     "printedinTCG": "Yes",
     "ban_status": "unlimited"

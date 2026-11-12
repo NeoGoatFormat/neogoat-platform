@@ -1,81 +1,67 @@
-# NeoGoat December 2026 — Draft
+# NeoGoat December 2026
 
-**Work in progress. October 2026 remains the active format.**
+**Final list supplied on November 11, 2026. October 2026 remains the active format.**
 
-This draft inherits the complete October 2026 pool and records the maintainer's December planning decisions. It will be updated as further changes are defined. It is not the final December banlist.
+December is rebuilt from the complete, frozen October 2026 pool using only the maintainer's final list. This replaces all earlier December drafts.
 
-## Cumulative changes through November 10, 2026
+## Banlist changes from October
 
-### Banlist
-
-| Card | October limit | December draft limit |
+| Card | October limit | December limit |
 | --- | --- | --- |
-| Pot of Greed | Limited (1) | Forbidden (0) |
-| Magical Stone Excavation | Semi-limited (2) | Forbidden (0) |
 | Night Assailant | Limited (1) | Forbidden (0) |
+| Magical Stone Excavation | Semi-limited (2) | Forbidden (0) |
+| Pot of Greed | Limited (1) | Forbidden (0) |
+| Mobius the Frost Monarch | Semi-limited (2) | Limited (1) |
 | Pyramid Turtle | Forbidden (0) | Limited (1) |
 | Graceful Charity | Forbidden (0) | Limited (1) |
-| Lonefire Blossom | Semi-limited (2) | Limited (1) |
-| Last Will | Forbidden (0) | Limited (1) |
-| Future Fusion | Semi-limited (2) | Unlimited (3) |
-| Miracle Fusion | Semi-limited (2) | Unlimited (3) |
+| Crush Card Virus | Semi-limited (2) | Limited (1) |
 | Dark Spirit's Mastery | Unlimited (3) | Semi-limited (2) |
-| Gozuki | Semi-limited (2) | Unlimited (3) |
+| Miracle Fusion | Semi-limited (2) | Unlimited (3) |
+| Future Fusion | Semi-limited (2) | Unlimited (3) |
+| Mage Power | Semi-limited (2) | Unlimited (3) |
 
-All other retained cards keep their October copy limits. Forbidden cards remain in the data with a zero-copy limit.
+All other retained cards keep their October limits and metadata. In particular, Gozuki and Lonefire Blossom remain semi-limited (2), Last Will remains forbidden (0), and Fog King, Chaos Trap Hole and Cyberdark Keel remain unlimited (3). Forbidden cards remain in the data with a zero-copy limit.
 
-### Extra Card Pool
+## Extra Card Pool
 
-The following nine cards leave the Extra Card Pool:
+These nine cards leave the pool and are absent from the December file:
 
-- Arcane Barrier
 - Elemental HERO Prisma
+- Elemental HERO Nova Master
 - Fifth Hope
-- Fog King
+- Arcane Barrier
 - Goldd, Wu-Lord of Dark World
 - Magical Exemplar
 - Needlebug Nest
 - Spell Power Grasp
 - The Eye of Timaeus
 
-These cards are absent from the December file. Retained October entries preserve their metadata, with only the banlist changes above applied.
+These nine cards enter the pool:
 
-The following nine cards enter the Extra Card Pool. Soul Servant is semi-limited (two copies); the other eight are provisionally unlimited (three copies each):
+| Card | December limit |
+| --- | --- |
+| Ninja Grandmaster Hanzo | Semi-limited (2) |
+| Soul Servant | Semi-limited (2) |
+| Surface | Unlimited (3) |
+| Dweller in the Depths | Unlimited (3) |
+| Valhalla, Hall of the Fallen | Unlimited (3) |
+| Mei-Kou, Master of Barriers | Unlimited (3) |
+| Elemental HERO Escuridao | Unlimited (3) |
+| Rage of the Deep Sea | Unlimited (3) |
+| Fish Depth Charge | Unlimited (3) |
 
-- Chaos Distill
-- Mei-Kou, Master of Barriers
-- Koa'ki Meiru Gravirose
-- Surface
-- Poseidon Wave
-- Cyberdark Edge
-- Valhalla, Hall of the Fallen
-- Soul Servant
-- Victory Viper XX03
+Earlier proposed additions omitted from this final list are not part of December: Chaos Distill, Snipe Hunter, Koa'ki Meiru Gravirose, Poseidon Wave, Cyberdark Edge and Victory Viper XX03.
 
-Cyberdark Keel is inherited from October.
+New card identities and stats were checked against YGOPRODeck. Their English texts follow the official TCG database references in `changes.json`. These are card metadata; this update does not alter NeoGoat engine scripts or rulings.
 
-Earlier additions were checked against YGOPRODeck. Mei-Kou identity and stats were checked against the installed card database and the official TCG database. Their English card texts follow the official TCG database references in `changes.json`, including the current Surface and Cyberdark texts. This is card metadata, not a change to NeoGoat engine scripts or rulings.
+December contains **2229 entries**: 34 forbidden, 49 limited, 22 semi-limited and 2124 unlimited. The Extra Card Pool contains **103 entries**. Relative to October, there are nine removals, nine additions and eleven changes to retained cards' copy limits.
 
-Current draft: **2229 entries** (33 forbidden, 50 limited, 22 semi-limited, 2124 unlimited), with nine removals, nine additions and eleven changes to retained cards' copy limits.
+## Files and generation
 
-## Revision recorded on November 9, 2026
+- `cards_dec_2026.json`: the complete December pool in the existing builder schema.
+- `changes.json`: the final changes relative to the frozen October base, including card IDs, previous limits and source links.
 
-Snipe Hunter has been withdrawn from the December draft and replaced by Mei-Kou, Master of Barriers at three copies. Chaos Trap Hole returns to the December pool with its October unlimited status (three copies). These changes do not activate December as the current format.
-
-Mei-Kou's LIGHT Attribute, Level 4, 1700 ATK, 600 DEF and current English text were checked against the [official card database](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7116&ope=2&request_locale=en).
-
-## Revision recorded on November 10, 2026
-
-Mobius the Frost Monarch returns to **two copies (semi-limited)**, matching its October limit. Its earlier one-copy restriction has been removed from the cumulative changes. October remains the active format.
-
-Soul Servant, one of the December additions, is reduced from three copies to **two copies (semi-limited)**.
-
-## Files and further edits
-
-- `cards_dec_2026.json`: the complete December draft pool in the existing builder schema.
-- `changes.json`: the cumulative changes relative to the frozen October base, with card IDs and previous limits.
-
-For each subsequent decision, update `changes.json`, regenerate the pool and update this summary. The generator preserves inherited metadata and checks the October source hash. From the repository root:
+The generator preserves inherited metadata and checks the October source hash. After editing the manifest, regenerate the pool and update this summary. From the repository root:
 
 ```sh
 node tools/build-december-2026.js
@@ -84,4 +70,4 @@ node tests/formats.test.js
 node tests/cardpool-data.test.js
 ```
 
-The active configuration, format selectors, historical pools, NeoGoat Pro clients and server rules are unchanged. Activation will be handled separately once the December format is finalized.
+October remains selected in `data/config.json`. December activation is a separate step; the active configuration, format selectors, historical pools, NeoGoat Pro clients and server rules are unchanged.

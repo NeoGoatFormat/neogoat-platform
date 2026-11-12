@@ -1,21 +1,21 @@
 {
   "formatId": "dec_2026",
   "name": "NeoGoat December 2026",
-  "status": "draft",
+  "status": "final",
   "rulesFile": "cards_dec_2026.json",
-  "source": "Maintainer's December planning decisions, November 7-10, 2026",
-  "updatedOn": "2026-11-10",
+  "source": "Maintainer's final December 2026 list, November 11, 2026",
+  "updatedOn": "2026-11-11",
   "metadataSource": "https://db.ygoprodeck.com/api/v7/cardinfo.php",
   "cardTextSources": {
-    "6500778": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=21756&ope=2&request_locale=en",
-    "41201555": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=8524&ope=2&request_locale=en",
-    "33057951": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9666&ope=2&request_locale=en",
-    "25642998": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9681&ope=2&request_locale=en",
-    "77625948": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6831&ope=2&request_locale=en",
     "1353770": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7573&ope=2&request_locale=en",
     "23020408": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=14907&ope=2&request_locale=en",
-    "93130021": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6684&ope=2&request_locale=en",
-    "47731128": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7116&ope=2&request_locale=en"
+    "33057951": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9666&ope=2&request_locale=en",
+    "33574806": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9838&ope=2&request_locale=en",
+    "46508640": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7119&ope=2&request_locale=en",
+    "47731128": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7116&ope=2&request_locale=en",
+    "58873391": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7768&ope=2&request_locale=en",
+    "73778008": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9581&ope=2&request_locale=en",
+    "95027497": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9903&ope=2&request_locale=en"
   },
   "base": {
     "file": "data/formats/oct_2026/cards_oct_2026.json",
@@ -24,20 +24,16 @@
     "hashEncoding": "UTF-8 with LF line endings (the Git blob); normalize CRLF only when checking a Windows checkout"
   },
   "notes": [
-    "Work in progress for December 2026; October remains the active format.",
+    "Final December 2026 list supplied by the maintainer on November 11; rebuilt from the frozen October pool and superseding all earlier December drafts. October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
     "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted.",
-    "Of the nine new cards, Soul Servant is semi-limited (two copies); the other eight are provisionally unlimited (three copies).",
-    "Earlier additions were checked against YGOPRODeck; Mei-Kou identity and stats were checked against the installed card database and the official TCG database; English card texts follow the official TCG database linked above, including its current Surface and Cyberdark texts. These metadata do not establish NeoGoat engine rulings or an errata policy.",
-    "November 9: Snipe Hunter leaves the December draft; Mei-Kou, Master of Barriers enters unlimited. Chaos Trap Hole is retained from October at three copies.",
-    "November 10: Mobius the Frost Monarch returns to two copies, inheriting its October semi-limited status.",
-    "November 10: Soul Servant is reduced from three copies to two in the December draft.",
-    "Further changes will be added as the maintainer defines them."
+    "Ninja Grandmaster Hanzo and Soul Servant enter the Extra Card Pool semi-limited (two copies each); the other seven additions enter unlimited (three copies each).",
+    "New card identities and stats were checked against YGOPRODeck; English texts follow the official TCG database links above. These metadata do not establish NeoGoat engine rulings or an errata policy."
   ],
   "statusChanges": [
     {
-      "password": "55144522",
-      "name": "Pot of Greed",
+      "password": "16226786",
+      "name": "Night Assailant",
       "from": "limited",
       "to": "forbidden"
     },
@@ -48,10 +44,16 @@
       "to": "forbidden"
     },
     {
-      "password": "16226786",
-      "name": "Night Assailant",
+      "password": "55144522",
+      "name": "Pot of Greed",
       "from": "limited",
       "to": "forbidden"
+    },
+    {
+      "password": "4929256",
+      "name": "Mobius the Frost Monarch",
+      "from": "semi-limited",
+      "to": "limited"
     },
     {
       "password": "77044671",
@@ -66,28 +68,10 @@
       "to": "limited"
     },
     {
-      "password": "48686504",
-      "name": "Lonefire Blossom",
+      "password": "57728570",
+      "name": "Crush Card Virus",
       "from": "semi-limited",
       "to": "limited"
-    },
-    {
-      "password": "85602018",
-      "name": "Last Will",
-      "from": "forbidden",
-      "to": "limited"
-    },
-    {
-      "password": "77565204",
-      "name": "Future Fusion",
-      "from": "semi-limited",
-      "to": "unlimited"
-    },
-    {
-      "password": "45906428",
-      "name": "Miracle Fusion",
-      "from": "semi-limited",
-      "to": "unlimited"
     },
     {
       "password": "14386013",
@@ -96,21 +80,33 @@
       "to": "semi-limited"
     },
     {
-      "password": "52467217",
-      "name": "Gozuki",
+      "password": "45906428",
+      "name": "Miracle Fusion",
+      "from": "semi-limited",
+      "to": "unlimited"
+    },
+    {
+      "password": "77565204",
+      "name": "Future Fusion",
+      "from": "semi-limited",
+      "to": "unlimited"
+    },
+    {
+      "password": "83746708",
+      "name": "Mage Power",
       "from": "semi-limited",
       "to": "unlimited"
     }
   ],
   "removals": [
     {
-      "password": "17896384",
-      "name": "Arcane Barrier",
-      "from": "unlimited"
-    },
-    {
       "password": "89312388",
       "name": "Elemental HERO Prisma",
+      "from": "limited"
+    },
+    {
+      "password": "1945387",
+      "name": "Elemental HERO Nova Master",
       "from": "limited"
     },
     {
@@ -119,8 +115,8 @@
       "from": "unlimited"
     },
     {
-      "password": "6614221",
-      "name": "Fog King",
+      "password": "17896384",
+      "name": "Arcane Barrier",
       "from": "unlimited"
     },
     {
@@ -151,52 +147,36 @@
   ],
   "additions": [
     {
-      "password": "6500778",
-      "name": "Chaos Distill",
+      "password": "95027497",
+      "name": "Ninja Grandmaster Hanzo",
+      "type": "Monster",
+      "subType": "Effect",
+      "attribute": "Dark",
+      "monsterType": "Warrior",
+      "class": null,
+      "level": 4,
+      "atk": 1800,
+      "def": 1000,
+      "text": "When this card is Normal Summoned: You can add 1 \"Ninjitsu Art\" card from your Deck to your hand. When this card is Flip or Special Summoned: You can add 1 \"Ninja\" monster from your Deck to your hand, except \"Ninja Grandmaster Hanzo\".",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "semi-limited"
+    },
+    {
+      "password": "23020408",
+      "name": "Soul Servant",
       "type": "Spell",
-      "subType": "Continuous",
+      "subType": "Quick-Play",
       "attribute": null,
-      "monsterType": "Continuous",
+      "monsterType": "Quick-Play",
       "class": null,
       "level": null,
       "atk": null,
       "def": null,
-      "text": "While this card is face-up on the field, any card sent to your GY is banished instead. You can activate 1 of these effects;\n● Add 1 \"Macro Cosmos\", or 1 card that mentions it, from your Deck to your hand, except \"Chaos Distill\".\n● If \"Macro Cosmos\" is on the field: Banish this face-up card from the Spell & Trap Zone; add 1 LIGHT monster with ? ATK from your Deck to your hand.\nYou can only use this effect of \"Chaos Distill\" once per turn.",
+      "text": "Place 1 card on top of the Deck from your hand, Deck, or GY, that is \"Dark Magician\" or mentions \"Dark Magician\" or \"Dark Magician Girl\", except \"Soul Servant\". During your Main Phase: You can banish this card from your GY; draw cards equal to the number of \"Palladium\" monsters, \"Dark Magician\", and/or \"Dark Magician Girl\", with different names, on the field and in the GYs. You can only use this effect of \"Soul Servant\" once per turn.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
-      "ban_status": "unlimited"
-    },
-    {
-      "password": "47731128",
-      "name": "Mei-Kou, Master of Barriers",
-      "type": "Monster",
-      "subType": "Effect",
-      "attribute": "Light",
-      "monsterType": "Spellcaster",
-      "class": null,
-      "level": 4,
-      "atk": 1700,
-      "def": 600,
-      "text": "You can Tribute this card, then target 1 face-up Continuous Spell/Trap on the field; destroy that target.",
-      "pool": "Extra Card Pool",
-      "printedinTCG": "Yes",
-      "ban_status": "unlimited"
-    },
-    {
-      "password": "41201555",
-      "name": "Koa'ki Meiru Gravirose",
-      "type": "Monster",
-      "subType": "Effect",
-      "attribute": "Fire",
-      "monsterType": "Plant",
-      "class": null,
-      "level": 4,
-      "atk": 1900,
-      "def": 1300,
-      "text": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Plant-Type monster in you hand. During each of your Standby Phases, you can send 1 Level 3 or lower monster from your Deck to your Graveyard.",
-      "pool": "Extra Card Pool",
-      "printedinTCG": "Yes",
-      "ban_status": "unlimited"
+      "ban_status": "semi-limited"
     },
     {
       "password": "33057951",
@@ -215,33 +195,17 @@
       "ban_status": "unlimited"
     },
     {
-      "password": "25642998",
-      "name": "Poseidon Wave",
-      "type": "Trap",
-      "subType": "Normal",
-      "attribute": null,
-      "monsterType": "Normal",
-      "class": null,
-      "level": null,
-      "atk": null,
-      "def": null,
-      "text": "When an opponent's monster declares an attack: Target the attacking monster; negate the attack, and if you do, inflict 800 damage to your opponent for each Fish, Sea Serpent, or Aqua-Type monster you control.",
-      "pool": "Extra Card Pool",
-      "printedinTCG": "Yes",
-      "ban_status": "unlimited"
-    },
-    {
-      "password": "77625948",
-      "name": "Cyberdark Edge",
+      "password": "46508640",
+      "name": "Dweller in the Depths",
       "type": "Monster",
       "subType": "Effect",
-      "attribute": "Dark",
-      "monsterType": "Machine",
+      "attribute": "Earth",
+      "monsterType": "Dragon",
       "class": null,
-      "level": 4,
-      "atk": 800,
-      "def": 800,
-      "text": "If this card is Normal Summoned: Target 1 Level 3 or lower Dragon monster in your GY; equip that Dragon monster to this card. Gains ATK equal to the original ATK of the monster equipped to it by this effect. This card can attack directly. If it does using this effect, its ATK is halved during damage calculation only. If this card would be destroyed by battle, destroy that equipped monster, instead.",
+      "level": 3,
+      "atk": 1500,
+      "def": 700,
+      "text": "Gains 300 ATK for each Continuous Spell in your Spell & Trap Zone.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"
@@ -263,33 +227,65 @@
       "ban_status": "unlimited"
     },
     {
-      "password": "23020408",
-      "name": "Soul Servant",
-      "type": "Spell",
-      "subType": "Quick-Play",
+      "password": "47731128",
+      "name": "Mei-Kou, Master of Barriers",
+      "type": "Monster",
+      "subType": "Effect",
+      "attribute": "Light",
+      "monsterType": "Spellcaster",
+      "class": null,
+      "level": 4,
+      "atk": 1700,
+      "def": 600,
+      "text": "You can Tribute this card, then target 1 face-up Continuous Spell/Trap on the field; destroy that target.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "33574806",
+      "name": "Elemental HERO Escuridao",
+      "type": "Monster",
+      "subType": "Fusion",
+      "attribute": "Dark",
+      "monsterType": "Warrior",
+      "class": "Effect",
+      "level": 8,
+      "atk": 2500,
+      "def": 2000,
+      "text": "1 \"Elemental HERO\" monster + 1 DARK monster\nMust be Fusion Summoned. Gains 100 ATK for each \"Elemental HERO\" monster in your GY.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "73778008",
+      "name": "Rage of the Deep Sea",
+      "type": "Monster",
+      "subType": "Effect",
+      "attribute": "Water",
+      "monsterType": "Fish",
+      "class": null,
+      "level": 5,
+      "atk": 0,
+      "def": 0,
+      "text": "This card gains 500 ATK and DEF for each Fish, Sea Serpent, or Aqua-Type monster in your Graveyard.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "58873391",
+      "name": "Fish Depth Charge",
+      "type": "Trap",
+      "subType": "Normal",
       "attribute": null,
-      "monsterType": "Quick-Play",
+      "monsterType": "Normal",
       "class": null,
       "level": null,
       "atk": null,
       "def": null,
-      "text": "Place 1 card on top of the Deck from your hand, Deck, or GY, that is \"Dark Magician\" or mentions \"Dark Magician\" or \"Dark Magician Girl\", except \"Soul Servant\". During your Main Phase: You can banish this card from your GY; draw cards equal to the number of \"Palladium\" monsters, \"Dark Magician\", and/or \"Dark Magician Girl\", with different names, on the field and in the GYs. You can only use this effect of \"Soul Servant\" once per turn.",
-      "pool": "Extra Card Pool",
-      "printedinTCG": "Yes",
-      "ban_status": "semi-limited"
-    },
-    {
-      "password": "93130021",
-      "name": "Victory Viper XX03",
-      "type": "Monster",
-      "subType": "Effect",
-      "attribute": "Light",
-      "monsterType": "Machine",
-      "class": null,
-      "level": 4,
-      "atk": 1200,
-      "def": 1000,
-      "text": "If this card destroys an opponent's monster by battle: Activate 1 of these effects.\n● This card gains 400 ATK.\n● Target 1 face-up Spell/Trap on the field; destroy that target.\n● Special Summon 1 \"Option Token\". Its Type, Attribute, Level, and ATK/DEF are always the same as this card, but destroy it if this card is no longer face-up on the field.",
+      "text": "Tribute 1 Fish monster, then target 1 card on the field; destroy that target, and if you do, draw 1 card.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"

@@ -1,4 +1,4 @@
-// Deterministic, offline generation of the December draft from October.
+// Deterministic, offline generation of the December format from October.
 const assert = require("node:assert/strict");
 const crypto = require("node:crypto");
 const fs = require("node:fs");
