@@ -2,7 +2,7 @@
 
 **Final list supplied on November 11, 2026. October 2026 remains the active format.**
 
-December is rebuilt from the complete, frozen October 2026 pool using only the maintainer's final list. This replaces all earlier December drafts and includes the maintainer's subsequent November 11 addition of Chaos Distill at three copies.
+December is rebuilt from the complete, frozen October 2026 pool using only the maintainer's final list. This replaces all earlier December drafts and includes the maintainer's subsequent November 11 additions of Chaos Distill and Koa'ki Meiru Gravirose at three copies each.
 
 ## Banlist changes from October
 
@@ -36,7 +36,7 @@ These nine cards leave the pool and are absent from the December file:
 - Spell Power Grasp
 - The Eye of Timaeus
 
-These ten cards enter the pool:
+These eleven cards enter the pool:
 
 | Card | December limit |
 | --- | --- |
@@ -50,12 +50,13 @@ These ten cards enter the pool:
 | Rage of the Deep Sea | Unlimited (3) |
 | Fish Depth Charge | Unlimited (3) |
 | Chaos Distill | Unlimited (3) |
+| Koa'ki Meiru Gravirose | Unlimited (3) |
 
-Earlier proposed additions omitted from this final list are not part of December: Snipe Hunter, Koa'ki Meiru Gravirose, Poseidon Wave, Cyberdark Edge and Victory Viper XX03.
+Earlier proposed additions omitted from this final list are not part of December: Snipe Hunter, Poseidon Wave, Cyberdark Edge and Victory Viper XX03.
 
 New card identities and stats were checked against YGOPRODeck. Their English texts follow the official TCG database references in `changes.json`. These are card metadata; this update does not alter NeoGoat engine scripts or rulings.
 
-December contains **2230 entries**: 34 forbidden, 49 limited, 22 semi-limited and 2125 unlimited. The Extra Card Pool contains **104 entries**. Relative to October, there are nine removals, ten additions and eleven changes to retained cards' copy limits.
+December contains **2231 entries**: 34 forbidden, 49 limited, 22 semi-limited and 2126 unlimited. The Extra Card Pool contains **105 entries**. Relative to October, there are nine removals, eleven additions and eleven changes to retained cards' copy limits.
 
 ## Files and generation
 
