@@ -3,7 +3,7 @@
   "name": "NeoGoat December 2026",
   "status": "final",
   "rulesFile": "cards_dec_2026.json",
-  "source": "Maintainer's final December 2026 list, including subsequent additions and Elemental HERO Escuridao limited to one copy on November 12, 2026",
+  "source": "Maintainer's definitive December 2026 list supplied on November 12, 2026, superseding incompatible earlier drafts and updates",
   "updatedOn": "2026-11-12",
   "metadataSource": "https://db.ygoprodeck.com/api/v7/cardinfo.php",
   "cardTextSources": {
@@ -13,13 +13,13 @@
     "33057951": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9666&ope=2&request_locale=en",
     "33574806": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9838&ope=2&request_locale=en",
     "41201555": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=8524&ope=2&request_locale=en",
-    "46508640": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7119&ope=2&request_locale=en",
     "47731128": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7116&ope=2&request_locale=en",
     "58873391": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7768&ope=2&request_locale=en",
     "73778008": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9581&ope=2&request_locale=en",
     "95027497": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=9903&ope=2&request_locale=en",
     "4754691": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=17140&ope=2&request_locale=en",
-    "61802346": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7017&ope=2&request_locale=en"
+    "61802346": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7017&ope=2&request_locale=en",
+    "75081613": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7569&ope=2&request_locale=en"
   },
   "base": {
     "file": "data/formats/oct_2026/cards_oct_2026.json",
@@ -28,17 +28,12 @@
     "hashEncoding": "UTF-8 with LF line endings (the Git blob); normalize CRLF only when checking a Windows checkout"
   },
   "notes": [
-    "Final December 2026 list supplied by the maintainer on November 11; rebuilt from the frozen October pool and superseding all earlier December drafts. October remains the active format.",
+    "Definitive December 2026 list supplied by the maintainer on November 12; rebuilt from the frozen October pool and superseding incompatible earlier drafts and updates. October remains the active format.",
     "Removed cards are absent from the December pool, not retained with forbidden status.",
-    "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted.",
-    "Ninja Grandmaster Hanzo and Soul Servant enter the Extra Card Pool semi-limited (two copies each); Elemental HERO Escuridao enters limited (one copy); the other ten additions enter unlimited (three copies each).",
-    "New card identities and stats were checked against YGOPRODeck; English texts follow the official TCG database links above. These metadata do not establish NeoGoat engine rulings or an errata policy.",
-    "November 11: Chaos Distill joins the final Extra Card Pool unlimited (three copies).",
-    "November 11: Koa'ki Meiru Gravirose joins the final Extra Card Pool unlimited (three copies).",
-    "November 12: Elemental HERO Nova Master is restored to the final Extra Card Pool limited (one copy), retaining its October entry unchanged.",
-    "November 12: Amphibious Bugroth MK-11 joins the Extra Card Pool unlimited (three copies). Identity comes from the existing EDOPro card database; English text and stats were checked against the official TCG database.",
-    "November 12: Blizzard Dragon joins the Extra Card Pool unlimited (three copies). Identity and text use the existing card database, checked against the official TCG database.",
-    "November 12: Elemental HERO Escuridao is limited to one copy, remaining in the Extra Card Pool."
+    "All retained October card metadata is inherited unchanged; only copy limits listed in statusChanges are adjusted. Elemental HERO Nova Master retains its October one-copy limit.",
+    "Amphibious Bugroth MK-11 and Elemental HERO Escuridao enter the Extra Card Pool limited (one copy each). Ninja Grandmaster Hanzo and Soul Servant enter semi-limited (two copies each); the other nine additions enter unlimited (three copies each).",
+    "Dweller in the Depths is not included in the definitive list. Aztekipede, the Worm Warrior enters unlimited; Darklord Nurse Reficule, Desert Twister and Elemental HERO Mariner leave the pool.",
+    "New card identities and stats were checked against YGOPRODeck, except Amphibious Bugroth MK-11, Blizzard Dragon and Aztekipede, the Worm Warrior, which use existing card databases. Their English texts and stats were checked against the official TCG database references. These metadata do not establish NeoGoat engine rulings or an errata policy."
   ],
   "statusChanges": [
     {
@@ -110,6 +105,26 @@
   ],
   "removals": [
     {
+      "password": "17896384",
+      "name": "Arcane Barrier",
+      "from": "unlimited"
+    },
+    {
+      "password": "67316075",
+      "name": "Darklord Nurse Reficule",
+      "from": "unlimited"
+    },
+    {
+      "password": "81977953",
+      "name": "Desert Twister",
+      "from": "unlimited"
+    },
+    {
+      "password": "14225239",
+      "name": "Elemental HERO Mariner",
+      "from": "unlimited"
+    },
+    {
       "password": "89312388",
       "name": "Elemental HERO Prisma",
       "from": "limited"
@@ -117,11 +132,6 @@
     {
       "password": "55428811",
       "name": "Fifth Hope",
-      "from": "unlimited"
-    },
-    {
-      "password": "17896384",
-      "name": "Arcane Barrier",
       "from": "unlimited"
     },
     {
@@ -200,17 +210,17 @@
       "ban_status": "unlimited"
     },
     {
-      "password": "46508640",
-      "name": "Dweller in the Depths",
+      "password": "75081613",
+      "name": "Aztekipede, the Worm Warrior",
       "type": "Monster",
       "subType": "Effect",
       "attribute": "Earth",
-      "monsterType": "Dragon",
+      "monsterType": "Insect",
       "class": null,
-      "level": 3,
-      "atk": 1500,
-      "def": 700,
-      "text": "Gains 300 ATK for each Continuous Spell in your Spell & Trap Zone.",
+      "level": 4,
+      "atk": 1900,
+      "def": 400,
+      "text": "Cannot be Normal Summoned/Set. Must be Special Summoned by banishing 1 Insect-Type monster from your Graveyard, and cannot be Special Summoned by other ways. If this card inflicts battle damage to your opponent: Send the top card of their Deck to the Graveyard.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"
@@ -341,7 +351,7 @@
       "text": "While \"Umi\" is not on the field, this card gains 700 ATK, also it cannot attack directly. While \"Umi\" is on the field: You can target 1 face-up non-WATER monster on the field; destroy it. You can only use this effect of \"Amphibious Bugroth MK-11\" once per turn.",
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
-      "ban_status": "unlimited"
+      "ban_status": "limited"
     },
     {
       "password": "61802346",
