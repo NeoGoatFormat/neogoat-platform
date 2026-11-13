@@ -2,7 +2,7 @@
 
 **Final list supplied on November 11, 2026; updated November 12. October 2026 remains the active format.**
 
-December is rebuilt from the complete, frozen October 2026 pool using only the maintainer's final list. This replaces all earlier December drafts and includes the maintainer's subsequent November 11 additions of Chaos Distill and Koa'ki Meiru Gravirose at three copies each. On November 12, Elemental HERO Nova Master was restored to the Extra Card Pool at one copy, retaining its October entry unchanged. Amphibious Bugroth MK-11 and Blizzard Dragon were then added at three copies each.
+December is rebuilt from the complete, frozen October 2026 pool using only the maintainer's final list. This replaces all earlier December drafts and includes the maintainer's subsequent November 11 additions of Chaos Distill and Koa'ki Meiru Gravirose at three copies each. On November 12, Elemental HERO Nova Master was restored to the Extra Card Pool at one copy, retaining its October entry unchanged. Amphibious Bugroth MK-11 and Blizzard Dragon were then added at three copies each. Elemental HERO Escuridao was subsequently limited to one copy.
 
 ## Banlist changes from October
 
@@ -45,7 +45,7 @@ These thirteen cards enter the pool:
 | Dweller in the Depths | Unlimited (3) |
 | Valhalla, Hall of the Fallen | Unlimited (3) |
 | Mei-Kou, Master of Barriers | Unlimited (3) |
-| Elemental HERO Escuridao | Unlimited (3) |
+| Elemental HERO Escuridao | Limited (1) |
 | Rage of the Deep Sea | Unlimited (3) |
 | Fish Depth Charge | Unlimited (3) |
 | Chaos Distill | Unlimited (3) |
@@ -57,7 +57,7 @@ Earlier proposed additions omitted from this final list are not part of December
 
 New card identities and stats were checked against YGOPRODeck, except Amphibious Bugroth MK-11 and Blizzard Dragon, whose identities use existing card databases and whose stats were checked against the official TCG database. Their English texts follow the official TCG database references in `changes.json`. These are card metadata; this update does not alter NeoGoat engine scripts or rulings.
 
-December contains **2234 entries**: 34 forbidden, 50 limited, 22 semi-limited and 2128 unlimited. The Extra Card Pool contains **108 entries**. Relative to October, there are eight removals, thirteen additions and eleven changes to retained cards' copy limits.
+December contains **2234 entries**: 34 forbidden, 51 limited, 22 semi-limited and 2127 unlimited. The Extra Card Pool contains **108 entries**. Relative to October, there are eight removals, thirteen additions and eleven changes to retained cards' copy limits.
 
 ## Files and generation
 
