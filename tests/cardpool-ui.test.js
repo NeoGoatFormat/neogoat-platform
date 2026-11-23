@@ -46,6 +46,9 @@ function setup(options = {}) {
       return { ok: false, status: 503 };
     }
     const value = Object.hasOwn(fixture, relative) ? fixture[relative] : readJSON(relative);
+    // The detailed gallery regression below uses the frozen October pool.
+    // Exercise current-format selection separately with the real configuration.
+    if(relative === "data/cardpool-gallery.json" && !options.currentFormat) value.activeFormatId = "oct_2026";
     return { ok: true, json: async () => JSON.parse(JSON.stringify(value)) };
   };
   window.eval(read("assets/cardpool-core.js"));
@@ -69,6 +72,17 @@ function setup(options = {}) {
 }
 
 async function main() {
+  const current = setup({ currentFormat: true });
+  try {
+    await current.ready();
+    assert.equal(current.$("format-select").value, "dec_2026");
+    assert.match(current.$("result-summary").textContent, /533 unique cards selected/);
+    current.query("Valhalla, Hall of the Fallen");
+    assert.equal(current.tiles().length, 1, "December addition is visible in the current gallery");
+    current.select("format-select", "oct_2026");
+    await current.ready();
+    assert.equal(current.tiles().length, 0, "October remains available with its own pool");
+  } finally { current.dom.window.close(); }
   const app = setup();
   try {
     await app.ready();

@@ -1,6 +1,6 @@
 # NeoGoat December 2026
 
-**Definitive list supplied on November 12, 2026. October 2026 remains the active format.**
+**Active website format, selected on November 23, 2026. Definitive list supplied on November 12, 2026, matching NeoGoat Pro December v7.**
 
 December is rebuilt from the complete, frozen October 2026 pool using the maintainer's definitive list. This replaces incompatible earlier drafts and updates.
 
@@ -76,4 +76,4 @@ node tests/formats.test.js
 node tests/cardpool-data.test.js
 ```
 
-October remains selected in `data/config.json`. Public activation and client/server deployment are managed separately.
+December is selected in `data/config.json` and `data/cardpool-gallery.json`. Earlier pools remain unchanged for historical deck profiles. Client/server deployment is managed separately.

@@ -1,0 +1,182 @@
+{
+  "Warrior": {
+    "archetype": "Warrior Aggro",
+    "thumbnail_strip": [
+      "Blade Knight",
+      "Elemental HERO Wildheart",
+      "Zombyra the Dark"
+    ],
+    "description": "An adaptable Warrior deck that combines efficient attackers, targeted removal and graveyard disruption. Reinforcement of the Army finds the Warrior best suited to the current board, while Banisher of the Radiance changes how both players can use their graveyards.\n\nGAME PLAN\nEstablish one attacker and use Shrink, Book of Moon and removal to keep it connecting. Blade Knight rewards a small hand, Wildheart helps pressure trap-heavy boards, and Mystic Swordsman LV2 threatens face-down monsters. Exiled Force and D.D. Warrior Lady give you different ways to remove a difficult defender. Zombyra also supplies a DARK body for Deck Devastation Virus; decide whether the disruption is worth losing your attacker. Avoid committing every monster into a possible mass-removal card, and remember that Banisher also affects your own resources.\n\nSIDE DECK PLAN\nUse Cipher Soldier against Warriors and Des Wombat against effect damage. D.D. Survivor fits battles where banishing remains central. Mobius, Dust Tornado and Giant Trunade help break back rows; the extra Nobleman answers set monsters. Pulling the Rug and The Selection offer more specific summon disruption. Replace the least useful removal for the matchup while preserving enough attackers."
+  },
+  "Gadget": {
+    "archetype": "Gadget Control",
+    "thumbnail_strip": [
+      "Green Gadget",
+      "Red Gadget",
+      "Yellow Gadget"
+    ],
+    "description": "A resource-focused Machine deck built around the Green, Red and Yellow Gadget search chain. Small monsters repeatedly replace themselves in hand while efficient removal keeps opposing threats from stopping their attacks. Banisher of the Radiance adds pressure against graveyard strategies.\n\nGAME PLAN\nNormal Summon a Gadget when its next color remains in the Deck, then trade removal for the opposing board. Fissure, Smashing Ground and combat tricks let the Gadgets attack through larger monsters without spending extra bodies. Ultimate Offering can turn the cards accumulated in hand into several summons, but its LP costs and the risk of mass removal make timing important. Limiter Removal can produce a decisive burst of Machine damage; plan around its End Phase destruction instead of activating it for a small, unnecessary gain.\n\nSIDE DECK PLAN\nBring Cipher Soldier for Warrior combat and Des Wombat for effect damage. Extra Nobleman and Dust Tornado adjust the removal mix. Stronghold provides another Machine threat, while Royal Oppression can constrain Special Summons but also affects your own options. Pulling the Rug and The Selection are targeted answers; choose them when the opponent's actual summons justify the slots."
+  },
+  "Valhalla Agents": {
+    "archetype": "Fairy / Agents",
+    "thumbnail_strip": [
+      "The Agent of Judgment - Saturn",
+      "Valhalla, Hall of the Fallen",
+      "Guardian Angel Joan"
+    ],
+    "description": "A Fairy deck that develops large monsters with Valhalla and turns a Life Point advantage into pressure from the Agents. The Sanctuary in the Sky supports the central plan, with Zeradias providing access to the Field Spell.\n\nGAME PLAN\nUse Valhalla while you control no monsters to bring out an appropriate Fairy before committing your Normal Summon. Airknight Parshath can turn successful piercing damage into another card, while Guardian Angel Joan and Cestus of Dagla support LP recovery. Shining Angel maintains field presence and accesses small LIGHT monsters; Mudora grows as Fairies reach the graveyard. With Sanctuary active, Saturn can convert an LP lead into effect damage, but using that effect gives up the Battle Phase for the turn. Compare that line with attacking first on a different turn, and do not spend your LP advantage carelessly.\n\nSIDE DECK PLAN\nNobleman and additional monster removal help against defensive boards. Mobius, Dust Tornado and Spell Shattering Arrow challenge back rows, while Pulling the Rug addresses effects triggered by Normal Summons. Emergency Provisions can turn expendable Spells or Traps into LP. Keep the Fairy density and access to Sanctuary intact when making swaps."
+  },
+  "Bonfire Hero": {
+    "archetype": "HERO / Trap-Resistant Aggro",
+    "thumbnail_strip": [
+      "Elemental HERO Wildheart",
+      "Tenkabito Shien",
+      "Elemental HERO Escuridao"
+    ],
+    "description": "Warrior pressure combines with a searchable FIRE package and a small HERO Fusion toolbox. Wildheart and Tenkabito Shien resist Trap effects, allowing this deck to use destructive Traps while keeping its own preferred attackers on the field.\n\nGAME PLAN\nE - Emergency Call finds Wildheart, and Bonfire finds Tenkabito Shien. Giant Rat supplies another route to Wildheart or an EARTH utility monster. Use combat tricks to protect your pressure, then look for Needle Ceiling or Torrential Tribute opportunities where the trap-resistant monsters retain their effects. Skill Drain changes those interactions, so check the actual board before relying on immunity. Miracle Fusion converts spent materials into Gaia, Nova Master or Escuridao according to the available attributes. Save the Fusion for a useful swing rather than consuming resources just because the summon is possible.\n\nSIDE DECK PLAN\nKycoo pressures opposing graveyard plans, Des Wombat covers effect damage and Cipher Soldier improves Warrior combat. Acid Rain attacks Machine boards, while Dust Tornado and Malevolent Catastrophe provide back-row answers. Extra targeted removal and Pulling the Rug can replace weaker matchup cards. Preserve enough HERO and attribute material to keep Miracle Fusion functional after siding."
+  },
+  "Wind Skill Drain": {
+    "archetype": "WIND / Skill Drain",
+    "thumbnail_strip": [
+      "Luster Dragon",
+      "Sonic Duck",
+      "The Tricky"
+    ],
+    "description": "A WIND beatdown deck using Normal Monsters, graveyard-based Special Summons and Skill Drain. Rising Air Current increases the pressure from the WIND lineup, while Unexpected Dai and revival cards help build a board without relying entirely on the Normal Summon.\n\nGAME PLAN\nStart with Unexpected Dai when its empty-field requirement is available, then decide how much additional pressure the opposing back row allows. Luster Dragon and Sonic Duck remain reliable under Skill Drain. The Tricky can turn a spare card into another body, while Silpheed and Garuda use WIND monsters from the graveyard. When paying those banish costs, preserve a useful Normal Monster for Birthright if that revival is part of your follow-up. Emissary of the Afterlife can find a low-Level Normal Monster when sent from the field to the graveyard. Rising Air Current reduces WIND DEF as it raises ATK, so position and removal timing still matter.\n\nSIDE DECK PLAN\nUse Soul Release against graveyard resources and Nobleman against face-down monsters. Spell Shattering Arrow and Dust Tornado clear troublesome Spells and Traps. More Bottomless Trap Hole, Skill Drain or Solemn Judgment can strengthen disruption when their costs suit the matchup. Diskblade Rider offers an additional WIND attacker."
+  },
+  "Vanilla Fish": {
+    "archetype": "WATER / Normal Fish",
+    "thumbnail_strip": [
+      "Terrorking Salmon",
+      "7 Colored Fish",
+      "Fish Depth Charge"
+    ],
+    "description": "Normal Fish monsters form a renewable attacking and removal engine around A Legendary Ocean. Warrior of Atlantis finds the Field Spell, while Unexpected Dai, Birthright and recovery cards keep the deck supplied with bodies and WATER cards.\n\nGAME PLAN\nOcean lowers WATER monster Levels and improves their stats, making Terrorking Salmon easier to Normal Summon. Develop a Normal Monster early, then use Fish Depth Charge to trade a Fish for an opposing card and a draw if that target is destroyed. Order to Charge provides another use for a Normal Monster. Abyss Soldier converts a WATER discard into a bounce, while Amphibious Bugroth MK-11 removes a face-up non-WATER monster when Umi is present. Rage of the Deep Sea grows with the appropriate graveyard monster types. Plan your revival and recovery before spending every Fish as a cost; not every WATER monster is eligible for Fish Depth Charge.\n\nSIDE DECK PLAN\nMobius and the back-row removal help against defensive setups. Nobleman deals with set monsters, while Bottomless Trap Hole and Pulling the Rug strengthen summon interaction. Des Wombat addresses effect damage, and Penguin Soldier offers another way to reset monsters. Keep the Normal Fish package large enough to support your engine cards."
+  },
+  "Dark Magician": {
+    "archetype": "Dark Magician / Chaos",
+    "thumbnail_strip": [
+      "Dark Magician",
+      "Dark Magician Girl",
+      "Soul Servant"
+    ],
+    "description": "A Spellcaster deck that combines Dark Magician support, Spell Counters and a LIGHT/DARK Chaos package. Soul Servant improves access to the named engine cards, while Dark Renewal and Magical Dimension provide ways to convert smaller Spellcasters into larger threats.\n\nGAME PLAN\nSkilled Dark Magician accumulates counters through resolved Spell activations and can turn them into Dark Magician. Skilled Blue Magician supplies LIGHT material and can later banish itself from the graveyard to place a Spell Counter on an eligible card such as Breaker. Establish Dark Magician before relying on Dark Magic Attack. Soul Servant's graveyard draw depends on the qualifying different names actually present on the field or in the graveyards; merely stacking a card does not guarantee multiple draws. Dark Magic Curtain carries a major LP cost and summon restrictions for the turn, so plan the whole sequence before using it. Chaos Sorcerer gives the accumulated LIGHT and DARK monsters another purpose.\n\nSIDE DECK PLAN\nMei-Kou and Spell Shattering Arrow answer face-up Spells, while Dust Tornado covers back rows more broadly. Add Nobleman, Bottomless Trap Hole or Torrential Tribute when their removal is more useful than slower engine cards. Kycoo and the summon-response Traps offer matchup-specific disruption. Keep enough Spellcasters for Dimension and Renewal."
+  },
+  "Skill Drain Beatdown": {
+    "archetype": "Skill Drain Beatdown",
+    "thumbnail_strip": [
+      "Fusilier Dragon, the Dual-Mode Beast",
+      "Mist Archfiend",
+      "Skill Drain"
+    ],
+    "description": "Large attackers with restrictive effects become the foundation of a simple pressure deck under Skill Drain. The list combines high ATK, combat tricks and removal, with Nimble Momonga helping maintain resources and offset some of the LP pressure.\n\nGAME PLAN\nDeploy a threat that fits the current board rather than assuming Skill Drain will always remain active. Fusilier can be Normal Summoned without Tributes, and negating its on-field effect restores its printed stats. Mist Archfiend and the attack-position drawbacks of Goblin Attack Force or Giant Orc create further reasons to protect Drain. Final Attack Orders keeps face-up monsters in Attack Position and changes combat calculations for both players. Exiled Force can remove a monster even though Drain is on the field because it Tributes itself as cost. Deck Devastation Virus turns a suitable DARK attacker into disruption, but the lost board presence should be worth the trade.\n\nSIDE DECK PLAN\nSoul Release challenges graveyard plans; Nobleman handles set monsters. Bottomless and Compulsory Evacuation Device offer different answers to newly summoned threats. Dust Tornado, Spell Shattering Arrow and Giant Trunade help force attacks through back rows. Pikeru's Circle of Enchantment protects against effect damage for a turn. Avoid cutting too many attackers for reactive cards."
+  },
+  "Archfiend Pandemonium": {
+    "archetype": "Archfiend",
+    "thumbnail_strip": [
+      "Archfiend General",
+      "Archfiend Heiress",
+      "Pandemonium"
+    ],
+    "description": "An Archfiend resource engine combines Pandemonium, Heiress and revival with strong Fiend attackers. The deck can turn specific destruction events into replacement monsters while using Falling Down to steal an opposing threat when an Archfiend card is present.\n\nGAME PLAN\nDiscard Archfiend General to find Pandemonium when the Field Spell is missing. Foolish Burial can send Heiress by card effect and unlock its search; discarding it as an activation cost is a different interaction. Pandemonium rewards Archfiends destroyed and sent to the graveyard outside battle, and its search must be for a lower Level. Archfiend's Roar offers temporary revival at an LP cost, so consider both the immediate attack or defense and the later destruction. Terrorking requires another Archfiend monster for its Normal Summon. Keep a qualifying Archfiend card available when relying on Falling Down, and do not confuse the archetype's conditional searches with unconditional replacement.\n\nSIDE DECK PLAN\nKycoo and Lesser Fiend can pressure graveyard-dependent strategies. Mobius, Dust Tornado and Spell Shattering Arrow challenge back rows. Nobleman and Warrior Elimination target specific defensive plans, while Pulling the Rug responds to relevant Normal Summon effects. Retain enough Archfiends to keep the core cards working after siding."
+  },
+  "Cyberdark Armed Dragon": {
+    "archetype": "Dragon / Cyberdark",
+    "thumbnail_strip": [
+      "Cyberdark Keel",
+      "Armed Dragon LV7",
+      "Five-Headed Dragon"
+    ],
+    "description": "A Dragon deck that develops Armed Dragon while reusing small Dragons as equipment for Cyberdark Keel. Blizzard Dragon and conventional removal buy time, and Future Fusion plus Dragon's Mirror supply a larger late-game threat.\n\nGAME PLAN\nMasked Dragon can replace itself with another eligible Dragon and establish material in the graveyard. Armed Dragon LV3 advances through its Standby Phase effect; protect the developing line when that upgrade is worth more than immediate damage. Armed Dragon LV5 uses a discarded monster's ATK to determine which target it can destroy. Keel equips a Level 3 or lower Dragon when Normal Summoned, so leave a useful target available. Future Fusion follows its current delayed effect: it does not send materials when first activated. Dragon's Mirror can eventually summon Five-Headed Dragon, but banishing the wrong Dragons can weaken Keel or your revival options.\n\nSIDE DECK PLAN\nKycoo attacks opposing graveyard plans and Des Wombat covers effect damage. Warrior Elimination and additional monster removal adapt to combat-heavy opponents. Dust Tornado and Spell Shattering Arrow remove back-row obstacles. Deck Devastation Virus is an optional disruption route when a suitable DARK body is available; avoid siding away so many small Dragons that Keel becomes unreliable."
+  },
+  "Zorc Chaos Ritual": {
+    "archetype": "Ritual / Chaos",
+    "thumbnail_strip": [
+      "Dark Master - Zorc",
+      "Advanced Ritual Art",
+      "Chaos Sorcerer"
+    ],
+    "description": "A Ritual deck with a Chaos follow-up, built around Dark Master - Zorc and Level 4 Normal Monsters of both attributes. Searchers improve access to the Ritual pieces, while removal and defensive Traps give the engine time to establish a threat.\n\nGAME PLAN\nManju can find a Ritual Monster or Ritual Spell; Senju finds the monster. Dark Spirit's Mastery gives another way to reach the Level 8 Fiend Zorc. Advanced Ritual Art sends Normal Monsters from the Deck with total Levels exactly matching the summon, so two Level 4 monsters can supply Zorc's eight Levels. Choose Archfiend Soldier and X-Head Cannon according to what remains in the Deck and the LIGHT/DARK balance needed for Chaos Sorcerer. Contract with the Dark Master offers an alternative Ritual route using hand or field resources. Zorc's die roll can remove opposing monsters, but a six destroys all monsters you control, so account for that risk before extending.\n\nSIDE DECK PLAN\nJinzo and Mobius can help break back rows, although Jinzo conflicts with your own Traps. Kycoo pressures graveyard resources. Extra removal, Dust Tornado and Spell Shattering Arrow answer the threats actually shown in the first game. Keep sufficient Normal Monsters and search pieces so the Ritual plan remains live."
+  },
+  "Doriado Skull Servants": {
+    "archetype": "Doriado / Skull Servant",
+    "thumbnail_strip": [
+      "Elemental Mistress Doriado",
+      "King of the Skull Servants",
+      "Fuh-Rin-Ka-Zan"
+    ],
+    "description": "A Zombie and Ritual hybrid that turns Advanced Ritual Art into graveyard setup. King of the Skull Servants provides growing combat pressure, while Elemental Mistress Doriado enables the powerful attribute requirement of Fuh-Rin-Ka-Zan.\n\nGAME PLAN\nManju finds Doriado or a Ritual Spell. Advanced Ritual Art can send three Skull Servants or the Level 3 Clown Zombie to meet Doriado's exact Level requirement, depending on the cards still in the Deck. Doriado is also treated as WIND, WATER, FIRE and EARTH while its effect applies, enabling Fuh-Rin-Ka-Zan's choice of removal, hand disruption or draws. Gozuki and Foolish Burial improve Zombie setup, and the Kings gain ATK from Skull Servants and other Kings in the graveyard. Goblin Zombie and Pyramid Turtle maintain access to the Zombie engine. Remember that banishing graveyard resources can reduce King's strength, and negating Doriado changes the Trap's activation conditions.\n\nSIDE DECK PLAN\nRyu Kokki offers another large Zombie threat. Des Wombat covers effect damage, while Nobleman and Smashing Ground add direct removal. Dust Tornado and Spell Shattering Arrow tackle back rows; Compulsory and Pulling the Rug add targeted interaction. Preserve the Ritual materials and enough Zombies for the revival package."
+  },
+  "Macro Monarch": {
+    "archetype": "Banish / Monarch",
+    "thumbnail_strip": [
+      "D.D. Survivor",
+      "Chaos Distill",
+      "Thestalos the Firestorm Monarch"
+    ],
+    "description": "A banishing-based Monarch deck using Chaos Distill and Banisher of the Radiance to support recurring D.D. monsters. Despite the deck name, this exact list does not contain Macro Cosmos: its banishing effects come from the cards actually included.\n\nGAME PLAN\nChaos Distill redirects cards sent to your own graveyard, while Banisher affects cards sent to either graveyard. D.D. Survivor returns after being banished while face-up on the field, and D.D. Scout Plane supplies a different recurring body. Use those resources for Tribute Summons, Enemy Controller or continued pressure, keeping each monster's return conditions in mind. Mobius removes back rows, Zaborg removes a monster and Thestalos attacks the opponent's hand. Soul Exchange can use an opposing monster for a Tribute but prevents your Battle Phase that turn. The deck gains value by repeating these exchanges, not by spending every defensive card to protect one Monarch.\n\nSIDE DECK PLAN\nDimension Fusion can convert a developed banished zone into a swing, but it costs LP and may also help the opponent. Jinzo, Mei-Kou and Dust Tornado challenge back rows. Des Wombat, Nobleman, Pulling the Rug and Chaos Trap Hole cover narrower threats. Keep enough banishing enablers and recurring bodies for the Tribute engine."
+  },
+  "Monarch": {
+    "archetype": "Monarch / Chaos",
+    "thumbnail_strip": [
+      "Zaborg the Thunder Monarch",
+      "Chaos Sorcerer",
+      "Crystal Seer"
+    ],
+    "description": "A value-oriented Monarch deck with recruiters, Flip monsters and a LIGHT/DARK Chaos package. Small monsters keep cards and bodies available until a Tribute Summon or Chaos Sorcerer can turn the developing resources into removal and pressure.\n\nGAME PLAN\nShining Angel and Apprentice Magician help maintain the field and access eligible monsters. Crystal Seer, Skelengel and Mask of Darkness give different forms of advantage when their Flip effects resolve. Book of Moon can support those effects or disrupt an opposing attack, but a set monster still needs time or battle to generate value. Fiend's Sanctuary supplies a Token for a Tribute, while Soul Exchange can replace your own material with an opposing monster at the cost of the Battle Phase. Match the Monarch to the problem: Mobius for back rows, Zaborg for monsters and Thestalos for the hand. Preserve LIGHT and DARK resources when a Chaos follow-up is likely.\n\nSIDE DECK PLAN\nThe End of Anubis and Kycoo challenge graveyard strategies. Jinzo and Mei-Kou address different back-row setups, while Dark Dust Spirit provides a broader monster reset. Des Wombat and Cipher Soldier are focused defensive options. Extra Nobleman, Dust Tornado and Chaos Trap Hole adjust the interaction without abandoning the Tribute-support engine."
+  },
+  "Earth Monarchs": {
+    "archetype": "EARTH / Monarch",
+    "thumbnail_strip": [
+      "Giant Rat",
+      "Injection Fairy Lily",
+      "Mobius the Frost Monarch"
+    ],
+    "description": "An EARTH-based pressure deck that combines Giant Rat's recruitment with a compact Tribute lineup. The smaller monsters provide flexible combat and removal options, while graveyard-based Special Summons help build material without consuming every Normal Summon.\n\nGAME PLAN\nChoose Giant Rat's replacement according to the board: Wildheart resists Trap effects, Exiled Force removes a monster, and Injection Fairy Lily can threaten much larger attackers at a steep LP cost. Gigantes and The Rock Spirit use EARTH monsters in the graveyard to add bodies, so preserve targets needed for revival. Soul Exchange and Brain Control create further Tribute opportunities. Mobius, Zaborg and Thestalos each attack a different resource, while Jinzo suppresses Traps on both sides. Consider whether direct pressure is stronger than a Tribute Summon, and remember that Soul Exchange gives up the Battle Phase for that turn.\n\nSIDE DECK PLAN\nKycoo and D.D. Warrior improve interaction with specific monster and graveyard plans. Des Wombat covers effect damage and Cipher Soldier excels against Warriors. Extra Nobleman, Dust Tornado, Pulling the Rug and Chaos Trap Hole let you exchange generic interaction for more suitable answers. Keep enough EARTH bodies and Rat targets to preserve the deck's flexibility."
+  },
+  "Fire Plant": {
+    "archetype": "FIRE / Plant",
+    "thumbnail_strip": [
+      "Koa'ki Meiru Gravirose",
+      "Lonefire Blossom",
+      "Sylvan Hermitree"
+    ],
+    "description": "A Plant deck built around FIRE recruitment, graveyard recovery and large Lonefire targets. Gravirose and UFO Turtle establish the engine, while Oil and Circle of the Fire Kings give spent FIRE monsters more than one opportunity to contribute.\n\nGAME PLAN\nKeep a Plant in hand when you intend to maintain Gravirose through the End Phase; this list does not supply Iron Core for its alternative upkeep. Gravirose's Standby Phase effect can send a Level 3 or lower monster to the graveyard, setting up later recovery. Lonefire Blossom converts a Plant into another Plant from the Deck, including the larger threats, while Lord Poison supplies battle-triggered revival. Oil recovers up to two different named Level 4 or lower FIRE monsters, so inspect the graveyard before committing it. Circle needs both an eligible FIRE on the field and a FIRE in the graveyard; do not sacrifice the only resource required for a planned follow-up.\n\nSIDE DECK PLAN\nDes Wombat and Tenkabito Shien offer focused protection. Soul Release attacks graveyard resources, while Warrior Elimination and additional removal answer monster-heavy boards. Dust Tornado and Spell Shattering Arrow clear back rows. Retain enough Plants for Gravirose's reveal and Lonefire's remaining targets when making swaps."
+  },
+  "Ninja Phoenix": {
+    "archetype": "Ninja / Beast",
+    "thumbnail_strip": [
+      "Ninja Grandmaster Hanzo",
+      "Sacred Phoenix of Nephthys",
+      "Green Baboon, Defender of the Forest"
+    ],
+    "description": "A Ninja engine links efficient attackers to Sacred Phoenix and Green Baboon through Ninjitsu Art of Transformation. The deck also includes a full Metamorphosis toolbox, giving suitable Levels on the field several possible ways to change roles.\n\nGAME PLAN\nNormal Summon Hanzo to search a Ninjitsu Art, then preserve an appropriate Ninja for Transformation. The Trap summons a Beast, Winged Beast or Insect up to three Levels above the Tributed Ninja: a Level 4 Ninja can reach Green Baboon, while Flame Armor Ninja's Level increase can open the Level 8 Phoenix route. Transformation remains tied to the summoned monster, so removing it has consequences. Phoenix can return after effect destruction and clear Spells and Traps, including your own. Baboon's revival does not activate during the Damage Step. Use Metamorphosis only when the available Fusion provides more value than the monster and Spell you spend.\n\nSIDE DECK PLAN\nKycoo and Soul Release pressure graveyards, King Tiger Wanghu constrains small summons, and Cipher Soldier improves Warrior combat. Des Wombat covers effect damage. Nobleman, Dust Tornado, Pulling the Rug and other targeted answers replace weaker matchup cards. Keep sufficient Ninjas and Transformation targets for the core plan."
+  },
+  "Zombie": {
+    "archetype": "Zombie Midrange",
+    "thumbnail_strip": [
+      "Gozuki",
+      "Pyramid Turtle",
+      "Ryu Kokki"
+    ],
+    "description": "A Zombie midrange deck that trades small monsters and removal for a graveyard full of reusable threats. Gozuki sets up the engine, while Goblin Zombie, Pyramid Turtle and the revival Spells help sustain pressure through repeated exchanges.\n\nGAME PLAN\nUse Gozuki to send the Zombie needed for the next sequence, rather than automatically choosing the largest monster. Goblin Zombie searches an eligible Zombie when sent from the field to the graveyard, and Pyramid Turtle recruits an eligible Zombie after battle destruction. Ryu Kokki and Vampire Lord provide different attacking threats. Book of Life revives a Zombie while banishing an opposing graveyard monster, so check that both targets are available. Creature Swap can turn an expendable recruiter into a favorable exchange. Card Destruction and Graceful Charity can improve the hand and fill the graveyard, but consider which resources the opponent gains as well.\n\nSIDE DECK PLAN\nMobius, Dust Tornado and Spell Shattering Arrow help force revival and attacks through back rows. Kycoo, Chaos Trap Hole and summon-response Traps address specific monster engines. Extra Nobleman handles face-down threats. Jinzo offers a trap-suppression plan, but your own Traps also stop functioning while its effect applies. Preserve enough Zombies and live revival targets when replacing cards."
+  },
+  "Umi Bugroth": {
+    "archetype": "WATER / Umi Control",
+    "thumbnail_strip": [
+      "Amphibious Bugroth MK-3",
+      "A Legendary Ocean",
+      "Amphibious Bugroth MK-11"
+    ],
+    "description": "A WATER control deck that uses A Legendary Ocean to combine direct attacks with Level-based battle restrictions. Warrior of Atlantis improves Field Spell access, while Mother Grizzly and the Penguin monsters keep the board manageable.\n\nGAME PLAN\nOcean lowers WATER Levels and is treated as Umi, allowing Amphibious Bugroth MK-3 to attack directly while supporting Mermaid Knight's additional attack. Gravity Bind and Level Limit - Area B constrain many larger attackers; check the changed Levels of your own monsters before relying on those cards. Abyss Soldier turns a WATER discard into a bounce, and Salvage recovers eligible low-ATK WATER monsters for another exchange. Bugroth MK-11 can destroy a face-up non-WATER monster with Umi present. Mage Power can turn a protected direct attacker into a serious threat, but do not commit the whole plan to an unprotected Field Spell.\n\nSIDE DECK PLAN\nMobius, Breaker, Heavy Storm and Spell Shattering Arrow help contest troublesome back rows. Des Wombat covers effect damage, while additional Penguin and monster removal broaden defensive options. Cursed Seal requires a Spell discard and can shut down repeated use of a key opposing Spell. Adjust carefully so your own battle restrictions still support the remaining attackers."
+  },
+  "Hot and Cold Dragon": {
+    "archetype": "Horus / FIRE-WATER",
+    "thumbnail_strip": [
+      "Horus the Black Flame Dragon LV8",
+      "Frost and Flame Dragon",
+      "Blizzard Dragon"
+    ],
+    "description": "A FIRE/WATER Dragon deck that develops Horus while stocking the graveyard for Frost and Flame Dragon. Recruiters and combat tricks keep monsters available, and Royal Decree supports a plan focused on monster effects and Spells.\n\nGAME PLAN\nMother Grizzly and Masked Dragon find eligible replacements, while Hydrogeddon can reward a successful battle destruction with another copy from the Deck. Horus LV4 and LV6 advance through their respective battle requirements; LV6 is unaffected by Spell effects, and LV8 provides Spell negation. Frost and Flame Dragon requires one FIRE and two WATER monsters banished from the graveyard for its hand summon, then discards a card to destroy a targeted monster. Count those attributes before spending revival targets or other graveyard resources. Blizzard Dragon can delay an opposing monster, creating time for the Horus line. Royal Decree suppresses Trap effects while active, but it is not protection from every kind of removal.\n\nSIDE DECK PLAN\nKycoo attacks graveyard plans, Des Wombat covers effect damage and Penguin Soldier offers a reset. Mobius, Breaker, Stamping Destruction and Spell Shattering Arrow address back rows. Nobleman, Warrior Elimination and Smashing Ground adjust the removal mix. Preserve enough FIRE and WATER monsters for Frost and Flame Dragon after siding."
+  }
+}

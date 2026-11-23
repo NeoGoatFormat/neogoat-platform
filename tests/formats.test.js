@@ -278,10 +278,41 @@ if (process.argv[2]) {
 }
 
 const config = json("data/config.json");
-assert.deepEqual(config, {currentFormatId:"oct_2026",rulesFile:"cards_oct_2026.json"});
+assert.deepEqual(config, {currentFormatId:"dec_2026",rulesFile:"cards_dec_2026.json"});
 assert(Array.isArray(json(`data/formats/${config.currentFormatId}/${config.rulesFile}`)), "Active format must resolve");
-assert(!html.includes('"aug_2026"'), "Builder defaults and submission metadata must use October");
-assert(html.includes("OCTOBER 2026 FORMAT"));
-assert.equal(JSON.parse(context.makeDeckSignature({})).format, "oct_2026");
+assert(!html.includes('"aug_2026"'), "Builder defaults and submission metadata must use December");
+assert(html.includes("DECEMBER 2026 FORMAT"));
+assert.equal(JSON.parse(context.makeDeckSignature({})).format, "dec_2026");
+// Apply the same live rule initialization to December. Check actual admissions
+// and cross-zone limits, rather than only the month displayed in the header.
+const december = json("data/formats/dec_2026/cards_dec_2026.json");
+assert.equal(december.length, 2231);
+clearDeck();
+context.cardList = december;
+context.cardMap = {};
+context.rules = {};
+vm.runInContext(mapping[0], context);
+for (const name of ["Pot of Greed", "Night Assailant", "Magical Stone Excavation"]) {
+  const id = context.findCardIdByName(name);
+  assert(id, `${name}: forbidden card remains visible`);
+  assert.match(context.canPlace(id, "main"), /forbidden/);
+}
+for (const name of ["Elemental HERO Prisma", "The Eye of Timaeus", "Desert Twister"]) {
+  assert.equal(context.findCardIdByName(name), null, `${name}: removed from December`);
+}
+for (const [name, limit] of [["Mobius the Frost Monarch", 1], ["Pyramid Turtle", 1], ["Graceful Charity", 1],
+    ["Ninja Grandmaster Hanzo", 2], ["Soul Servant", 2], ["Future Fusion", 3], ["Miracle Fusion", 3]]) {
+  clearDeck();
+  const id = context.findCardIdByName(name);
+  assert(id, name);
+  assert.equal(context.canPlace(id, "main"), "", name);
+  deck.side.set(id, limit);
+  assert.equal(context.canPlace(id, "main"), "Copy limit reached.", `${name}: shared Main/Side limit`);
+}
+clearDeck();
+assert.equal(context.canPlace(context.findCardIdByName("Elemental HERO Escuridao"), "extra"), "");
+deck.extra.set(context.findCardIdByName("Elemental HERO Escuridao"), 1);
+assert.equal(context.canPlace(context.findCardIdByName("Elemental HERO Escuridao"), "side"), "Copy limit reached.");
 execFileSync(process.execPath, [path.join(root, "tools/build-october-2026.js"), "--check"], { stdio: "inherit" });
-console.log("FORMATS_TEST PASS: October active; 2229 cards; exact 17/6/4 delta; historical data preserved; 83 artwork aliases, shared limits and all import paths verified");
+execFileSync(process.execPath, [path.join(root, "tools/build-december-2026.js"), "--check"], { stdio: "inherit" });
+console.log("FORMATS_TEST PASS: December active with correct bans/removals/cross-zone limits; historical October preserved; 83 artwork aliases, shared limits and all import paths verified");

@@ -344,14 +344,14 @@ header h2{
     <h2 style="margin:0;">NeoGoat Deck Library</h2>
 
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-      <span style="
+      <span id="currentFormatText" style="
         font-size:12px;
         font-weight:900;
         color:#7dd3fc;
         text-shadow:0 0 10px rgba(125,211,252,.6);
         letter-spacing:.05em;
       ">
-        CURRENT FORMAT: OCTOBER 2026
+        CURRENT FORMAT: DECEMBER 2026
       </span>
 
       <a
@@ -407,6 +407,17 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 let allDecks=[];
 const thumbIdCache = {};
+
+async function loadCurrentFormat(){
+  try{
+    const res=await fetch("/data/config.json",{cache:"no-store"});
+    if(!res.ok)throw new Error("Format request failed: "+res.status);
+    const config=await res.json();
+    const id=config.currentFormatId||"dec_2026";
+    const label=id==="dec_2026"?"DECEMBER 2026":id==="oct_2026"?"OCTOBER 2026":String(id).replace(/_/g," ").toUpperCase();
+    document.getElementById("currentFormatText").textContent="CURRENT FORMAT: "+label;
+  }catch(e){console.warn("Could not load current format",e);}
+}
 
 async function loadDecks(){
   const res=await fetch(
@@ -679,6 +690,7 @@ document.getElementById("fCard3").addEventListener("input",applyFilters);
 document.getElementById("fFormat").addEventListener("change",applyFilters);
 
 (async()=>{
+  loadCurrentFormat();
   try{
     allDecks=await loadDecks();
     populateFormatFilter(allDecks);

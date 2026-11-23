@@ -1,5 +1,7 @@
 # NeoGoat Pro — October 2026 deck posts
 
+For the current 20 beta.78 decks, see [December 2026 deck posts](README-dec-2026.md). The October sources and posts below remain available as historical profiles.
+
 These are the 20 default decks shipped with NeoGoat Pro 0.3.2 beta.60. They are published through the same deck-post API as the existing Share Deck form and appear in [Deck Library](https://neogoat-platform.vercel.app/decks.html) as ordinary posts. Play and Side Deck guides are English text inside each post's description, accessible with the existing Read More control. No separate collection, special badges or guide panels are used.
 
 ## Sources and fidelity

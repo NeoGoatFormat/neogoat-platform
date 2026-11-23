@@ -1,0 +1,231 @@
+{
+  "release": "NeoGoat Pro 0.3.2 beta.78 - December 2026 v7",
+  "release_archive": "NeoGoat-Pro-Windows-0.3.2-beta.78-Diciembre-v7.zip",
+  "release_sha256": "8d7ea16c68b7584dad2b343e53fd24fe30b7b4f258ccdbe25638c56a9cd7bade",
+  "native_format_hash": "75CA0D55",
+  "native_format_sha256": "649074b3f9428d57d27a5d44d26a0d05418d75be23005c7234227ef46b175203",
+  "verification": "All 20 YDK byte sequences match the published Windows archive, its extracted deck directory and the December Type A bank. Web post names normalize known alternate-art passwords without changing cards or quantities.",
+  "decks": [
+    {
+      "title": "Warrior",
+      "order": 1,
+      "file": "dec_2026/01. Warrior.ydk",
+      "sha256": "610136c1d2053bef8c50b04c7ee40c16130c785c1f108541a5f35caa7bcfb7ab",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Gadget",
+      "order": 2,
+      "file": "dec_2026/02. Gadget.ydk",
+      "sha256": "65788b3f32277c3d6bb63d456ab6ac0e34b3faa0bfa4f8022a392d507feae8a9",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Valhalla Agents",
+      "order": 3,
+      "file": "dec_2026/03. Valhalla Agents.ydk",
+      "sha256": "8ce5c8ef73f3b7a813eb1252c9cc4c3ba30b6f51a25b4e9e1ca6784bbce9334c",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Bonfire Hero",
+      "order": 4,
+      "file": "dec_2026/04. Bonfire Hero.ydk",
+      "sha256": "b932658b9ca702e8d1dd7815597473d43b7179cff96e51173bb25cf727d87914",
+      "counts": {
+        "main": 40,
+        "extra": 5,
+        "side": 15
+      }
+    },
+    {
+      "title": "Wind Skill Drain",
+      "order": 5,
+      "file": "dec_2026/05. Wind Skill Drain.ydk",
+      "sha256": "8e41988dafeb7aebdcd9dd198f32a832e9b79672d56e3db6374f4503c8435168",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Vanilla Fish",
+      "order": 6,
+      "file": "dec_2026/06. Vanilla Fish.ydk",
+      "sha256": "33eae3556717535b283537898f7542105a2914bdd213d1f9a248e12a6d0f0081",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Dark Magician",
+      "order": 7,
+      "file": "dec_2026/07. Dark Magician.ydk",
+      "sha256": "b81e849f31361f23522e9df27a1b8c75eb58b22da33fb3aac5b3b5eea80bd2a7",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Skill Drain Beatdown",
+      "order": 8,
+      "file": "dec_2026/08. Skill Drain Beatdown.ydk",
+      "sha256": "5086939641e86a559522974533495a7d9f75a294763684b4c4f5f059dc27ae45",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Archfiend Pandemonium",
+      "order": 9,
+      "file": "dec_2026/09. Archfiend Pandemonium.ydk",
+      "sha256": "a97c42a118f96fdfad190cce42db2677119628555b908b713756d7ea4d56cdc2",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Cyberdark Armed Dragon",
+      "order": 10,
+      "file": "dec_2026/10. Cyberdark Armed Dragon.ydk",
+      "sha256": "1b685a01a2a145fbe91a2d48cb7f7b1725a6afdf0b61336215458ada6833653d",
+      "counts": {
+        "main": 40,
+        "extra": 2,
+        "side": 15
+      }
+    },
+    {
+      "title": "Zorc Chaos Ritual",
+      "order": 11,
+      "file": "dec_2026/11. Zorc Chaos Ritual.ydk",
+      "sha256": "d753a0e4747361233cffbcffa4ada4699980b039be9739e7a6204ed970097ff9",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Doriado Skull Servants",
+      "order": 12,
+      "file": "dec_2026/12. Doriado Skull Servants.ydk",
+      "sha256": "f26ad70c75e51ecf91a105a1baa7ddc2a78cb78044d3e63f0631921b5d8d43f7",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Macro Monarch",
+      "order": 13,
+      "file": "dec_2026/13. Macro Monarch.ydk",
+      "sha256": "28c97bec4255b79d3ce022d749ac6de75a95a69839a31db2276b1fae0b938e5a",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Monarch",
+      "order": 14,
+      "file": "dec_2026/14. Monarch.ydk",
+      "sha256": "6422ffed4ac94aeb40f12ef67c5b65f5df28512cde9de764c1a7805efd5c86b0",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Earth Monarchs",
+      "order": 15,
+      "file": "dec_2026/15. Earth Monarchs.ydk",
+      "sha256": "dc5af31226504fb6899590a59b7ccb91ccf36ef4eb2fad52e5ff0e2bcfedeaa0",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Fire Plant",
+      "order": 16,
+      "file": "dec_2026/16. Fire Plant .ydk",
+      "sha256": "4a0e9a591e4aa8fdaeed88c5649ae0c05a60abc57efb971043aa5288487f15d5",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Ninja Phoenix",
+      "order": 17,
+      "file": "dec_2026/17. Ninja Phoenix.ydk",
+      "sha256": "079779bd13d3512676f3d78c2282c829e99005d8c2d236154039e74bf6f4ee11",
+      "counts": {
+        "main": 40,
+        "extra": 15,
+        "side": 15
+      }
+    },
+    {
+      "title": "Zombie",
+      "order": 18,
+      "file": "dec_2026/18. Zombie.ydk",
+      "sha256": "41861cdc88d727e86872d2d04f6ed0600272291074c2ffa8094d6fc67a298444",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Umi Bugroth",
+      "order": 19,
+      "file": "dec_2026/19. Umi Bugroth.ydk",
+      "sha256": "9a9836276645886e7a4a1c617f24345fb56c554f6a2ea777091417508267e96c",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    },
+    {
+      "title": "Hot and Cold Dragon",
+      "order": 20,
+      "file": "dec_2026/20. Hot and Cold Dragon.ydk",
+      "sha256": "cd689ada1b9cc2874328751d0837e75d032f0d4ccdfbcefea719d7cfadcc8840",
+      "counts": {
+        "main": 40,
+        "extra": 0,
+        "side": 15
+      }
+    }
+  ],
+  "web_pool_lf_sha256": "9285a2594b1a308e9c355c8552f9fb1c2ac22b7e62ee0dba7eed6bca19db3bff"
+}

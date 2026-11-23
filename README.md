@@ -21,9 +21,9 @@ It is a living sandbox format.
 
 ## Current Format
 
-**Active Format:** [NeoGoat October 2026](data/formats/oct_2026/README.md) (selected by `data/config.json`).
+**Active Format:** [NeoGoat December 2026](data/formats/dec_2026/README.md) (selected by `data/config.json`).
 
-October includes the published banlist, its source, exact changes and reproducible validation. Earlier format files remain available for historical deck profiles.
+December uses the definitive v7 list shipped with NeoGoat Pro beta.78: 2,231 cards, including the 105-card Extra Card Pool. The builder and card-pool gallery select December; earlier format files remain available for historical deck profiles.
 
 Previous formats before February 2026 are deprecated.
 
@@ -36,7 +36,7 @@ Every two months:
 
 ## NeoGoat Pro default profiles
 
-[Browse Deck Library](https://neogoat-platform.vercel.app/decks.html) for the 20 beta.60 default decks, published as ordinary deck posts alongside existing community submissions. Each post includes its English play guide and Side Deck guide in the existing description field. There is no separate collection selector or special guide interface. The usual Read More, comments, downloads and Open in Builder actions apply.
+[Browse Deck Library](https://neogoat-platform.vercel.app/decks.html) for the 20 December beta.78 default decks, published as ordinary deck posts alongside the historical beta.60 decks and existing community submissions. Each post includes its English play guide and Side Deck guide in the existing description field. There is no separate collection selector or special guide interface. The usual Read More, comments, downloads and Open in Builder actions apply.
 
 The [profile sources and validation instructions](data/decks/README.md) document the exact release, hashes, and adaptations to the final lists. These profiles describe the shipped decks; they are not a competitive tier list.
 

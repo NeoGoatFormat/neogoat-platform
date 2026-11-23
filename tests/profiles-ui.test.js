@@ -9,6 +9,8 @@ const root = path.resolve(__dirname, "..");
 const load = file => JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
 const catalog = load("data/decks/neogoat-pro-oct-2026.json");
 const payload = load("data/decks/community-posts-oct-2026.json");
+const currentPool = load("data/formats/dec_2026/cards_dec_2026.json");
+const currentByName = new Map(currentPool.map(card => [card.name, card]));
 assert(Array.isArray(payload), "Publication payload must be a normal post array");
 assert.equal(payload.length, 20);
 const posts = payload.map((post, index) => ({
@@ -104,9 +106,9 @@ for (const name of ["index.html", "deck.html", "decks.html"]) {
     const noSpecialUI = async () => assert.equal(await page.locator(specialUI).count(), 0, "No separate default-profile controls");
 
     await page.goto(base + "/index.html");
-    await page.waitForFunction(() => document.getElementById("statusBadge").textContent === "2229 cards loaded");
+    await page.waitForFunction(() => document.getElementById("statusBadge").textContent === "2231 cards loaded");
     assert.equal(await page.locator("#searchResults .scard").count(), 80, "Fresh builder renders the card search");
-    assert.match(await page.locator("#fmtLabel").innerText(), /OCTOBER 2026/);
+    assert.match(await page.locator("#fmtLabel").innerText(), /DECEMBER 2026/);
     assert.equal(await page.getByRole("button", { name: "Deck Library", exact: true }).count(), 1);
     assert.equal(await page.locator("#header a, #header button").filter({ hasText: /20 mazos|20 decks|gu[ií]as|guides|defaults/i }).count(), 0, "No extra default-deck guide button");
     await noSpecialUI();
@@ -115,7 +117,7 @@ for (const name of ["index.html", "deck.html", "decks.html"]) {
     await gridCount(21);
     await noSpecialUI();
     assert.equal(await page.locator("#fFormat").inputValue(), "", "Library defaults to All formats");
-    assert.match(await page.locator("header").innerText(), /CURRENT FORMAT: OCTOBER 2026/);
+    assert.match(await page.locator("header").innerText(), /CURRENT FORMAT: DECEMBER 2026/);
     assert.equal(await page.locator("#countText").innerText(), "21 deck(s) found.");
     await page.locator("#fSearch").fill("Harpie");
     await gridCount(1);
@@ -199,10 +201,18 @@ for (const name of ["index.html", "deck.html", "decks.html"]) {
       }
       await page.locator("#builderBtn").click();
       await page.waitForURL("**/index.html");
-      await page.waitForFunction(() => document.getElementById("cntMain").textContent === "40");
-      assert.equal(await page.locator("#cntSide").innerText(), "15", post.title + ": Side import");
-      assert.equal(await page.locator("#cntExtra").innerText(), String(total(deck.extra_deck)), post.title + ": Extra import");
-      assert.equal(await page.locator("#validation").innerText(), "Deck OK", post.title + ": October legality");
+      await page.waitForFunction(() => document.getElementById("statusBadge").textContent === "2231 cards loaded");
+      for (const zone of zones) {
+        const retained = deck[zone + "_deck"].filter(card => currentByName.has(card.name));
+        assert.equal(await page.locator("#cnt" + zone[0].toUpperCase() + zone.slice(1)).innerText(), String(total(retained)), post.title + ": import into current " + zone);
+      }
+      const quantities = new Map();
+      for (const zone of zones) for (const card of deck[zone + "_deck"]) quantities.set(card.name, (quantities.get(card.name) || 0) + card.qty);
+      const limits = { forbidden: 0, limited: 1, "semi-limited": 2, unlimited: 3 };
+      const changedLimits = [...quantities].filter(([name, count]) => currentByName.has(name) && count > limits[currentByName.get(name).ban_status]);
+      const validation = await page.locator("#validation").innerText();
+      for (const [name] of changedLimits) assert(validation.includes(name), post.title + ": current legality flags " + name);
+      if (changedLimits.length) assert.notEqual(validation, "Deck OK", post.title + ": historical list is checked against December in Builder");
       checked++;
     }
     for (const post of posts) {

@@ -1,0 +1,4340 @@
+[
+  {
+    "slug": "neogoat-pro-dec-2026-warrior",
+    "title": "Warrior",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Warrior Aggro",
+    "description": "An adaptable Warrior deck that combines efficient attackers, targeted removal and graveyard disruption. Reinforcement of the Army finds the Warrior best suited to the current board, while Banisher of the Radiance changes how both players can use their graveyards.\n\nGAME PLAN\nEstablish one attacker and use Shrink, Book of Moon and removal to keep it connecting. Blade Knight rewards a small hand, Wildheart helps pressure trap-heavy boards, and Mystic Swordsman LV2 threatens face-down monsters. Exiled Force and D.D. Warrior Lady give you different ways to remove a difficult defender. Zombyra also supplies a DARK body for Deck Devastation Virus; decide whether the disruption is worth losing your attacker. Avoid committing every monster into a possible mass-removal card, and remember that Banisher also affects your own resources.\n\nSIDE DECK PLAN\nUse Cipher Soldier against Warriors and Des Wombat against effect damage. D.D. Survivor fits battles where banishing remains central. Mobius, Dust Tornado and Giant Trunade help break back rows; the extra Nobleman answers set monsters. Pulling the Rug and The Selection offer more specific summon disruption. Replace the least useful removal for the matchup while preserving enough attackers.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Zombyra the Dark",
+        "qty": 2,
+        "password": "88472456"
+      },
+      {
+        "name": "Ninja Grandmaster Sasuke",
+        "qty": 1,
+        "password": "4041838"
+      },
+      {
+        "name": "D.D. Assailant",
+        "qty": 1,
+        "password": "70074904"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Blade Knight",
+        "qty": 3,
+        "password": "39507162"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Elemental HERO Wildheart",
+        "qty": 2,
+        "password": "86188410"
+      },
+      {
+        "name": "Don Zaloog",
+        "qty": 1,
+        "password": "76922029"
+      },
+      {
+        "name": "Exiled Force",
+        "qty": 1,
+        "password": "74131780"
+      },
+      {
+        "name": "Banisher of the Radiance",
+        "qty": 2,
+        "password": "94853057"
+      },
+      {
+        "name": "Injection Fairy Lily",
+        "qty": 1,
+        "password": "79575620"
+      },
+      {
+        "name": "Mystic Swordsman LV2",
+        "qty": 1,
+        "password": "47507260"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Reinforcement of the Army",
+        "qty": 1,
+        "password": "32807846"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 2,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Enemy Controller",
+        "qty": 1,
+        "password": "98045062"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Deck Devastation Virus",
+        "qty": 1,
+        "password": "35027493"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Sakuretsu Armor",
+        "qty": 1,
+        "password": "56120475"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "D.D. Survivor",
+        "qty": 2,
+        "password": "48092532"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Cipher Soldier",
+        "qty": 2,
+        "password": "79853073"
+      },
+      {
+        "name": "Giant Trunade",
+        "qty": 1,
+        "password": "42703248"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      },
+      {
+        "name": "The Selection",
+        "qty": 2,
+        "password": "30888983"
+      }
+    ],
+    "thumbnail_card": "Blade Knight",
+    "thumbnail_strip": [
+      "Blade Knight",
+      "Elemental HERO Wildheart",
+      "Zombyra the Dark"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"banisher of the radiance\",\"qty\":2},{\"name\":\"blade knight\",\"qty\":3},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"d.d. assailant\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"deck devastation virus\",\"qty\":1},{\"name\":\"don zaloog\",\"qty\":1},{\"name\":\"elemental hero wildheart\",\"qty\":2},{\"name\":\"enemy controller\",\"qty\":1},{\"name\":\"exiled force\",\"qty\":1},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"injection fairy lily\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystic swordsman lv2\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"ninja grandmaster sasuke\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"reinforcement of the army\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"sakuretsu armor\",\"qty\":1},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"smashing ground\",\"qty\":2},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"zombyra the dark\",\"qty\":2}],\"extra\":[],\"side\":[{\"name\":\"cipher soldier\",\"qty\":2},{\"name\":\"d.d. survivor\",\"qty\":2},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"giant trunade\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"the selection\",\"qty\":2}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-gadget",
+    "title": "Gadget",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Gadget Control",
+    "description": "A resource-focused Machine deck built around the Green, Red and Yellow Gadget search chain. Small monsters repeatedly replace themselves in hand while efficient removal keeps opposing threats from stopping their attacks. Banisher of the Radiance adds pressure against graveyard strategies.\n\nGAME PLAN\nNormal Summon a Gadget when its next color remains in the Deck, then trade removal for the opposing board. Fissure, Smashing Ground and combat tricks let the Gadgets attack through larger monsters without spending extra bodies. Ultimate Offering can turn the cards accumulated in hand into several summons, but its LP costs and the risk of mass removal make timing important. Limiter Removal can produce a decisive burst of Machine damage; plan around its End Phase destruction instead of activating it for a small, unnecessary gain.\n\nSIDE DECK PLAN\nBring Cipher Soldier for Warrior combat and Des Wombat for effect damage. Extra Nobleman and Dust Tornado adjust the removal mix. Stronghold provides another Machine threat, while Royal Oppression can constrain Special Summons but also affects your own options. Pulling the Rug and The Selection are targeted answers; choose them when the opponent's actual summons justify the slots.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Green Gadget",
+        "qty": 3,
+        "password": "41172955"
+      },
+      {
+        "name": "Red Gadget",
+        "qty": 3,
+        "password": "86445415"
+      },
+      {
+        "name": "Yellow Gadget",
+        "qty": 3,
+        "password": "13839120"
+      },
+      {
+        "name": "Exiled Force",
+        "qty": 1,
+        "password": "74131780"
+      },
+      {
+        "name": "Banisher of the Radiance",
+        "qty": 2,
+        "password": "94853057"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Fissure",
+        "qty": 2,
+        "password": "66788016"
+      },
+      {
+        "name": "Lightning Vortex",
+        "qty": 1,
+        "password": "69162969"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 3,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Limiter Removal",
+        "qty": 1,
+        "password": "23171610"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Ultimate Offering",
+        "qty": 2,
+        "password": "80604091"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Banisher of the Radiance",
+        "qty": 1,
+        "password": "94853057"
+      },
+      {
+        "name": "Cipher Soldier",
+        "qty": 2,
+        "password": "79853073"
+      },
+      {
+        "name": "Giant Trunade",
+        "qty": 1,
+        "password": "42703248"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Ceasefire",
+        "qty": 1,
+        "password": "36468556"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 1,
+        "password": "60082869"
+      },
+      {
+        "name": "Stronghold the Moving Fortress",
+        "qty": 1,
+        "password": "13955608"
+      },
+      {
+        "name": "Royal Oppression",
+        "qty": 1,
+        "password": "93016201"
+      },
+      {
+        "name": "The Selection",
+        "qty": 1,
+        "password": "30888983"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      }
+    ],
+    "thumbnail_card": "Green Gadget",
+    "thumbnail_strip": [
+      "Green Gadget",
+      "Red Gadget",
+      "Yellow Gadget"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"banisher of the radiance\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"exiled force\",\"qty\":1},{\"name\":\"fissure\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"green gadget\",\"qty\":3},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"lightning vortex\",\"qty\":1},{\"name\":\"limiter removal\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"red gadget\",\"qty\":3},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"smashing ground\",\"qty\":3},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"ultimate offering\",\"qty\":2},{\"name\":\"yellow gadget\",\"qty\":3}],\"extra\":[],\"side\":[{\"name\":\"banisher of the radiance\",\"qty\":1},{\"name\":\"ceasefire\",\"qty\":1},{\"name\":\"cipher soldier\",\"qty\":2},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":1},{\"name\":\"giant trunade\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"royal oppression\",\"qty\":1},{\"name\":\"stronghold the moving fortress\",\"qty\":1},{\"name\":\"the selection\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-valhalla-agents",
+    "title": "Valhalla Agents",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Fairy / Agents",
+    "description": "A Fairy deck that develops large monsters with Valhalla and turns a Life Point advantage into pressure from the Agents. The Sanctuary in the Sky supports the central plan, with Zeradias providing access to the Field Spell.\n\nGAME PLAN\nUse Valhalla while you control no monsters to bring out an appropriate Fairy before committing your Normal Summon. Airknight Parshath can turn successful piercing damage into another card, while Guardian Angel Joan and Cestus of Dagla support LP recovery. Shining Angel maintains field presence and accesses small LIGHT monsters; Mudora grows as Fairies reach the graveyard. With Sanctuary active, Saturn can convert an LP lead into effect damage, but using that effect gives up the Battle Phase for the turn. Compare that line with attacking first on a different turn, and do not spend your LP advantage carelessly.\n\nSIDE DECK PLAN\nNobleman and additional monster removal help against defensive boards. Mobius, Dust Tornado and Spell Shattering Arrow challenge back rows, while Pulling the Rug addresses effects triggered by Normal Summons. Emergency Provisions can turn expendable Spells or Traps into LP. Keep the Fairy density and access to Sanctuary intact when making swaps.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Guardian Angel Joan",
+        "qty": 1,
+        "password": "68007326"
+      },
+      {
+        "name": "The Agent of Judgment - Saturn",
+        "qty": 2,
+        "password": "91345518"
+      },
+      {
+        "name": "Airknight Parshath",
+        "qty": 2,
+        "password": "18036057"
+      },
+      {
+        "name": "Zeradias, Herald of Heaven",
+        "qty": 3,
+        "password": "12171659"
+      },
+      {
+        "name": "Zolga",
+        "qty": 1,
+        "password": "16268841"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "Mudora",
+        "qty": 2,
+        "password": "82108372"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Shining Angel",
+        "qty": 3,
+        "password": "95956346"
+      },
+      {
+        "name": "Marshmallon",
+        "qty": 1,
+        "password": "31305911"
+      },
+      {
+        "name": "The Agent of Force - Mars",
+        "qty": 1,
+        "password": "91123920"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Valhalla, Hall of the Fallen",
+        "qty": 3,
+        "password": "1353770"
+      },
+      {
+        "name": "Cestus of Dagla",
+        "qty": 1,
+        "password": "28106077"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "The Sanctuary in the Sky",
+        "qty": 2,
+        "password": "56433456"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Draining Shield",
+        "qty": 2,
+        "password": "43250041"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Magic Cylinder",
+        "qty": 1,
+        "password": "62279055"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Asura Priest",
+        "qty": 1,
+        "password": "2134346"
+      },
+      {
+        "name": "Giant Trunade",
+        "qty": 1,
+        "password": "42703248"
+      },
+      {
+        "name": "Lightning Vortex",
+        "qty": 1,
+        "password": "69162969"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Emergency Provisions",
+        "qty": 1,
+        "password": "53046408"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 2,
+        "password": "93260132"
+      },
+      {
+        "name": "Ceasefire",
+        "qty": 1,
+        "password": "36468556"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      }
+    ],
+    "thumbnail_card": "The Agent of Judgment - Saturn",
+    "thumbnail_strip": [
+      "The Agent of Judgment - Saturn",
+      "Valhalla, Hall of the Fallen",
+      "Guardian Angel Joan"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"airknight parshath\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"cestus of dagla\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"draining shield\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"guardian angel joan\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"magic cylinder\",\"qty\":1},{\"name\":\"marshmallon\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mudora\",\"qty\":2},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"shining angel\",\"qty\":3},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"the agent of force - mars\",\"qty\":1},{\"name\":\"the agent of judgment - saturn\",\"qty\":2},{\"name\":\"the sanctuary in the sky\",\"qty\":2},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"valhalla, hall of the fallen\",\"qty\":3},{\"name\":\"zeradias, herald of heaven\",\"qty\":3},{\"name\":\"zolga\",\"qty\":1}],\"extra\":[],\"side\":[{\"name\":\"asura priest\",\"qty\":1},{\"name\":\"ceasefire\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"emergency provisions\",\"qty\":1},{\"name\":\"giant trunade\",\"qty\":1},{\"name\":\"lightning vortex\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"spell shattering arrow\",\"qty\":2}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-bonfire-hero",
+    "title": "Bonfire Hero",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "HERO / Trap-Resistant Aggro",
+    "description": "Warrior pressure combines with a searchable FIRE package and a small HERO Fusion toolbox. Wildheart and Tenkabito Shien resist Trap effects, allowing this deck to use destructive Traps while keeping its own preferred attackers on the field.\n\nGAME PLAN\nE - Emergency Call finds Wildheart, and Bonfire finds Tenkabito Shien. Giant Rat supplies another route to Wildheart or an EARTH utility monster. Use combat tricks to protect your pressure, then look for Needle Ceiling or Torrential Tribute opportunities where the trap-resistant monsters retain their effects. Skill Drain changes those interactions, so check the actual board before relying on immunity. Miracle Fusion converts spent materials into Gaia, Nova Master or Escuridao according to the available attributes. Save the Fusion for a useful swing rather than consuming resources just because the summon is possible.\n\nSIDE DECK PLAN\nKycoo pressures opposing graveyard plans, Des Wombat covers effect damage and Cipher Soldier improves Warrior combat. Acid Rain attacks Machine boards, while Dust Tornado and Malevolent Catastrophe provide back-row answers. Extra targeted removal and Pulling the Rug can replace weaker matchup cards. Preserve enough HERO and attribute material to keep Miracle Fusion functional after siding.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Zombyra the Dark",
+        "qty": 1,
+        "password": "88472456"
+      },
+      {
+        "name": "Ninja Grandmaster Sasuke",
+        "qty": 1,
+        "password": "4041838"
+      },
+      {
+        "name": "D.D. Assailant",
+        "qty": 1,
+        "password": "70074904"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Elemental HERO Wildheart",
+        "qty": 3,
+        "password": "86188410"
+      },
+      {
+        "name": "Tenkabito Shien",
+        "qty": 3,
+        "password": "41589166"
+      },
+      {
+        "name": "Don Zaloog",
+        "qty": 1,
+        "password": "76922029"
+      },
+      {
+        "name": "Giant Rat",
+        "qty": 2,
+        "password": "97017120"
+      },
+      {
+        "name": "Exiled Force",
+        "qty": 1,
+        "password": "74131780"
+      },
+      {
+        "name": "Mystic Swordsman LV2",
+        "qty": 1,
+        "password": "47507260"
+      },
+      {
+        "name": "E - Emergency Call",
+        "qty": 2,
+        "password": "213326"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Reinforcement of the Army",
+        "qty": 1,
+        "password": "32807846"
+      },
+      {
+        "name": "Miracle Fusion",
+        "qty": 2,
+        "password": "45906428"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Bonfire",
+        "qty": 2,
+        "password": "85106525"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Needle Ceiling",
+        "qty": 2,
+        "password": "38411870"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [
+      {
+        "name": "Elemental HERO Nova Master",
+        "qty": 1,
+        "password": "1945387"
+      },
+      {
+        "name": "Elemental HERO Escuridao",
+        "qty": 1,
+        "password": "33574806"
+      },
+      {
+        "name": "Elemental HERO Gaia",
+        "qty": 3,
+        "password": "16304628"
+      }
+    ],
+    "side_deck": [
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 2,
+        "password": "88240808"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Cipher Soldier",
+        "qty": 2,
+        "password": "79853073"
+      },
+      {
+        "name": "Acid Rain",
+        "qty": 1,
+        "password": "21323861"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Malevolent Catastrophe",
+        "qty": 1,
+        "password": "1224927"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 1,
+        "password": "29401950"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      }
+    ],
+    "thumbnail_card": "Elemental HERO Wildheart",
+    "thumbnail_strip": [
+      "Elemental HERO Wildheart",
+      "Tenkabito Shien",
+      "Elemental HERO Escuridao"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"bonfire\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"d.d. assailant\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"don zaloog\",\"qty\":1},{\"name\":\"e - emergency call\",\"qty\":2},{\"name\":\"elemental hero wildheart\",\"qty\":3},{\"name\":\"exiled force\",\"qty\":1},{\"name\":\"giant rat\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"miracle fusion\",\"qty\":2},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystic swordsman lv2\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"needle ceiling\",\"qty\":2},{\"name\":\"ninja grandmaster sasuke\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"reinforcement of the army\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"tenkabito shien\",\"qty\":3},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"zombyra the dark\",\"qty\":1}],\"extra\":[{\"name\":\"elemental hero escuridao\",\"qty\":1},{\"name\":\"elemental hero gaia\",\"qty\":3},{\"name\":\"elemental hero nova master\",\"qty\":1}],\"side\":[{\"name\":\"acid rain\",\"qty\":1},{\"name\":\"bottomless trap hole\",\"qty\":1},{\"name\":\"cipher soldier\",\"qty\":2},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"kycoo the ghost destroyer\",\"qty\":2},{\"name\":\"malevolent catastrophe\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"smashing ground\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-wind-skill-drain",
+    "title": "Wind Skill Drain",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "WIND / Skill Drain",
+    "description": "A WIND beatdown deck using Normal Monsters, graveyard-based Special Summons and Skill Drain. Rising Air Current increases the pressure from the WIND lineup, while Unexpected Dai and revival cards help build a board without relying entirely on the Normal Summon.\n\nGAME PLAN\nStart with Unexpected Dai when its empty-field requirement is available, then decide how much additional pressure the opposing back row allows. Luster Dragon and Sonic Duck remain reliable under Skill Drain. The Tricky can turn a spare card into another body, while Silpheed and Garuda use WIND monsters from the graveyard. When paying those banish costs, preserve a useful Normal Monster for Birthright if that revival is part of your follow-up. Emissary of the Afterlife can find a low-Level Normal Monster when sent from the field to the graveyard. Rising Air Current reduces WIND DEF as it raises ATK, so position and removal timing still matter.\n\nSIDE DECK PLAN\nUse Soul Release against graveyard resources and Nobleman against face-down monsters. Spell Shattering Arrow and Dust Tornado clear troublesome Spells and Traps. More Bottomless Trap Hole, Skill Drain or Solemn Judgment can strengthen disruption when their costs suit the matchup. Diskblade Rider offers an additional WIND attacker.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Luster Dragon",
+        "qty": 3,
+        "password": "11091375"
+      },
+      {
+        "name": "Sonic Duck",
+        "qty": 3,
+        "password": "84696266"
+      },
+      {
+        "name": "The Tricky",
+        "qty": 1,
+        "password": "14778250"
+      },
+      {
+        "name": "Slate Warrior",
+        "qty": 3,
+        "password": "78636495"
+      },
+      {
+        "name": "Silpheed",
+        "qty": 2,
+        "password": "73001017"
+      },
+      {
+        "name": "Garuda the Wind Spirit",
+        "qty": 1,
+        "password": "12800777"
+      },
+      {
+        "name": "Emissary of the Afterlife",
+        "qty": 2,
+        "password": "75043725"
+      },
+      {
+        "name": "Exiled Force",
+        "qty": 1,
+        "password": "74131780"
+      },
+      {
+        "name": "Unexpected Dai",
+        "qty": 2,
+        "password": "911883"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Creature Swap",
+        "qty": 1,
+        "password": "31036355"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Terraforming",
+        "qty": 1,
+        "password": "73628505"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Rising Air Current",
+        "qty": 2,
+        "password": "45778932"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 1,
+        "password": "60082869"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Birthright",
+        "qty": 1,
+        "password": "35539880"
+      },
+      {
+        "name": "Skill Drain",
+        "qty": 2,
+        "password": "82732705"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Diskblade Rider",
+        "qty": 2,
+        "password": "41113025"
+      },
+      {
+        "name": "Twin-Headed Behemoth",
+        "qty": 1,
+        "password": "43586926"
+      },
+      {
+        "name": "Soul Release",
+        "qty": 2,
+        "password": "5758500"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 2,
+        "password": "93260132"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Skill Drain",
+        "qty": 1,
+        "password": "82732705"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "thumbnail_card": "Luster Dragon",
+    "thumbnail_strip": [
+      "Luster Dragon",
+      "Sonic Duck",
+      "The Tricky"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"birthright\",\"qty\":1},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"creature swap\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":1},{\"name\":\"emissary of the afterlife\",\"qty\":2},{\"name\":\"exiled force\",\"qty\":1},{\"name\":\"garuda the wind spirit\",\"qty\":1},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"luster dragon\",\"qty\":3},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"rising air current\",\"qty\":2},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"silpheed\",\"qty\":2},{\"name\":\"skill drain\",\"qty\":2},{\"name\":\"slate warrior\",\"qty\":3},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"sonic duck\",\"qty\":3},{\"name\":\"terraforming\",\"qty\":1},{\"name\":\"the tricky\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"unexpected dai\",\"qty\":2}],\"extra\":[],\"side\":[{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"diskblade rider\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"skill drain\",\"qty\":1},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"soul release\",\"qty\":2},{\"name\":\"spell shattering arrow\",\"qty\":2},{\"name\":\"twin-headed behemoth\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-vanilla-fish",
+    "title": "Vanilla Fish",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "WATER / Normal Fish",
+    "description": "Normal Fish monsters form a renewable attacking and removal engine around A Legendary Ocean. Warrior of Atlantis finds the Field Spell, while Unexpected Dai, Birthright and recovery cards keep the deck supplied with bodies and WATER cards.\n\nGAME PLAN\nOcean lowers WATER monster Levels and improves their stats, making Terrorking Salmon easier to Normal Summon. Develop a Normal Monster early, then use Fish Depth Charge to trade a Fish for an opposing card and a draw if that target is destroyed. Order to Charge provides another use for a Normal Monster. Abyss Soldier converts a WATER discard into a bounce, while Amphibious Bugroth MK-11 removes a face-up non-WATER monster when Umi is present. Rage of the Deep Sea grows with the appropriate graveyard monster types. Plan your revival and recovery before spending every Fish as a cost; not every WATER monster is eligible for Fish Depth Charge.\n\nSIDE DECK PLAN\nMobius and the back-row removal help against defensive setups. Nobleman deals with set monsters, while Bottomless Trap Hole and Pulling the Rug strengthen summon interaction. Des Wombat addresses effect damage, and Penguin Soldier offers another way to reset monsters. Keep the Normal Fish package large enough to support your engine cards.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Terrorking Salmon",
+        "qty": 3,
+        "password": "78060096"
+      },
+      {
+        "name": "7 Colored Fish",
+        "qty": 3,
+        "password": "23771716"
+      },
+      {
+        "name": "Space Mambo",
+        "qty": 3,
+        "password": "36119641"
+      },
+      {
+        "name": "Amphibious Bugroth MK-11",
+        "qty": 1,
+        "password": "4754691"
+      },
+      {
+        "name": "Rage of the Deep Sea",
+        "qty": 1,
+        "password": "73778008"
+      },
+      {
+        "name": "Warrior of Atlantis",
+        "qty": 3,
+        "password": "43797906"
+      },
+      {
+        "name": "Abyss Soldier",
+        "qty": 3,
+        "password": "18318842"
+      },
+      {
+        "name": "Unexpected Dai",
+        "qty": 2,
+        "password": "911883"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Summoner's Art",
+        "qty": 1,
+        "password": "79816536"
+      },
+      {
+        "name": "Dark Factory of Mass Production",
+        "qty": 1,
+        "password": "90928333"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Order to Charge",
+        "qty": 1,
+        "password": "78986941"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "A Legendary Ocean",
+        "qty": 3,
+        "password": "295517"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Fish Depth Charge",
+        "qty": 3,
+        "password": "58873391"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Birthright",
+        "qty": 2,
+        "password": "35539880"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Giant Trunade",
+        "qty": 1,
+        "password": "42703248"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      },
+      {
+        "name": "The Selection",
+        "qty": 1,
+        "password": "30888983"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      },
+      {
+        "name": "Penguin Soldier",
+        "qty": 1,
+        "password": "93920745"
+      }
+    ],
+    "thumbnail_card": "Terrorking Salmon",
+    "thumbnail_strip": [
+      "Terrorking Salmon",
+      "7 Colored Fish",
+      "Fish Depth Charge"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"7 colored fish\",\"qty\":3},{\"name\":\"a legendary ocean\",\"qty\":3},{\"name\":\"abyss soldier\",\"qty\":3},{\"name\":\"amphibious bugroth mk-11\",\"qty\":1},{\"name\":\"birthright\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"dark factory of mass production\",\"qty\":1},{\"name\":\"fish depth charge\",\"qty\":3},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"order to charge\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"rage of the deep sea\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"space mambo\",\"qty\":3},{\"name\":\"summoner's art\",\"qty\":1},{\"name\":\"terrorking salmon\",\"qty\":3},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"unexpected dai\",\"qty\":2},{\"name\":\"warrior of atlantis\",\"qty\":3}],\"extra\":[],\"side\":[{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"giant trunade\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"penguin soldier\",\"qty\":1},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"spell shattering arrow\",\"qty\":1},{\"name\":\"the selection\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-dark-magician",
+    "title": "Dark Magician",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Dark Magician / Chaos",
+    "description": "A Spellcaster deck that combines Dark Magician support, Spell Counters and a LIGHT/DARK Chaos package. Soul Servant improves access to the named engine cards, while Dark Renewal and Magical Dimension provide ways to convert smaller Spellcasters into larger threats.\n\nGAME PLAN\nSkilled Dark Magician accumulates counters through resolved Spell activations and can turn them into Dark Magician. Skilled Blue Magician supplies LIGHT material and can later banish itself from the graveyard to place a Spell Counter on an eligible card such as Breaker. Establish Dark Magician before relying on Dark Magic Attack. Soul Servant's graveyard draw depends on the qualifying different names actually present on the field or in the graveyards; merely stacking a card does not guarantee multiple draws. Dark Magic Curtain carries a major LP cost and summon restrictions for the turn, so plan the whole sequence before using it. Chaos Sorcerer gives the accumulated LIGHT and DARK monsters another purpose.\n\nSIDE DECK PLAN\nMei-Kou and Spell Shattering Arrow answer face-up Spells, while Dust Tornado covers back rows more broadly. Add Nobleman, Bottomless Trap Hole or Torrential Tribute when their removal is more useful than slower engine cards. Kycoo and the summon-response Traps offer matchup-specific disruption. Keep enough Spellcasters for Dimension and Renewal.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Dark Magician",
+        "qty": 2,
+        "password": "46986414"
+      },
+      {
+        "name": "Dark Magician of Chaos",
+        "qty": 1,
+        "password": "40737112"
+      },
+      {
+        "name": "Chaos Sorcerer",
+        "qty": 2,
+        "password": "9596126"
+      },
+      {
+        "name": "Dark Magician Girl",
+        "qty": 1,
+        "password": "38033121"
+      },
+      {
+        "name": "Skilled Dark Magician",
+        "qty": 3,
+        "password": "73752131"
+      },
+      {
+        "name": "Skilled Blue Magician",
+        "qty": 3,
+        "password": "88901771"
+      },
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 1,
+        "password": "88240808"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Mythical Beast Cerberus",
+        "qty": 1,
+        "password": "55424270"
+      },
+      {
+        "name": "Marshmallon",
+        "qty": 1,
+        "password": "31305911"
+      },
+      {
+        "name": "Copycat",
+        "qty": 1,
+        "password": "26376390"
+      },
+      {
+        "name": "Dark Magic Attack",
+        "qty": 1,
+        "password": "2314238"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Card Destruction",
+        "qty": 1,
+        "password": "72892473"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Foolish Burial",
+        "qty": 1,
+        "password": "81439173"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Dark Magic Curtain",
+        "qty": 1,
+        "password": "99789342"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Soul Servant",
+        "qty": 2,
+        "password": "23020408"
+      },
+      {
+        "name": "Magical Dimension",
+        "qty": 2,
+        "password": "28553439"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Magician's Circle",
+        "qty": 1,
+        "password": "50755"
+      },
+      {
+        "name": "Dark Renewal",
+        "qty": 2,
+        "password": "9287078"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 1,
+        "password": "88240808"
+      },
+      {
+        "name": "Mei-Kou, Master of Barriers",
+        "qty": 2,
+        "password": "47731128"
+      },
+      {
+        "name": "Lightning Vortex",
+        "qty": 1,
+        "password": "69162969"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Diffusion Wave-Motion",
+        "qty": 1,
+        "password": "87880531"
+      },
+      {
+        "name": "Warrior Elimination",
+        "qty": 1,
+        "password": "90873992"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "The Selection",
+        "qty": 1,
+        "password": "30888983"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 1,
+        "password": "34717238"
+      }
+    ],
+    "thumbnail_card": "Dark Magician",
+    "thumbnail_strip": [
+      "Dark Magician",
+      "Dark Magician Girl",
+      "Soul Servant"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"card destruction\",\"qty\":1},{\"name\":\"chaos sorcerer\",\"qty\":2},{\"name\":\"copycat\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"dark magic attack\",\"qty\":1},{\"name\":\"dark magic curtain\",\"qty\":1},{\"name\":\"dark magician\",\"qty\":2},{\"name\":\"dark magician girl\",\"qty\":1},{\"name\":\"dark magician of chaos\",\"qty\":1},{\"name\":\"dark renewal\",\"qty\":2},{\"name\":\"foolish burial\",\"qty\":1},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"kycoo the ghost destroyer\",\"qty\":1},{\"name\":\"magical dimension\",\"qty\":2},{\"name\":\"magician's circle\",\"qty\":1},{\"name\":\"marshmallon\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"mythical beast cerberus\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"skilled blue magician\",\"qty\":3},{\"name\":\"skilled dark magician\",\"qty\":3},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"soul servant\",\"qty\":2}],\"extra\":[],\"side\":[{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"diffusion wave-motion\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"kycoo the ghost destroyer\",\"qty\":1},{\"name\":\"lightning vortex\",\"qty\":1},{\"name\":\"mei-kou, master of barriers\",\"qty\":2},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"pulling the rug\",\"qty\":1},{\"name\":\"spell shattering arrow\",\"qty\":1},{\"name\":\"the selection\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"warrior elimination\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-skill-drain-beatdown",
+    "title": "Skill Drain Beatdown",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Skill Drain Beatdown",
+    "description": "Large attackers with restrictive effects become the foundation of a simple pressure deck under Skill Drain. The list combines high ATK, combat tricks and removal, with Nimble Momonga helping maintain resources and offset some of the LP pressure.\n\nGAME PLAN\nDeploy a threat that fits the current board rather than assuming Skill Drain will always remain active. Fusilier can be Normal Summoned without Tributes, and negating its on-field effect restores its printed stats. Mist Archfiend and the attack-position drawbacks of Goblin Attack Force or Giant Orc create further reasons to protect Drain. Final Attack Orders keeps face-up monsters in Attack Position and changes combat calculations for both players. Exiled Force can remove a monster even though Drain is on the field because it Tributes itself as cost. Deck Devastation Virus turns a suitable DARK attacker into disruption, but the lost board presence should be worth the trade.\n\nSIDE DECK PLAN\nSoul Release challenges graveyard plans; Nobleman handles set monsters. Bottomless and Compulsory Evacuation Device offer different answers to newly summoned threats. Dust Tornado, Spell Shattering Arrow and Giant Trunade help force attacks through back rows. Pikeru's Circle of Enchantment protects against effect damage for a turn. Avoid cutting too many attackers for reactive cards.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Fusilier Dragon, the Dual-Mode Beast",
+        "qty": 3,
+        "password": "51632798"
+      },
+      {
+        "name": "Mist Archfiend",
+        "qty": 2,
+        "password": "28601770"
+      },
+      {
+        "name": "Goblin Attack Force",
+        "qty": 3,
+        "password": "78658564"
+      },
+      {
+        "name": "Giant Orc",
+        "qty": 3,
+        "password": "73698349"
+      },
+      {
+        "name": "Berserk Gorilla",
+        "qty": 2,
+        "password": "39168895"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "Exiled Force",
+        "qty": 1,
+        "password": "74131780"
+      },
+      {
+        "name": "Nimble Momonga",
+        "qty": 3,
+        "password": "22567609"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Reinforcement of the Army",
+        "qty": 1,
+        "password": "32807846"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 2,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Deck Devastation Virus",
+        "qty": 1,
+        "password": "35027493"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Final Attack Orders",
+        "qty": 1,
+        "password": "52503575"
+      },
+      {
+        "name": "Skill Drain",
+        "qty": 3,
+        "password": "82732705"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Soul Release",
+        "qty": 2,
+        "password": "5758500"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Compulsory Evacuation Device",
+        "qty": 2,
+        "password": "94192409"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 2,
+        "password": "93260132"
+      },
+      {
+        "name": "Pikeru's Circle of Enchantment",
+        "qty": 2,
+        "password": "74270067"
+      },
+      {
+        "name": "Giant Trunade",
+        "qty": 1,
+        "password": "42703248"
+      }
+    ],
+    "thumbnail_card": "Fusilier Dragon, the Dual-Mode Beast",
+    "thumbnail_strip": [
+      "Fusilier Dragon, the Dual-Mode Beast",
+      "Mist Archfiend",
+      "Skill Drain"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"berserk gorilla\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"deck devastation virus\",\"qty\":1},{\"name\":\"exiled force\",\"qty\":1},{\"name\":\"final attack orders\",\"qty\":1},{\"name\":\"fusilier dragon, the dual-mode beast\",\"qty\":3},{\"name\":\"giant orc\",\"qty\":3},{\"name\":\"goblin attack force\",\"qty\":3},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mist archfiend\",\"qty\":2},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nimble momonga\",\"qty\":3},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"reinforcement of the army\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"skill drain\",\"qty\":3},{\"name\":\"smashing ground\",\"qty\":2},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1}],\"extra\":[],\"side\":[{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"compulsory evacuation device\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"giant trunade\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pikeru's circle of enchantment\",\"qty\":2},{\"name\":\"soul release\",\"qty\":2},{\"name\":\"spell shattering arrow\",\"qty\":2}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-archfiend-pandemonium",
+    "title": "Archfiend Pandemonium",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Archfiend",
+    "description": "An Archfiend resource engine combines Pandemonium, Heiress and revival with strong Fiend attackers. The deck can turn specific destruction events into replacement monsters while using Falling Down to steal an opposing threat when an Archfiend card is present.\n\nGAME PLAN\nDiscard Archfiend General to find Pandemonium when the Field Spell is missing. Foolish Burial can send Heiress by card effect and unlock its search; discarding it as an activation cost is a different interaction. Pandemonium rewards Archfiends destroyed and sent to the graveyard outside battle, and its search must be for a lower Level. Archfiend's Roar offers temporary revival at an LP cost, so consider both the immediate attack or defense and the later destruction. Terrorking requires another Archfiend monster for its Normal Summon. Keep a qualifying Archfiend card available when relying on Falling Down, and do not confuse the archetype's conditional searches with unconditional replacement.\n\nSIDE DECK PLAN\nKycoo and Lesser Fiend can pressure graveyard-dependent strategies. Mobius, Dust Tornado and Spell Shattering Arrow challenge back rows. Nobleman and Warrior Elimination target specific defensive plans, while Pulling the Rug responds to relevant Normal Summon effects. Retain enough Archfiends to keep the core cards working after siding.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Archfiend Soldier",
+        "qty": 2,
+        "password": "49881766"
+      },
+      {
+        "name": "Chaos Sorcerer",
+        "qty": 1,
+        "password": "9596126"
+      },
+      {
+        "name": "Archfiend of Gilfer",
+        "qty": 1,
+        "password": "50287060"
+      },
+      {
+        "name": "Mist Archfiend",
+        "qty": 1,
+        "password": "28601770"
+      },
+      {
+        "name": "Archfiend General",
+        "qty": 3,
+        "password": "48675364"
+      },
+      {
+        "name": "Terrorking Archfiend",
+        "qty": 2,
+        "password": "35975813"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Desrook Archfiend",
+        "qty": 2,
+        "password": "72192100"
+      },
+      {
+        "name": "Archfiend Heiress",
+        "qty": 3,
+        "password": "66540884"
+      },
+      {
+        "name": "Magical Merchant",
+        "qty": 1,
+        "password": "32362575"
+      },
+      {
+        "name": "Unexpected Dai",
+        "qty": 1,
+        "password": "911883"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Foolish Burial",
+        "qty": 2,
+        "password": "81439173"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Falling Down",
+        "qty": 2,
+        "password": "32919136"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Pandemonium",
+        "qty": 2,
+        "password": "94585852"
+      },
+      {
+        "name": "Deck Devastation Virus",
+        "qty": 1,
+        "password": "35027493"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Archfiend's Roar",
+        "qty": 2,
+        "password": "56246017"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Lesser Fiend",
+        "qty": 1,
+        "password": "16475472"
+      },
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 2,
+        "password": "88240808"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 1,
+        "password": "9637706"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Warrior Elimination",
+        "qty": 1,
+        "password": "90873992"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      },
+      {
+        "name": "Axe of Despair",
+        "qty": 1,
+        "password": "40619825"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 1,
+        "password": "29401950"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      }
+    ],
+    "thumbnail_card": "Archfiend General",
+    "thumbnail_strip": [
+      "Archfiend General",
+      "Archfiend Heiress",
+      "Pandemonium"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"archfiend general\",\"qty\":3},{\"name\":\"archfiend heiress\",\"qty\":3},{\"name\":\"archfiend of gilfer\",\"qty\":1},{\"name\":\"archfiend soldier\",\"qty\":2},{\"name\":\"archfiend's roar\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"chaos sorcerer\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"deck devastation virus\",\"qty\":1},{\"name\":\"desrook archfiend\",\"qty\":2},{\"name\":\"falling down\",\"qty\":2},{\"name\":\"foolish burial\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"magical merchant\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mist archfiend\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"pandemonium\",\"qty\":2},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"terrorking archfiend\",\"qty\":2},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"unexpected dai\",\"qty\":1}],\"extra\":[],\"side\":[{\"name\":\"axe of despair\",\"qty\":1},{\"name\":\"bottomless trap hole\",\"qty\":1},{\"name\":\"des wombat\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"kycoo the ghost destroyer\",\"qty\":2},{\"name\":\"lesser fiend\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"spell shattering arrow\",\"qty\":1},{\"name\":\"warrior elimination\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-cyberdark-armed-dragon",
+    "title": "Cyberdark Armed Dragon",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Dragon / Cyberdark",
+    "description": "A Dragon deck that develops Armed Dragon while reusing small Dragons as equipment for Cyberdark Keel. Blizzard Dragon and conventional removal buy time, and Future Fusion plus Dragon's Mirror supply a larger late-game threat.\n\nGAME PLAN\nMasked Dragon can replace itself with another eligible Dragon and establish material in the graveyard. Armed Dragon LV3 advances through its Standby Phase effect; protect the developing line when that upgrade is worth more than immediate damage. Armed Dragon LV5 uses a discarded monster's ATK to determine which target it can destroy. Keel equips a Level 3 or lower Dragon when Normal Summoned, so leave a useful target available. Future Fusion follows its current delayed effect: it does not send materials when first activated. Dragon's Mirror can eventually summon Five-Headed Dragon, but banishing the wrong Dragons can weaken Keel or your revival options.\n\nSIDE DECK PLAN\nKycoo attacks opposing graveyard plans and Des Wombat covers effect damage. Warrior Elimination and additional monster removal adapt to combat-heavy opponents. Dust Tornado and Spell Shattering Arrow remove back-row obstacles. Deck Devastation Virus is an optional disruption route when a suitable DARK body is available; avoid siding away so many small Dragons that Keel becomes unreliable.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Armed Dragon LV7",
+        "qty": 1,
+        "password": "73879377"
+      },
+      {
+        "name": "Armed Dragon LV5",
+        "qty": 2,
+        "password": "46384672"
+      },
+      {
+        "name": "Blizzard Dragon",
+        "qty": 2,
+        "password": "61802346"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "Cyberdark Keel",
+        "qty": 3,
+        "password": "3019642"
+      },
+      {
+        "name": "Twin-Headed Behemoth",
+        "qty": 1,
+        "password": "43586926"
+      },
+      {
+        "name": "Masked Dragon",
+        "qty": 3,
+        "password": "39191307"
+      },
+      {
+        "name": "Armed Dragon LV3",
+        "qty": 2,
+        "password": "980973"
+      },
+      {
+        "name": "Exploder Dragon",
+        "qty": 2,
+        "password": "20586572"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Creature Swap",
+        "qty": 1,
+        "password": "31036355"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Dragon's Mirror",
+        "qty": 1,
+        "password": "71490127"
+      },
+      {
+        "name": "Swords of Revealing Light",
+        "qty": 1,
+        "password": "72302403"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Future Fusion",
+        "qty": 3,
+        "password": "77565204"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 1,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Dragon's Rage",
+        "qty": 1,
+        "password": "54178050"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      }
+    ],
+    "extra_deck": [
+      {
+        "name": "Five-Headed Dragon",
+        "qty": 2,
+        "password": "99267150"
+      }
+    ],
+    "side_deck": [
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 2,
+        "password": "88240808"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Warrior Elimination",
+        "qty": 2,
+        "password": "90873992"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Deck Devastation Virus",
+        "qty": 1,
+        "password": "35027493"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "thumbnail_card": "Cyberdark Keel",
+    "thumbnail_strip": [
+      "Cyberdark Keel",
+      "Armed Dragon LV7",
+      "Five-Headed Dragon"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"armed dragon lv3\",\"qty\":2},{\"name\":\"armed dragon lv5\",\"qty\":2},{\"name\":\"armed dragon lv7\",\"qty\":1},{\"name\":\"blizzard dragon\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":1},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"creature swap\",\"qty\":1},{\"name\":\"cyberdark keel\",\"qty\":3},{\"name\":\"dragon's mirror\",\"qty\":1},{\"name\":\"dragon's rage\",\"qty\":1},{\"name\":\"exploder dragon\",\"qty\":2},{\"name\":\"future fusion\",\"qty\":3},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"masked dragon\",\"qty\":3},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"swords of revealing light\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"twin-headed behemoth\",\"qty\":1}],\"extra\":[{\"name\":\"five-headed dragon\",\"qty\":2}],\"side\":[{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"deck devastation virus\",\"qty\":1},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"kycoo the ghost destroyer\",\"qty\":2},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"spell shattering arrow\",\"qty\":1},{\"name\":\"warrior elimination\",\"qty\":2}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-zorc-chaos-ritual",
+    "title": "Zorc Chaos Ritual",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Ritual / Chaos",
+    "description": "A Ritual deck with a Chaos follow-up, built around Dark Master - Zorc and Level 4 Normal Monsters of both attributes. Searchers improve access to the Ritual pieces, while removal and defensive Traps give the engine time to establish a threat.\n\nGAME PLAN\nManju can find a Ritual Monster or Ritual Spell; Senju finds the monster. Dark Spirit's Mastery gives another way to reach the Level 8 Fiend Zorc. Advanced Ritual Art sends Normal Monsters from the Deck with total Levels exactly matching the summon, so two Level 4 monsters can supply Zorc's eight Levels. Choose Archfiend Soldier and X-Head Cannon according to what remains in the Deck and the LIGHT/DARK balance needed for Chaos Sorcerer. Contract with the Dark Master offers an alternative Ritual route using hand or field resources. Zorc's die roll can remove opposing monsters, but a six destroys all monsters you control, so account for that risk before extending.\n\nSIDE DECK PLAN\nJinzo and Mobius can help break back rows, although Jinzo conflicts with your own Traps. Kycoo pressures graveyard resources. Extra removal, Dust Tornado and Spell Shattering Arrow answer the threats actually shown in the first game. Keep sufficient Normal Monsters and search pieces so the Ritual plan remains live.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Archfiend Soldier",
+        "qty": 2,
+        "password": "49881766"
+      },
+      {
+        "name": "X-Head Cannon",
+        "qty": 2,
+        "password": "62651957"
+      },
+      {
+        "name": "Chaos Sorcerer",
+        "qty": 2,
+        "password": "9596126"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Senju of the Thousand Hands",
+        "qty": 1,
+        "password": "23401839"
+      },
+      {
+        "name": "Dekoichi the Battlechanted Locomotive",
+        "qty": 1,
+        "password": "87621407"
+      },
+      {
+        "name": "Manju of the Ten Thousand Hands",
+        "qty": 3,
+        "password": "95492061"
+      },
+      {
+        "name": "Tsukuyomi",
+        "qty": 1,
+        "password": "34853266"
+      },
+      {
+        "name": "Dark Master - Zorc",
+        "qty": 2,
+        "password": "97642679"
+      },
+      {
+        "name": "Dark Spirit's Mastery",
+        "qty": 1,
+        "password": "14386013"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Creature Swap",
+        "qty": 1,
+        "password": "31036355"
+      },
+      {
+        "name": "Giant Trunade",
+        "qty": 1,
+        "password": "42703248"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Advanced Ritual Art",
+        "qty": 2,
+        "password": "46052429"
+      },
+      {
+        "name": "Contract with the Dark Master",
+        "qty": 1,
+        "password": "96420087"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Jinzo",
+        "qty": 1,
+        "password": "77585513"
+      },
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 2,
+        "password": "88240808"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 1,
+        "password": "29401950"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      },
+      {
+        "name": "Malevolent Catastrophe",
+        "qty": 1,
+        "password": "1224927"
+      },
+      {
+        "name": "Chaos Trap Hole",
+        "qty": 1,
+        "password": "11593137"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      },
+      {
+        "name": "Lightning Vortex",
+        "qty": 1,
+        "password": "69162969"
+      }
+    ],
+    "thumbnail_card": "Dark Master - Zorc",
+    "thumbnail_strip": [
+      "Dark Master - Zorc",
+      "Advanced Ritual Art",
+      "Chaos Sorcerer"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"advanced ritual art\",\"qty\":2},{\"name\":\"archfiend soldier\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"chaos sorcerer\",\"qty\":2},{\"name\":\"contract with the dark master\",\"qty\":1},{\"name\":\"creature swap\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"dark master - zorc\",\"qty\":2},{\"name\":\"dark spirit's mastery\",\"qty\":1},{\"name\":\"dekoichi the battlechanted locomotive\",\"qty\":1},{\"name\":\"giant trunade\",\"qty\":1},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"manju of the ten thousand hands\",\"qty\":3},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"senju of the thousand hands\",\"qty\":1},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"tsukuyomi\",\"qty\":1},{\"name\":\"x-head cannon\",\"qty\":2}],\"extra\":[],\"side\":[{\"name\":\"bottomless trap hole\",\"qty\":1},{\"name\":\"chaos trap hole\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"jinzo\",\"qty\":1},{\"name\":\"kycoo the ghost destroyer\",\"qty\":2},{\"name\":\"lightning vortex\",\"qty\":1},{\"name\":\"malevolent catastrophe\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"spell shattering arrow\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-doriado-skull-servants",
+    "title": "Doriado Skull Servants",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Doriado / Skull Servant",
+    "description": "A Zombie and Ritual hybrid that turns Advanced Ritual Art into graveyard setup. King of the Skull Servants provides growing combat pressure, while Elemental Mistress Doriado enables the powerful attribute requirement of Fuh-Rin-Ka-Zan.\n\nGAME PLAN\nManju finds Doriado or a Ritual Spell. Advanced Ritual Art can send three Skull Servants or the Level 3 Clown Zombie to meet Doriado's exact Level requirement, depending on the cards still in the Deck. Doriado is also treated as WIND, WATER, FIRE and EARTH while its effect applies, enabling Fuh-Rin-Ka-Zan's choice of removal, hand disruption or draws. Gozuki and Foolish Burial improve Zombie setup, and the Kings gain ATK from Skull Servants and other Kings in the graveyard. Goblin Zombie and Pyramid Turtle maintain access to the Zombie engine. Remember that banishing graveyard resources can reduce King's strength, and negating Doriado changes the Trap's activation conditions.\n\nSIDE DECK PLAN\nRyu Kokki offers another large Zombie threat. Des Wombat covers effect damage, while Nobleman and Smashing Ground add direct removal. Dust Tornado and Spell Shattering Arrow tackle back rows; Compulsory and Pulling the Rug add targeted interaction. Preserve the Ritual materials and enough Zombies for the revival package.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Clown Zombie",
+        "qty": 1,
+        "password": "92667214"
+      },
+      {
+        "name": "Skull Servant",
+        "qty": 3,
+        "password": "32274490"
+      },
+      {
+        "name": "Gozuki",
+        "qty": 2,
+        "password": "52467217"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "Manju of the Ten Thousand Hands",
+        "qty": 3,
+        "password": "95492061"
+      },
+      {
+        "name": "Pyramid Turtle",
+        "qty": 1,
+        "password": "77044671"
+      },
+      {
+        "name": "Goblin Zombie",
+        "qty": 2,
+        "password": "63665875"
+      },
+      {
+        "name": "King of the Skull Servants",
+        "qty": 3,
+        "password": "36021814"
+      },
+      {
+        "name": "Elemental Mistress Doriado",
+        "qty": 2,
+        "password": "99414168"
+      },
+      {
+        "name": "Book of Life",
+        "qty": 2,
+        "password": "2204140"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Creature Swap",
+        "qty": 1,
+        "password": "31036355"
+      },
+      {
+        "name": "Card Destruction",
+        "qty": 1,
+        "password": "72892473"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Foolish Burial",
+        "qty": 2,
+        "password": "81439173"
+      },
+      {
+        "name": "Doriado's Blessing",
+        "qty": 1,
+        "password": "23965037"
+      },
+      {
+        "name": "Advanced Ritual Art",
+        "qty": 2,
+        "password": "46052429"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Fuh-Rin-Ka-Zan",
+        "qty": 2,
+        "password": "1781310"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Ryu Kokki",
+        "qty": 1,
+        "password": "57281778"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 2,
+        "password": "97169186"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 2,
+        "password": "93260132"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Compulsory Evacuation Device",
+        "qty": 2,
+        "password": "94192409"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      }
+    ],
+    "thumbnail_card": "Elemental Mistress Doriado",
+    "thumbnail_strip": [
+      "Elemental Mistress Doriado",
+      "King of the Skull Servants",
+      "Fuh-Rin-Ka-Zan"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"advanced ritual art\",\"qty\":2},{\"name\":\"book of life\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"card destruction\",\"qty\":1},{\"name\":\"clown zombie\",\"qty\":1},{\"name\":\"creature swap\",\"qty\":1},{\"name\":\"doriado's blessing\",\"qty\":1},{\"name\":\"elemental mistress doriado\",\"qty\":2},{\"name\":\"foolish burial\",\"qty\":2},{\"name\":\"fuh-rin-ka-zan\",\"qty\":2},{\"name\":\"goblin zombie\",\"qty\":2},{\"name\":\"gozuki\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"king of the skull servants\",\"qty\":3},{\"name\":\"manju of the ten thousand hands\",\"qty\":3},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"pyramid turtle\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"skull servant\",\"qty\":3},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1}],\"extra\":[],\"side\":[{\"name\":\"compulsory evacuation device\",\"qty\":2},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"ryu kokki\",\"qty\":1},{\"name\":\"smashing ground\",\"qty\":2},{\"name\":\"spell shattering arrow\",\"qty\":2}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-macro-monarch",
+    "title": "Macro Monarch",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Banish / Monarch",
+    "description": "A banishing-based Monarch deck using Chaos Distill and Banisher of the Radiance to support recurring D.D. monsters. Despite the deck name, this exact list does not contain Macro Cosmos: its banishing effects come from the cards actually included.\n\nGAME PLAN\nChaos Distill redirects cards sent to your own graveyard, while Banisher affects cards sent to either graveyard. D.D. Survivor returns after being banished while face-up on the field, and D.D. Scout Plane supplies a different recurring body. Use those resources for Tribute Summons, Enemy Controller or continued pressure, keeping each monster's return conditions in mind. Mobius removes back rows, Zaborg removes a monster and Thestalos attacks the opponent's hand. Soul Exchange can use an opposing monster for a Tribute but prevents your Battle Phase that turn. The deck gains value by repeating these exchanges, not by spending every defensive card to protect one Monarch.\n\nSIDE DECK PLAN\nDimension Fusion can convert a developed banished zone into a swing, but it costs LP and may also help the opponent. Jinzo, Mei-Kou and Dust Tornado challenge back rows. Des Wombat, Nobleman, Pulling the Rug and Chaos Trap Hole cover narrower threats. Keep enough banishing enablers and recurring bodies for the Tribute engine.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Thestalos the Firestorm Monarch",
+        "qty": 2,
+        "password": "26205777"
+      },
+      {
+        "name": "Zaborg the Thunder Monarch",
+        "qty": 2,
+        "password": "51945556"
+      },
+      {
+        "name": "D.D. Survivor",
+        "qty": 3,
+        "password": "48092532"
+      },
+      {
+        "name": "D.D. Scout Plane",
+        "qty": 2,
+        "password": "3773196"
+      },
+      {
+        "name": "Banisher of the Radiance",
+        "qty": 3,
+        "password": "94853057"
+      },
+      {
+        "name": "Marshmallon",
+        "qty": 1,
+        "password": "31305911"
+      },
+      {
+        "name": "Spirit Reaper",
+        "qty": 1,
+        "password": "23205979"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Chaos Distill",
+        "qty": 3,
+        "password": "6500778"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Reinforcement of the Army",
+        "qty": 1,
+        "password": "32807846"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Enemy Controller",
+        "qty": 2,
+        "password": "98045062"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Soul Exchange",
+        "qty": 1,
+        "password": "68005187"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 1,
+        "password": "60082869"
+      },
+      {
+        "name": "Phoenix Wing Wind Blast",
+        "qty": 1,
+        "password": "63356631"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Jinzo",
+        "qty": 1,
+        "password": "77585513"
+      },
+      {
+        "name": "Mei-Kou, Master of Barriers",
+        "qty": 1,
+        "password": "47731128"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Dimension Fusion",
+        "qty": 1,
+        "password": "23557835"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Soul Exchange",
+        "qty": 1,
+        "password": "68005187"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      },
+      {
+        "name": "Chaos Trap Hole",
+        "qty": 2,
+        "password": "11593137"
+      }
+    ],
+    "thumbnail_card": "D.D. Survivor",
+    "thumbnail_strip": [
+      "D.D. Survivor",
+      "Chaos Distill",
+      "Thestalos the Firestorm Monarch"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"banisher of the radiance\",\"qty\":3},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"chaos distill\",\"qty\":3},{\"name\":\"d.d. scout plane\",\"qty\":2},{\"name\":\"d.d. survivor\",\"qty\":3},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":1},{\"name\":\"enemy controller\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"marshmallon\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"phoenix wing wind blast\",\"qty\":1},{\"name\":\"reinforcement of the army\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"soul exchange\",\"qty\":1},{\"name\":\"spirit reaper\",\"qty\":1},{\"name\":\"thestalos the firestorm monarch\",\"qty\":2},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"zaborg the thunder monarch\",\"qty\":2}],\"extra\":[],\"side\":[{\"name\":\"chaos trap hole\",\"qty\":2},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dimension fusion\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"jinzo\",\"qty\":1},{\"name\":\"mei-kou, master of barriers\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"soul exchange\",\"qty\":1},{\"name\":\"spell shattering arrow\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-monarch",
+    "title": "Monarch",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Monarch / Chaos",
+    "description": "A value-oriented Monarch deck with recruiters, Flip monsters and a LIGHT/DARK Chaos package. Small monsters keep cards and bodies available until a Tribute Summon or Chaos Sorcerer can turn the developing resources into removal and pressure.\n\nGAME PLAN\nShining Angel and Apprentice Magician help maintain the field and access eligible monsters. Crystal Seer, Skelengel and Mask of Darkness give different forms of advantage when their Flip effects resolve. Book of Moon can support those effects or disrupt an opposing attack, but a set monster still needs time or battle to generate value. Fiend's Sanctuary supplies a Token for a Tribute, while Soul Exchange can replace your own material with an opposing monster at the cost of the Battle Phase. Match the Monarch to the problem: Mobius for back rows, Zaborg for monsters and Thestalos for the hand. Preserve LIGHT and DARK resources when a Chaos follow-up is likely.\n\nSIDE DECK PLAN\nThe End of Anubis and Kycoo challenge graveyard strategies. Jinzo and Mei-Kou address different back-row setups, while Dark Dust Spirit provides a broader monster reset. Des Wombat and Cipher Soldier are focused defensive options. Extra Nobleman, Dust Tornado and Chaos Trap Hole adjust the interaction without abandoning the Tribute-support engine.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Thestalos the Firestorm Monarch",
+        "qty": 1,
+        "password": "26205777"
+      },
+      {
+        "name": "Chaos Sorcerer",
+        "qty": 2,
+        "password": "9596126"
+      },
+      {
+        "name": "Zaborg the Thunder Monarch",
+        "qty": 2,
+        "password": "51945556"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Shining Angel",
+        "qty": 2,
+        "password": "95956346"
+      },
+      {
+        "name": "Spirit Reaper",
+        "qty": 1,
+        "password": "23205979"
+      },
+      {
+        "name": "Mask of Darkness",
+        "qty": 1,
+        "password": "28933734"
+      },
+      {
+        "name": "Skelengel",
+        "qty": 2,
+        "password": "60694662"
+      },
+      {
+        "name": "Old Vindictive Magician",
+        "qty": 1,
+        "password": "45141844"
+      },
+      {
+        "name": "Apprentice Magician",
+        "qty": 2,
+        "password": "9156135"
+      },
+      {
+        "name": "Crystal Seer",
+        "qty": 1,
+        "password": "82099401"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Fiend's Sanctuary",
+        "qty": 2,
+        "password": "24874630"
+      },
+      {
+        "name": "Creature Swap",
+        "qty": 1,
+        "password": "31036355"
+      },
+      {
+        "name": "Soul Exchange",
+        "qty": 2,
+        "password": "68005187"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "The End of Anubis",
+        "qty": 2,
+        "password": "65403020"
+      },
+      {
+        "name": "Jinzo",
+        "qty": 1,
+        "password": "77585513"
+      },
+      {
+        "name": "Dark Dust Spirit",
+        "qty": 1,
+        "password": "89111398"
+      },
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 2,
+        "password": "88240808"
+      },
+      {
+        "name": "Mei-Kou, Master of Barriers",
+        "qty": 1,
+        "password": "47731128"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Cipher Soldier",
+        "qty": 2,
+        "password": "79853073"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Chaos Trap Hole",
+        "qty": 1,
+        "password": "11593137"
+      }
+    ],
+    "thumbnail_card": "Zaborg the Thunder Monarch",
+    "thumbnail_strip": [
+      "Zaborg the Thunder Monarch",
+      "Chaos Sorcerer",
+      "Crystal Seer"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"apprentice magician\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"chaos sorcerer\",\"qty\":2},{\"name\":\"creature swap\",\"qty\":1},{\"name\":\"crystal seer\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"fiend's sanctuary\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"mask of darkness\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"old vindictive magician\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"shining angel\",\"qty\":2},{\"name\":\"skelengel\",\"qty\":2},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"soul exchange\",\"qty\":2},{\"name\":\"spirit reaper\",\"qty\":1},{\"name\":\"thestalos the firestorm monarch\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"zaborg the thunder monarch\",\"qty\":2}],\"extra\":[],\"side\":[{\"name\":\"chaos trap hole\",\"qty\":1},{\"name\":\"cipher soldier\",\"qty\":2},{\"name\":\"dark dust spirit\",\"qty\":1},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"jinzo\",\"qty\":1},{\"name\":\"kycoo the ghost destroyer\",\"qty\":2},{\"name\":\"mei-kou, master of barriers\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"the end of anubis\",\"qty\":2}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-earth-monarchs",
+    "title": "Earth Monarchs",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "EARTH / Monarch",
+    "description": "An EARTH-based pressure deck that combines Giant Rat's recruitment with a compact Tribute lineup. The smaller monsters provide flexible combat and removal options, while graveyard-based Special Summons help build material without consuming every Normal Summon.\n\nGAME PLAN\nChoose Giant Rat's replacement according to the board: Wildheart resists Trap effects, Exiled Force removes a monster, and Injection Fairy Lily can threaten much larger attackers at a steep LP cost. Gigantes and The Rock Spirit use EARTH monsters in the graveyard to add bodies, so preserve targets needed for revival. Soul Exchange and Brain Control create further Tribute opportunities. Mobius, Zaborg and Thestalos each attack a different resource, while Jinzo suppresses Traps on both sides. Consider whether direct pressure is stronger than a Tribute Summon, and remember that Soul Exchange gives up the Battle Phase for that turn.\n\nSIDE DECK PLAN\nKycoo and D.D. Warrior improve interaction with specific monster and graveyard plans. Des Wombat covers effect damage and Cipher Soldier excels against Warriors. Extra Nobleman, Dust Tornado, Pulling the Rug and Chaos Trap Hole let you exchange generic interaction for more suitable answers. Keep enough EARTH bodies and Rat targets to preserve the deck's flexibility.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Jinzo",
+        "qty": 1,
+        "password": "77585513"
+      },
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Thestalos the Firestorm Monarch",
+        "qty": 1,
+        "password": "26205777"
+      },
+      {
+        "name": "Zaborg the Thunder Monarch",
+        "qty": 1,
+        "password": "51945556"
+      },
+      {
+        "name": "Berserk Gorilla",
+        "qty": 2,
+        "password": "39168895"
+      },
+      {
+        "name": "Gigantes",
+        "qty": 1,
+        "password": "47606319"
+      },
+      {
+        "name": "D.D. Assailant",
+        "qty": 1,
+        "password": "70074904"
+      },
+      {
+        "name": "The Rock Spirit",
+        "qty": 1,
+        "password": "76305638"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Elemental HERO Wildheart",
+        "qty": 1,
+        "password": "86188410"
+      },
+      {
+        "name": "Giant Rat",
+        "qty": 3,
+        "password": "97017120"
+      },
+      {
+        "name": "Exiled Force",
+        "qty": 1,
+        "password": "74131780"
+      },
+      {
+        "name": "Exploder Dragon",
+        "qty": 1,
+        "password": "20586572"
+      },
+      {
+        "name": "Injection Fairy Lily",
+        "qty": 1,
+        "password": "79575620"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Soul Exchange",
+        "qty": 2,
+        "password": "68005187"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Enemy Controller",
+        "qty": 1,
+        "password": "98045062"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 2,
+        "password": "88240808"
+      },
+      {
+        "name": "D.D. Warrior",
+        "qty": 1,
+        "password": "37043180"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Cipher Soldier",
+        "qty": 2,
+        "password": "79853073"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      },
+      {
+        "name": "Chaos Trap Hole",
+        "qty": 2,
+        "password": "11593137"
+      }
+    ],
+    "thumbnail_card": "Giant Rat",
+    "thumbnail_strip": [
+      "Giant Rat",
+      "Injection Fairy Lily",
+      "Mobius the Frost Monarch"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"berserk gorilla\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"d.d. assailant\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"elemental hero wildheart\",\"qty\":1},{\"name\":\"enemy controller\",\"qty\":1},{\"name\":\"exiled force\",\"qty\":1},{\"name\":\"exploder dragon\",\"qty\":1},{\"name\":\"giant rat\",\"qty\":3},{\"name\":\"gigantes\",\"qty\":1},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"injection fairy lily\",\"qty\":1},{\"name\":\"jinzo\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"soul exchange\",\"qty\":2},{\"name\":\"the rock spirit\",\"qty\":1},{\"name\":\"thestalos the firestorm monarch\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"zaborg the thunder monarch\",\"qty\":1}],\"extra\":[],\"side\":[{\"name\":\"chaos trap hole\",\"qty\":2},{\"name\":\"cipher soldier\",\"qty\":2},{\"name\":\"d.d. warrior\",\"qty\":1},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"kycoo the ghost destroyer\",\"qty\":2},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pulling the rug\",\"qty\":2}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-fire-plant",
+    "title": "Fire Plant",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "FIRE / Plant",
+    "description": "A Plant deck built around FIRE recruitment, graveyard recovery and large Lonefire targets. Gravirose and UFO Turtle establish the engine, while Oil and Circle of the Fire Kings give spent FIRE monsters more than one opportunity to contribute.\n\nGAME PLAN\nKeep a Plant in hand when you intend to maintain Gravirose through the End Phase; this list does not supply Iron Core for its alternative upkeep. Gravirose's Standby Phase effect can send a Level 3 or lower monster to the graveyard, setting up later recovery. Lonefire Blossom converts a Plant into another Plant from the Deck, including the larger threats, while Lord Poison supplies battle-triggered revival. Oil recovers up to two different named Level 4 or lower FIRE monsters, so inspect the graveyard before committing it. Circle needs both an eligible FIRE on the field and a FIRE in the graveyard; do not sacrifice the only resource required for a planned follow-up.\n\nSIDE DECK PLAN\nDes Wombat and Tenkabito Shien offer focused protection. Soul Release attacks graveyard resources, while Warrior Elimination and additional removal answer monster-heavy boards. Dust Tornado and Spell Shattering Arrow clear back rows. Retain enough Plants for Gravirose's reveal and Lonefire's remaining targets when making swaps.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Sylvan Hermitree",
+        "qty": 1,
+        "password": "25824484"
+      },
+      {
+        "name": "Fairy King Truesdale",
+        "qty": 1,
+        "password": "45425051"
+      },
+      {
+        "name": "Koa'ki Meiru Gravirose",
+        "qty": 3,
+        "password": "41201555"
+      },
+      {
+        "name": "Homunculus the Alchemic Being",
+        "qty": 1,
+        "password": "40410110"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "Lord Poison",
+        "qty": 2,
+        "password": "40320754"
+      },
+      {
+        "name": "UFO Turtle",
+        "qty": 3,
+        "password": "60806437"
+      },
+      {
+        "name": "Rigorous Reaver",
+        "qty": 2,
+        "password": "39180960"
+      },
+      {
+        "name": "Lonefire Blossom",
+        "qty": 2,
+        "password": "48686504"
+      },
+      {
+        "name": "Sinister Serpent",
+        "qty": 1,
+        "password": "8131171"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Creature Swap",
+        "qty": 1,
+        "password": "31036355"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Oil",
+        "qty": 2,
+        "password": "74055055"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Foolish Burial",
+        "qty": 1,
+        "password": "81439173"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Circle of the Fire Kings",
+        "qty": 2,
+        "password": "59388357"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Molten Destruction",
+        "qty": 1,
+        "password": "19384334"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 1,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 1,
+        "password": "60082869"
+      },
+      {
+        "name": "Phoenix Wing Wind Blast",
+        "qty": 1,
+        "password": "63356631"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Tenkabito Shien",
+        "qty": 1,
+        "password": "41589166"
+      },
+      {
+        "name": "Warrior Elimination",
+        "qty": 1,
+        "password": "90873992"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      },
+      {
+        "name": "Chaos Trap Hole",
+        "qty": 1,
+        "password": "11593137"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Soul Release",
+        "qty": 2,
+        "password": "5758500"
+      }
+    ],
+    "thumbnail_card": "Koa'ki Meiru Gravirose",
+    "thumbnail_strip": [
+      "Koa'ki Meiru Gravirose",
+      "Lonefire Blossom",
+      "Sylvan Hermitree"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"circle of the fire kings\",\"qty\":2},{\"name\":\"creature swap\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":1},{\"name\":\"fairy king truesdale\",\"qty\":1},{\"name\":\"foolish burial\",\"qty\":1},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"homunculus the alchemic being\",\"qty\":1},{\"name\":\"koa'ki meiru gravirose\",\"qty\":3},{\"name\":\"lonefire blossom\",\"qty\":2},{\"name\":\"lord poison\",\"qty\":2},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"molten destruction\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"oil\",\"qty\":2},{\"name\":\"phoenix wing wind blast\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"rigorous reaver\",\"qty\":2},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"sinister serpent\",\"qty\":1},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"sylvan hermitree\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"ufo turtle\",\"qty\":3}],\"extra\":[],\"side\":[{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"chaos trap hole\",\"qty\":1},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"soul release\",\"qty\":2},{\"name\":\"spell shattering arrow\",\"qty\":1},{\"name\":\"tenkabito shien\",\"qty\":1},{\"name\":\"warrior elimination\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-ninja-phoenix",
+    "title": "Ninja Phoenix",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Ninja / Beast",
+    "description": "A Ninja engine links efficient attackers to Sacred Phoenix and Green Baboon through Ninjitsu Art of Transformation. The deck also includes a full Metamorphosis toolbox, giving suitable Levels on the field several possible ways to change roles.\n\nGAME PLAN\nNormal Summon Hanzo to search a Ninjitsu Art, then preserve an appropriate Ninja for Transformation. The Trap summons a Beast, Winged Beast or Insect up to three Levels above the Tributed Ninja: a Level 4 Ninja can reach Green Baboon, while Flame Armor Ninja's Level increase can open the Level 8 Phoenix route. Transformation remains tied to the summoned monster, so removing it has consequences. Phoenix can return after effect destruction and clear Spells and Traps, including your own. Baboon's revival does not activate during the Damage Step. Use Metamorphosis only when the available Fusion provides more value than the monster and Spell you spend.\n\nSIDE DECK PLAN\nKycoo and Soul Release pressure graveyards, King Tiger Wanghu constrains small summons, and Cipher Soldier improves Warrior combat. Des Wombat covers effect damage. Nobleman, Dust Tornado, Pulling the Rug and other targeted answers replace weaker matchup cards. Keep sufficient Ninjas and Transformation targets for the core plan.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Sacred Phoenix of Nephthys",
+        "qty": 1,
+        "password": "61441708"
+      },
+      {
+        "name": "Green Baboon, Defender of the Forest",
+        "qty": 1,
+        "password": "46668237"
+      },
+      {
+        "name": "Berserk Gorilla",
+        "qty": 3,
+        "password": "39168895"
+      },
+      {
+        "name": "Ninja Grandmaster Sasuke",
+        "qty": 1,
+        "password": "4041838"
+      },
+      {
+        "name": "Ninja Grandmaster Hanzo",
+        "qty": 2,
+        "password": "95027497"
+      },
+      {
+        "name": "D.D. Assailant",
+        "qty": 1,
+        "password": "70074904"
+      },
+      {
+        "name": "Flame Armor Ninja",
+        "qty": 3,
+        "password": "33034646"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Exiled Force",
+        "qty": 1,
+        "password": "74131780"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Reinforcement of the Army",
+        "qty": 1,
+        "password": "32807846"
+      },
+      {
+        "name": "Metamorphosis",
+        "qty": 1,
+        "password": "46411259"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 2,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Ninjitsu Art of Transformation",
+        "qty": 3,
+        "password": "70861343"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [
+      {
+        "name": "Dragoness the Wicked Knight",
+        "qty": 1,
+        "password": "70681994"
+      },
+      {
+        "name": "Karbonala Warrior",
+        "qty": 1,
+        "password": "54541900"
+      },
+      {
+        "name": "Rare Fish",
+        "qty": 1,
+        "password": "80516007"
+      },
+      {
+        "name": "Dark Balter the Terrible",
+        "qty": 1,
+        "password": "80071763"
+      },
+      {
+        "name": "Fiend Skull Dragon",
+        "qty": 1,
+        "password": "66235877"
+      },
+      {
+        "name": "Reaper on the Nightmare",
+        "qty": 1,
+        "password": "85684223"
+      },
+      {
+        "name": "Alligator's Sword Dragon",
+        "qty": 1,
+        "password": "3366982"
+      },
+      {
+        "name": "Ryu Senshi",
+        "qty": 1,
+        "password": "49868263"
+      },
+      {
+        "name": "Dark Blade the Dragon Knight",
+        "qty": 1,
+        "password": "86805855"
+      },
+      {
+        "name": "Ojama King",
+        "qty": 1,
+        "password": "90140980"
+      },
+      {
+        "name": "The Last Warrior from Another Planet",
+        "qty": 1,
+        "password": "86099788"
+      },
+      {
+        "name": "Twin-Headed Thunder Dragon",
+        "qty": 1,
+        "password": "54752875"
+      },
+      {
+        "name": "King Dragun",
+        "qty": 1,
+        "password": "13756293"
+      },
+      {
+        "name": "Gatling Dragon",
+        "qty": 1,
+        "password": "87751584"
+      },
+      {
+        "name": "Meteor Black Dragon",
+        "qty": 1,
+        "password": "90660762"
+      }
+    ],
+    "side_deck": [
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 1,
+        "password": "88240808"
+      },
+      {
+        "name": "King Tiger Wanghu",
+        "qty": 1,
+        "password": "83986578"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Cipher Soldier",
+        "qty": 2,
+        "password": "79853073"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      },
+      {
+        "name": "Chaos Trap Hole",
+        "qty": 1,
+        "password": "11593137"
+      },
+      {
+        "name": "Soul Release",
+        "qty": 1,
+        "password": "5758500"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      }
+    ],
+    "thumbnail_card": "Ninja Grandmaster Hanzo",
+    "thumbnail_strip": [
+      "Ninja Grandmaster Hanzo",
+      "Sacred Phoenix of Nephthys",
+      "Green Baboon, Defender of the Forest"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"berserk gorilla\",\"qty\":3},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"d.d. assailant\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"exiled force\",\"qty\":1},{\"name\":\"flame armor ninja\",\"qty\":3},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"green baboon, defender of the forest\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"metamorphosis\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"ninja grandmaster hanzo\",\"qty\":2},{\"name\":\"ninja grandmaster sasuke\",\"qty\":1},{\"name\":\"ninjitsu art of transformation\",\"qty\":3},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"reinforcement of the army\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"sacred phoenix of nephthys\",\"qty\":1},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"smashing ground\",\"qty\":2},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1}],\"extra\":[{\"name\":\"alligator's sword dragon\",\"qty\":1},{\"name\":\"dark balter the terrible\",\"qty\":1},{\"name\":\"dark blade the dragon knight\",\"qty\":1},{\"name\":\"dragoness the wicked knight\",\"qty\":1},{\"name\":\"fiend skull dragon\",\"qty\":1},{\"name\":\"gatling dragon\",\"qty\":1},{\"name\":\"karbonala warrior\",\"qty\":1},{\"name\":\"king dragun\",\"qty\":1},{\"name\":\"meteor black dragon\",\"qty\":1},{\"name\":\"ojama king\",\"qty\":1},{\"name\":\"rare fish\",\"qty\":1},{\"name\":\"reaper on the nightmare\",\"qty\":1},{\"name\":\"ryu senshi\",\"qty\":1},{\"name\":\"the last warrior from another planet\",\"qty\":1},{\"name\":\"twin-headed thunder dragon\",\"qty\":1}],\"side\":[{\"name\":\"chaos trap hole\",\"qty\":1},{\"name\":\"cipher soldier\",\"qty\":2},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"king tiger wanghu\",\"qty\":1},{\"name\":\"kycoo the ghost destroyer\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"soul release\",\"qty\":1},{\"name\":\"spell shattering arrow\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-zombie",
+    "title": "Zombie",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Zombie Midrange",
+    "description": "A Zombie midrange deck that trades small monsters and removal for a graveyard full of reusable threats. Gozuki sets up the engine, while Goblin Zombie, Pyramid Turtle and the revival Spells help sustain pressure through repeated exchanges.\n\nGAME PLAN\nUse Gozuki to send the Zombie needed for the next sequence, rather than automatically choosing the largest monster. Goblin Zombie searches an eligible Zombie when sent from the field to the graveyard, and Pyramid Turtle recruits an eligible Zombie after battle destruction. Ryu Kokki and Vampire Lord provide different attacking threats. Book of Life revives a Zombie while banishing an opposing graveyard monster, so check that both targets are available. Creature Swap can turn an expendable recruiter into a favorable exchange. Card Destruction and Graceful Charity can improve the hand and fill the graveyard, but consider which resources the opponent gains as well.\n\nSIDE DECK PLAN\nMobius, Dust Tornado and Spell Shattering Arrow help force revival and attacks through back rows. Kycoo, Chaos Trap Hole and summon-response Traps address specific monster engines. Extra Nobleman handles face-down threats. Jinzo offers a trap-suppression plan, but your own Traps also stop functioning while its effect applies. Preserve enough Zombies and live revival targets when replacing cards.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Ryu Kokki",
+        "qty": 2,
+        "password": "57281778"
+      },
+      {
+        "name": "Vampire Lord",
+        "qty": 1,
+        "password": "53839837"
+      },
+      {
+        "name": "Zombyra the Dark",
+        "qty": 1,
+        "password": "88472456"
+      },
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 1,
+        "password": "88240808"
+      },
+      {
+        "name": "D.D. Assailant",
+        "qty": 1,
+        "password": "70074904"
+      },
+      {
+        "name": "Gozuki",
+        "qty": 2,
+        "password": "52467217"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "D.D. Warrior Lady",
+        "qty": 1,
+        "password": "7572887"
+      },
+      {
+        "name": "Pyramid Turtle",
+        "qty": 1,
+        "password": "77044671"
+      },
+      {
+        "name": "Goblin Zombie",
+        "qty": 2,
+        "password": "63665875"
+      },
+      {
+        "name": "Exiled Force",
+        "qty": 1,
+        "password": "74131780"
+      },
+      {
+        "name": "Spirit Reaper",
+        "qty": 1,
+        "password": "23205979"
+      },
+      {
+        "name": "Morphing Jar",
+        "qty": 1,
+        "password": "33508719"
+      },
+      {
+        "name": "Sinister Serpent",
+        "qty": 1,
+        "password": "8131171"
+      },
+      {
+        "name": "Book of Life",
+        "qty": 2,
+        "password": "2204140"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Creature Swap",
+        "qty": 1,
+        "password": "31036355"
+      },
+      {
+        "name": "Lightning Vortex",
+        "qty": 1,
+        "password": "69162969"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Card Destruction",
+        "qty": 1,
+        "password": "72892473"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Sakuretsu Armor",
+        "qty": 1,
+        "password": "56120475"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 1,
+        "password": "60082869"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 1,
+        "password": "88240808"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Enemy Controller",
+        "qty": 1,
+        "password": "98045062"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Pulling the Rug",
+        "qty": 2,
+        "password": "34717238"
+      },
+      {
+        "name": "The Selection",
+        "qty": 1,
+        "password": "30888983"
+      },
+      {
+        "name": "Divine Wrath",
+        "qty": 1,
+        "password": "49010598"
+      },
+      {
+        "name": "Jinzo",
+        "qty": 1,
+        "password": "77585513"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 1,
+        "password": "93260132"
+      },
+      {
+        "name": "Compulsory Evacuation Device",
+        "qty": 1,
+        "password": "94192409"
+      },
+      {
+        "name": "Chaos Trap Hole",
+        "qty": 1,
+        "password": "11593137"
+      }
+    ],
+    "thumbnail_card": "Gozuki",
+    "thumbnail_strip": [
+      "Gozuki",
+      "Pyramid Turtle",
+      "Ryu Kokki"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"book of life\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"card destruction\",\"qty\":1},{\"name\":\"creature swap\",\"qty\":1},{\"name\":\"d.d. assailant\",\"qty\":1},{\"name\":\"d.d. warrior lady\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":1},{\"name\":\"exiled force\",\"qty\":1},{\"name\":\"goblin zombie\",\"qty\":2},{\"name\":\"gozuki\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"kycoo the ghost destroyer\",\"qty\":1},{\"name\":\"lightning vortex\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"morphing jar\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"pyramid turtle\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"ryu kokki\",\"qty\":2},{\"name\":\"sakuretsu armor\",\"qty\":1},{\"name\":\"sinister serpent\",\"qty\":1},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"spirit reaper\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"vampire lord\",\"qty\":1},{\"name\":\"zombyra the dark\",\"qty\":1}],\"extra\":[],\"side\":[{\"name\":\"chaos trap hole\",\"qty\":1},{\"name\":\"compulsory evacuation device\",\"qty\":1},{\"name\":\"divine wrath\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"enemy controller\",\"qty\":1},{\"name\":\"jinzo\",\"qty\":1},{\"name\":\"kycoo the ghost destroyer\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"pulling the rug\",\"qty\":2},{\"name\":\"spell shattering arrow\",\"qty\":1},{\"name\":\"the selection\",\"qty\":1}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-umi-bugroth",
+    "title": "Umi Bugroth",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "WATER / Umi Control",
+    "description": "A WATER control deck that uses A Legendary Ocean to combine direct attacks with Level-based battle restrictions. Warrior of Atlantis improves Field Spell access, while Mother Grizzly and the Penguin monsters keep the board manageable.\n\nGAME PLAN\nOcean lowers WATER Levels and is treated as Umi, allowing Amphibious Bugroth MK-3 to attack directly while supporting Mermaid Knight's additional attack. Gravity Bind and Level Limit - Area B constrain many larger attackers; check the changed Levels of your own monsters before relying on those cards. Abyss Soldier turns a WATER discard into a bounce, and Salvage recovers eligible low-ATK WATER monsters for another exchange. Bugroth MK-11 can destroy a face-up non-WATER monster with Umi present. Mage Power can turn a protected direct attacker into a serious threat, but do not commit the whole plan to an unprotected Field Spell.\n\nSIDE DECK PLAN\nMobius, Breaker, Heavy Storm and Spell Shattering Arrow help contest troublesome back rows. Des Wombat covers effect damage, while additional Penguin and monster removal broaden defensive options. Cursed Seal requires a Spell discard and can shut down repeated use of a key opposing Spell. Adjust carefully so your own battle restrictions still support the remaining attackers.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Amphibious Bugroth MK-11",
+        "qty": 1,
+        "password": "4754691"
+      },
+      {
+        "name": "Warrior of Atlantis",
+        "qty": 3,
+        "password": "43797906"
+      },
+      {
+        "name": "Abyss Soldier",
+        "qty": 3,
+        "password": "18318842"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Amphibious Bugroth MK-3",
+        "qty": 3,
+        "password": "64342551"
+      },
+      {
+        "name": "Mermaid Knight",
+        "qty": 1,
+        "password": "24435369"
+      },
+      {
+        "name": "Mother Grizzly",
+        "qty": 3,
+        "password": "57839750"
+      },
+      {
+        "name": "Nightmare Penguin",
+        "qty": 2,
+        "password": "81306586"
+      },
+      {
+        "name": "Penguin Soldier",
+        "qty": 1,
+        "password": "93920745"
+      },
+      {
+        "name": "Sinister Serpent",
+        "qty": 1,
+        "password": "8131171"
+      },
+      {
+        "name": "Giant Trunade",
+        "qty": 1,
+        "password": "42703248"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Salvage",
+        "qty": 2,
+        "password": "96947648"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Level Limit - Area B",
+        "qty": 1,
+        "password": "3136426"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Mage Power",
+        "qty": 1,
+        "password": "83746708"
+      },
+      {
+        "name": "A Legendary Ocean",
+        "qty": 3,
+        "password": "295517"
+      },
+      {
+        "name": "Mirror Force",
+        "qty": 1,
+        "password": "44095762"
+      },
+      {
+        "name": "Torrential Tribute",
+        "qty": 1,
+        "password": "53582587"
+      },
+      {
+        "name": "Dust Tornado",
+        "qty": 2,
+        "password": "60082869"
+      },
+      {
+        "name": "Ring of Destruction",
+        "qty": 1,
+        "password": "83555666"
+      },
+      {
+        "name": "Gravity Bind",
+        "qty": 1,
+        "password": "85742772"
+      },
+      {
+        "name": "Call of the Haunted",
+        "qty": 1,
+        "password": "97077563"
+      },
+      {
+        "name": "Solemn Judgment",
+        "qty": 1,
+        "password": "41420027"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 1,
+        "password": "88240808"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Penguin Soldier",
+        "qty": 1,
+        "password": "93920745"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Bottomless Trap Hole",
+        "qty": 2,
+        "password": "29401950"
+      },
+      {
+        "name": "Cursed Seal of the Forbidden Spell",
+        "qty": 1,
+        "password": "58851034"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 2,
+        "password": "93260132"
+      },
+      {
+        "name": "Warrior Elimination",
+        "qty": 2,
+        "password": "90873992"
+      }
+    ],
+    "thumbnail_card": "Amphibious Bugroth MK-3",
+    "thumbnail_strip": [
+      "Amphibious Bugroth MK-3",
+      "A Legendary Ocean",
+      "Amphibious Bugroth MK-11"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"a legendary ocean\",\"qty\":3},{\"name\":\"abyss soldier\",\"qty\":3},{\"name\":\"amphibious bugroth mk-11\",\"qty\":1},{\"name\":\"amphibious bugroth mk-3\",\"qty\":3},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"call of the haunted\",\"qty\":1},{\"name\":\"dust tornado\",\"qty\":2},{\"name\":\"giant trunade\",\"qty\":1},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"gravity bind\",\"qty\":1},{\"name\":\"level limit - area b\",\"qty\":1},{\"name\":\"mage power\",\"qty\":1},{\"name\":\"mermaid knight\",\"qty\":1},{\"name\":\"mirror force\",\"qty\":1},{\"name\":\"mother grizzly\",\"qty\":3},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nightmare penguin\",\"qty\":2},{\"name\":\"penguin soldier\",\"qty\":1},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"ring of destruction\",\"qty\":1},{\"name\":\"salvage\",\"qty\":2},{\"name\":\"sinister serpent\",\"qty\":1},{\"name\":\"solemn judgment\",\"qty\":1},{\"name\":\"torrential tribute\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"warrior of atlantis\",\"qty\":3}],\"extra\":[],\"side\":[{\"name\":\"bottomless trap hole\",\"qty\":2},{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"cursed seal of the forbidden spell\",\"qty\":1},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"kycoo the ghost destroyer\",\"qty\":1},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"penguin soldier\",\"qty\":1},{\"name\":\"spell shattering arrow\",\"qty\":2},{\"name\":\"warrior elimination\",\"qty\":2}]}"
+  },
+  {
+    "slug": "neogoat-pro-dec-2026-hot-and-cold-dragon",
+    "title": "Hot and Cold Dragon",
+    "author_name": "neogoat pro",
+    "format": "dec_2026",
+    "archetype": "Horus / FIRE-WATER",
+    "description": "A FIRE/WATER Dragon deck that develops Horus while stocking the graveyard for Frost and Flame Dragon. Recruiters and combat tricks keep monsters available, and Royal Decree supports a plan focused on monster effects and Spells.\n\nGAME PLAN\nMother Grizzly and Masked Dragon find eligible replacements, while Hydrogeddon can reward a successful battle destruction with another copy from the Deck. Horus LV4 and LV6 advance through their respective battle requirements; LV6 is unaffected by Spell effects, and LV8 provides Spell negation. Frost and Flame Dragon requires one FIRE and two WATER monsters banished from the graveyard for its hand summon, then discards a card to destroy a targeted monster. Count those attributes before spending revival targets or other graveyard resources. Blizzard Dragon can delay an opposing monster, creating time for the Horus line. Royal Decree suppresses Trap effects while active, but it is not protection from every kind of removal.\n\nSIDE DECK PLAN\nKycoo attacks graveyard plans, Des Wombat covers effect damage and Penguin Soldier offers a reset. Mobius, Breaker, Stamping Destruction and Spell Shattering Arrow address back rows. Nobleman, Warrior Elimination and Smashing Ground adjust the removal mix. Preserve enough FIRE and WATER monsters for Frost and Flame Dragon after siding.\n\nIncluded with NeoGoat Pro 0.3.2 beta.78 | December 2026.",
+    "main_deck": [
+      {
+        "name": "Horus the Black Flame Dragon LV8",
+        "qty": 1,
+        "password": "48229808"
+      },
+      {
+        "name": "Frost and Flame Dragon",
+        "qty": 2,
+        "password": "55589254"
+      },
+      {
+        "name": "Horus the Black Flame Dragon LV6",
+        "qty": 2,
+        "password": "11224103"
+      },
+      {
+        "name": "Blizzard Dragon",
+        "qty": 2,
+        "password": "61802346"
+      },
+      {
+        "name": "Hydrogeddon",
+        "qty": 3,
+        "password": "22587018"
+      },
+      {
+        "name": "Tribe-Infecting Virus",
+        "qty": 1,
+        "password": "33184167"
+      },
+      {
+        "name": "Horus the Black Flame Dragon LV4",
+        "qty": 2,
+        "password": "75830094"
+      },
+      {
+        "name": "Mother Grizzly",
+        "qty": 2,
+        "password": "57839750"
+      },
+      {
+        "name": "Masked Dragon",
+        "qty": 2,
+        "password": "39191307"
+      },
+      {
+        "name": "Exploder Dragon",
+        "qty": 1,
+        "password": "20586572"
+      },
+      {
+        "name": "Yomi Ship",
+        "qty": 1,
+        "password": "51534754"
+      },
+      {
+        "name": "Sinister Serpent",
+        "qty": 1,
+        "password": "8131171"
+      },
+      {
+        "name": "Crystal Seer",
+        "qty": 2,
+        "password": "82099401"
+      },
+      {
+        "name": "Heavy Storm",
+        "qty": 1,
+        "password": "19613556"
+      },
+      {
+        "name": "Creature Swap",
+        "qty": 1,
+        "password": "31036355"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 2,
+        "password": "71044499"
+      },
+      {
+        "name": "Graceful Charity",
+        "qty": 1,
+        "password": "79571449"
+      },
+      {
+        "name": "Brain Control",
+        "qty": 1,
+        "password": "87910978"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 1,
+        "password": "97169186"
+      },
+      {
+        "name": "Mystical Space Typhoon",
+        "qty": 1,
+        "password": "5318639"
+      },
+      {
+        "name": "Book of Moon",
+        "qty": 2,
+        "password": "14087893"
+      },
+      {
+        "name": "Shrink",
+        "qty": 2,
+        "password": "55713623"
+      },
+      {
+        "name": "My Body as a Shield",
+        "qty": 1,
+        "password": "69279219"
+      },
+      {
+        "name": "Enemy Controller",
+        "qty": 2,
+        "password": "98045062"
+      },
+      {
+        "name": "Premature Burial",
+        "qty": 1,
+        "password": "70828912"
+      },
+      {
+        "name": "Royal Decree",
+        "qty": 2,
+        "password": "51452091"
+      }
+    ],
+    "extra_deck": [],
+    "side_deck": [
+      {
+        "name": "Mobius the Frost Monarch",
+        "qty": 1,
+        "password": "4929256"
+      },
+      {
+        "name": "Kycoo the Ghost Destroyer",
+        "qty": 2,
+        "password": "88240808"
+      },
+      {
+        "name": "Breaker the Magical Warrior",
+        "qty": 1,
+        "password": "71413901"
+      },
+      {
+        "name": "Des Wombat",
+        "qty": 2,
+        "password": "9637706"
+      },
+      {
+        "name": "Penguin Soldier",
+        "qty": 1,
+        "password": "93920745"
+      },
+      {
+        "name": "Nobleman of Crossout",
+        "qty": 1,
+        "password": "71044499"
+      },
+      {
+        "name": "Stamping Destruction",
+        "qty": 1,
+        "password": "81385346"
+      },
+      {
+        "name": "Warrior Elimination",
+        "qty": 2,
+        "password": "90873992"
+      },
+      {
+        "name": "Smashing Ground",
+        "qty": 2,
+        "password": "97169186"
+      },
+      {
+        "name": "Spell Shattering Arrow",
+        "qty": 2,
+        "password": "93260132"
+      }
+    ],
+    "thumbnail_card": "Horus the Black Flame Dragon LV8",
+    "thumbnail_strip": [
+      "Horus the Black Flame Dragon LV8",
+      "Frost and Flame Dragon",
+      "Blizzard Dragon"
+    ],
+    "is_public": true,
+    "deck_signature": "{\"format\":\"dec_2026\",\"main\":[{\"name\":\"blizzard dragon\",\"qty\":2},{\"name\":\"book of moon\",\"qty\":2},{\"name\":\"brain control\",\"qty\":1},{\"name\":\"creature swap\",\"qty\":1},{\"name\":\"crystal seer\",\"qty\":2},{\"name\":\"enemy controller\",\"qty\":2},{\"name\":\"exploder dragon\",\"qty\":1},{\"name\":\"frost and flame dragon\",\"qty\":2},{\"name\":\"graceful charity\",\"qty\":1},{\"name\":\"heavy storm\",\"qty\":1},{\"name\":\"horus the black flame dragon lv4\",\"qty\":2},{\"name\":\"horus the black flame dragon lv6\",\"qty\":2},{\"name\":\"horus the black flame dragon lv8\",\"qty\":1},{\"name\":\"hydrogeddon\",\"qty\":3},{\"name\":\"masked dragon\",\"qty\":2},{\"name\":\"mother grizzly\",\"qty\":2},{\"name\":\"my body as a shield\",\"qty\":1},{\"name\":\"mystical space typhoon\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":2},{\"name\":\"premature burial\",\"qty\":1},{\"name\":\"royal decree\",\"qty\":2},{\"name\":\"shrink\",\"qty\":2},{\"name\":\"sinister serpent\",\"qty\":1},{\"name\":\"smashing ground\",\"qty\":1},{\"name\":\"tribe-infecting virus\",\"qty\":1},{\"name\":\"yomi ship\",\"qty\":1}],\"extra\":[],\"side\":[{\"name\":\"breaker the magical warrior\",\"qty\":1},{\"name\":\"des wombat\",\"qty\":2},{\"name\":\"kycoo the ghost destroyer\",\"qty\":2},{\"name\":\"mobius the frost monarch\",\"qty\":1},{\"name\":\"nobleman of crossout\",\"qty\":1},{\"name\":\"penguin soldier\",\"qty\":1},{\"name\":\"smashing ground\",\"qty\":2},{\"name\":\"spell shattering arrow\",\"qty\":2},{\"name\":\"stamping destruction\",\"qty\":1},{\"name\":\"warrior elimination\",\"qty\":2}]}"
+  }
+]
