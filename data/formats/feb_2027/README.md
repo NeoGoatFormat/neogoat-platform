@@ -11,5 +11,7 @@ This draft is available for deckbuilding. It uses the [December 2026 v7 card poo
 | Sylvan Hermitree | Limited (1), Extra Card Pool | Outside the card pool |
 | Photon Veil | Outside the card pool | Unlimited (3), Extra Card Pool |
 | Victory Viper XX03 | Outside the card pool | Unlimited (3), Extra Card Pool |
+| Battle Mania | Outside the card pool | Unlimited (3), Extra Card Pool |
+| Tri-Wight | Outside the card pool | Unlimited (3), Extra Card Pool |
 
-The [complete card list](cards_feb_2027.json) contains 2,232 entries, including 106 Extra Card Pool cards. The seven changes are also available in [changes.json](changes.json).
+The [complete card list](cards_feb_2027.json) contains 2,234 entries, including 108 Extra Card Pool cards. The nine changes are also available in [changes.json](changes.json).

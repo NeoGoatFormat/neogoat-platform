@@ -75,6 +75,38 @@
       "pool": "Extra Card Pool",
       "printedinTCG": "Yes",
       "ban_status": "unlimited"
+    },
+    {
+      "password": "31245780",
+      "name": "Battle Mania",
+      "type": "Trap",
+      "subType": "Normal",
+      "attribute": null,
+      "monsterType": "Normal",
+      "class": null,
+      "level": null,
+      "atk": null,
+      "def": null,
+      "text": "Activate only during your opponent's Standby Phase. All face-up monsters your opponent controls are changed to Attack Position, and cannot change their battle positions this turn. All monsters your opponent currently controls must attack this turn, if able.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    },
+    {
+      "password": "96383838",
+      "name": "Tri-Wight",
+      "type": "Spell",
+      "subType": "Normal",
+      "attribute": null,
+      "monsterType": "Normal",
+      "class": null,
+      "level": null,
+      "atk": null,
+      "def": null,
+      "text": "Target 3 Level 2 or lower Normal Monsters in your Graveyard; Special Summon them from the Graveyard.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
     }
   ]
 }
