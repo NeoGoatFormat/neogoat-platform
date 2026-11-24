@@ -1,0 +1,64 @@
+{
+  "formatId": "feb_2027",
+  "name": "NeoGoat February 2027",
+  "status": "draft",
+  "updatedOn": "2026-11-23",
+  "base": {
+    "formatId": "dec_2026",
+    "version": 7,
+    "file": "data/formats/dec_2026/cards_dec_2026.json",
+    "sha256": "9285a2594b1a308e9c355c8552f9fb1c2ac22b7e62ee0dba7eed6bca19db3bff"
+  },
+  "statusChanges": [
+    {
+      "password": "79571449",
+      "name": "Graceful Charity",
+      "from": "limited",
+      "to": "forbidden"
+    },
+    {
+      "password": "55144522",
+      "name": "Pot of Greed",
+      "from": "forbidden",
+      "to": "limited"
+    },
+    {
+      "password": "31786629",
+      "name": "Thunder Dragon",
+      "from": "semi-limited",
+      "to": "unlimited"
+    },
+    {
+      "password": "85602018",
+      "name": "Last Will",
+      "from": "forbidden",
+      "to": "limited"
+    }
+  ],
+  "removals": [
+    {
+      "password": "25824484",
+      "name": "Sylvan Hermitree",
+      "pool": "Extra Card Pool",
+      "from": "limited"
+    }
+  ],
+  "additions": [
+    {
+      "password": "9354555",
+      "name": "Photon Veil",
+      "type": "Spell",
+      "subType": "Normal",
+      "attribute": null,
+      "monsterType": "Normal",
+      "class": null,
+      "level": null,
+      "atk": null,
+      "def": null,
+      "text": "Shuffle 3 LIGHT monsters from your hand into the Deck, then add 1 to 3 Level 4 or lower LIGHT monsters from your Deck to your hand. If you add 2 or more monsters, they must have the same name.",
+      "pool": "Extra Card Pool",
+      "printedinTCG": "Yes",
+      "ban_status": "unlimited"
+    }
+  ]
+}
